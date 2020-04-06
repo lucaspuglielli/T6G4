@@ -1,0 +1,214 @@
+body {
+	margin: 0;
+}
+
+.nav1 {
+	height: 10vh;
+	background-color: #2f364a;
+	display: flex;
+	justify-content: center;
+}
+
+.logo1 {
+	height: 10vh;
+}
+
+.carousel {
+	overflow: hidden;
+	height: 80vh;
+	width: 100%;
+	margin: 1.6vh 0;
+}
+
+.destaque1 {
+	background-image: url(/img/destaque1.jpg);
+	width: auto;
+	height: 80vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 38%;
+}
+
+.destaque2 {
+	background-image: url(/img/destaque2.jpg);
+	width: auto;
+	height: 80vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 38%;
+}
+
+.destaque3 {
+	background-image: url(/img/destaque3.jpg);
+	width: auto;
+	height: 80vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 38%;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.slideshow-container {
+	max-width: 100%;
+	position: relative;
+	margin: auto;
+}
+
+.mySlides {
+	display: none;
+}
+
+.prev,
+.next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+}
+
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+	background-color: #c4924b;
+}
+
+.dot {
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	position: relative;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+	background-color: #c4924b;
+}
+
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+	from {
+		opacity: 0.4;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fade {
+	from {
+		opacity: 0.4;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.dotbox {
+	justify-content: center;
+	position: relative;
+	z-index: 15;
+	width: 100%;
+	display: flex;
+	bottom: 30px;
+}
+
+.dotboxinterno {
+	position: absolute;
+}
+
+.fa:hover {
+	color: #c4924b;
+}
+
+.fe:hover {
+	color: #c4924b;
+}
+
+.nav2 {
+	position: sticky;
+	top: 0;
+	background-color: #262c3d;
+	height: 7vh;
+	display: flex;
+	align-content: center;
+	justify-content: space-evenly;
+}
+
+.navcontainer1 {
+	width: 40%;
+	height: 100%;
+}
+
+.logo2 {
+	height: 7vh;
+}
+
+.navcontainer2 {
+	width: 40%;
+	height: 100%;
+}
+
+.navsubcontainer {
+	display: flex;
+	justify-content: flex-end;
+	height: 100%;
+}
+
+.navopcao {
+	width: 5vh;
+	height: 5vh;
+	background-color: #c4924b;
+	border-radius: 50%;
+	align-self: center;
+	margin-right: 10px;
+}
+
+.containerservicos {
+	height: 28vh;
+}
+
+.containernewsletter {
+	background-color: #262c3d;
+	height: 22vh;
+}
+
+.containersobreempresa {
+	height: 100vh;
+}
+
+.containermidias {
+	background-color: #262c3d;
+	height: 6vh;
+}
+
+.footer {
+	height: 9vh;
+}
