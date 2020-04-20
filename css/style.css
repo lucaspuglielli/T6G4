@@ -1,3 +1,5 @@
+/* Inicio da home */
+
 body {
 	margin: 0;
 }
@@ -193,8 +195,115 @@ body {
 }
 
 .containerservicos {
-	height: 28vh;
+	padding: 5px 0 10px 0;
+	font-family: Arial, Helvetica, sans-serif;
 }
+
+.servicoestitulo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 8vh;
+	font-size: 15px;
+}
+
+.servicosopcoescontainer{
+	
+}
+
+.servicoscontainer{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 3px 0;
+}
+
+.servicostitulo {
+	width: 90%;
+	height: 30px;
+	background-color: #c4924b;
+	color: white;
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.servicosdescricao{
+	width: 80%;
+	background-color: #eee;
+	color: #41BFC4;
+	text-align: center;
+	font-size: 12px;
+	padding: 20px;
+	margin-bottom: 10px;
+}
+
+.servicosbotaocontainer{
+	padding-top: 18px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.servicosbotao{
+	width: 86px;
+	height: 34px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 600;
+	font-size: 13px;
+	border-radius: 7px;
+	background-color: #c4924b;
+}
+
+/* toggle display dos servicos */
+
+.cabelo + .servicosdescricao {
+	display: none;
+}
+
+.cabelo:checked + .servicosdescricao {
+	display: block;
+}
+
+.unhas + .servicosdescricao {
+	display: none;
+}
+
+.unhas:checked + .servicosdescricao {
+	display: block;
+}
+
+.depilacao + .servicosdescricao {
+	display: none;
+}
+
+.depilacao:checked + .servicosdescricao {
+	display: block;
+}
+
+.estetica + .servicosdescricao {
+	display: none;
+}
+
+.estetica:checked + .servicosdescricao {
+	display: block;
+}
+
+.massagem + .servicosdescricao {
+	display: none;
+}
+
+.massagem:checked + .servicosdescricao {
+	display: block;
+}
+
+/* toggle display dos servicos */
 
 .containernewsletter {
 	background-color: #262c3d;
@@ -213,6 +322,10 @@ body {
 .footer1 {
 	height: 9vh;
 }
+
+/* Fim da home */
+
+/* Inicio do template */
 
 .nav3 {
 	height: 127px;
@@ -279,7 +392,7 @@ footer {
 	justify-content: space-around;
 }
 
-.subcontainermidias2{
+.subcontainermidias2 {
 	width: 800px;
 	display: flex;
 	align-items: center;
@@ -329,7 +442,7 @@ footer {
 	font-size: 20px;
 }
 
-.footerfontespaco{
+.footerfontespaco {
 	margin-bottom: 10px;
 }
 
