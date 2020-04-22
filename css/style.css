@@ -301,14 +301,14 @@ body {
 
 /* toggle display dos servicos */
 
-.espacoopcao{
+.espacoopcao {
 	width: 25px;
 	height: 25px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	font-size: 20px;
-	margin: 0 20px;0
+	margin: 0 20px;
 }
 
 .imgcabelo {
@@ -348,16 +348,16 @@ body {
 	text-align: center;
 }
 
-.newslettertitle{
+.newslettertitle {
 	margin: 0;
 }
 
-.newslettersubtitle{
+.newslettersubtitle {
 	font-size: 11px;
 	margin: 10px 0;
 }
 
-.newsletterinputhome{
+.newsletterinputhome {
 	width: 220px;
 	background-color: #262c3d;
 	border: none;
@@ -365,7 +365,7 @@ body {
 	margin-bottom: 5px;
 }
 
-.botaonewsletter{
+.botaonewsletter {
 	color: white;
 	height: 25px;
 	width: 80px;
@@ -414,11 +414,11 @@ body {
 	line-height: 20px;
 }
 
-.quemsomostitle{
-	margin: 30px 0px 8px 0px
+.quemsomostitle {
+	margin: 30px 0px 8px 0px;
 }
 
-.quemsomostexto{
+.quemsomostexto {
 	font-size: 11px;
 	width: 80%;
 	color: #41bfc4;
@@ -432,7 +432,7 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 }
 
-.equipehomecontainer{
+.equipehomecontainer {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -440,14 +440,14 @@ body {
 	margin-bottom: 20px;
 }
 
-.equipehomecards{
+.equipehomecards {
 	width: 18vh;
 	height: 22vh;
 	border: 1px solid black;
 	margin: 5px;
 }
 
-.funcionario1bg{
+.funcionario1bg {
 	width: 100%;
 	height: 14vh;
 	background-image: url(../img/funcionario-1.jpg);
@@ -455,7 +455,7 @@ body {
 	background-position: center;
 }
 
-.funcionario2bg{
+.funcionario2bg {
 	width: 100%;
 	height: 14vh;
 	background-image: url(../img/funcionario-2.png);
@@ -463,7 +463,7 @@ body {
 	background-position: center;
 }
 
-.funcionario3bg{
+.funcionario3bg {
 	width: 100%;
 	height: 14vh;
 	background-image: url(../img/funcionario-3.jpg);
@@ -471,7 +471,7 @@ body {
 	background-position: center;
 }
 
-.funcionario4bg{
+.funcionario4bg {
 	width: 100%;
 	height: 14vh;
 	background-image: url(../img/funcionario-4.jpg);
@@ -479,7 +479,7 @@ body {
 	background-position: center;
 }
 
-.descricaofuncionariohome{
+.descricaofuncionariohome {
 	width: 100%;
 	height: 8vh;
 	padding: 10px;
@@ -488,12 +488,12 @@ body {
 	justify-content: center;
 }
 
-.titulofuncionariohome{
+.titulofuncionariohome {
 	font-size: 12px;
 	color: #227578;
 }
 
-.subtitulofuncionariohome{
+.subtitulofuncionariohome {
 	font-size: 10px;
 	color: #41bfc4;
 }
