@@ -17,7 +17,7 @@ body {
 
 .carousel {
 	overflow: hidden;
-	height: 80vh;
+	height: 79vh;
 	width: 100%;
 	margin: 1.6vh 0;
 }
@@ -25,7 +25,7 @@ body {
 .destaque1 {
 	background-image: url(/img/destaque1.jpg);
 	width: auto;
-	height: 80vh;
+	height: 79vh;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 38%;
@@ -35,7 +35,7 @@ body {
 .destaque2 {
 	background-image: url(/img/destaque2.jpg);
 	width: auto;
-	height: 80vh;
+	height: 79vh;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 38%;
@@ -44,7 +44,7 @@ body {
 .destaque3 {
 	background-image: url(/img/destaque3.jpg);
 	width: auto;
-	height: 80vh;
+	height: 79vh;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 38%;
@@ -78,16 +78,12 @@ body {
 	transition: 0.6s ease;
 	border-radius: 0 3px 3px 0;
 	user-select: none;
+	background-color: #c4924b;
 }
 
 .next {
 	right: 0;
 	border-radius: 3px 0 0 3px;
-}
-
-.prev:hover,
-.next:hover {
-	background-color: #c4924b;
 }
 
 .dot {
@@ -159,7 +155,7 @@ body {
 	position: sticky;
 	top: 0;
 	background-color: #262c3d;
-	height: 7vh;
+	height: 8vh;
 	display: flex;
 	align-content: center;
 	justify-content: space-evenly;
@@ -171,7 +167,7 @@ body {
 }
 
 .logo2 {
-	height: 7vh;
+	height: 8vh;
 }
 
 .navcontainer2 {
@@ -192,6 +188,10 @@ body {
 	border-radius: 50%;
 	align-self: center;
 	margin-right: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
 }
 
 .containerservicos {
@@ -207,11 +207,7 @@ body {
 	font-size: 15px;
 }
 
-.servicosopcoescontainer{
-	
-}
-
-.servicoscontainer{
+.servicoscontainer {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -226,27 +222,27 @@ body {
 	font-size: 14px;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-between;
 }
 
-.servicosdescricao{
+.servicosdescricao {
 	width: 80%;
 	background-color: #eee;
-	color: #41BFC4;
+	color: #41bfc4;
 	text-align: center;
 	font-size: 12px;
 	padding: 20px;
 	margin-bottom: 10px;
 }
 
-.servicosbotaocontainer{
+.servicosbotaocontainer {
 	padding-top: 18px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.servicosbotao{
+.servicosbotao {
 	width: 86px;
 	height: 34px;
 	display: flex;
@@ -305,22 +301,226 @@ body {
 
 /* toggle display dos servicos */
 
-.containernewsletter {
-	background-color: #262c3d;
-	height: 22vh;
+.espacoopcao{
+	width: 25px;
+	height: 25px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 20px;
+	margin: 0 20px;0
 }
 
-.containersobreempresa {
-	height: 100vh;
+.imgcabelo {
+	background-image: url(../img/unha.png);
+	background-size: contain;
+}
+
+.imgunhas {
+	background-image: url(../img/unha.png);
+	background-size: contain;
+}
+
+.imgdepilacao {
+	background-image: url(../img/unha.png);
+	background-size: contain;
+}
+
+.imgestetica {
+	background-image: url(../img/unha.png);
+	background-size: contain;
+}
+
+.imgmassagem {
+	background-image: url(../img/unha.png);
+	background-size: contain;
+}
+
+.containernewsletter {
+	background-color: #262c3d;
+	padding: 25px;
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.newslettertitle{
+	margin: 0;
+}
+
+.newslettersubtitle{
+	font-size: 11px;
+	margin: 10px 0;
+}
+
+.newsletterinputhome{
+	width: 220px;
+	background-color: #262c3d;
+	border: none;
+	border-bottom: 2px solid white;
+	margin-bottom: 5px;
+}
+
+.botaonewsletter{
+	color: white;
+	height: 25px;
+	width: 80px;
+	font-size: 11px;
+	background-color: #c4924b;
+	border-radius: 3px;
+	display: flex;
+	margin: 15px auto 0 auto;
+	justify-content: center;
+	align-items: center;
+	font-family: arial;
+	border: none;
+}
+
+.quemsomoshomecontainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.quemsomoscard {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #eee;
+	width: 80%;
+	height: 40vh;
+}
+
+.quemsomosbg {
+	background-image: url(../img/quem-somos1.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 20vh;
+	width: 100%;
+}
+
+.quemsomosdescricao {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	flex-direction: column;
+	line-height: 20px;
+}
+
+.quemsomostitle{
+	margin: 30px 0px 8px 0px
+}
+
+.quemsomostexto{
+	font-size: 11px;
+	width: 80%;
+	color: #41bfc4;
+}
+
+.nossaequipehomecontainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.equipehomecontainer{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 80%;
+	margin-bottom: 20px;
+}
+
+.equipehomecards{
+	width: 18vh;
+	height: 22vh;
+	border: 1px solid black;
+	margin: 5px;
+}
+
+.funcionario1bg{
+	width: 100%;
+	height: 14vh;
+	background-image: url(../img/funcionario-1.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.funcionario2bg{
+	width: 100%;
+	height: 14vh;
+	background-image: url(../img/funcionario-2.png);
+	background-size: cover;
+	background-position: center;
+}
+
+.funcionario3bg{
+	width: 100%;
+	height: 14vh;
+	background-image: url(../img/funcionario-3.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.funcionario4bg{
+	width: 100%;
+	height: 14vh;
+	background-image: url(../img/funcionario-4.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.descricaofuncionariohome{
+	width: 100%;
+	height: 8vh;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.titulofuncionariohome{
+	font-size: 12px;
+	color: #227578;
+}
+
+.subtitulofuncionariohome{
+	font-size: 10px;
+	color: #41bfc4;
 }
 
 .containermidias1 {
 	background-color: #262c3d;
 	height: 6vh;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.subcontainermidias1 {
+	width: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
 }
 
 .footer1 {
 	height: 9vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 12px;
+	font-family: arial;
+	font-weight: 100;
 }
 
 /* Fim da home */
