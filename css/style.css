@@ -712,3 +712,26 @@ footer {
 .teste {
 	height: 20vh;
 }
+
+/* PÁGINA DE AGENDAMENTO (/views/agendamento.html) */
+
+.btn-color {
+	background-color: #C4924B;
+	color: #ffffff;
+	font-size: larger;
+}
+
+.label-form {
+	color: #262C3D;
+	font-weight: bold;
+}
+
+.form-border {
+	border: 2px solid #227578;
+	border-radius: .6rem;
+	height: calc(1.5em + 1.2rem + 2px);
+	font-size: 1rem;
+	color: #83B2B3;
+}
+
+

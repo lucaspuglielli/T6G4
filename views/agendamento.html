@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Agendamento</title>
+</head>
+
+<body>
+    <nav class="nav2">
+        <div class="navcontainer1">
+            <a href="index.html">
+                <img src="../img/logo-deitado.png" alt="logo deitado" class="logo2">
+            </a>
+        </div>
+        <div class="navcontainer2">
+            <div class="navsubcontainer">
+                <a href="#" class="navopcao"><i class="fa fa-bars" style="font-size: 3.5vh; color:white;"></i></a>
+                <a href="#" class="navopcao"><i class="fa fa-search" style="font-size: 3.5vh; color:white;"></i></a>
+            </div>
+        </div>
+    </nav>
+    <main class="d-flex flex-column align-items-center">
+        <h3 class="m-3">AGENDAMENTO</h3>
+        <form class="w-75 d-flex flex-column">
+            <div class="form-group">
+                <label class="label-form" for="servico">Selecione um serviço</label>
+                <select class="form-control form-control-lg form-border" id="servico">
+                    <option disabled selected>Escolha um serviço</option>
+                    <option>Mão</option>
+                    <option>Pé e mão</option>
+                    <option>Escova</option>
+                    <option>Drenagem Linfática</option>
+                    <option>Escova</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="label-form" for="valor">Valor</label>
+                <input type="text" class="form-control form-control-lg form-border" id="valor" placeholder="R$0,00">
+            </div>
+            <div class="form-group">
+                <label class="label-form" for="profissional">Escolha o profissional</label>
+                <select class="form-control form-control-lg form-border" id="profissional">
+                    <option disabled selected>Escolha o profissional</option>
+                    <option>Ana Américo</option>
+                    <option>Ana Paes</option>
+                    <option>Gabriela Ribeiro</option>
+                    <option>Mariane</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="label-form" for="data">Escolha a data</label>
+                <select class="form-control form-control-lg form-border" id="data">
+                    <option disabled selected>Escolha o dia</option>
+                    <option>Aprender a implementar 'datepicker'.</option>
+                </select>
+            </div>
+            <div class="form-group ">
+                <label class="label-form" for="horario">Escolha o horário</label>
+                <select class="form-control form-control-lg form-border" id="horario">
+                    <option disabled selected>Escolha o horário</option>
+                    <option>8:00</option>
+                    <option>9:00</option>
+                    <option>10:00</option>
+                    <option>11:00</option>
+                    <option>12:00</option>
+                    <option>14:00</option>
+                    <option>15:00</option>
+                    <option>16:00</option>
+                    <option>17:00</option>
+                    <option>18:00</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-color m-3 align-self-center">Agendar</button>
+        </form>
+    </main>
+    <div class="containermidias1">
+        <div class="subcontainermidias1">
+            <a href="#"><i class="fa fa-facebook" style="font-size:16px; color:white;"></i></a>
+            <a href="#"><i class="fa fa-instagram" style="font-size:16px; color:white;"></i></a>
+            <a href="#"><i class="fa fa-twitter" style="font-size:16px; color:white;"></i></a>
+        </div>
+    </div>
+    <footer class="footer1">
+        Copyright © 2020 - All rights reserved.
+    </footer>
+
+</body>
+
+</html>
