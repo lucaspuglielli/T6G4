@@ -21,7 +21,7 @@ body {
 }
 
 .destaque1 {
-	background-image: url(/img/destaque1.jpg);
+	background-image: url(../img/destaque1.jpg);
 	width: auto;
 	height: 80vh;
 	background-repeat: no-repeat;
@@ -30,7 +30,7 @@ body {
 }
 
 .destaque2 {
-	background-image: url(/img/destaque2.jpg);
+	background-image: url(../img/destaque2.jpg);
 	width: auto;
 	height: 80vh;
 	background-repeat: no-repeat;
@@ -39,7 +39,7 @@ body {
 }
 
 .destaque3 {
-	background-image: url(/img/destaque3.jpg);
+	background-image: url(../img/destaque3.jpg);
 	width: auto;
 	height: 80vh;
 	background-repeat: no-repeat;
