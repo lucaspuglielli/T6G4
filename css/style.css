@@ -23,7 +23,7 @@ body {
 }
 
 .destaque1 {
-	background-image: url(/img/destaque1.jpg);
+	background-image: url(../img/destaque1.jpg);
 	width: auto;
 	height: 79vh;
 	background-repeat: no-repeat;
@@ -33,7 +33,7 @@ body {
 }
 
 .destaque2 {
-	background-image: url(/img/destaque2.jpg);
+	background-image: url(../img/destaque2.jpg);
 	width: auto;
 	height: 79vh;
 	background-repeat: no-repeat;
@@ -42,7 +42,7 @@ body {
 }
 
 .destaque3 {
-	background-image: url(/img/destaque3.jpg);
+	background-image: url(../img/destaque3.jpg);
 	width: auto;
 	height: 79vh;
 	background-repeat: no-repeat;
@@ -712,3 +712,43 @@ footer {
 .teste {
 	height: 20vh;
 }
+
+/* Para page Nossos Serviços */
+.card{
+	border: none!important;
+}
+
+.img-nossos-servicos{
+	width: 60%!important;
+}
+
+.container-nossos-servicos{
+	padding: 0!important;
+}
+
+.texto-cards-nossos-servicos{
+	font-size: 1em;
+	color: #41bfc4;
+}
+/* PÁGINA DE AGENDAMENTO (/views/agendamento.html) */
+
+.btn-color {
+	background-color: #C4924B;
+	color: #ffffff;
+	font-size: larger;
+}
+
+.label-form {
+	color: #262C3D;
+	font-weight: bold;
+}
+
+.form-border {
+	border: 2px solid #227578;
+	border-radius: .6rem;
+	height: calc(1.5em + 1.2rem + 2px);
+	font-size: 1rem;
+	color: #83B2B3;
+}
+
+
