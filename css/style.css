@@ -712,3 +712,21 @@ footer {
 .teste {
 	height: 20vh;
 }
+
+/* Para page Nossos Serviços */
+.card{
+	border: none!important;
+}
+
+.img-nossos-servicos{
+	width: 60%!important;
+}
+
+.container-nossos-servicos{
+	padding: 0!important;
+}
+
+.texto-cards-nossos-servicos{
+	font-size: 1em;
+	color: #41bfc4;
+}
