@@ -529,6 +529,7 @@ body {
 
 .nav3 {
 	height: 127px;
+	width: 100%;
 	background-color: #2f364a;
 	display: flex;
 	justify-content: center;
@@ -746,7 +747,7 @@ footer {
 .form-border {
 	border: 2px solid #227578;
 	border-radius: .6rem;
-	height: calc(1.5em + 1.2rem + 2px);
+	height: calc(1.5em + 1.5rem + 2px);
 	font-size: 1rem;
 	color: #83B2B3;
 }
