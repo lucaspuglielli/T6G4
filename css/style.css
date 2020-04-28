@@ -529,6 +529,7 @@ body {
 
 .nav3 {
 	height: 127px;
+	width: 100%;
 	background-color: #2f364a;
 	display: flex;
 	justify-content: center;
@@ -539,7 +540,7 @@ body {
 	height: 100%;
 	display: flex;
 	align-items: center;
-	justify-content: end;
+	justify-content: center;
 }
 
 .logo3 {
@@ -547,7 +548,6 @@ body {
 }
 
 .navcontainer4 {
-	width: 855px;
 	height: 100%;
 	display: flex;
 	align-items: center;
@@ -567,7 +567,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: 0 27px 0 22px;
+	margin: 0 22px 0 22px;
 	font-family: arial;
 }
 
@@ -754,7 +754,7 @@ footer {
 .form-border {
 	border: 2px solid #227578;
 	border-radius: .6rem;
-	height: calc(1.5em + 1.2rem + 2px);
+	height: calc(1.5em + 1.5rem + 2px);
 	font-size: 1rem;
 	color: #83B2B3;
 }
