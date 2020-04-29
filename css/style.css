@@ -784,6 +784,10 @@ footer {
 	font-weight: bold;
 }
 
+.formAgendamento {
+	max-width: 500px;
+}
+
 .form-border {
 	border: 2px solid #227578;
 	border-radius: .6rem;
