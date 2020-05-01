@@ -926,6 +926,11 @@ footer {
 .label-form {
 	color: #262c3d;
 	font-weight: bold;
+	margin-bottom: .75rem
+}
+
+.formAgendamento {
+	max-width: 500px;
 }
 
 .form-border {

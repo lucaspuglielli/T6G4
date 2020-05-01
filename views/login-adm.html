@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Agendamento</title>
+    <title>Login Administrador</title>
 </head>
 
 <body>
@@ -56,57 +56,17 @@
         </div>
     </nav>
     <main class="d-flex flex-column align-items-center">
-        <h3 class="m-4">AGENDAMENTO</h3>
+        <h3 class="m-5">LOGIN DE ADMINISTRADOR</h3>
         <form class="formAgendamento w-75 d-flex flex-column">
             <div class="form-group">
-                <label class="label-form" for="servico">Selecione um serviço</label>
-                <select class="form-control form-control-lg form-border" id="servico">
-                    <option disabled selected>Escolha um serviço</option>
-                    <option>Mão</option>
-                    <option>Pé e mão</option>
-                    <option>Escova</option>
-                    <option>Drenagem Linfática</option>
-                    <option>Escova</option>
-                </select>
+                <label class="label-form" for="email">Email</label>
+                <input type="email" class="form-control form-control-lg form-border" id="valor" placeholder="Digite seu email">
             </div>
             <div class="form-group">
-                <label class="label-form" for="valor">Valor</label>
-                <input type="text" class="form-control form-control-lg form-border" id="valor" placeholder="R$0,00">
+                <label class="label-form" for="password">Valor</label>
+                <input type="password" class="form-control form-control-lg form-border" id="password" placeholder="Digite sua senha">
             </div>
-            <div class="form-group">
-                <label class="label-form" for="profissional">Escolha o profissional</label>
-                <select class="form-control form-control-lg form-border" id="profissional">
-                    <option disabled selected>Escolha o profissional</option>
-                    <option>Ana Américo</option>
-                    <option>Ana Paes</option>
-                    <option>Gabriela Ribeiro</option>
-                    <option>Mariane</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label class="label-form" for="data">Escolha a data</label>
-                <select class="form-control form-control-lg form-border" id="data">
-                    <option disabled selected>Escolha o dia</option>
-                    <option>Aprender a implementar 'datepicker'.</option>
-                </select>
-            </div>
-            <div class="form-group ">
-                <label class="label-form" for="horario">Escolha o horário</label>
-                <select class="form-control form-control-lg form-border" id="horario">
-                    <option disabled selected>Escolha o horário</option>
-                    <option>8:00</option>
-                    <option>9:00</option>
-                    <option>10:00</option>
-                    <option>11:00</option>
-                    <option>12:00</option>
-                    <option>14:00</option>
-                    <option>15:00</option>
-                    <option>16:00</option>
-                    <option>17:00</option>
-                    <option>18:00</option>
-                </select>
-            </div>
-            <button type="submit" class="btn btn-color mb-4 mt-3 align-self-center">Agendar</button>
+            <button type="submit" class="btn btn-color mb-5 mt-4 align-self-center">Entrar</button>
         </form>
     </main>
     <footer>
