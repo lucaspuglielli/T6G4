@@ -782,6 +782,7 @@ footer {
 .label-form {
 	color: #262C3D;
 	font-weight: bold;
+	margin-bottom: .75rem
 }
 
 .formAgendamento {
