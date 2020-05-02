@@ -194,6 +194,30 @@ body {
 	text-decoration: none;
 }
 
+.navcontainer5 {
+	height: 100%;
+	display: none;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+}
+
+.navbutton2 {
+	text-decoration: none;
+	color: white;
+	list-style-type: none;
+	height: 35px;
+	width: 120px;
+	font-size: 15px;
+	background-color: #c4924b;
+	border-radius: 7px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 40px;
+	font-family: arial;
+}
+
 .containerservicos {
 	padding: 5px 0 10px 0;
 	font-family: Arial, Helvetica, sans-serif;
@@ -336,7 +360,7 @@ body {
 	background-size: contain;
 }
 
-.containernewsletter {
+.containernewsletter1 {
 	background-color: #262c3d;
 	padding: 25px;
 	color: white;
@@ -348,6 +372,48 @@ body {
 	text-align: center;
 }
 
+.containernewsletter2 {
+	background-color: #262c3d;
+	padding: 25px;
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+.formwidth {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.newslettercontainer1 {
+	width: 400px;
+	padding-bottom: 15px;
+}
+
+.subnewslettercontainer1 {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: flex-start;
+	padding-top: 10px;
+	}
+
+.subnewslettercontainer2 {
+	width: 440px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	text-align: center;
+	padding-bottom: 15px;
+	}
+
 .newslettertitle {
 	margin: 0;
 }
@@ -357,12 +423,35 @@ body {
 	margin: 10px 0;
 }
 
+.newslettersubtitle1 {
+	font-size: 14px;
+	margin: 10px 0 0 0;
+}
+
 .newsletterinputhome {
 	width: 220px;
 	background-color: #262c3d;
 	border: none;
 	border-bottom: 2px solid white;
 	margin-bottom: 5px;
+}
+
+.newsletterinputhome2 {
+	width: 440px;
+	background-color: #262c3d;
+	border: none;
+	border-bottom: 2px solid white;
+	margin-bottom: 5px;
+	height: 30px;
+}
+
+.newsletterinputhome3 {
+	width: 360px;
+	background-color: #262c3d;
+	border: none;
+	border-bottom: 2px solid white;
+	margin-bottom: 5px;
+	height: 30px;
 }
 
 .botaonewsletter {
@@ -374,6 +463,20 @@ body {
 	border-radius: 3px;
 	display: flex;
 	margin: 15px auto 0 auto;
+	justify-content: center;
+	align-items: center;
+	font-family: arial;
+	border: none;
+}
+
+.botaonewsletter1 {
+	color: white;
+	height: 25px;
+	width: 80px;
+	font-size: 11px;
+	background-color: #c4924b;
+	border-radius: 3px;
+	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-family: arial;
@@ -522,6 +625,47 @@ body {
 	font-size: 12px;
 	font-family: arial;
 	font-weight: 100;
+}
+
+@media (min-width: 1200px) {
+	.nav1 {
+		height: 13vh;
+	}
+	.logo1 {
+		height: 13vh;
+	}
+	.carousel {
+		height: 73vh;
+		margin: 1.5vh 0;
+	}
+	.prev,
+	.next {
+		top: 45%;
+	}
+	.dotbox {
+		bottom: 88px;
+	}
+	.nav2 {
+		height: 11vh;
+	}
+	.navcontainer1,
+	.navcontainer2 {
+		display: none;
+	}
+	.navcontainer5 {
+		display: flex;
+	}
+
+	.servicoscontainer,
+	.servicoestitulo {
+		display: none;
+	}
+	.containernewsletter1 {
+		display: none;
+	}
+	.containernewsletter2 {
+		display: flex;
+	}
 }
 
 /* Fim da home */
@@ -755,19 +899,19 @@ footer {
 }
 
 /* Para page Nossos Serviços */
-.card{
-	border: none!important;
+.card {
+	border: none !important;
 }
 
-.img-nossos-servicos{
-	width: 60%!important;
+.img-nossos-servicos {
+	width: 60% !important;
 }
 
-.container-nossos-servicos{
-	padding: 0!important;
+.container-nossos-servicos {
+	padding: 0 !important;
 }
 
-.texto-cards-nossos-servicos{
+.texto-cards-nossos-servicos {
 	font-size: 1em;
 	color: #41bfc4;
 }
@@ -782,13 +926,13 @@ footer {
 /* PÁGINA DE AGENDAMENTO (/views/agendamento.html) */
 
 .btn-color {
-	background-color: #C4924B;
+	background-color: #c4924b;
 	color: #ffffff;
 	font-size: larger;
 }
 
 .label-form {
-	color: #262C3D;
+	color: #262c3d;
 	font-weight: bold;
 	margin-bottom: .75rem
 }
@@ -799,11 +943,12 @@ footer {
 
 .form-border {
 	border: 2px solid #227578;
-	border-radius: .6rem;
+	border-radius: 0.6rem;
 	height: calc(1.5em + 1.5rem + 2px);
 	font-size: 1rem;
-	color: #83B2B3;
+	color: #83b2b3;
 }
+<<<<<<< HEAD
 
 
 /*  MEDIA QUERIES*/
@@ -818,3 +963,5 @@ footer {
 		width: 80%!important;
 	}
 }
+=======
+>>>>>>> 85da8185139bddb866312f9f26eb33a83ee29b7b
