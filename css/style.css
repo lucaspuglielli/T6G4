@@ -1,3 +1,32 @@
+/* expurgo do bootstrap */
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: initial ;
+	font-size: initial;
+	line-height: initial;
+	margin-top: initial;
+}
+
+body {
+	line-height: initial;
+}
+
+a{
+	color: initial;
+}
+
+a:hover {
+	color: initial;
+}
+
+a:not([href]) {
+	color: initial;
+}
+
+label {
+	margin: initial;
+}
+
 /* Inicio da home */
 
 body {
@@ -20,6 +49,12 @@ body {
 	height: 79vh;
 	width: 100%;
 	margin: 1.6vh 0;
+}
+
+.carouselimgheight{
+	width: auto !important;
+	height: 79vh !important;
+	margin: 0 auto;
 }
 
 .destaque1 {
@@ -72,7 +107,7 @@ body {
 	width: auto;
 	margin-top: -22px;
 	padding: 16px;
-	color: white;
+	color: white !important;
 	font-weight: bold;
 	font-size: 18px;
 	transition: 0.6s ease;
@@ -786,7 +821,9 @@ footer {
 .footerfonttitulo {
 	color: white;
 	font-family: arial;
-	margin-bottom: 15px;
+	margin: 20px 0 15px 0;
+	font-weight: 700;
+	font-size: 19px;
 }
 
 .footerfontopcoes {
@@ -820,6 +857,7 @@ footer {
 .newslettercontainer {
 	width: 240px;
 	padding: 18.7px 0 20px 0;
+	margin: 0;
 }
 
 .inputnewsletterfooter {
