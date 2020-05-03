@@ -760,7 +760,7 @@ body {
 }
 
 footer {
-	display: flex;
+	display: flex!important;
 	flex-direction: column;
 	align-items: center;
 }
@@ -953,6 +953,14 @@ footer {
 	font-size: 1em;
 	color: #41bfc4;
 }
+
+.nossos-servicos-hide{
+	
+}
+
+.menu-header{
+	background-color: #2f364a;
+}
 /* PÁGINA DE AGENDAMENTO (/views/agendamento.html) */
 
 .btn-color {
@@ -977,4 +985,25 @@ footer {
 	height: calc(1.5em + 1.5rem + 2px);
 	font-size: 1rem;
 	color: #83b2b3;
+<<<<<<< HEAD
 }
+=======
+}
+<<<<<<< HEAD
+
+
+/*  MEDIA QUERIES*/
+@media(min-width: 1200px){
+	div.nossos-servicos-hide{
+		display: none;
+	}
+}
+
+@media(max-width: 991px){
+	img.img-nossos-servicos{
+		width: 80%!important;
+	}
+}
+=======
+>>>>>>> 85da8185139bddb866312f9f26eb33a83ee29b7b
+>>>>>>> 94667d2398aa14e813deb3694de5f219c75cf926
