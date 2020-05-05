@@ -1053,6 +1053,11 @@ footer {
 	font-size: larger;
 }
 
+#valoragendamento::placeholder {
+	font-size: initial;
+	color: #83b2b3
+}
+
 .label-form {
 	color: #262c3d;
 	font-weight: bold;
