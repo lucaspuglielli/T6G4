@@ -4,9 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
     <title>Home</title>
 </head>
 
@@ -16,33 +19,31 @@
             <img src="./img/logo-deitado.png" alt="logo deitado" class="logo1">
         </a>
     </div>
-    <div class="carousel">
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                <a href="#">
-                    <div class="destaque1"></div>
-                </a>
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="d-block carouselimgheight destaque1"></div>
             </div>
-            <div class="mySlides fade">
-                <a href="#">
-                    <div class="destaque2"></div>
-                </a>
+            <div class="carousel-item">
+                <div class="d-block carouselimgheight destaque2"></div>
             </div>
-            <div class="mySlides fade">
-                <a href="#">
-                    <div class="destaque3"></div>
-                </a>
-            </div>
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            <div class="dotbox">
-                <div class="dotboxinterno">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
-                </div>
+            <div class="carousel-item">
+                <div class="d-block carouselimgheight destaque3"></div>
             </div>
         </div>
+        <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
     <nav class="nav2">
         <div class="navcontainer1">
@@ -56,130 +57,234 @@
                 <a href="#" class="navopcao"><i class="fa fa-search" style="font-size: 3.5vh; color:white;"></i></a>
             </div>
         </div>
+        <ul class="navcontainer5">
+            <a href="#" class="navbutton2">
+                <li>Serviços</li>
+            </a>
+            <a href="#" class="navbutton2">
+                <li>Quem somos</li>
+            </a>
+            <a href="#" class="navbutton2">
+                <li>Equipe</li>
+            </a>
+            <a href="#" class="navbutton2">
+                <li>Contato</li>
+            </a>
+            <a href="#" class="navbutton2">
+                <li>Login</li>
+            </a>
+        </ul>
     </nav>
     <div class="containerservicos">
-        <div class="servicoestitulo">NOSSOS SERVIÇOS</div>
-        <div>
+        <div class="servicostitle">NOSSOS SERVIÇOS</div>
 
-            <div class="servicoscontainer">
-                <label class="servicostitulo" for="cabelo">
-                    <div class="imgcabelo espacoopcao"></div>
-                    <div>CABELO</div>
-                    <div class="espacoopcao">+</div>
-                </label>
-                <input type="checkbox" class="cabelo" style="position: absolute; z-index: -1;" id="cabelo">
-                <div class="servicosdescricao">
-                    <div>
-                        Nossos tratamentos capilares são feitos com os melhores produtos disponíveis no mercado e com
-                        todo o cuidado e dedicação dos nossos profissionais.
-                    </div>
-                    <div class="servicosbotaocontainer">
-                        <a href="#" class="servicosbotao">Agendar</a>
+        <div class="servicoscontainer">
+            <label class="servicostitulo" for="cabelo">
+                <div class="imgcabelo espacoopcao"></div>
+                <div>CABELO</div>
+                <div class="espacoopcao">+</div>
+            </label>
+            <input type="checkbox" class="cabelo" style="position: absolute; z-index: -1;" id="cabelo">
+            <div class="servicosdescricao">
+                <div>
+                    Nossos tratamentos capilares são feitos com os melhores produtos disponíveis no mercado e com
+                    todo o cuidado e dedicação dos nossos profissionais.
+                </div>
+                <div class="servicosbotaocontainer">
+                    <a href="#" class="servicosbotao">Agendar</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="servicoscontainer">
+            <label class="servicostitulo" for="unhas">
+                <div class="imgunhas espacoopcao"></div>
+                <div>UNHAS</div>
+                <div class="espacoopcao">+</div>
+            </label>
+            <input type="checkbox" class="unhas" style="position: absolute; z-index: -1;" id="unhas">
+            <div class="servicosdescricao">
+                <div>
+                    Nossos tratamentos capilares são feitos com os melhores produtos disponíveis no mercado e com
+                    todo o cuidado e dedicação dos nossos profissionais.
+                </div>
+                <div class="servicosbotaocontainer">
+                    <a href="#" class="servicosbotao">Agendar</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="servicoscontainer">
+            <label class="servicostitulo" for="depilacao">
+                <div class="imgdepilacao espacoopcao"></div>
+                <div>DEPILAÇÃO</div>
+                <div class="espacoopcao">+</div>
+            </label>
+            <input type="checkbox" class="depilacao" style="position: absolute; z-index: -1;" id="depilacao">
+            <div class="servicosdescricao">
+                <div>
+                    Nossos tratamentos capilares são feitos com os melhores produtos disponíveis no mercado e com
+                    todo o cuidado e dedicação dos nossos profissionais.
+                </div>
+                <div class="servicosbotaocontainer">
+                    <a href="#" class="servicosbotao">Agendar</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="servicoscontainer">
+            <label class="servicostitulo" for="estetica">
+                <div class="imgestetica espacoopcao"></div>
+                <div>ESTÉTICA</div>
+                <div class="espacoopcao">+</div>
+            </label>
+            <input type="checkbox" class="estetica" style="position: absolute; z-index: -1;" id="estetica">
+            <div class="servicosdescricao">
+                <div>
+                    Nossos tratamentos capilares são feitos com os melhores produtos disponíveis no mercado e com
+                    todo o cuidado e dedicação dos nossos profissionais.
+                </div>
+                <div class="servicosbotaocontainer">
+                    <a href="#" class="servicosbotao">Agendar</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="servicoscontainer">
+            <label class="servicostitulo" for="massagem">
+                <div class="imgmassagem espacoopcao"></div>
+                <div>MASSAGEM</div>
+                <div class="espacoopcao">+</div>
+            </label>
+            <input type="checkbox" class="massagem" style="position: absolute; z-index: -1;" id="massagem">
+            <div class="servicosdescricao">
+                <div>
+                    Nossos tratamentos capilares são feitos com os melhores produtos disponíveis no mercado e com
+                    todo o cuidado e dedicação dos nossos profissionais.
+                </div>
+                <div class="servicosbotaocontainer">
+                    <a href="#" class="servicosbotao">Agendar</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="servicostitle1">NOSSOS SERVIÇOS</div>
+
+        <div class="overflowservicos">
+
+            <div class="testecard">
+                <img src="./img/cabelo-1.svg" class="img-nossos-servicos imgservicosdesktop" alt="...">
+                <div class="card-body conteudoservicosdesktop">
+                    <h5 class="card-title text-center">Massagem</h5>
+                    <p class="card-text text-center texto-cards-nossos-servicos d-none d-lg-block">Venha relaxar e
+                        diminuir o seu nível de stress com uma massagem. Nossas profissionais</p>
+                    <div class="d-flex justify-content-center">
+                        <a href="#" class="navbutton">Agendar</a>
                     </div>
                 </div>
             </div>
 
-            <div class="servicoscontainer">
-                <label class="servicostitulo" for="unhas">
-                    <div class="imgunhas espacoopcao"></div>
-                    <div>UNHAS</div>
-                    <div class="espacoopcao">+</div>
-                </label>
-                <input type="checkbox" class="unhas" style="position: absolute; z-index: -1;" id="unhas">
-                <div class="servicosdescricao">
-                    <div>
-                        Nossos tratamentos capilares são feitos com os melhores produtos disponíveis no mercado e com
-                        todo o cuidado e dedicação dos nossos profissionais.
-                    </div>
-                    <div class="servicosbotaocontainer">
-                        <a href="#" class="servicosbotao">Agendar</a>
+            <div class="testecard">
+                <img src="./img/manicure.svg" class="img-nossos-servicos imgservicosdesktop" alt="...">
+                <div class="card-body conteudoservicosdesktop">
+                    <h5 class="card-title text-center">Design de Sobrancelhas</h5>
+                    <p class="card-text text-center texto-cards-nossos-servicos d-none d-lg-block">Serviços de
+                        manicure, pedicure e alongamento de unhas com fibra de vidro.</p>
+                    <div class="d-flex justify-content-center">
+                        <a href="#" class="navbutton">Agendar</a>
                     </div>
                 </div>
             </div>
-
-            <div class="servicoscontainer">
-                <label class="servicostitulo" for="depilacao">
-                    <div class="imgdepilacao espacoopcao"></div>
-                    <div>DEPILAÇÃO</div>
-                    <div class="espacoopcao">+</div>
-                </label>
-                <input type="checkbox" class="depilacao" style="position: absolute; z-index: -1;" id="depilacao">
-                <div class="servicosdescricao">
-                    <div>
-                        Nossos tratamentos capilares são feitos com os melhores produtos disponíveis no mercado e com
-                        todo o cuidado e dedicação dos nossos profissionais.
-                    </div>
-                    <div class="servicosbotaocontainer">
-                        <a href="#" class="servicosbotao">Agendar</a>
+            <div class="testecard">
+                <img src="./img/depilacao-1.svg" class="img-nossos-servicos imgservicosdesktop" alt="...">
+                <div class="card-body conteudoservicosdesktop">
+                    <h5 class="card-title text-center">Depilação</h5>
+                    <p class="card-text text-center texto-cards-nossos-servicos d-none d-lg-block">Depilação com
+                        cera quente, com os melhores produtos do mercado todo.</p>
+                    <div class="d-flex justify-content-center">
+                        <a href="#" class="navbutton">Agendar</a>
                     </div>
                 </div>
             </div>
-
-            <div class="servicoscontainer">
-                <label class="servicostitulo" for="estetica">
-                    <div class="imgestetica espacoopcao"></div>
-                    <div>ESTÉTICA</div>
-                    <div class="espacoopcao">+</div>
-                </label>
-                <input type="checkbox" class="estetica" style="position: absolute; z-index: -1;" id="estetica">
-                <div class="servicosdescricao">
-                    <div>
-                        Nossos tratamentos capilares são feitos com os melhores produtos disponíveis no mercado e com
-                        todo o cuidado e dedicação dos nossos profissionais.
-                    </div>
-                    <div class="servicosbotaocontainer">
-                        <a href="#" class="servicosbotao">Agendar</a>
+            <div class="testecard">
+                <img src="./img/estética.svg" class="img-nossos-servicos imgservicosdesktop" alt="...">
+                <div class="card-body conteudoservicosdesktop">
+                    <h5 class="card-title text-center">Estética Corporal</h5>
+                    <p class="card-text text-center texto-cards-nossos-servicos d-none d-lg-block">Profissionais
+                        treinadas e credenciadas nos melhores protocolos de estética corporal.</p>
+                    <div class="d-flex justify-content-center">
+                        <a href="#" class="navbutton">Agendar</a>
                     </div>
                 </div>
             </div>
-
-            <div class="servicoscontainer">
-                <label class="servicostitulo" for="massagem">
-                    <div class="imgmassagem espacoopcao"></div>
-                    <div>MASSAGEM</div>
-                    <div class="espacoopcao">+</div>
-                </label>
-                <input type="checkbox" class="massagem" style="position: absolute; z-index: -1;" id="massagem">
-                <div class="servicosdescricao">
-                    <div>
-                        Nossos tratamentos capilares são feitos com os melhores produtos disponíveis no mercado e com
-                        todo o cuidado e dedicação dos nossos profissionais.
+            <div class="testecard">
+                <img src="./img/massagem.svg" class="img-nossos-servicos imgservicosdesktop" alt="...">
+                <div class="card-body conteudoservicosdesktop">
+                    <h5 class="card-title text-center">Massagem</h5>
+                    <p class="card-text text-center texto-cards-nossos-servicos d-none d-lg-block">Venha relaxar e
+                        diminuir o seu nível de stress com uma massagem. Nossas profissionais</p>
+                    <div class="d-flex justify-content-center">
+                        <a href="#" class="navbutton">Agendar</a>
                     </div>
-                    <div class="servicosbotaocontainer">
-                        <a href="#" class="servicosbotao">Agendar</a>
+                </div>
+            </div>
+            <div class="testecard">
+                <img src="img/sobrancelha.svg" class="img-nossos-servicos imgservicosdesktop" alt="...">
+                <div class="card-body conteudoservicosdesktop">
+                    <h5 class="card-title text-center">Design de Sobrancelhas</h5>
+                    <p class="card-text text-center texto-cards-nossos-servicos d-none d-lg-block">Embelezamento de
+                        sobrancelhas corrigindo imperfeições e destacando o seu olhar.</p>
+                    <div class="d-flex justify-content-center">
+                        <a href="#" class="navbutton">Agendar</a>
                     </div>
                 </div>
             </div>
 
         </div>
+
     </div>
-    <div class="containernewsletter">
-        <form action="POST">
-            <h5 class="newslettertitle">NEWSLETTER</h5>
-            <div class="newslettersubtitle">Cadastrar-se e receba nossas dicas e novidades.</div>
-            <input type="text" name="nome" id="nome" class="newsletterinputhome" placeholder="Nome Completo">
-            <input type="email" name="email" id="email" class="newsletterinputhome" placeholder="email@dominio.com.br">
-            <button class="botaonewsletter">Enviar</button>
+    <div class="containernewsletter1">
+        <form action="POST" class="formwidth">
+            <div class="newslettercontainer1">
+                <div class="subnewslettercontainer1">
+                    <h2 class="newslettertitle">NEWSLETTER</h2>
+                    <div class="newslettersubtitle1">Cadastrar-se e receba nossas dicas e novidades.</div>
+                </div>
+            </div>
+            <div class="subnewslettercontainer2">
+                <input type="text" name="nome" id="nome" class="newsletterinputhome1"
+                    placeholder="          Nome Completo">
+                <input type="email" name="email" id="email" class="newsletterinputhome2"
+                    placeholder="          email@dominio.com.br">
+                <button class="botaonewsletter1">Inscreva-se</button>
+            </div>
         </form>
     </div>
     <div class="containersobreempresa">
 
         <div class="quemsomoshomecontainer">
-            <h5>QUEM SOMOS</h5>
+            <h5 class="quemsomostitle1">QUEM SOMOS</h5>
             <div class="quemsomoscard">
                 <div class="quemsomosbg"></div>
-                <div class="quemsomosdescricao">
-                    <h4 class="quemsomostitle">Casarão Estética & Saúde</h4>
-                    <div class="quemsomostexto">
+                <div class="quemsomosdescricao1">
+                    <h4 class="quemsomostitle3">Casarão Estética & Saúde</h4>
+                    <div class="quemsomostexto1">
                         O Casarão Estética & Saúde iniciou suas atividades no dia 30 de março de 2019, e desde então
                         oferece uma grande variedade
                     </div>
                 </div>
+                <div class="quemsomosdescricao2">
+                    <h4 class="quemsomostitle4">Casarão Estética & Saúde</h4>
+                    <div class="quemsomostexto2">
+                        O Casarão Estética & Saúde iniciou suas atividades no dia 30 de março de 2019, e desde então oferece uma grande variedade de serviços nos segmentos de beleza e saúde, sempre preocupado com a segurança, saúde e satisfação de suas clientes e profissionais. Uma antiga casa de família foi totalmente reformada para dar lugar ao estabelecimento que conta, como um de seus pontos altos, espaços kids para entreter crianças de todas as idades enquanto as mães desfrutam dos serviços com tranquilidade. 
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
 
         <div class="nossaequipehomecontainer">
-            <h5 style="margin: 22px 0 17px 0;">NOSSA EQUIPE</h5>
+            <h5 class="quemsomostitle2">NOSSA EQUIPE</h5>
             <div class="equipehomecontainer">
                 <div class="equipehomecards">
                     <div class="funcionario1bg"></div>
@@ -212,17 +317,87 @@
             </div>
         </div>
 
-    </div>
-    <div class="containermidias1">
-        <div class="subcontainermidias1">
-            <a href="#"><i class="fa fa-facebook" style="font-size:16px; color:white;"></i></a>
-            <a href="#"><i class="fa fa-instagram" style="font-size:16px; color:white;"></i></a>
-            <a href="#"><i class="fa fa-twitter" style="font-size:16px; color:white;"></i></a>
-        </div>
-    </div>
-    <footer class="footer1">
-        Copyright © 2020 - All rights reserved.
-    </footer>
+        <footer>
+            <div class="footercontainer">
+                <div class="containermidias2">
+                    <div class="subcontainermidias2">
+                        <a href="#"><i class="fa fa-facebook" style="font-size:50px; color:white;"></i></a>
+                        <a href="#"><i class="fa fa-instagram" style="font-size:50px; color:white;"></i></a>
+                        <a href="#"><i class="fa fa-twitter" style="font-size:50px; color:white;"></i></a>
+                    </div>
+                </div>
+                <div class="footerconteudo">
+                    <div class="containerlogofooter">
+                        <a href="#">
+                            <img src="./img/LOGO-CASARÃO-VETOR.png" class="logofooter" alt="logo footer">
+                        </a>
+                    </div>
+                    <div class="containerconteudofooter">
+                        <div class="subcontainerconteudofooter">
+                            <div class="sobrefooter">
+                                <h3 class="footerfonttitulo">SOBRE</h3>
+                                <ul class="semformato">
+                                    <a href="#" class="semformato footerfontopcoes foterhoover1">
+                                        <li class="footerfontespaco">Quem somos</li>
+                                    </a>
+                                    <a href="#" class="semformato footerfontopcoes foterhoover1">
+                                        <li class="footerfontespaco">Nossa Equipe</li>
+                                    </a>
+                                </ul>
+                            </div>
+                            <div class="servicosfooter">
+                                <h3 class="footerfonttitulo">SERVIÇOS</h3>
+                                <ul class="semformato">
+                                    <a href="#" class="semformato footerfontopcoes foterhoover1">
+                                        <li class="footerfontespaco">Cabelo</li>
+                                    </a>
+                                    <a href="#" class="semformato footerfontopcoes foterhoover1">
+                                        <li class="footerfontespaco">Unhas</li>
+                                    </a>
+                                    <a href="#" class="semformato footerfontopcoes foterhoover1">
+                                        <li class="footerfontespaco">Depilação</li>
+                                    </a>
+                                    <a href="#" class="semformato footerfontopcoes foterhoover1">
+                                        <li class="footerfontespaco">Estética</li>
+                                    </a>
+                                    <a href="#" class="semformato footerfontopcoes foterhoover1">
+                                        <li class="footerfontespaco">Design de Sombrancelha</li>
+                                    </a>
+                                </ul>
+                            </div>
+                            <div class="newsletterfooter">
+                                <form action="POST" class="formfooter">
+                                    <label class="footerfontopcoes newslettercontainer" for="emailfooter">
+                                        Cadastre-se e receba nossas dicas e novidades.
+                                    </label>
+                                    <input type="email" name="emailfooter" id="emailfooter" class="inputnewsletterfooter"
+                                        placeholder="email@dominio.com.br">
+                                    <button type="submit" class="buttonnewsletterfooter">Inscreva-se</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="containermidias3">
+                <div class="subcontainermidias1">
+                    <a href="#"><i class="fa fa-facebook" style="font-size:16px; color:white;"></i></a>
+                    <a href="#"><i class="fa fa-instagram" style="font-size:16px; color:white;"></i></a>
+                    <a href="#"><i class="fa fa-twitter" style="font-size:16px; color:white;"></i></a>
+                </div>
+            </div>
+            <div class="copyright">Copyright © 2020 - All rights reserved.</div>
+        </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 
     <script>
         var slideIndex = 1;

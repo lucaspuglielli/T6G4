@@ -1,8 +1,39 @@
-/* Inicio da home */
+/* expurgo do bootstrap */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: initial;
+	font-size: initial;
+	line-height: initial;
+	margin-top: initial;
+}
 
 body {
+	line-height: initial;
 	margin: 0;
 }
+
+a {
+	color: initial;
+}
+
+a:hover {
+	color: initial;
+}
+
+a:not([href]) {
+	color: initial;
+}
+
+label {
+	margin: initial;
+}
+
+/* Inicio da home */
 
 .nav1 {
 	height: 10vh;
@@ -50,107 +81,6 @@ body {
 	background-position: 38%;
 }
 
-* {
-	box-sizing: border-box;
-}
-
-.slideshow-container {
-	max-width: 100%;
-	position: relative;
-	margin: auto;
-}
-
-.mySlides {
-	display: none;
-}
-
-.prev,
-.next {
-	cursor: pointer;
-	position: absolute;
-	top: 50%;
-	width: auto;
-	margin-top: -22px;
-	padding: 16px;
-	color: white;
-	font-weight: bold;
-	font-size: 18px;
-	transition: 0.6s ease;
-	border-radius: 0 3px 3px 0;
-	user-select: none;
-	background-color: #c4924b;
-}
-
-.next {
-	right: 0;
-	border-radius: 3px 0 0 3px;
-}
-
-.dot {
-	cursor: pointer;
-	height: 15px;
-	width: 15px;
-	margin: 0 2px;
-	background-color: #bbb;
-	border-radius: 50%;
-	position: relative;
-	display: inline-block;
-	transition: background-color 0.6s ease;
-}
-
-.active,
-.dot:hover {
-	background-color: #c4924b;
-}
-
-.fade {
-	-webkit-animation-name: fade;
-	-webkit-animation-duration: 1.5s;
-	animation-name: fade;
-	animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-	from {
-		opacity: 0.4;
-	}
-
-	to {
-		opacity: 1;
-	}
-}
-
-@keyframes fade {
-	from {
-		opacity: 0.4;
-	}
-
-	to {
-		opacity: 1;
-	}
-}
-
-.dotbox {
-	justify-content: center;
-	position: relative;
-	z-index: 15;
-	width: 100%;
-	display: flex;
-	bottom: 30px;
-}
-
-.dotboxinterno {
-	position: absolute;
-}
-
-.fa:hover {
-	color: #c4924b;
-}
-
-.fe:hover {
-	color: #c4924b;
-}
-
 .nav2 {
 	position: sticky;
 	top: 0;
@@ -194,17 +124,49 @@ body {
 	text-decoration: none;
 }
 
+.navcontainer5 {
+	height: 100%;
+	display: none;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+}
+
+.navbutton2 {
+	text-decoration: none;
+	color: white;
+	list-style-type: none;
+	height: 35px;
+	width: 120px;
+	font-size: 15px;
+	background-color: #c4924b;
+	border-radius: 7px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 40px;
+	font-family: arial;
+}
+
 .containerservicos {
 	padding: 5px 0 10px 0;
 	font-family: Arial, Helvetica, sans-serif;
 }
 
-.servicoestitulo {
+.servicostitle {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 8vh;
 	font-size: 15px;
+}
+
+.servicostitle1 {
+	display: none;
+	justify-content: center;
+	align-items: center;
+	height: 8vh;
+	font-size: 20px;
 }
 
 .servicoscontainer {
@@ -336,7 +298,35 @@ body {
 	background-size: contain;
 }
 
-.containernewsletter {
+.overflowservicos {
+	overflow: auto;
+	white-space: nowrap;
+	display: none;
+}
+
+.testecard {
+	margin: 30px;
+	height: 400px;
+	width: 360px;
+	display: inline-block;
+	padding: 30px;
+}
+
+.imgservicosdesktop {
+	display: flex;
+	margin: 0 auto;
+}
+
+.conteudoservicosdesktop {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	white-space: normal;
+}
+
+.containernewsletter1 {
 	background-color: #262c3d;
 	padding: 25px;
 	color: white;
@@ -348,16 +338,42 @@ body {
 	text-align: center;
 }
 
+.formwidth {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.subnewslettercontainer1 {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 10px;
+}
+
+.subnewslettercontainer2 {
+	width: 220px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
 .newslettertitle {
 	margin: 0;
 }
 
-.newslettersubtitle {
+.newslettersubtitle1 {
 	font-size: 11px;
 	margin: 10px 0;
 }
 
-.newsletterinputhome {
+.newsletterinputhome1 {
 	width: 220px;
 	background-color: #262c3d;
 	border: none;
@@ -365,7 +381,15 @@ body {
 	margin-bottom: 5px;
 }
 
-.botaonewsletter {
+.newsletterinputhome2 {
+	width: 220px;
+	background-color: #262c3d;
+	border: none;
+	border-bottom: 2px solid white;
+	margin-bottom: 5px;
+}
+
+.botaonewsletter1 {
 	color: white;
 	height: 25px;
 	width: 80px;
@@ -378,6 +402,12 @@ body {
 	align-items: center;
 	font-family: arial;
 	border: none;
+}
+
+::placeholder {
+	color: white;
+	opacity: 1;
+	font-size: 11px;
 }
 
 .quemsomoshomecontainer {
@@ -405,7 +435,7 @@ body {
 	width: 100%;
 }
 
-.quemsomosdescricao {
+.quemsomosdescricao1 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -414,12 +444,40 @@ body {
 	line-height: 20px;
 }
 
-.quemsomostitle {
+.quemsomosdescricao2 {
+	display: none;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	flex-direction: column;
+	line-height: 20px;
+}
+
+.quemsomostitle1 {
+	margin: 27px 0px 27px 0px;
+}
+
+.quemsomostitle2 {
+	margin: 29px 0px 21px 0px;
+}
+
+.quemsomostitle3 {
 	margin: 30px 0px 8px 0px;
 }
 
-.quemsomostexto {
+.quemsomostitle4 {
+	margin: 30px 0px 8px 0px;
+	font-size: 20px;
+}
+
+.quemsomostexto1 {
 	font-size: 11px;
+	width: 80%;
+	color: #41bfc4;
+}
+
+.quemsomostexto2 {
+	font-size: 15px;
 	width: 80%;
 	color: #41bfc4;
 }
@@ -524,6 +582,157 @@ body {
 	font-weight: 100;
 }
 
+.foterhoover1:hover {
+	color: #c4924b;
+	text-decoration: none;
+}
+
+@media (min-width: 1200px) {
+	.nav1 {
+		height: 13vh;
+	}
+	.logo1 {
+		height: 13vh;
+	}
+	.carousel {
+		height: 73vh;
+		margin: 1.5vh 0;
+	}
+	.dotbox {
+		bottom: 88px;
+	}
+	.nav2 {
+		height: 11vh;
+	}
+	.navcontainer1,
+	.navcontainer2 {
+		display: none;
+	}
+	.navcontainer5 {
+		display: flex;
+	}
+
+	.servicoscontainer,
+	.servicostitle {
+		display: none;
+	}
+	.servicostitle1 {
+		display: flex;
+	}
+	.overflowservicos {
+		display: block;
+	}
+
+	.newslettertitle{
+		font-size: 25px;
+	}
+
+	.newslettercontainer1 {
+		width: 400px;
+		padding-bottom: 15px;
+	}
+
+	.subnewslettercontainer1,
+	.subnewslettercontainer2 {
+		align-items: flex-start;
+	}
+
+	.subnewslettercontainer2 {
+		width: 440px;
+		padding-bottom: 15px;
+	}
+
+	.newsletterinputhome1 {
+		width: 440px;
+		height: 30px;
+	}
+
+	.newsletterinputhome2 {
+		width: 360px;
+		height: 30px;
+	}
+
+	.newslettersubtitle1 {
+		font-size: 14px;
+		margin: 10px 0 0 0;
+	}
+
+	::placeholder {
+		color: white;
+		opacity: 1;
+		font-size: initial;
+	}
+
+	.botaonewsletter1 {
+		margin-top: 5px;
+	}
+
+	.quemsomostitle1 {
+		font-size: 20px;
+	}
+
+	.quemsomostitle2 {
+		font-size: 20px;
+	}
+
+	.quemsomoscard {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: #eee;
+		width: 1140px;
+		height: 58vh;
+	}
+
+	.quemsomosbg{
+		height: 40vh;
+		background-position: center;
+	}
+
+	.quemsomosdescricao1{
+		display: none;
+	}
+
+	.quemsomosdescricao2{
+		display: flex;
+	}
+
+	.equipehomecontainer{
+		width: 1150px;
+		justify-content: space-between;
+	}
+
+	.equipehomecards{
+		width: 264px;
+		height: 289px;
+	}
+
+	.funcionario1bg {
+		height: 20vh;
+	}
+
+	.funcionario2bg {
+		height: 20vh;
+	}
+
+	.funcionario3bg {
+		height: 20vh;
+	}
+
+	.funcionario4bg {
+		height: 20vh;
+	}
+
+	.titulofuncionariohome{
+		font-size: 20px;
+	}
+
+	.subtitulofuncionariohome{
+		font-size: 16px;
+	}
+
+}
+
 /* Fim da home */
 
 /* Inicio do template */
@@ -581,7 +790,7 @@ body {
 }
 
 footer {
-	display: flex;
+	display: flex !important;
 	flex-direction: column;
 	align-items: center;
 }
@@ -642,7 +851,9 @@ footer {
 .footerfonttitulo {
 	color: white;
 	font-family: arial;
-	margin-bottom: 15px;
+	margin: 20px 0 15px 0;
+	font-weight: 700;
+	font-size: 19px;
 }
 
 .footerfontopcoes {
@@ -676,6 +887,7 @@ footer {
 .newslettercontainer {
 	width: 240px;
 	padding: 18.7px 0 20px 0;
+	margin: 0;
 }
 
 .inputnewsletterfooter {
@@ -755,34 +967,41 @@ footer {
 }
 
 /* Para page Nossos Serviços */
-.card{
-	border: none!important;
+.card {
+	border: none !important;
 }
 
-.img-nossos-servicos{
-	width: 60%!important;
+.img-nossos-servicos {
+	width: 60% !important;
 }
 
-.container-nossos-servicos{
-	padding: 0!important;
+.container-nossos-servicos {
+	padding: 0 !important;
 }
 
-.texto-cards-nossos-servicos{
+.texto-cards-nossos-servicos {
 	font-size: 1em;
 	color: #41bfc4;
+}
+
+.nossos-servicos-hide {
+}
+
+.menu-header {
+	background-color: #2f364a;
 }
 /* PÁGINA DE AGENDAMENTO (/views/agendamento.html) */
 
 .btn-color {
-	background-color: #C4924B;
+	background-color: #c4924b;
 	color: #ffffff;
 	font-size: larger;
 }
 
 .label-form {
-	color: #262C3D;
+	color: #262c3d;
 	font-weight: bold;
-	margin-bottom: .75rem
+	margin-bottom: 0.75rem;
 }
 
 .formAgendamento {
@@ -791,10 +1010,21 @@ footer {
 
 .form-border {
 	border: 2px solid #227578;
-	border-radius: .6rem;
+	border-radius: 0.6rem;
 	height: calc(1.5em + 1.5rem + 2px);
 	font-size: 1rem;
-	color: #83B2B3;
+	color: #83b2b3;
+}
+/*  MEDIA QUERIES*/
+
+@media (min-width: 1200px) {
+	div.nossos-servicos-hide {
+		display: none;
+	}
 }
 
-
+@media (max-width: 991px) {
+	img.img-nossos-servicos {
+		width: 80% !important;
+	}
+}
