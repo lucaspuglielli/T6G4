@@ -1,7 +1,6 @@
-
 @font-face {
 	font-family: fonteteste1;
-	src: url(./fonts/FUTURA\ LT\ CONDENSED\ BOLD.OTF);
+	src: url(./fonts/FUTURA\LT\CONDENSED\BOLD.OTF);
 }
 @font-face {
 	font-family: fonteteste2;
@@ -108,38 +107,117 @@
 	src: url(./fonts/TT0145M.TTF);
 }
 
-.testefonte1{font-family: "fonteteste1";}
-.testefonte2{font-family: "fonteteste2";}
-.testefonte3{font-family: "fonteteste3";}
-.testefonte4{font-family: "fonteteste4";}
-.testefonte5{font-family: "fonteteste5";}
-.testefonte6{font-family: "fonteteste6";}
-.testefonte7{font-family: "fonteteste7";}
-.testefonte8{font-family: "fonteteste8";}
-.testefonte9{font-family: "fonteteste9";}
-.testefonte10{font-family: "fonteteste10";}
-.testefonte11{font-family: "fonteteste11";}
-.testefonte12{font-family: "fonteteste12";}
-.testefonte13{font-family: "fonteteste13";}
-.testefonte14{font-family: "fonteteste14";}
-.testefonte15{font-family: "fonteteste15";}
-.testefonte16{font-family: "fonteteste16";}
-.testefonte17{font-family: "fonteteste17";}
-.testefonte18{font-family: "fonteteste18";}
-.testefonte19{font-family: "fonteteste19";}
-.testefonte20{font-family: "fonteteste20";}
-.testefonte21{font-family: "fonteteste21";}
-.testefonte22{font-family: "fonteteste22";}
-.testefonte23{font-family: "fonteteste23";}
-.testefonte24{font-family: "fonteteste24";}
-.testefonte25{font-family: "fonteteste25";}
-.testefonte26{font-family: "fonteteste26";}
-.testefonte27{font-family: arial; font-weight: 100;}
-.testefonte28{font-family: sans-serif; font-weight: 200;}
-.testefonte29{font-family: sans-serif; font-weight: 300;}
-.testefonte30{font-family: sans-serif; font-weight: 400;}
-.testefonte31{font-family: sans-serif; font-weight: 500;}
-.testefonte32{font-family: sans-serif; font-weight: 600;}
-.testefonte33{font-family: sans-serif; font-weight: 700;}
-.testefonte34{font-family: sans-serif; font-weight: 800;}
-.testefonte35{font-family: sans-serif; font-weight: 900;}
+.testefonte1 {
+	font-family: "fonteteste1";
+}
+.testefonte2 {
+	font-family: "fonteteste2";
+}
+.testefonte3 {
+	font-family: "fonteteste3";
+}
+.testefonte4 {
+	font-family: "fonteteste4";
+}
+.testefonte5 {
+	font-family: "fonteteste5";
+}
+.testefonte6 {
+	font-family: "fonteteste6";
+}
+.testefonte7 {
+	font-family: "fonteteste7";
+}
+.testefonte8 {
+	font-family: "fonteteste8";
+}
+.testefonte9 {
+	font-family: "fonteteste9";
+}
+.testefonte10 {
+	font-family: "fonteteste10";
+}
+.testefonte11 {
+	font-family: "fonteteste11";
+}
+.testefonte12 {
+	font-family: "fonteteste12";
+}
+.testefonte13 {
+	font-family: "fonteteste13";
+}
+.testefonte14 {
+	font-family: "fonteteste14";
+}
+.testefonte15 {
+	font-family: "fonteteste15";
+}
+.testefonte16 {
+	font-family: "fonteteste16";
+}
+.testefonte17 {
+	font-family: "fonteteste17";
+}
+.testefonte18 {
+	font-family: "fonteteste18";
+}
+.testefonte19 {
+	font-family: "fonteteste19";
+}
+.testefonte20 {
+	font-family: "fonteteste20";
+}
+.testefonte21 {
+	font-family: "fonteteste21";
+}
+.testefonte22 {
+	font-family: "fonteteste22";
+}
+.testefonte23 {
+	font-family: "fonteteste23";
+}
+.testefonte24 {
+	font-family: "fonteteste24";
+}
+.testefonte25 {
+	font-family: "fonteteste25";
+}
+.testefonte26 {
+	font-family: "fonteteste26";
+}
+.testefonte27 {
+	font-family: arial;
+	font-weight: 100;
+}
+.testefonte28 {
+	font-family: sans-serif;
+	font-weight: 200;
+}
+.testefonte29 {
+	font-family: sans-serif;
+	font-weight: 300;
+}
+.testefonte30 {
+	font-family: sans-serif;
+	font-weight: 400;
+}
+.testefonte31 {
+	font-family: sans-serif;
+	font-weight: 500;
+}
+.testefonte32 {
+	font-family: sans-serif;
+	font-weight: 600;
+}
+.testefonte33 {
+	font-family: sans-serif;
+	font-weight: 700;
+}
+.testefonte34 {
+	font-family: sans-serif;
+	font-weight: 800;
+}
+.testefonte35 {
+	font-family: sans-serif;
+	font-weight: 900;
+}

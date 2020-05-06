@@ -569,13 +569,13 @@ body {
 	color: #41bfc4;
 }
 
-.correcaofakebg{
+.correcaofakebg {
 	width: 100%;
 	display: flex;
 	justify-content: center;
 }
 
-.fakebg{
+.fakebg {
 	display: none;
 	height: 60px;
 	width: 1200px;
@@ -609,11 +609,11 @@ body {
 	font-weight: 100;
 }
 
-.containerfootertodo{
-width: 100%;
-display: flex;
-flex-direction: column;
-align-items: center;
+.containerfootertodo {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .foterhoover1:hover {
@@ -765,23 +765,22 @@ align-items: center;
 		font-size: 16px;
 	}
 
-	.fakebg{
+	.fakebg {
 		display: block;
 	}
 
-	
-.containerfootertodo{
-	position: relative;
-	bottom: 60px;
-}
+	.containerfootertodo {
+		position: relative;
+		bottom: 60px;
+	}
 
-.copyright{
-	
-	top: 30px;
-}
+	.copyright {
+		top: 30px;
+	}
 
-.containermaincontent{
-	width: 1200px;}
+	.containermaincontent {
+		width: 1200px;
+	}
 }
 
 /* Fim da home */
@@ -1016,8 +1015,8 @@ footer {
 	}
 
 	.copyright {
-			font-size: 12px;
-			height: 9vh;
+		font-size: 12px;
+		height: 9vh;
 	}
 }
 
@@ -1055,7 +1054,7 @@ footer {
 
 #valoragendamento::placeholder {
 	font-size: initial;
-	color: #83b2b3
+	color: #83b2b3;
 }
 
 .label-form {
