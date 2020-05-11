@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<%- include('includes/head', {title: "Agendamento"}) %> 
+
+<body>
+
+    <%- include('includes/header') %> 
+        <main class="d-flex flex-column align-items-center">
+            <h3 class="m-4">AGENDAMENTO</h3>
+            <form class="formAgendamento w-75 d-flex flex-column">
+                <div class="form-group">
+                    <label class="label-form" for="servico">Selecione um serviço</label>
+                    <select class="form-control form-control-lg form-border" id="servico">
+                        <option disabled selected>Escolha um serviço</option>
+                        <option>Mão</option>
+                        <option>Pé e mão</option>
+                        <option>Escova</option>
+                        <option>Drenagem Linfática</option>
+                        <option>Escova</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="label-form" for="valor">Valor</label>
+                    <input type="text" class="form-control form-control-lg form-border" id="valoragendamento"
+                        placeholder="R$0,00">
+                </div>
+                <div class="form-group">
+                    <label class="label-form" for="profissional">Escolha o profissional</label>
+                    <select class="form-control form-control-lg form-border" id="profissional">
+                        <option disabled selected>Escolha o profissional</option>
+                        <option>Ana Américo</option>
+                        <option>Ana Paes</option>
+                        <option>Gabriela Ribeiro</option>
+                        <option>Mariane</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="label-form" for="data">Escolha a data</label>
+                    <select class="form-control form-control-lg form-border" id="data">
+                        <option disabled selected>Escolha o dia</option>
+                        <option>Aprender a implementar 'datepicker'.</option>
+                    </select>
+                </div>
+                <div class="form-group ">
+                    <label class="label-form" for="horario">Escolha o horário</label>
+                    <select class="form-control form-control-lg form-border" id="horario">
+                        <option disabled selected>Escolha o horário</option>
+                        <option>8:00</option>
+                        <option>9:00</option>
+                        <option>10:00</option>
+                        <option>11:00</option>
+                        <option>12:00</option>
+                        <option>14:00</option>
+                        <option>15:00</option>
+                        <option>16:00</option>
+                        <option>17:00</option>
+                        <option>18:00</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-color mb-4 mt-3 align-self-center">Agendar</button>
+            </form>
+        </main>
+    <%- include('includes/footer') %> 
+    <%- include('includes/scripts') %> 
+</body>
+
+</html>

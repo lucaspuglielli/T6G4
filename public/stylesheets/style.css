@@ -102,6 +102,7 @@ body {
 	display: flex;
 	align-content: center;
 	justify-content: space-evenly;
+	z-index: 11;
 }
 
 .navcontainer1 {
