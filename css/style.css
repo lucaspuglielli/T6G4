@@ -1044,6 +1044,11 @@ footer {
 .menu-header {
 	background-color: #2f364a;
 }
+
+/* Para page quem-somos*/
+.quem-somos-card{
+	width: 100%;
+}
 /* PÁGINA DE AGENDAMENTO (/views/agendamento.html) */
 
 .btn-color {
