@@ -36,7 +36,7 @@ label {
 /* Inicio da home */
 
 html {
-	background-image: url(../img/bg_teste_1.jpg);
+	background-image: url(../images/bg_teste_1.jpg);
 }
 
 body {
@@ -67,7 +67,7 @@ body {
 }
 
 .destaque1 {
-	background-image: url(../img/destaque1.jpg);
+	background-image: url(../images/destaque1.jpg);
 	width: auto;
 	height: 79vh;
 	background-repeat: no-repeat;
@@ -77,7 +77,7 @@ body {
 }
 
 .destaque2 {
-	background-image: url(../img/destaque2.jpg);
+	background-image: url(../images/destaque2.jpg);
 	width: auto;
 	height: 79vh;
 	background-repeat: no-repeat;
@@ -86,7 +86,7 @@ body {
 }
 
 .destaque3 {
-	background-image: url(../img/destaque3.jpg);
+	background-image: url(../images/destaque3.jpg);
 	width: auto;
 	height: 79vh;
 	background-repeat: no-repeat;
@@ -287,27 +287,27 @@ body {
 }
 
 .imgcabelo {
-	background-image: url(../img/unha.png);
+	background-image: url(../images/unha.png);
 	background-size: contain;
 }
 
 .imgunhas {
-	background-image: url(../img/unha.png);
+	background-image: url(../images/unha.png);
 	background-size: contain;
 }
 
 .imgdepilacao {
-	background-image: url(../img/unha.png);
+	background-image: url(../images/unha.png);
 	background-size: contain;
 }
 
 .imgestetica {
-	background-image: url(../img/unha.png);
+	background-image: url(../images/unha.png);
 	background-size: contain;
 }
 
 .imgmassagem {
-	background-image: url(../img/unha.png);
+	background-image: url(../images/unha.png);
 	background-size: contain;
 }
 
@@ -441,7 +441,7 @@ body {
 }
 
 .quemsomosbg {
-	background-image: url(../img/quem-somos1.jpg);
+	background-image: url(../images/quem-somos1.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 20vh;
@@ -521,7 +521,7 @@ body {
 .funcionario1bg {
 	width: 100%;
 	height: 14vh;
-	background-image: url(../img/funcionario-1.jpg);
+	background-image: url(../images/funcionario-1.jpg);
 	background-size: cover;
 	background-position: center;
 }
@@ -529,7 +529,7 @@ body {
 .funcionario2bg {
 	width: 100%;
 	height: 14vh;
-	background-image: url(../img/funcionario-2.png);
+	background-image: url(../images/funcionario-2.png);
 	background-size: cover;
 	background-position: center;
 }
@@ -537,7 +537,7 @@ body {
 .funcionario3bg {
 	width: 100%;
 	height: 14vh;
-	background-image: url(../img/funcionario-3.jpg);
+	background-image: url(../images/funcionario-3.jpg);
 	background-size: cover;
 	background-position: center;
 }
@@ -545,7 +545,7 @@ body {
 .funcionario4bg {
 	width: 100%;
 	height: 14vh;
-	background-image: url(../img/funcionario-4.jpg);
+	background-image: url(../images/funcionario-4.jpg);
 	background-size: cover;
 	background-position: center;
 }
