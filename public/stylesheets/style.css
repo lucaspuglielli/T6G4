@@ -1058,6 +1058,10 @@ footer {
 }
 
 /* Para page Nossos Serviços */
+.titulo-nossos-servicos{
+	font-size: 2.5em;
+}
+
 .card {
 	border: none !important;
 }
@@ -1083,6 +1087,34 @@ footer {
 }
 
 /* Para page quem-somos*/
+.agendar-botao{
+	color:#000;
+	background-color: #fff;
+	border-color: #c4924b;
+	display: inline-block;
+	font-weight: 400;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	user-select: none;
+	border: 3px solid #c4924b;
+	padding: .375rem .75rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	border-radius: .25rem;
+}
+
+.img-insta{
+	max-width: 100%;
+}
+
+.titulo-insta{
+	font-size: 1.5em;
+}
+
+.link-insta{
+	color: #41bfc4;
+}
 .quem-somos-card{
 	width: 100%;
 }
