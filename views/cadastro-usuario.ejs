@@ -6,39 +6,41 @@
 <body>
     <%- include('includes/header') %>
 
-        <div class="container">
-            <h2>CADASTRE-SE</h2>
-            <form action="/cadastro" id="cadastro_form">
+        <main class="d-flex flex-column align-items-center">
+            <h1 class="m-4 titulopagina">CADASTRE-SE</h1>
+            <form action="/cadastrar" class="formCadastro w-75 d-flex flex-column">
                 <div class="form-group">
-                    <label for="name"> Nome Completo </label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="John Doe">
+                    <label class="label-form" for="name"> Nome </label>
+                    <input type="text" class="form-control form-control-lg form-border correcaoplaceholder" id="name" name="name" placeholder="Digite seu nome">
                 </div>
                 <div class="form-group">
-                    <label for="email"> E-mail </label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="usuario@mail.com">
+                    <label class="label-form" for="sobrenome"> Sobrenome </label>
+                    <input type="text" class="form-control form-control-lg form-border correcaoplaceholder" id="sobrenome" name="sobrenome" placeholder="Digite seu sobrenome">
                 </div>
                 <div class="form-group">
-                    <label for="email"> CPF </label>
-                    <input type="number" class="form-control" id="cpf" name="cpf" placeholder="123.456.789-12">
+                    <label class="label-form" for="email"> E-mail </label>
+                    <input type="email" class="form-control form-control-lg form-border correcaoplaceholder" id="email" name="email" placeholder="usuario@email.com">
                 </div>
                 <div class="form-group">
-                    <label for="email"> Data de Nascimento </label>
-                    <input type="date" class="form-control" id="birthdate" name="birthdate" placeholder="dd/mm/aaaa">
+                    <label class="label-form" for="cpf"> CPF </label>
+                    <input type="number" class="form-control form-control-lg form-border correcaoplaceholder" id="cpf" name="cpf" placeholder="123.456.789-12">
                 </div>
                 <div class="form-group">
-                    <label for="email"> Telefone </label>
-                    <input type="number" class="form-control" id="phone" name="phone" placeholder="(99)99999-9999">
+                    <label class="label-form" for="nascimento"> Data de Nascimento </label>
+                    <input type="date" class="form-control form-control-lg form-border correcaoplaceholder" id="nascimento" name="nascimento" placeholder="dd/mm/aaaa">
                 </div>
                 <div class="form-group">
-                    <label for="email"> Senha </label>
-                    <input type="password" class="form-control" id="password" name="password"
+                    <label class="label-form" for="telefone"> Telefone </label>
+                    <input type="number" class="form-control form-control-lg form-border correcaoplaceholder" id="telefone" name="telefone" placeholder="(99)99999-9999">
+                </div>
+                <div class="form-group">
+                    <label class="label-form" for="senha"> Senha </label>
+                    <input type="password" class="form-control form-control-lg form-border correcaoplaceholder" id="senha" name="senha"
                         placeholder="Defina uma senha">
                 </div>
-                <div class="form-group">
-                    <button type="submit" value="submit" class="buttonnewsletterfooter">Cadastrar</button>
-                </div>
+                    <button type="submit" value="submit" class="btn btn-color mb-4 mt-3 align-self-center">Cadastrar</button>
             </form>
-        </div>
+        </main>
 
     <%- include('includes/footer') %> 
     <%- include('includes/scripts') %> 

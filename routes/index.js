@@ -7,7 +7,10 @@ router.get('/', function(req, res) {
 });
 
 router.get('/teste', function(req, res) {
-  res.render('template')
+  res.render('cadastro-usuario')
 });
 
+router.get('/teste1', function(req, res) {
+  res.render('login-adm')
+});
 module.exports = router;

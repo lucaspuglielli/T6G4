@@ -33,6 +33,42 @@ label {
 	margin: initial;
 }
 
+/* ESTILOS COMUNS */
+
+.titulopagina {
+	color: #2F364A;
+	font-weight: 600;
+	font-size: 1.5em;
+}
+
+/* TEMPLATE DE FORMULÁRIO */
+
+.label-form {
+	color: #262c3d;
+	font-weight: bold;
+	margin-bottom: 0.75rem;
+}
+
+.form-border {
+	border: 2px solid #227578;
+	border-radius: 0.6rem;
+	height: calc(1.5em + 1.5rem + 2px);
+	font-size: 1rem;
+	color: #83b2b3;
+}
+
+.correcaoplaceholder::placeholder {
+	font-size: initial;
+	color: #83b2b3;
+}
+
+.btn-color {
+	background-color: #c4924b;
+	color: #ffffff;
+	font-size: larger;
+}
+
+
 /* Inicio da home */
 
 html {
@@ -1052,34 +1088,19 @@ footer {
 }
 /* PÁGINA DE AGENDAMENTO (/views/agendamento.html) */
 
-.btn-color {
-	background-color: #c4924b;
-	color: #ffffff;
-	font-size: larger;
-}
-
-#valoragendamento::placeholder {
-	font-size: initial;
-	color: #83b2b3;
-}
-
-.label-form {
-	color: #262c3d;
-	font-weight: bold;
-	margin-bottom: 0.75rem;
-}
-
 .formAgendamento {
 	max-width: 500px;
 }
 
-.form-border {
-	border: 2px solid #227578;
-	border-radius: 0.6rem;
-	height: calc(1.5em + 1.5rem + 2px);
-	font-size: 1rem;
-	color: #83b2b3;
+
+/* PÁGINA DE CADASTRO USUÁRIO */
+
+.formCadastro {
+	max-width: 500px;
 }
+
+
+
 /*  MEDIA QUERIES*/
 
 @media (min-width: 1200px) {
