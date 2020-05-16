@@ -18,6 +18,10 @@ router.get('/teste', function(req, res) {
   res.render('cadastro-usuario')
 });
 
+router.get('/profissionais', function(req, res) {
+  res.render('profissionais')
+})
+
 router.get('/teste1', function(req, res) {
   res.render('login-adm')
 });
