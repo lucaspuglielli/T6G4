@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../public/stylesheets/style.css">
+    <title>Template</title>
+</head>
+
+<body>
+    <nav class="nav3">
+        <div class="navcontainer3">
+            <a href="index.html">
+                <img src="../public/images/logo-deitado.png" alt="logo deitado" class="logo3">
+            </a>
+            <ul class="navcontainer4">
+                <a href="#" class="navbutton">
+                    <li>Serviços</li>
+                </a>
+                <a href="#" class="navbutton">
+                    <li>Quem somos</li>
+                </a>
+                <a href="#" class="navbutton">
+                    <li>Equipe</li>
+                </a>
+                <a href="#" class="navbutton">
+                    <li>Contato</li>
+                </a>
+                <a href="#" class="navbutton">
+                    <li>Login</li>
+                </a>
+            </ul>
+        </div>
+    </nav>
+    <nav class="nav4">
+        <div class="navcontainer1">
+            <a href="index.html">
+                <img src="../public/images/logo-deitado.png" alt="logo deitado" class="logo2">
+            </a>
+        </div>
+        <div class="navcontainer2">
+            <div class="navsubcontainer">
+                <a href="#" class="navopcao"><i class="fa fa-bars" style="font-size: 3.5vh; color:white;"></i></a>
+                <a href="#" class="navopcao"><i class="fa fa-search" style="font-size: 3.5vh; color:white;"></i></a>
+            </div>
+        </div>
+    </nav>
+    <div class="containermaincontent">
+
+        <main>
+            <div class="containerinfosopcoes">
+                <div class="opcaoinfos" onclick="currentForm(1)">
+                    <div class="admitem1"></div>
+                    <form class="forms">
+                        <h3 class="tituloinfosadm">INFORMAÇÕES DO ADMINISTRADOR</h3>
+                        <label for="nomeinfosadm" class="labelinfosadm">Nome Completo</label><br>
+                        <input type="text" class="inputinfosadm" name="nomeinfosadm" id="nomeinfosadm"><br>
+                        <label for="emailinfosadm" class="labelinfosadm">E-mail</label><br>
+                        <input type="email" class="inputinfosadm" name="emailinfosadm" id="emailinfosadm"><br>
+                        <label for="cpfinfosadm" class="labelinfosadm">CPF</label><br>
+                        <input type="text" class="inputinfosadm" name="cpfinfosadm" id="cpfinfosadm"><br>
+                        <label for="datainfosadm" class="labelinfosadm">Data de Nascimento</label><br>
+                        <input type="date" class="inputinfosadm" name="datainfosadm" id="datainfosadm"><br>
+                        <label for="celinfosadm" class="labelinfosadm">Telefone</label><br>
+                        <input type="text" class="inputinfosadm" name="celinfosadm" id="celinfosadm"><br>
+                        <button type="submit" class="botaoinfosadm">Salvar</button>
+                    </form>
+                </div>
+                <div class="opcaoinfos" onclick="currentForm(2)">
+                    <div class="admitem2"></div>
+                    <form class="forms">
+                        <h3 class="tituloinfosadm">INFORMAÇÕES DA EMPRESA</h3>
+                        <label for="nomeinfosempresa" class="labelinfosadm">Nome</label><br>
+                        <input type="text" class="inputinfosadm" name="nomeinfosempresa" id="nomeinfosempresa"><br>
+                        <label for="emailinfosempresa" class="labelinfosadm">E-mail para contato</label><br>
+                        <input type="email" class="inputinfosadm" name="emailinfosempresa" id="emailinfosempresa"><br>
+                        <label for="celinfosempresa" class="labelinfosadm">Telefone</label><br>
+                        <input type="text" class="inputinfosadm" name="celinfosempresa" id="celinfosempresa"><br>
+                        <label for="celinfosempresa" class="labelinfosadm">Dias de funcionamento</label><br>
+                        <input type="checkbox" name="dominfosempresa" id="dominfosempresa">
+                        <label for="dominfosempresa" class="labelinfosadm">Dom</label>
+                        <input type="checkbox" name="seginfosempresa" id="seginfosempresa">
+                        <label for="seginfosempresa" class="labelinfosadm">Seg</label>
+                        <input type="checkbox" name="terinfosempresa" id="terinfosempresa">
+                        <label for="terinfosempresa" class="labelinfosadm">Ter</label>
+                        <input type="checkbox" name="quainfosempresa" id="quainfosempresa">
+                        <label for="quainfosempresa" class="labelinfosadm">Qua</label>
+                        <br>
+                        <input type="checkbox" name="quiinfosempresa" id="quiinfosempresa">
+                        <label for="quiinfosempresa" class="labelinfosadm">Qui</label>
+                        <input type="checkbox" name="sexinfosempresa" id="sexinfosempresa">
+                        <label for="sexinfosempresa" class="labelinfosadm">Sex</label>
+                        <input type="checkbox" name="sabinfosempresa" id="sabinfosempresa">
+                        <label for="sabinfosempresa" class="labelinfosadm">Sáb</label>
+                        <br>
+                        <label for="celinfosempresa" class="labelinfosadm">Horário de funcionamento</label><br>
+                        <select name="selected" class="dropdowninfosadm">
+                            <option value="0" selected="selected">das 8:00h</option>
+                            <option value="1">das 9:00h</option>
+                            <option value="2">das 10:00h</option>
+                            <option value="3">das 11:00h</option>
+                            <option value="4">das 12:00h</option>
+                            <option value="5">das 13:00h</option>
+                            <option value="6">das 14:00h</option>
+                            <option value="7">das 15:00h</option>
+                            <option value="8">das 16:00h</option>
+                            <option value="9">das 17:00h</option>
+                        </select>
+                        <select name="selected" class="dropdowninfosadm">
+                            <option value="0" selected="selected">as 09:00h</option>
+                            <option value="1">as 10:00h</option>
+                            <option value="2">as 11:00h</option>
+                            <option value="3">as 12:00h</option>
+                            <option value="4">as 13:00h</option>
+                            <option value="5">as 14:00h</option>
+                            <option value="6">as 15:00h</option>
+                            <option value="7">as 16:00h</option>
+                            <option value="8">as 17:00h</option>
+                            <option value="9">as 18:00h</option>
+                        </select><br>
+                        <button type="submit" class="botaoinfosadm">Salvar</button>
+                    </form>
+                </div>
+                <div class="opcaoinfos" onclick="currentForm(3)">
+                    <div class="admitem3"></div>
+                    <form class="forms">
+                        <h3 class="tituloinfosadm">CADASTRAR CLIENTE</h3>
+                        <label for="nomeinfoscliente" class="labelinfosadm">Nome Completo</label><br>
+                        <input type="text" class="inputinfosadm" name="nomeinfoscliente" id="nomeinfoscliente"><br>
+                        <label for="emailinfoscliente" class="labelinfosadm">E-mail</label><br>
+                        <input type="email" class="inputinfosadm" name="emailinfoscliente" id="emailinfoscliente"><br>
+                        <label for="cpfinfoscliente" class="labelinfosadm">CPF</label><br>
+                        <input type="text" class="inputinfosadm" name="cpfinfoscliente" id="cpfinfoscliente"><br>
+                        <label for="datainfosclass" class="labelinfosadm">Data de Nascimento</label><br>
+                        <input type="date" class="inputinfosadm" name="datainfosclass" id="datainfosclass"><br>
+                        <label for="celinfoscliente" class="labelinfosadm">Telefone</label><br>
+                        <input type="text" class="inputinfosadm" name="celinfoscliente" id="celinfoscliente"><br>
+                        <button type="submit" class="botaoinfosadm">Salvar</button>
+                    </form>
+                </div>
+                <div class="opcaoinfos" onclick="currentForm(4)">
+                    <div class="admitem4"></div>
+                    <form class="forms">
+                        <h3 class="tituloinfosadm">EDITAR FUNCIONARIO</h3>
+                        <label for="nomeinfosfuncionario" class="labelinfosadm">Nome</label><br>
+                        <input type="text" class="inputinfosadm" name="nomeinfosfuncionario" id="nomeinfosfuncionario"><br>
+                        <label for="emailinfosfuncionario" class="labelinfosadm">E-mail</label><br>
+                        <input type="email" class="inputinfosadm" name="emailinfosfuncionario" id="emailinfosfuncionario"><br>
+                        <label for="celinfosfuncionario" class="labelinfosadm">Telefone</label><br>
+                        <input type="text" class="inputinfosadm" name="celinfosfuncionario" id="celinfosfuncionario"><br>
+                        <label for="celinfosfuncionario" class="labelinfosadm">Dias de trabalho</label><br>
+                        <input type="checkbox" name="dominfosfuncionario" id="dominfosfuncionario">
+                        <label for="dominfosfuncionario" class="labelinfosadm">Dom</label>
+                        <input type="checkbox" name="seginfosfuncionario" id="seginfosfuncionario">
+                        <label for="seginfosfuncionario" class="labelinfosadm">Seg</label>
+                        <input type="checkbox" name="terinfosfuncionario" id="terinfosfuncionario">
+                        <label for="terinfosfuncionario" class="labelinfosadm">Ter</label>
+                        <input type="checkbox" name="quainfosfuncionario" id="quainfosfuncionario">
+                        <label for="quainfosfuncionario" class="labelinfosadm">Qua</label>
+                        <br>
+                        <input type="checkbox" name="quiinfosfuncionario" id="quiinfosfuncionario">
+                        <label for="quiinfosfuncionario" class="labelinfosadm">Qui</label>
+                        <input type="checkbox" name="sexinfosfuncionario" id="sexinfosfuncionario">
+                        <label for="sexinfosfuncionario" class="labelinfosadm">Sex</label>
+                        <input type="checkbox" name="sabinfosfuncionario" id="sabinfosfuncionario">
+                        <label for="sabinfosfuncionario" class="labelinfosadm">Sáb</label>
+                        <br>
+                        <label for="celinfosfuncionario" class="labelinfosadm">Horário de trabalho</label><br>
+                        <select name="selected" class="dropdowninfosadm">
+                            <option value="0" selected="selected">das 8:00h</option>
+                            <option value="1">das 9:00h</option>
+                            <option value="2">das 10:00h</option>
+                            <option value="3">das 11:00h</option>
+                            <option value="4">das 12:00h</option>
+                            <option value="5">das 13:00h</option>
+                            <option value="6">das 14:00h</option>
+                            <option value="7">das 15:00h</option>
+                            <option value="8">das 16:00h</option>
+                            <option value="9">das 17:00h</option>
+                        </select>
+                        <select name="selected" class="dropdowninfosadm">
+                            <option value="0" selected="selected">as 09:00h</option>
+                            <option value="1">as 10:00h</option>
+                            <option value="2">as 11:00h</option>
+                            <option value="3">as 12:00h</option>
+                            <option value="4">as 13:00h</option>
+                            <option value="5">as 14:00h</option>
+                            <option value="6">as 15:00h</option>
+                            <option value="7">as 16:00h</option>
+                            <option value="8">as 17:00h</option>
+                            <option value="9">as 18:00h</option>
+                        </select><br>
+                        <button type="submit" class="botaoinfosadm">Salvar</button>
+                    </form>
+                </div>
+                <div class="opcaoinfos" onclick="currentForm(5)">
+                    <div class="admitem5"></div>
+                    <form class="forms">
+                        <h3 class="tituloinfosadm">FECHAR HORÁRIOS</h3>
+                        <label for="nomeinfosfuncionario" class="labelinfosadm">Funcionário / Geral</label><br>
+                        <select name="selected" class="dropdowninfosfunc">
+                            <option value="0" selected="selected">Selecione</option>
+                            <option value="1">Funcionário 1</option>
+                            <option value="2">Funcionário 2</option>
+                            <option value="3">Funcionário 3</option>
+                            <option value="4">Funcionário 4</option>
+                            <option value="5">Funcionário 5</option>
+                            <option value="6">Funcionário 6</option>
+                            <option value="7">Funcionário 7</option>
+                            <option value="8">Funcionário 8</option>
+                            <option value="9">Funcionário 9</option>
+                        </select><br>
+                        <label for="datainfosinicio" class="labelinfosadm">Data Inicial</label><br>
+                        <input type="date" class="inputinfosfunc" name="datainfosinicio" id="datainfosinicio"><br>
+                        <label for="datainfosfim" class="labelinfosadm">Data Final</label><br>
+                        <input type="date" class="inputinfosfunc" name="datainfosfim" id="datainfosfim"><br>
+                        <label for="celinfosfuncionario" class="labelinfosadm">Horário</label><br>
+                        <select name="selected" class="dropdowninfosadm">
+                            <option value="0" selected="selected">das 8:00h</option>
+                            <option value="1">das 9:00h</option>
+                            <option value="2">das 10:00h</option>
+                            <option value="3">das 11:00h</option>
+                            <option value="4">das 12:00h</option>
+                            <option value="5">das 13:00h</option>
+                            <option value="6">das 14:00h</option>
+                            <option value="7">das 15:00h</option>
+                            <option value="8">das 16:00h</option>
+                            <option value="9">das 17:00h</option>
+                        </select>
+                        <select name="selected" class="dropdowninfosadm">
+                            <option value="0" selected="selected">as 09:00h</option>
+                            <option value="1">as 10:00h</option>
+                            <option value="2">as 11:00h</option>
+                            <option value="3">as 12:00h</option>
+                            <option value="4">as 13:00h</option>
+                            <option value="5">as 14:00h</option>
+                            <option value="6">as 15:00h</option>
+                            <option value="7">as 16:00h</option>
+                            <option value="8">as 17:00h</option>
+                            <option value="9">as 18:00h</option>
+                        </select><br>
+                        <button type="submit" class="botaoinfosadm">Salvar</button>
+                    </form>
+                </div>
+                <div class="opcaoinfos" onclick="currentForm(6)">
+                    <div class="admitem6"></div>
+                    <form class="forms">
+                        <h3>Form 6</h3>
+                        <input type="text">
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <div class="teste"></div>
+
+    </div>
+    <div class="correcaofakebg">
+        <div class="fakebg"></div>
+    </div>
+    <footer>
+        <div class="containerfootertodo">
+            <div class="footercontainer">
+                <div class="containermidias2">
+                    <div class="subcontainermidias2">
+                        <a href="#"><i class="fa fa-facebook" style="font-size:50px; color:white;"></i></a>
+                        <a href="#"><i class="fa fa-instagram" style="font-size:50px; color:white;"></i></a>
+                        <a href="#"><i class="fa fa-twitter" style="font-size:50px; color:white;"></i></a>
+                    </div>
+                </div>
+                <div class="footerconteudo">
+                    <div class="containerlogofooter">
+                        <a href="#">
+                            <img src="../public/images/LOGO-CASARÃO-VETOR.png" class="logofooter" alt="logo footer">
+                        </a>
+                    </div>
+                    <div class="containerconteudofooter">
+                        <div class="subcontainerconteudofooter">
+                            <div class="sobrefooter">
+                                <h3 class="footerfonttitulo">SOBRE</h3>
+                                <ul class="semformato">
+                                    <a href="#" class="semformato footerfontopcoes foterhoover1">
+                                        <li class="footerfontespaco">Quem somos</li>
+                                    </a>
+                                    <a href="#" class="semformato footerfontopcoes foterhoover1">
+                                        <li class="footerfontespaco">Nossa Equipe</li>
+                                    </a>
+                                </ul>
+                            </div>
+                            <div class="servicosfooter">
+                                <h3 class="footerfonttitulo">SERVIÇOS</h3>
+                                <ul class="semformato">
+                                    <a href="#" class="semformato footerfontopcoes foterhoover1">
+                                        <li class="footerfontespaco">Cabelo</li>
+                                    </a>
+                                    <a href="#" class="semformato footerfontopcoes foterhoover1">
+                                        <li class="footerfontespaco">Unhas</li>
+                                    </a>
+                                    <a href="#" class="semformato footerfontopcoes foterhoover1">
+                                        <li class="footerfontespaco">Depilação</li>
+                                    </a>
+                                    <a href="#" class="semformato footerfontopcoes foterhoover1">
+                                        <li class="footerfontespaco">Estética</li>
+                                    </a>
+                                    <a href="#" class="semformato footerfontopcoes foterhoover1">
+                                        <li class="footerfontespaco">Design de Sobrancelha</li>
+                                    </a>
+                                </ul>
+                            </div>
+                            <div class="newsletterfooter">
+                                <form action="POST" class="formfooter">
+                                    <label class="footerfontopcoes newslettercontainer" for="emailfooter">
+                                        Cadastre-se e receba nossas dicas e novidades.
+                                    </label>
+                                    <input type="email" name="emailfooter" id="emailfooter"
+                                        class="inputnewsletterfooter" placeholder="email@dominio.com.br">
+                                    <button type="submit" class="buttonnewsletterfooter">Inscreva-se</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="containermidias3">
+                <div class="subcontainermidias1">
+                    <a href="#"><i class="fa fa-facebook" style="font-size:16px; color:white;"></i></a>
+                    <a href="#"><i class="fa fa-instagram" style="font-size:16px; color:white;"></i></a>
+                    <a href="#"><i class="fa fa-twitter" style="font-size:16px; color:white;"></i></a>
+                </div>
+            </div>
+            <div class="copyright">Copyright © 2020 - All rights reserved.</div>
+        </div>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <script>
+        var formIndex = 1;
+        showForms(formIndex);
+
+        function currentForm(n) {
+            showForms((formIndex = n));
+        }
+    
+        function showForms(n) {
+            var i;
+            var forms = document.getElementsByClassName("forms");
+            var borda = document.getElementsByClassName("opcaoinfos");
+            for (i = 0; i < forms.length; i++) {
+                forms[i].style.display = "none";
+            }
+            for (i = 0; i < forms.length; i++) {
+				borda[i].className = borda[i].className.replace(" borda", "");
+			}
+            forms[formIndex - 1].style.display = "block";
+			borda[formIndex - 1].className += " borda";
+        }
+    </script>
+
+</body>
+
+</html>
