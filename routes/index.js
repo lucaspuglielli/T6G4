@@ -18,7 +18,19 @@ router.get('/teste', function(req, res) {
   res.render('cadastro-usuario')
 });
 
+router.get('/profissionais', function(req, res) {
+  res.render('profissionais')
+})
+
 router.get('/teste1', function(req, res) {
   res.render('login-adm')
 });
+
+router.get('/contato', function(req, res) {
+  res.render('contato')
+})
+
+router.get('/agendamento', function(req, res) {
+  res.render('agendamento')
+})
 module.exports = router;
