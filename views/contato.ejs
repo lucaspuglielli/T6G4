@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('includes/head', {title: "Título da página"}) %>
+
+<body>
+    <%- include('includes/header') %>
+
+    <main>
+        <h1 class="text-center py-5 titulo-nossos-servicos">FALE COM A GENTE</h1>
+
+        <div class="container d-flex justify-content-center">
+            <form action=""  class="card-contato formAgendamento w-75 d-flex flex-column p-5 pb-2">
+                <div class="form-group">
+                    <label class="label-form" for="nome">Nome</label>
+                    <input type="text" class="input-contato form-control form-control-lg form-border correcaoplaceholder" id="nome">
+                </div>
+                <div class="form-group">
+                    <label class="label-form" for="email">E-mail</label>
+                    <input type="text" class="input-contato form-control form-control-lg form-border correcaoplaceholder" id="email">
+                </div>
+                <div class="form-group">
+                    <label class="label-form" for="mensagem">Mensagem</label>
+                    <textarea name="mensagem" class="input-contato form-control form-control-lg form-border correcaoplaceholder" id="mensagem" cols="30" rows="10">
+                    </textarea>
+                </div>
+                <button type="submit" class="btn btn-color align-self-start">Enviar</button>
+            </form>
+        </div>
+
+    </main>
+
+    
+    <div class="teste"></div>
+
+        <%- include('includes/footer') %> 
+        <%- include('includes/scripts') %> 
+
+</body>
+
+</html>

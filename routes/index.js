@@ -25,4 +25,12 @@ router.get('/profissionais', function(req, res) {
 router.get('/teste1', function(req, res) {
   res.render('login-adm')
 });
+
+router.get('/contato', function(req, res) {
+  res.render('contato')
+})
+
+router.get('/agendamento', function(req, res) {
+  res.render('agendamento')
+})
 module.exports = router;

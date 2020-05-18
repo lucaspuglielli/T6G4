@@ -1089,6 +1089,16 @@ footer {
 
 }
 
+/* Para page contato */
+.card-contato{
+	border: 1px solid gray;
+	border-radius: 5px;
+	box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.253);
+}
+
+.input-contato{
+	background-color: #E5FAFB;
+}
 
 /* Para page Nossos Serviços */
 .titulo-nossos-servicos{
