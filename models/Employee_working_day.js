@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
   });
   Employee_working_day.associate = (models) => {
     Employee_working_day.belongsTo(models.Employee, {foreignKey: 'id_employee'});
-    Employee_working_day.belongsTo(models.Working_Day, {foreignKey: 'id_working_day'});
+    Employee_working_day.belongsTo(models.Working_day, {foreignKey: 'id_working_day'});
   };
   return Employee_working_day;
 };
