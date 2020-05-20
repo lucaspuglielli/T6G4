@@ -1253,8 +1253,36 @@ footer {
 	font-size: 12px;
 }
 
+.inputinfosfunc2{
+	width: 30%;
+	border-radius: 8px;
+	margin: 10px 0;
+	height: 40px;
+	border: 2px solid #227578;
+	color: #227578;
+	padding-left: 10px;
+	box-sizing: border-box;
+	font-size: 12px;
+}
+
+.inputinfosfunc2::placeholder, .inputinfosadm::placeholder {
+	color: #227578;
+}
+
 .dropdowninfosadm{
 	width: 40%;
+	border-radius: 8px;
+	margin: 10px 0;
+	height: 40px;
+	border: 2px solid #227578;
+	color: #227578;
+	box-sizing: border-box;
+	font-size: 12px;
+	padding: 0 10px;
+}
+
+.dropdowninfosadm2{
+	width: 100%;
 	border-radius: 8px;
 	margin: 10px 0;
 	height: 40px;
