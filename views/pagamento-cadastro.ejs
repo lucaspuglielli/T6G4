@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('includes/head', {title: "Cadastro"}) %>
+
+<body>
+    <%- include('includes/header') %>
+
+        <main class="d-flex flex-column align-items-center">
+            <h1 class="m-4 titulopagina">PAGAMENTO</h1>
+            <form action="" method="POST" class="formCadastro w-75 d-flex flex-column">
+                <div class="form-group">
+                    <label class="label-form" for="numero-cartao"> Número do Cartão </label>
+                    <input type="text" class="form-control form-control-lg form-border correcaoplaceholder" id="numero-cartao" name="numero-cartao" placeholder="1234 5678 9012 3456">
+                </div>
+
+                <div class="d-flex">
+                    <div class="form-group mr-5">
+                        <label class="label-form" for="validade"> Validade </label>
+                        <input type="text" class="form-control form-control-lg form-border correcaoplaceholder" id="validade" name="validade" placeholder="MM/AA">
+                        
+                    </div>
+                    <div class="form-group">
+                        
+                        <label class="label-form" for="cvv"> CVV </label>
+                        <input type="text" class="form-control form-control-lg form-border correcaoplaceholder" id="cvv" name="cvv" placeholder="123">
+                    </div>
+                </div>
+                
+
+                <div class="form-group">
+                    <label class="label-form" for="nome-cartao"> E-mail </label>
+                    <input type="email" class="form-control form-control-lg form-border correcaoplaceholder" id="nome-cartao" name="nome-cartao" placeholder="Nome S">
+                </div>
+                
+                    <button type="submit" value="submit" class="btn btn-color mb-4 mt-3 align-self-center">Finalizar</button>
+            </form>
+        </main>
+
+        <div class="teste"></div>
+
+    <%- include('includes/footer') %> 
+    <%- include('includes/scripts') %> 
+
+</body>
+
+</html>
