@@ -33,4 +33,8 @@ router.get('/contato', function(req, res) {
 router.get('/agendamento', function(req, res) {
   res.render('agendamento')
 })
+
+router.get('/pagamento', function(req, res) {
+  res.render('pagamento')
+})
 module.exports = router;

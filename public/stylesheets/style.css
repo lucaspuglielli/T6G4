@@ -1089,6 +1089,47 @@ footer {
 
 }
 
+/* Para página pagamento */
+.logo-cartao{
+	width: 4em;
+	height: 4em;
+	margin-right: 2em;
+}
+
+.icone-editar{
+	width: 1.5em;
+	height: 1.5em;
+	margin: .5em;
+}
+
+.cartao{
+	width: 40%;
+	/* border: 1px solid grey; */
+	box-shadow: 2px 1px 10px 2px #888888;
+}
+
+.nome-banco{
+	font-size: 2em;
+	padding: .3em;
+}
+
+.nome-cartao{
+	font-size: 2em;
+	padding: .3em;
+}
+
+.numero-cartao{
+	font-size: 1.5em;
+	color: rgb(75, 131, 75);
+	margin-left: 2em;
+	margin-bottom: 0;
+}
+
+.usuario-sa{
+	font-size: 1.5em;
+	color: rgb(75, 131, 75);
+	margin-left: 2em;
+}
 /* Para page contato */
 .card-contato{
 	border: 1px solid gray;
@@ -1195,6 +1236,181 @@ footer {
 		width: 80% !important;
 	}
 }
+
+/* MEDIA QUERIES PARA PAGAMENTOS */
+@media (max-width: 991px) and (min-width: 768px){
+	.logo-cartao{
+		width: 3em;
+		height: 3em;
+		margin-right: 1em;
+	}
+	
+	.icone-editar{
+		width: 1.5em;
+		height: 1.5em;
+		margin: .5em;
+	}
+	
+	.cartao{
+		width: 45%;
+		/* border: 1px solid grey; */
+		box-shadow: 2px 1px 10px 2px #888888;
+	}
+	
+	.nome-banco{
+		font-size: 1.5em;
+		padding: .3em;
+	}
+	
+	.nome-cartao{
+		font-size: 1.5em;
+		padding: .3em;
+	}
+	
+	.numero-cartao{
+		font-size: 1.2em;
+		color: rgb(75, 131, 75);
+		margin-left: 2em;
+		margin-bottom: 0;
+	}
+	
+	.usuario-sa{
+		font-size: 1.2em;
+		color: rgb(75, 131, 75);
+		margin-left: 2em;
+	}
+}
+
+@media(max-width: 767px) and (min-width: 576px){
+	.logo-cartao{
+		width: 3em;
+		height: 3em;
+		margin-right: 1em;
+	}
+	
+	.icone-editar{
+		width: 1.5em;
+		height: 1.5em;
+		margin: .5em;
+	}
+	
+	.cartao{
+		width: 50%;
+		/* border: 1px solid grey; */
+		box-shadow: 2px 1px 10px 2px #888888;
+	}
+	
+	.nome-banco{
+		font-size: 1.3em;
+		padding: .3em;
+	}
+	
+	.nome-cartao{
+		font-size: 1.3em;
+		padding: .3em;
+	}
+	
+	.numero-cartao{
+		font-size: 1em;
+		color: rgb(75, 131, 75);
+		margin-left: 2em;
+		margin-bottom: 0;
+	}
+	
+	.usuario-sa{
+		font-size: 1em;
+		color: rgb(75, 131, 75);
+		margin-left: 2em;
+	}
+}
+
+@media(max-width: 575px) and (min-width: 481px){
+	.logo-cartao{
+		width: 3em;
+		height: 3em;
+		margin-right: 1em;
+	}
+	
+	.icone-editar{
+		width: 1.5em;
+		height: 1.5em;
+		margin: .5em;
+	}
+	
+	.cartao{
+		width: 80%;
+		/* border: 1px solid grey; */
+		box-shadow: 2px 1px 10px 2px #888888;
+	}
+	
+	.nome-banco{
+		font-size: 1.5em;
+		padding: .3em;
+	}
+	
+	.nome-cartao{
+		font-size: 1.5em;
+		padding: .3em;
+	}
+	
+	.numero-cartao{
+		font-size: 1.2em;
+		color: rgb(75, 131, 75);
+		margin-left: 2em;
+		margin-bottom: 0;
+	}
+	
+	.usuario-sa{
+		font-size: 1.2em;
+		color: rgb(75, 131, 75);
+		margin-left: 2em;
+	}
+}
+
+@media(max-width: 480px){
+	.logo-cartao{
+		width: 2.5em;
+		height: 2.5em;
+		margin-right: 1em;
+	}
+	
+	.icone-editar{
+		width: 1.5em;
+		height: 1.5em;
+		margin: .5em;
+	}
+	
+	.cartao{
+		width: 80%;
+		/* border: 1px solid grey; */
+		box-shadow: 2px 1px 10px 2px #888888;
+	}
+	
+	.nome-banco{
+		font-size: 1.2em;
+		padding: .3em;
+	}
+	
+	.nome-cartao{
+		font-size: 1.2em;
+		padding: .3em;
+	}
+	
+	.numero-cartao{
+		font-size: 1em;
+		color: rgb(75, 131, 75);
+		margin-left: 2em;
+		margin-bottom: 0;
+	}
+	
+	.usuario-sa{
+		font-size: 1em;
+		color: rgb(75, 131, 75);
+		margin-left: 2em;
+	}
+}
+
+
 
 /* PAGINA DE INFOS */
 
