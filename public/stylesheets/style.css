@@ -1034,6 +1034,10 @@ footer {
 	height: 20vh;
 }
 
+.teste1 {
+	height: 200px;
+}
+
 @media (max-width: 1199px) {
 	.nav3 {
 		display: none;
@@ -1219,6 +1223,19 @@ footer {
 	width: 71vw;
 }
 
+#displayinv{
+	display: none;
+}
+
+.subforms{
+	position: absolute;
+	display: none;
+	left: 23vw;
+	top: 20vw;
+	width: 71vw;
+	/* background-color: white; */
+}
+
 .tituloinfosadm{
 	font-size: 18px;
 	margin-bottom: 15px;
@@ -1315,6 +1332,24 @@ footer {
 	font-size: 18px;
 	height: 35px;
 	width: 80px;
+}
+
+.botaoagendamento{
+	/* border: 1px solid black; */
+	width: 80%;
+	padding: 4% 5%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 2px 2px 8px #ccc;
+	color: #227578;
+	font-size: 20px;
+}
+
+.textcolorblack{
+	color: black;
+	font-size: 12px;
+	font-weight: bold;
 }
 
 .borda{

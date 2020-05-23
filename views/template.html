@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css"
         href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/19b308c025.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../public/stylesheets/style.css">
     <title>Template</title>
 </head>
@@ -142,7 +143,8 @@
                         <input type="date" class="inputinfosadm" name="datainfosclass" id="datainfosclass"><br>
                         <label for="celinfoscliente" class="labelinfosadm">Telefone</label><br>
                         <input type="text" placeholder=" (99) 99999-9999" class="inputinfosadm" name="celinfoscliente" id="celinfoscliente"><br>
-                        <button type="submit" class="botaoinfosadm">Salvar</button>
+                        <button type="submit" class="botaoinfosadm classeteste">Salvar</button><br><br>
+                        <div class="botaoagendamento" onclick="displaysub(1)"><span class="textcolorblack">Agendar Cliente</span><i class="fas fa-arrow-right"></i></div>
                     </form>
                 </div>
                 <div class="opcaoinfos" onclick="currentForm(4)">
@@ -308,10 +310,25 @@
                         <button type="submit" class="botaoinfosadm">Salvar</button>
                     </form>
                 </div>
+                <div class="opcaoinfos" id="displayinv"></div>
+                <form class="subforms">
+                    <h3 class="tituloinfosadm">AGENDAR CLIENTE</h3>
+                    <label for="nomeagendarcliente" class="labelinfosadm">Nome Completo</label><br>
+                    <input type="text" placeholder=" John Doe" class="inputinfosadm" name="nomeagendarcliente" id="nomeagendarcliente"><br>
+                    <label for="emailagendarcliente" class="labelinfosadm">E-mail</label><br>
+                    <input type="email" placeholder=" usuario@mail.com" class="inputinfosadm" name="emailagendarcliente" id="emailagendarcliente"><br>
+                    <label for="cpfagendarcliente" class="labelinfosadm">CPF</label><br>
+                    <input type="text" placeholder=" 123.456.789-12" class="inputinfosadm" name="cpfagendarcliente" id="cpfagendarcliente"><br>
+                    <label for="dataagendarclass" class="labelinfosadm">Data de Nascimento</label><br>
+                    <input type="date" class="inputinfosadm" name="dataagendarclass" id="dataagendarclass"><br>
+                    <label for="celagendarcliente" class="labelinfosadm">Telefone</label><br>
+                    <input type="text" placeholder=" (99) 99999-9999" class="inputinfosadm" name="celagendarcliente" id="celagendarcliente"><br>
+                    <button type="submit" class="botaoinfosadm">Salvar</button><br><br>
+                </form>
             </div>
         </main>
 
-        <div class="teste"></div>
+        <div class="teste1"></div>
 
     </div>
     <div class="correcaofakebg">
@@ -404,26 +421,50 @@
         crossorigin="anonymous"></script>
 
     <script>
-        var formIndex = 1;
+        let agendamento = false;
+        let formIndex = 1;
         showForms(formIndex);
 
         function currentForm(n) {
             showForms((formIndex = n));
         }
+
+        function currentFormaa(n) {
+            showForms((formIndex = n));
+        }
     
         function showForms(n) {
-            var i;
-            var forms = document.getElementsByClassName("forms");
-            var borda = document.getElementsByClassName("opcaoinfos");
+            let i;
+            let forms = document.getElementsByClassName("forms");
+            let subforms = document.getElementsByClassName("subforms");
+            let borda = document.getElementsByClassName("opcaoinfos");
+            let subformsbutton = document.getElementsByClassName("botaoagendamento");
+            if(n != 3){
+            agendamento = false;
+            subforms[0].style.display = "none";
+            forms[2].style.display = "block"
+            }
             for (i = 0; i < forms.length; i++) {
                 forms[i].style.display = "none";
             }
             for (i = 0; i < forms.length; i++) {
 				borda[i].className = borda[i].className.replace(" borda", "");
 			}
-            forms[formIndex - 1].style.display = "block";
+            if(!agendamento){
+                forms[formIndex - 1].style.display = "block";
+            }
 			borda[formIndex - 1].className += " borda";
         }
+
+        function displaysub(n){
+            let forms = document.getElementsByClassName("forms");
+            let subforms = document.getElementsByClassName("subforms");
+            subforms[n - 1].style.display = "block"
+            forms[2].style.display = "none";
+            agendamento = true;
+
+        }
+
     </script>
 
 </body>
