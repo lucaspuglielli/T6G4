@@ -1498,7 +1498,32 @@ footer {
 	font-size: 12px;
 }
 
-.inputinfosfunc2::placeholder, .inputinfosadm::placeholder {
+.textareainfoscategoria{
+	border-radius: 8px;
+	margin: 10px 0;
+	border: 2px solid #227578;
+	color: #227578;
+	padding: 5px 10px;
+	box-sizing: border-box;
+	font-size: 12px;
+	resize: none;
+	height: 120px;
+	width: 90%;
+}
+
+.inputfotofunc{
+	border-radius: 8px;
+	border: 2px solid #227578;
+	width: 100%;
+	margin: 10px 0;
+	padding: 8px 8px;
+	height: 40px;
+	color: #227578;
+	box-sizing: border-box;
+	font-size: 12px;
+}
+
+.inputinfosfunc2::placeholder, .inputinfosadm::placeholder, .dropdowninfosfunc::placeholder {
 	color: #227578;
 }
 
