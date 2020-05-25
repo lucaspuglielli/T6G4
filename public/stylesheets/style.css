@@ -1421,22 +1421,22 @@ footer {
 
 .containerinfosopcoes{
 	background-color: #2F364A;
-	width: 17vw;
+	width: 62px;
 }
 
 .opcaoinfos{
-	width: 17vw;
-	height: 17vw;
+	width: 62px;
+	height: 62px;
 	background-color: #2F364A;
 	display: block;
-	margin-bottom: 3vw;
+	margin-bottom: 10px;
 }
 
 .forms{
 	position: absolute;
-	left: 23vw;
-	top: 20vw;
-	width: 71vw;
+	left: 85px;
+	top: 10vh;
+	width: calc(100% - 105px);
 }
 
 #displayinv{
@@ -1446,10 +1446,10 @@ footer {
 .subforms{
 	position: absolute;
 	display: none;
-	left: 23vw;
-	top: 20vw;
-	width: 71vw;
-	/* background-color: white; */
+	left: 85px;
+	top: 10vh;
+	width: 70%;
+	background-color: white;
 }
 
 .tituloinfosadm{
@@ -1523,7 +1523,7 @@ footer {
 	font-size: 12px;
 }
 
-.inputinfosfunc2::placeholder, .inputinfosadm::placeholder, .dropdowninfosfunc::placeholder {
+.inputinfosfunc2::placeholder, .inputinfosadm::placeholder, .dropdowninfosfunc::placeholder, .textareainfoscategoria::placeholder {
 	color: #227578;
 }
 
@@ -1577,8 +1577,8 @@ footer {
 
 .botaoagendamento{
 	/* border: 1px solid black; */
-	width: 80%;
-	padding: 4% 5%;
+	width: 180px;
+	padding: 10px 12px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -1646,3 +1646,21 @@ footer {
 	transform: scale(0.6);
 }
 
+@media(min-width: 1199px){
+	.forms, .subforms{
+		width: 1000px;
+		left: calc(50% - 470px);
+		top: 170px;
+	}
+	.containerinfosopcoes{
+		width: 90px;
+	}
+	.opcaoinfos{
+		width: 90px;
+		height: 90px;
+	}
+}
+
+@media(min-height: 821px){
+	.teste1{height: 35vh;}
+}

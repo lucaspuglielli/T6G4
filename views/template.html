@@ -315,12 +315,6 @@
                         <div class="botaoagendamento" onclick="displaysub(4)"><span class="textcolorblack">Cadastrar Categoria</span><i class="fas fa-arrow-right"></i></div>
                     </form>
                 </div>
-
-
-
-
-
-
                 <form class="subforms">
                     <h3 class="tituloinfosadm">AGENDAR CLIENTE</h3>
                     <label for="nomeagendarcliente" class="labelinfosadm">Nome Completo</label><br>
@@ -369,10 +363,6 @@
                     </select><br>
                     <button type="submit" class="botaoinfosadm">Salvar</button><br><br>
                 </form>
-
-
-
-
                 <form class="subforms">
                     <h3 class="tituloinfosadm">CADASTRAR FUNCIONARIO</h3>
                     <label for="nomecadastrarfuncionario" class="labelinfosadm">Nome Completo</label><br>
@@ -427,13 +417,6 @@
                     </select><br>
                     <button type="submit" class="botaoinfosadm">Salvar</button>
                 </form>
-
-
-
-
-
-
-
                 <form class="subforms">
                     <h3 class="tituloinfosadm">CADASTRAR SERVIÇO</h3>
                     <label for="nomecadastrarservicos" class="labelinfosadm">Nome</label><br>
@@ -470,28 +453,17 @@
                     <br><br>
                     <div class="botaoagendamento" onclick="displaysub(4)"><span class="textcolorblack">Cadastrar Categoria</span><i class="fas fa-arrow-right"></i></div>
                 </form>
-
-
-
-
-
                 <form class="subforms">
                     <h3 class="tituloinfosadm">CADASTRAR CATEGORIA</h3>
                     <label for="nomecadastrarcategoria" class="labelinfosadm">Nome</label><br>
                     <input type="text" placeholder=" Nome da categoria" class="dropdowninfosfunc" name="nomecadastrarcategoria" id="nomecadastrarcategoria"><br>
                     <label for="servicoscadastrarcategoria" class="labelinfosadm">Categoria</label><br>
-                    <textarea name="servicoscadastrarcategoria" id="servicoscadastrarcategoria" class="textareainfoscategoria"></textarea>
+                    <textarea name="servicoscadastrarcategoria" id="servicoscadastrarcategoria" class="textareainfoscategoria" placeholder="Adicione aqui a descrição da categoria com até XXX caracteres."></textarea>
                     <br>
                     <button type="submit" class="botaoinfosadm">Salvar</button>
                     <br><br>
                     <div class="botaoagendamento" onclick="displaysub(3)"><span class="textcolorblack">Cadastrar Serviço</span><i class="fas fa-arrow-right"></i></div>
                 </form>
-
-
-
-
-
-
             </div>
         </main>
 
@@ -593,7 +565,7 @@
         let categoria = false;
         let funcionario = false;
 
-        let formIndex = 4;
+        let formIndex = 1;
 
         showForms(formIndex);
 
