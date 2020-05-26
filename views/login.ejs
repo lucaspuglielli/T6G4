@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<%- include('includes/head', {title: "Login"}) %>
+
+<body>
+    <%- include('includes/header') %>
+
+
+        <main class="d-flex flex-column align-items-center">
+            <h1 class="m-5 titulopagina">LOGIN</h1>
+            <form action="/login" method="POST" class="formAgendamento w-75 d-flex flex-column">
+                <% if(typeof(msg) != 'undefined') { %>
+                    <div class="alert alert-danger"><%= msg %></div>
+                <% } %>
+                <div class="form-group">
+                    <label class="label-form" for="email">Email</label>
+                    <input type="email" name="email" class="form-control form-control-lg form-border correcaoplaceholder" id="email"
+                        placeholder="Digite seu email">
+                </div>
+                <div class="form-group">
+                    <label class="label-form" for="password">Senha</label>
+                    <input type="password" name="password" class="form-control form-control-lg form-border correcaoplaceholder" id="password"
+                        placeholder="Digite sua senha">
+                </div>
+                <div class="register card">
+                    <p> Não tem uma conta? <a href="/registro"><b>Cadastre-se</b></a> </p>
+                    </div>
+                <button type="submit" class="btn btn-color mb-5 mt-4 align-self-center">Entrar</button>
+                
+
+            </form>
+        </main>
+
+
+        <%- include('includes/footer') %> 
+        <%- include('includes/scripts') %> 
+
+</body>
+
+</html>
