@@ -1646,6 +1646,10 @@ footer {
 	transform: scale(0.6);
 }
 
+@media(min-height: 821px){
+	.teste1{height: 35vh;}
+}
+
 @media(min-width: 1199px){
 	.forms, .subforms{
 		width: 1000px;
@@ -1659,8 +1663,6 @@ footer {
 		width: 90px;
 		height: 90px;
 	}
+	.teste1{height: 5vh;}
 }
 
-@media(min-height: 821px){
-	.teste1{height: 35vh;}
-}
