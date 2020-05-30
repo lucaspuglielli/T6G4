@@ -26,21 +26,25 @@
                         <label for="phoneinfosadm" class="labelinfosadm">Telefone</label><br>
                         <input type="text" placeholder=" (99) 99999-9999" class="inputinfosadm" name="phoneinfosadm" id="phoneinfosadm"><br>
                         <label for="passwordinfosadm" class="labelinfosadm">Senha</label><br>
-                        <input type="text" placeholder="Digite sua senha" class="inputinfosadm" name="passwordinfosadm" id="passwordinfosadm"><br>
+                        <input type="password" placeholder="Digite sua senha" class="inputinfosadm" name="passwordinfosadm" id="passwordinfosadm"><br>
                         <button type="submit" class="botaoinfosadm">Salvar</button>
                     </form>
                 </div>
                 <div class="opcaoinfos" onclick="currentForm(2)">
                     <div class="admitem2"></div>
-                    <form class="forms">
+                    <form class="forms" method="POST" action="/admin/company-register">
                         <h3 class="tituloinfosadm">INFORMAÇÕES DA EMPRESA</h3>
                         <label for="nomeinfosempresa" class="labelinfosadm">Nome</label><br>
-                        <input type="text" placeholder=" Casarão Estética & Saúde" class="inputinfosadm" name="nomeinfosempresa" id="nomeinfosempresa"><br>
+                        <input type="text" placeholder="Casarão Estética & Saúde" class="inputinfosadm" name="nomeinfosempresa" id="nomeinfosempresa"><br>
                         <label for="emailinfosempresa" class="labelinfosadm">E-mail para contato</label><br>
                         <input type="email" placeholder=" casaraodaestetica@gmail.com" class="inputinfosadm" name="emailinfosempresa" id="emailinfosempresa"><br>
-                        <label for="celinfosempresa" class="labelinfosadm">Telefone</label><br>
-                        <input type="text" placeholder=" (99) 99999-9999" class="inputinfosadm" name="celinfosempresa" id="celinfosempresa"><br>
-                        <label for="celinfosempresa" class="labelinfosadm">Dias de funcionamento</label><br>
+                        <label for="phone1infosempresa" class="labelinfosadm">Telefone 1</label><br>
+                        <input type="text" placeholder=" (99) 99999-9999" class="inputinfosadm" name="phone1infosempresa" id="phone1infosempresa"><br>
+                        <label for="phone2infosempresa" class="labelinfosadm">Telefone 2</label><br>
+                        <input type="text" placeholder=" (99) 99999-9999" class="inputinfosadm" name="phone2infosempresa" id="phone2infosempresa"><br>
+                        
+                        <!-- Essas informações serão mesmo necessárias? Teremos que alterar o BD -->
+                        <!-- <label for="celinfosempresa" class="labelinfosadm">Dias de funcionamento</label><br>
                         <input type="checkbox" name="dominfosempresa" id="dominfosempresa">
                         <label for="dominfosempresa" class="labelinfosadm">Dom</label>
                         <input type="checkbox" name="seginfosempresa" id="seginfosempresa" checked>
@@ -81,31 +85,33 @@
                             <option value="7">as 16:00h</option>
                             <option value="8">as 17:00h</option>
                             <option value="9">as 18:00h</option>
-                        </select><br>
+                        </select><br> -->
                         <button type="submit" class="botaoinfosadm">Salvar</button>
                     </form>
                 </div>
                 <div class="opcaoinfos" onclick="currentForm(3)">
                     <div class="admitem3"></div>
-                    <form class="forms">
+                    <form class="forms" method="POST" action="/admin/client-register">
                         <h3 class="tituloinfosadm">CADASTRAR CLIENTE</h3>
-                        <label for="nomeinfoscliente" class="labelinfosadm">Nome Completo</label><br>
-                        <input type="text" placeholder=" John Doe" class="inputinfosadm" name="nomeinfoscliente" id="nomeinfoscliente"><br>
+                        <label for="nomeinfoscliente" class="labelinfosadm">Nome</label><br>
+                        <input type="text" placeholder="Digite o nome do cliente" class="inputinfosadm" name="nomeinfoscliente" id="nomeinfoscliente"><br>
+                        <label for="sobrenomeinfoscliente" class="labelinfosadm">Sobrenome</label><br>
+                        <input type="text" placeholder="Digite o sobrenome do cliente" class="inputinfosadm" name="sobrenomeinfoscliente" id="sobrenomeinfoscliente"><br>
                         <label for="emailinfoscliente" class="labelinfosadm">E-mail</label><br>
-                        <input type="email" placeholder=" usuario@mail.com" class="inputinfosadm" name="emailinfoscliente" id="emailinfoscliente"><br>
+                        <input type="email" placeholder="Digite o email do cliente" class="inputinfosadm" name="emailinfoscliente" id="emailinfoscliente"><br>
                         <label for="cpfinfoscliente" class="labelinfosadm">CPF</label><br>
-                        <input type="text" placeholder=" 123.456.789-12" class="inputinfosadm" name="cpfinfoscliente" id="cpfinfoscliente"><br>
-                        <label for="datainfosclass" class="labelinfosadm">Data de Nascimento</label><br>
-                        <input type="date" class="inputinfosadm" name="datainfosclass" id="datainfosclass"><br>
-                        <label for="celinfoscliente" class="labelinfosadm">Telefone</label><br>
-                        <input type="text" placeholder=" (99) 99999-9999" class="inputinfosadm" name="celinfoscliente" id="celinfoscliente"><br>
+                        <input type="text" placeholder="123.456.789-12" class="inputinfosadm" name="cpfinfoscliente" id="cpfinfoscliente"><br>
+                        <label for="birthdateinfoscliente" class="labelinfosadm">Data de Nascimento</label><br>
+                        <input type="date" class="inputinfosadm" name="birthdateinfoscliente" id="birthdateinfoscliente"><br>
+                        <label for="phoneinfoscliente" class="labelinfosadm">Telefone</label><br>
+                        <input type="text" placeholder=" (99) 99999-9999" class="inputinfosadm" name="phoneinfoscliente" id="phoneinfoscliente"><br>
                         <button type="submit" class="botaoinfosadm classeteste">Salvar</button><br><br>
                         <div class="botaoagendamento" onclick="displaysub(1)"><span class="textcolorblack">Agendar Cliente</span><i class="fas fa-arrow-right"></i></div>
                     </form>
                 </div>
                 <div class="opcaoinfos" onclick="currentForm(4)">
                     <div class="admitem4"></div>
-                    <form class="forms">
+                    <form class="forms" method='POST' action="/admin/employee-register">
                         <h3 class="tituloinfosadm">EDITAR FUNCIONARIO</h3>
                         <label for="nomeeditarfuncionario" class="labelinfosadm">Nome</label><br>
                         <select name="selected" class="dropdowninfosadm2" id="nomeeditarfuncionario">
@@ -142,7 +148,7 @@
                         <label for="sabinfosfuncionario" class="labelinfosadm">Sáb</label>
                         <br>
                         <label for="celinfosfuncionario" class="labelinfosadm">Horário de trabalho</label><br>
-                        <select name="selected" class="dropdowninfosadm">
+                        <select name="shiftstart" id="shiftstart" class="dropdowninfosadm">
                             <option value="0" selected="selected">das 8:00h</option>
                             <option value="1">das 9:00h</option>
                             <option value="2">das 10:00h</option>

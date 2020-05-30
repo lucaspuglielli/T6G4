@@ -3,7 +3,7 @@ const config = require('../config/database');
 const bcrypt = require('bcrypt');
 const { Administrator } = require('../models');
 
-const adminAuthController = {
+const administratorController = {
     create: (_req, res) => {
         return res.render('admin-info');
     },
@@ -30,11 +30,6 @@ const adminAuthController = {
             updatedAt: new Date(),
         });
 
-        if(!administrator) {
-            return res.render('admin-info', {
-                msg: "Ocorreu um erro ao cadastrar usuário",
-            });
-        };
         return res.redirect('/');
 
     },
@@ -42,4 +37,4 @@ const adminAuthController = {
 
 };
 
-module.exports = adminAuthController;
+module.exports = administratorController;
