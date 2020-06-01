@@ -1,8 +1,9 @@
 var express = require('express');
 var router = express.Router();
+const sessionVerifier = require('../middleware/sessionVerifier');
 
 /* GET home page. */
-router.get('/', function(req, res) {
+router.get('/', sessionVerifier, function(req, res) {
   res.render('index');
 });
 
