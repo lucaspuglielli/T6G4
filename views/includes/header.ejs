@@ -17,9 +17,18 @@
             <a href="#" class="navbutton">
                 <li>Contato</li>
             </a>
-            <a href="#" class="navbutton">
+            <% if(user.name == "disconnected") { %>
+                <a href="/login" id="user-login" class="navbutton">
                 <li>Login</li>
             </a>
+           <% } else { %>
+            <a href="#" id="user-logado" class="navbutton">
+                <li> <%=user.name%> </li>
+            </a> <% } %>
+            
+            <!-- <a href="#" class="navbutton">
+                <li>Login</li>
+            </a> -->
         </ul>
     </div>
 </nav>

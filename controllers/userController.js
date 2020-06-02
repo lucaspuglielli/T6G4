@@ -9,6 +9,8 @@ const userController = {
     },
 
     store: async (req, res) => {
+       
+       
         const {
             name,
             lastname,
@@ -35,11 +37,6 @@ const userController = {
             updatedAt: new Date(),
         });
 
-        if(!user) {
-            return res.render('cadastro-usuario', {
-                msg: "Ocorreu um erro ao cadastrar usuário",
-            });
-        };
         return res.redirect('/');
     }, 
 };

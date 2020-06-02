@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <%- include('includes/head', {title: "Cadastro"}) %>
 
@@ -8,7 +8,7 @@
 
         <main class="d-flex flex-column align-items-center">
             <h1 class="m-4 titulopagina">CADASTRE-SE</h1>
-            <form action="/registro" method="POST" class="formCadastro w-75 d-flex flex-column">
+            <form id="formRegisterUser" action="/registro" method="POST" class="formCadastro w-75 d-flex flex-column">
                 <div class="form-group">
                     <label class="label-form" for="name"> Nome </label>
                     <input type="text" class="form-control form-control-lg form-border correcaoplaceholder" id="name" name="name" placeholder="Digite seu nome">
@@ -38,12 +38,19 @@
                     <input type="password" class="form-control form-control-lg form-border correcaoplaceholder" id="password" name="password"
                         placeholder="Defina uma senha">
                 </div>
+                <div id="errorList" class="alert alert-danger alert-dismissible fade show" role="alert" hidden>
+                    <ul>
+
+                    </ul>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+                </div>
                     <button type="submit" value="submit" class="btn btn-color mb-4 mt-3 align-self-center">Cadastrar</button>
             </form>
         </main>
 
     <%- include('includes/footer') %> 
     <%- include('includes/scripts') %> 
+    <script src="/javascripts/authRegisterUser.js"></script>
 
 </body>
 

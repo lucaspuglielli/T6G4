@@ -62,9 +62,15 @@
             <a href="#" class="navbutton2">
                 <li>Contato</li>
             </a>
-            <a href="#" class="navbutton2">
+            <% if(user.name == "disconnected") { %>
+                <a href="/login" id="user-login" class="navbutton2">
                 <li>Login</li>
             </a>
+           <% } else { %>
+            <a href="#" id="user-logado" class="navbutton2">
+                <li> <%=user.name%> </li>
+            </a> <% } %>
+
         </ul>
     </nav>
     
@@ -321,9 +327,9 @@
             </div>
         </div>
     </div>
-
     <%- include('includes/footer') %> 
     <%- include('includes/scripts') %> 
+    </script>
 </body>
 
 </html>
