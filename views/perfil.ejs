@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('includes/head', {title: "Meu Perfil"}) %> 
+
+<body>
+    <%- include('includes/header') %> 
+
+        <main>
+
+            <div class="containerinfosopcoes">
+                <div class="opcaoinfos" onclick="currentForm(1)">
+                    <div class="admitem1"></div>
+                    <form class="forms" method="POST" action="/admin/admin-register">
+                        <% if(typeof(msg) != 'undefined') { %>
+                            <div class="alert alert-danger"><%= msg %></div>
+                        <% } %>
+                        <h3 class="tituloinfosadm">MINHA CONTA</h3>
+                        <label for="name" class="labelinfosadm">Nome Completo</label><br>
+                        <input type="text" placeholder="Digite seu nome" class="inputinfosadm" name="name" id="name"><br>
+                        <label for="email" class="labelinfosadm">E-mail</label><br>
+                        <input type="email" placeholder=" usuario@mail.com" class="inputinfosadm" name="email" id="email"><br>
+                        <label for="cpf" class="labelinfosadm">CPF</label><br>
+                        <input type="text" placeholder="123.456.789-12" class="inputinfosadm" name="cpf" id="cpf"><br>
+                        <label for="birthdayinfosadm" class="labelinfosadm">Data de Nascimento</label><br>
+                        <input type="date" class="inputinfosadm" name="birthdayinfosadm" id="birthdayinfosadm"><br>
+                        <label for="phoneinfosadm" class="labelinfosadm">Telefone</label><br>
+                        <input type="text" placeholder=" (99) 99999-9999" class="inputinfosadm" name="phoneinfosadm" id="phoneinfosadm"><br>
+                        <button type="submit" class="botaoinfosadm">Salvar</button>
+                    </form>
+                </div>
+
+                <div class="opcaoinfos" onclick="currentForm(2)">
+                    <div class="perfilitem2"></div>
+                    <form class="forms" method="POST" action="/admin/admin-register">
+                        <div class="cartao mb-5">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h2 class="nome-banco">Nome do Banco</h2>
+                                </div>
+                                <div>
+                                    <img class="logo-cartao" src="/images/visto.png" alt="logo do cartão">
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <p class="numero-cartao">****</p>
+                                <p class="numero-cartao">****</p>
+                                <p class="numero-cartao">****</p>
+                                <p class="numero-cartao">5678</p>
+                            </div>
+                            <div>
+                                <p class="nome-cartao">Nome impresso no cartão.</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <p class="usuario-sa">Usuários do S A</p>
+                                </div>
+                                <div>
+                                    <img class="icone-editar" src="/images/fb-icon.png" alt="imagem de editar">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cartao mb-5">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h2 class="nome-banco">Nome do Banco</h2>
+                                </div>
+                                <div>
+                                    <img class="logo-cartao" src="/images/visto.png" alt="logo do cartão">
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <p class="numero-cartao">****</p>
+                                <p class="numero-cartao">****</p>
+                                <p class="numero-cartao">****</p>
+                                <p class="numero-cartao">5678</p>
+                            </div>
+                            <div>
+                                <p class="nome-cartao">Nome impresso no cartão.</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <p class="usuario-sa">Usuários do S A</p>
+                                </div>
+                                <div>
+                                    <img class="icone-editar" src="/images/fb-icon.png" alt="imagem de editar">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="opcaoinfos" onclick="currentForm(3)">
+                    <div class="perfilitem3"></div>
+                    <form class="forms" method="POST" action="/admin/admin-register">
+                        <div class="cartao-servico mb-5 p-4">
+                            <div class="d-flex">
+                                <div>
+                                    <img class="img-servico" src="/images/unha.png" alt="">
+                                </div>
+                                <div class="d-flex flex-column justify-content-between">
+                                    <div>
+                                        <h2 class="titulo-servico-card">Pé e Mão</h2>
+                                    </div>
+                                    <div>
+                                        <p class="data-servico-card">23/04/2020  -  10:00h</p>
+                                    </div>
+                                    <div class="d-flex">
+                                        <p class="label-info">Prefissional: </p>
+                                        <p class="label-info">Valor: </p>
+                                    </div>
+                                    <div class="d-flex">
+                                        <p class="nome-info">Ana Américo</p>
+                                        <p class="nome-info">R$:25,00</p>
+                                    </div>
+                                    <div class="d-flex">
+                                        <p class="label-info">Status: </p>
+                                        <p class="status-info">Agendado</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex">
+                                    <img class="icones-servico-card" src="/images/google.png" alt="">
+                                    <img class="icones-servico-card" src="/images/google.png" alt="">
+                                </div>
+                                <div></div>
+                               
+                            </div>
+                        </div>
+                        
+                        <!-- <div class="cartao mb-5">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h2 class="nome-banco">Nome do Banco</h2>
+                                </div>
+                                <div>
+                                    <img class="logo-cartao" src="/images/visto.png" alt="logo do cartão">
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <p class="numero-cartao">****</p>
+                                <p class="numero-cartao">****</p>
+                                <p class="numero-cartao">****</p>
+                                <p class="numero-cartao">5678</p>
+                            </div>
+                            <div>
+                                <p class="nome-cartao">Nome impresso no cartão.</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <p class="usuario-sa">Usuários do S A</p>
+                                </div>
+                                <div>
+                                    <img class="icone-editar" src="/images/fb-icon.png" alt="imagem de editar">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cartao mb-5">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h2 class="nome-banco">Nome do Banco</h2>
+                                </div>
+                                <div>
+                                    <img class="logo-cartao" src="/images/visto.png" alt="logo do cartão">
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <p class="numero-cartao">****</p>
+                                <p class="numero-cartao">****</p>
+                                <p class="numero-cartao">****</p>
+                                <p class="numero-cartao">5678</p>
+                            </div>
+                            <div>
+                                <p class="nome-cartao">Nome impresso no cartão.</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <p class="usuario-sa">Usuários do S A</p>
+                                </div>
+                                <div>
+                                    <img class="icone-editar" src="/images/fb-icon.png" alt="imagem de editar">
+                                </div>
+                            </div>
+                        </div> -->
+                    </form>
+                </div>
+
+
+
+            </div>
+
+        </main>
+
+        <div class="teste"></div>
+        <div class="teste"></div>
+
+        <%- include('includes/footer') %>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <script>
+        let agendamento = false;
+        let formIndex = 1;
+        showForms(formIndex);
+
+        function currentForm(n) {
+            showForms((formIndex = n));
+        }
+
+        function currentFormaa(n) {
+            showForms((formIndex = n));
+        }
+    
+        function showForms(n) {
+            let i;
+            let forms = document.getElementsByClassName("forms");
+            let subforms = document.getElementsByClassName("subforms");
+            let borda = document.getElementsByClassName("opcaoinfos");
+            let subformsbutton = document.getElementsByClassName("botaoagendamento");
+           
+            for (i = 0; i < forms.length; i++) {
+                forms[i].style.display = "none";
+            }
+            for (i = 0; i < forms.length; i++) {
+				borda[i].className = borda[i].className.replace(" borda", "");
+			}
+            if(!agendamento){
+                forms[formIndex - 1].style.display = "block";
+            }
+			borda[formIndex - 1].className += " borda";
+        }
+
+        function displaysub(n){
+            let forms = document.getElementsByClassName("forms");
+            let subforms = document.getElementsByClassName("subforms");
+            subforms[n - 1].style.display = "block"
+            forms[2].style.display = "none";
+            agendamento = true;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

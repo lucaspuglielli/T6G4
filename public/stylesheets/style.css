@@ -1597,6 +1597,8 @@ footer {
 	border-left: 3px solid #c4924b;
 }
 
+
+
 .admitem1{
 	background-image: url(../images/usuario-branco.png);
 	background-size: contain;
@@ -1644,6 +1646,79 @@ footer {
 	width: 100%;
 	height: 100%;
 	transform: scale(0.6);
+}
+
+/* Para page Perfil */
+.perfilitem2{
+	background-image: url(../images/pagar-branco.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	transform: scale(0.6);
+}
+
+.perfilitem3{
+	background-image: url(../images/serviços.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	transform: scale(0.6);
+}
+
+.titulo-servico-card{
+	font-size: 2em;
+	padding: .3em;
+	margin-left: 1em;
+	margin-bottom: 0;
+}
+
+.data-servico-card{
+	font-size: 1.5em;
+	color: rgb(75, 131, 75);
+	margin-left: 1.8em;
+	margin-bottom: 0;
+}
+
+.label-info{
+	font-size: 1.5em;
+	padding: .3em;
+	margin-left: 1.6em;
+	margin-top: 1em;
+	margin-bottom: 0;
+}
+
+.nome-info{
+	font-size: 1.5em;
+	color: rgb(75, 131, 75);
+	margin-left: 1.8em;
+	margin-bottom: 0;
+}
+
+.status-info{
+	font-size: 1.5em;
+	color: rgb(75, 131, 75);
+	margin-bottom: 0;
+	margin-top: 1.3em;
+}
+
+.img-servico{
+	width: 80px;
+	height: 80px;
+}
+
+.icones-servico-card{
+	width: 50px;
+	height: 50px;
+	margin-left: 1em;
+}
+
+.cartao-servico{
+	display: inline-block;
+	/* width: 60%; */
+	/* border: 1px solid grey; */
+	box-shadow: 2px 1px 10px 2px #888888;
 }
 
 @media(min-height: 821px){
