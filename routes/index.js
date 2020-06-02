@@ -46,4 +46,8 @@ router.get('/pagamento-cadastro', function(req, res) {
 router.get('/administracao', function(req, res) {
   res.render('administracao')
 })
+
+router.get('/perfil', function(req, res) {
+  res.render('perfil')
+})
 module.exports = router;
