@@ -5,7 +5,7 @@ const { Administrator } = require('../models');
 
 const administratorController = {
     create: (_req, res) => {
-        return res.render('admin-info');
+        return res.render('administracao');
     },
     store: async (req, res) => {
         const {
