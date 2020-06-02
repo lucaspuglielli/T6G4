@@ -5,9 +5,9 @@ module.exports = {
 
       return queryInterface.createTable('employees', { 
         id: {
-          type: Sequelize.INTEGER,
-          primaryKey: true,
-          autoIncrement: true,
+           type: Sequelize.INTEGER,
+           primaryKey: true,
+           autoIncrement: true,
         },
         name: {
           type: Sequelize.STRING,
@@ -21,6 +21,14 @@ module.exports = {
           type: Sequelize.STRING,
           allowNull: false,
           unique: true,
+        },
+        phone:{
+          type: Sequelize.INTEGER,
+          allowNull: false,
+        },
+        photo:{
+          type: Sequelize.STRING,
+          allowNull: false,
         },
         shiftstart: {
           type: Sequelize.STRING,
