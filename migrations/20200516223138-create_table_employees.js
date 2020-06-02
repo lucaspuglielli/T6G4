@@ -7,7 +7,7 @@ module.exports = {
         id: {
            type: Sequelize.INTEGER,
            primaryKey: true,
-           autoIncremet: true,
+           autoIncrement: true,
         },
         name: {
           type: Sequelize.STRING,
@@ -21,6 +21,14 @@ module.exports = {
           type: Sequelize.STRING,
           allowNull: false,
           unique: true,
+        },
+        phone:{
+          type: Sequelize.INTEGER,
+          allowNull: false,
+        },
+        photo:{
+          type: Sequelize.STRING,
+          allowNull: false,
         },
         shiftstart: {
           type: Sequelize.STRING,

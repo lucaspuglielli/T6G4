@@ -92,25 +92,27 @@
         </div>
         <div class="opcaoinfos" onclick="currentForm(3)">
             <div class="admitem3"></div>
-            <form class="forms">
+            <form class="forms" method="POST" action="/admin/client-register">
                 <h3 class="tituloinfosadm">CADASTRAR CLIENTE</h3>
-                <label for="nomeinfoscliente" class="labelinfosadm">Nome Completo</label><br>
-                <input type="text" placeholder=" John Doe" class="inputinfosadm" name="nomeinfoscliente" id="nomeinfoscliente"><br>
+                <label for="nomeinfoscliente" class="labelinfosadm">Nome</label><br>
+                <input type="text" placeholder="Digite o nome do cliente" class="inputinfosadm" name="nomeinfoscliente" id="nomeinfoscliente"><br>
+                <label for="sobrenomeinfoscliente" class="labelinfosadm">Sobrenome</label><br>
+                <input type="text" placeholder="Digite o sobrenome do cliente" class="inputinfosadm" name="sobrenomeinfoscliente" id="sobrenomeinfoscliente"><br>
                 <label for="emailinfoscliente" class="labelinfosadm">E-mail</label><br>
-                <input type="email" placeholder=" usuario@mail.com" class="inputinfosadm" name="emailinfoscliente" id="emailinfoscliente"><br>
+                <input type="email" placeholder="Digite o email do cliente" class="inputinfosadm" name="emailinfoscliente" id="emailinfoscliente"><br>
                 <label for="cpfinfoscliente" class="labelinfosadm">CPF</label><br>
-                <input type="text" placeholder=" 123.456.789-12" class="inputinfosadm" name="cpfinfoscliente" id="cpfinfoscliente"><br>
-                <label for="datainfosclass" class="labelinfosadm">Data de Nascimento</label><br>
-                <input type="date" class="inputinfosadm" name="datainfosclass" id="datainfosclass"><br>
-                <label for="celinfoscliente" class="labelinfosadm">Telefone</label><br>
-                <input type="text" placeholder=" (99) 99999-9999" class="inputinfosadm" name="celinfoscliente" id="celinfoscliente"><br>
+                <input type="text" placeholder="123.456.789-12" class="inputinfosadm" name="cpfinfoscliente" id="cpfinfoscliente"><br>
+                <label for="birthdateinfoscliente" class="labelinfosadm">Data de Nascimento</label><br>
+                <input type="date" class="inputinfosadm" name="birthdateinfoscliente" id="birthdateinfoscliente"><br>
+                <label for="phoneinfoscliente" class="labelinfosadm">Telefone</label><br>
+                <input type="text" placeholder=" (99) 99999-9999" class="inputinfosadm" name="phoneinfoscliente" id="phoneinfoscliente"><br>
                 <button type="submit" class="botaoinfosadm classeteste">Salvar</button><br><br>
                 <div class="botaoagendamento" onclick="displaysub(1)"><span class="textcolorblack">Agendar Cliente</span><i class="fas fa-arrow-right"></i></div>
             </form>
         </div>
         <div class="opcaoinfos" onclick="currentForm(4)">
             <div class="admitem4"></div>
-            <form class="forms" method='POST' action="/admin/employee-register">
+            <form class="forms" method='POST'>
                 <h3 class="tituloinfosadm">EDITAR FUNCIONARIO</h3>
                 <label for="nomeeditarfuncionario" class="labelinfosadm">Nome</label><br>
                 <select name="selected" class="dropdowninfosadm2" id="nomeeditarfuncionario">
@@ -324,57 +326,63 @@
             </select><br>
             <button type="submit" class="botaoinfosadm">Salvar</button><br><br>
         </form>
-        <form class="subforms">
+        <form class="subforms" method="POST" action="/admin/employee-register">
             <h3 class="tituloinfosadm">CADASTRAR FUNCIONARIO</h3>
-            <label for="nomecadastrarfuncionario" class="labelinfosadm">Nome Completo</label><br>
-            <input type="text" placeholder=" John Doe" class="inputinfosadm" name="nomecadastrarfuncionario" id="nomecadastrarfuncionario"><br>
-            <label for="emailcadastrarfuncionario" class="labelinfosadm">E-mail</label><br>
-            <input type="email" placeholder=" usuario@mail.com" class="inputinfosadm" name="emailcadastrarfuncionario" id="emailcadastrarfuncionario"><br>
-            <label for="celcadastrarfuncionario" class="labelinfosadm">Telefone</label><br>
-            <input type="text" placeholder=" (99) 99999-9999" class="inputinfosadm" name="celcadastrarfuncionario" id="celcadastrarfuncionario"><br>
-            <label for="fotocadastrarfuncionario" class="labelinfosadm">Foto</label><br>
-            <input type="file" name="fotocadastrarfuncionario" id="fotocadastrarfuncionario" class="inputfotofunc"><br>
+            <label for="nameemployee" class="labelinfosadm">Nome</label><br>
+            <input type="text" placeholder="Digite o nome do funcionário" class="inputinfosadm" name="nameemployee" id="nameemployee"><br>
+            <label for="lastnameemployee" class="labelinfosadm">Sobrenome</label><br>
+            <input type="text" placeholder="Digite o sobrenome do funcionário" class="inputinfosadm" name="lastnameemployee" id="lastnameemployee"><br>
+            <label for="emailemployee" class="labelinfosadm">E-mail</label><br>
+            <input type="email" placeholder=" usuario@mail.com" class="inputinfosadm" name="emailemployee" id="emailemployee"><br>
+            <label for="phoneemployee" class="labelinfosadm">Telefone</label><br>
+            <input type="text" placeholder=" (99) 99999-9999" class="inputinfosadm" name="phoneemployee" id="phoneemployee"><br>
+            <label for="photoemployee" class="labelinfosadm">Foto</label><br>
+            <input type="text" name="photoemployee" id="photoemployee" class="inputfotofunc"><br>
             <label class="labelinfosadm">Dias de trabalho</label><br>
-            <input type="checkbox" name="domcadastrarfuncionario" id="domcadastrarfuncionario">
-            <label for="domcadastrarfuncionario" class="labelinfosadm">Dom</label>
-            <input type="checkbox" name="segcadastrarfuncionario" id="segcadastrarfuncionario" checked>
-            <label for="segcadastrarfuncionario" class="labelinfosadm">Seg</label>
-            <input type="checkbox" name="tercadastrarfuncionario" id="tercadastrarfuncionario" checked>
-            <label for="tercadastrarfuncionario" class="labelinfosadm">Ter</label>
-            <input type="checkbox" name="quacadastrarfuncionario" id="quacadastrarfuncionario" checked>
-            <label for="quacadastrarfuncionario" class="labelinfosadm">Qua</label>
+            <input type="checkbox" name="sunemployee" id="sunemployee">
+            <label for="sunemployee" class="labelinfosadm">Dom</label>
+            <input type="checkbox" name="monemployee" id="monemployee" checked>
+            <label for="monemployee" class="labelinfosadm">Seg</label>
+            <input type="checkbox" name="tueemployee" id="tueemployee" checked>
+            <label for="tueemployee" class="labelinfosadm">Ter</label>
+            <input type="checkbox" name="wedemployee" id="wedemployee" checked>
+            <label for="wedemployee" class="labelinfosadm">Qua</label>
             <br>
-            <input type="checkbox" name="quicadastrarfuncionario" id="quicadastrarfuncionario" checked>
-            <label for="quicadastrarfuncionario" class="labelinfosadm">Qui</label>
-            <input type="checkbox" name="sexcadastrarfuncionario" id="sexcadastrarfuncionario" checked>
-            <label for="sexcadastrarfuncionario" class="labelinfosadm">Sex</label>
-            <input type="checkbox" name="sabcadastrarfuncionario" id="sabcadastrarfuncionario">
-            <label for="sabcadastrarfuncionario" class="labelinfosadm">Sáb</label>
+            <input type="checkbox" name="thuemployee" id="thuemployee" checked>
+            <label for="thuemployee" class="labelinfosadm">Qui</label>
+            <input type="checkbox" name="friemployee" id="friemployee" checked>
+            <label for="friemployee" class="labelinfosadm">Sex</label>
+            <input type="checkbox" name="satemployee" id="satemployee">
+            <label for="satemployee" class="labelinfosadm">Sáb</label>
             <br>
-            <label for="horariocadastrarfuncionario" class="labelinfosadm">Horário de trabalho</label><br>
-            <select name="selected" class="dropdowninfosadm" id="horariocadastrarfuncionario">
-                <option value="0" selected="selected">das 8:00h</option>
-                <option value="1">das 9:00h</option>
-                <option value="2">das 10:00h</option>
-                <option value="3">das 11:00h</option>
-                <option value="4">das 12:00h</option>
-                <option value="5">das 13:00h</option>
-                <option value="6">das 14:00h</option>
-                <option value="7">das 15:00h</option>
-                <option value="8">das 16:00h</option>
-                <option value="9">das 17:00h</option>
+            <label for="shiftstart" class="labelinfosadm">Horário de trabalho</label><br>
+            <select name="shiftstart" class="dropdowninfosadm" id="shiftstart">
+                <option value="" selected="selected" disabled="disabled">Selecione horário de início...</option>
+                <option value="8">das 8:00h</option>
+                <option value="9">das 9:00h</option>
+                <option value="10">das 10:00h</option>
+                <option value="11">das 11:00h</option>
+                <option value="12">das 12:00h</option>
+                <option value="13">das 13:00h</option>
+                <option value="14">das 14:00h</option>
+                <option value="15">das 15:00h</option>
+                <option value="16">das 16:00h</option>
+                <option value="17">das 17:00h</option>
+                <option value="18">das 18:00h</option>
+                <option value="19">das 19:00h</option>
             </select>
-            <select name="selected" class="dropdowninfosadm">
-                <option value="0" selected="selected">as 09:00h</option>
-                <option value="1">as 10:00h</option>
-                <option value="2">as 11:00h</option>
-                <option value="3">as 12:00h</option>
-                <option value="4">as 13:00h</option>
-                <option value="5">as 14:00h</option>
-                <option value="6">as 15:00h</option>
-                <option value="7">as 16:00h</option>
-                <option value="8">as 17:00h</option>
-                <option value="9">as 18:00h</option>
+            <select name="shiftend" id="shiftend" class="dropdowninfosadm">
+                <option value="" selected="selected" disabled="disabled">Selecione horário de término...</option>
+                <option value="9">as 09:00h</option>
+                <option value="10">as 10:00h</option>
+                <option value="11">as 11:00h</option>
+                <option value="12">as 12:00h</option>
+                <option value="13">as 13:00h</option>
+                <option value="14">as 14:00h</option>
+                <option value="15">as 15:00h</option>
+                <option value="16">as 16:00h</option>
+                <option value="17">as 17:00h</option>
+                <option value="18">as 18:00h</option>
             </select><br>
             <button type="submit" class="botaoinfosadm">Salvar</button>
         </form>
