@@ -1,6 +1,10 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Employee = sequelize.define('Employee', {
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+    },
     name: DataTypes.STRING,
     lastname: DataTypes.STRING,
     email: DataTypes.STRING,
@@ -13,9 +17,10 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     timestamps: false,
   });
+
+
   Employee.associate = (models) => {
     Employee.belongsToMany(models.Service, {through: 'Employee_skill', foreignKey: 'id_employee'});
-    Employee.belongsToMany(models.Working_day, {through: 'Employee_working_day', foreignKey: 'id_employee'});
   };
   return Employee;
 };
