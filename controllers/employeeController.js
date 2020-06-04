@@ -68,8 +68,6 @@ const employeeController = {
               saturday: verificarDia(satemployee),
               sunday: verificarDia(sunemployee),
           })
-
-          
     },
 };
 
