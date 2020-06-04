@@ -1,30 +1,37 @@
 <!-- Nav do desktop -->
 <nav class="nav3">
     <div class="navcontainer3">
-        <a href="index.html">
+        <a href="/">
             <img src="/images/logo-deitado.png" alt="logo deitado" class="logo3">
         </a>
         <ul class="navcontainer4">
-            <a href="#" class="navbutton">
+            <a href="/nossos-servicos" class="navbutton">
                 <li>Serviços</li>
             </a>
-            <a href="#" class="navbutton">
+            <a href="/quem-somos" class="navbutton">
                 <li>Quem somos</li>
             </a>
-            <a href="#" class="navbutton">
+            <a href="/profissionais" class="navbutton">
                 <li>Equipe</li>
             </a>
-            <a href="#" class="navbutton">
+            <a href="/contato" class="navbutton">
                 <li>Contato</li>
             </a>
             <% if(user.name == "disconnected") { %>
-                <a href="/login" id="user-login" class="navbutton">
-                <li>Login</li>
+                <a href="login" id="user-login" class="userinfocontent2">
+                <li>Olá, faça o Login ou Registre-se</li>
             </a>
            <% } else { %>
-            <a href="#" id="user-logado" class="navbutton">
-                <li> <%=user.name%> </li>
-            </a> <% } %>
+            <div class="usercontainer">
+            <a href="/usuario/perfil" id="user-logado" class="userinfocontent">
+                <li class="userinfocontent1"> Olá, <%=user.name%> <i class="fa fa-chevron-down" aria-hidden="true"></i></li>
+            </a>
+            <div class="useropcoesmenu">
+                <a href="/usuario/perfil"></href><li class="espacoteste">Acessar minha conta</li></a>
+                <a href="/login/logout"><li class="espacoteste">Log-out</li></a>
+            </div></div>
+            <% } %>
+            
             
             <!-- <a href="#" class="navbutton">
                 <li>Login</li>
@@ -35,7 +42,7 @@
 <!-- Nav do mobile -->
 <nav class="nav4">
     <div class="navcontainer1">
-        <a href="index.html">
+        <a href="index">
             <img src="/images/logo-deitado.png" alt="logo deitado" class="logo2">
         </a>
     </div>

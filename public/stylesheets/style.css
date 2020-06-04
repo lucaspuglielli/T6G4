@@ -860,12 +860,92 @@ body {
 	width: 120px;
 	font-size: 15px;
 	background-color: #c4924b;
-	border-radius: 7px;
+	border-radius: 4px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	margin: 0 22px 0 22px;
 	font-family: arial;
+}
+
+/* .usercontainer{
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	top:75px;
+} */
+
+a.userinfocontent {
+	text-decoration: none;
+	color: white;
+	list-style-type: none;
+	height: 35px;
+	width: 160px;
+	font-size: 18px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 20px;
+	align-items: flex-start;
+	margin: 0 22px 0 22px;
+	font-family: arial;
+}
+
+a.userinfocontent2{
+	text-decoration: none;
+	color: white;
+	list-style-type: none;
+	height: 35px;
+	width: 160px;
+	font-size: 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 20px;
+	align-items: flex-start;
+	margin: 0 22px 0 22px;
+	font-family: arial;
+}
+
+.fa-chevron-down{
+	padding-left: 20px;
+}
+
+.useropcoesmenu{
+	display: none;
+	list-style-type: none;
+	background-color: orange;
+	color: white;
+	width: 160px;
+	font-size: 13px;
+	flex-direction: column;
+	justify-content: space-around;
+	position: absolute;
+	margin: 0 22px 0 22px;
+	box-sizing: border-box;
+	padding-top: 10px;
+}
+
+.userinfocontent1:hover{
+	color: white;
+	text-decoration: none
+}
+
+a.userinfocontent:hover + .useropcoesmenu{display:flex;
+color: white;
+text-decoration: none;}
+
+.useropcoesmenu:hover{
+	display: flex;
+}
+
+.espacoteste{
+	padding: 0px 20px 10px;
+	background-color: orange;
+}
+
+.logoutbutton{
+	color: white;
 }
 
 .nav4 {
@@ -1089,10 +1169,6 @@ footer {
 	background-image: url(/images/funcionario-4.jpg);
 }
 
-.profissionais-hide{
-
-}
-
 /* Para página pagamento */
 .logo-cartao{
 	width: 4em;
@@ -1165,9 +1241,6 @@ footer {
 .texto-cards-nossos-servicos {
 	font-size: 1em;
 	color: #41bfc4;
-}
-
-.nossos-servicos-hide {
 }
 
 .menu-header {

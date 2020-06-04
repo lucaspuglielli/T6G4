@@ -31,6 +31,7 @@ app.use('/', indexRouter);
 app.use('/registro', usersRouter);
 app.use('/login', authRouter);
 app.use('/admin', adminRouter);
+app.use('/usuario', usersRouter);
 
 
 // catch 404 and forward to error handler

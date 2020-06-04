@@ -1,6 +1,10 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Credit_card = sequelize.define('Credit_card', {
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+    },
     number: DataTypes.INTEGER,
     name: DataTypes.STRING,
     id_client: DataTypes.INTEGER,

@@ -1,6 +1,10 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Employee_skill = sequelize.define('Employee_skill', {
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+    },
     id_service: DataTypes.INTEGER,
     id_employee: DataTypes.INTEGER,
     createdAt: DataTypes.DATE,

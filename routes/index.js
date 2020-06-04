@@ -7,31 +7,31 @@ router.get('/', sessionVerifier, function(req, res) {
   res.render('index');
 });
 
-router.get('/nossos-servicos', function(req, res) {
+router.get('/nossos-servicos', sessionVerifier, function(req, res) {
   res.render('nossos-servicos');
 })
 
-router.get('/quem-somos', function(req, res) {
+router.get('/quem-somos', sessionVerifier, function(req, res) {
   res.render('quem-somos');
 })
 
-router.get('/teste', function(req, res) {
+router.get('/teste', sessionVerifier, function(req, res) {
   res.render('cadastro-usuario')
 });
 
-router.get('/profissionais', function(req, res) {
+router.get('/profissionais', sessionVerifier, function(req, res) {
   res.render('profissionais')
 })
 
-router.get('/teste1', function(req, res) {
+router.get('/teste1', sessionVerifier, function(req, res) {
   res.render('login-adm')
 });
 
-router.get('/contato', function(req, res) {
+router.get('/contato', sessionVerifier, function(req, res) {
   res.render('contato')
 })
 
-router.get('/agendamento', function(req, res) {
+router.get('/agendamento', sessionVerifier, function(req, res) {
   res.render('agendamento')
 })
 
@@ -47,7 +47,4 @@ router.get('/administracao', function(req, res) {
   res.render('administracao')
 })
 
-router.get('/perfil', function(req, res) {
-  res.render('perfil')
-})
 module.exports = router;
