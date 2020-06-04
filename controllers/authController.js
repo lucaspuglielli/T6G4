@@ -28,10 +28,13 @@ const authController = {
             name: user.name,
             email: user.email,
         }
-        console.log(req.session.user);
-        res.redirect('/')
+        res.redirect('/usuario/perfil')
 
     },
+    update: (req, res) => {
+        req.session.user = undefined;
+        res.redirect('/');
+    }
 
 
 };
