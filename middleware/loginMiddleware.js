@@ -3,7 +3,7 @@ module.exports = (req, res, next) => {
         const user = {name: "disconnected"}
         res.render('login', {user});
     } else {
-        res.redirect("/");
+        res.redirect("/usuario/perfil");
     }
     next();
     };
