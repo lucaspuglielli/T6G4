@@ -13,12 +13,16 @@ const authController = {
             password
         } = req.body;
 
-        const [user] = await Client.findAll({
+        let [user] = await Client.findAll({
             where: {email: email}
         });
 
         if(!user || !bcrypt.compareSync(password, user.password)) {
+            user = {
+                name: "disconnected"
+            }
             return res.render('login', {
+                user,
                 msg: "Email ou senha inválidos."
             });
         }
