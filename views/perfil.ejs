@@ -11,21 +11,20 @@
             <div class="containerinfosopcoes">
                 <div class="opcaoinfos" onclick="currentForm(1)">
                     <div class="admitem1"></div>
-                    <form class="forms" method="POST" action="/admin/admin-register">
-                        <% if(typeof(msg) != 'undefined') { %>
-                            <div class="alert alert-danger"><%= msg %></div>
-                        <% } %>
+                    <form class="forms" method="POST" action="/usuario/editar?_method=put">
                         <h3 class="tituloinfosadm">MINHA CONTA</h3>
-                        <label for="name" class="labelinfosadm">Nome Completo</label><br>
-                        <input type="text" placeholder="Digite seu nome" class="inputinfosadm" name="name" id="name"><br>
+                        <label for="name" class="labelinfosadm">Nome</label><br>
+                        <input type="text" value="<%= inputValues.name %> " class="inputinfosadm" name="name" id="name"><br>
+                        <label for="lastname" class="labelinfosadm">Sobrenome</label><br>
+                        <input type="text" value="<%= inputValues.lastname %> " class="inputinfosadm" name="lastname" id="lastname"><br>
                         <label for="email" class="labelinfosadm">E-mail</label><br>
-                        <input type="email" placeholder=" usuario@mail.com" class="inputinfosadm" name="email" id="email"><br>
+                        <input type="email" value=" <%= inputValues.email %> " class="inputinfosadm" name="email" id="email"><br>
                         <label for="cpf" class="labelinfosadm">CPF</label><br>
-                        <input type="text" placeholder="123.456.789-12" class="inputinfosadm" name="cpf" id="cpf"><br>
-                        <label for="birthdayinfosadm" class="labelinfosadm">Data de Nascimento</label><br>
-                        <input type="date" class="inputinfosadm" name="birthdayinfosadm" id="birthdayinfosadm"><br>
-                        <label for="phoneinfosadm" class="labelinfosadm">Telefone</label><br>
-                        <input type="text" placeholder=" (99) 99999-9999" class="inputinfosadm" name="phoneinfosadm" id="phoneinfosadm"><br>
+                        <input type="text" value="<%= inputValues.cpf %> " class="inputinfosadm" name="cpf" id="cpf"><br>
+                        <label for="birthdate" class="labelinfosadm">Data de Nascimento</label><br>
+                        <input type="text" class="inputinfosadm" name="birthdate" id="birthdate" value="<%= inputValues.birthdate %>"><br>
+                        <label for="phone" class="labelinfosadm">Telefone</label><br>
+                        <input type="tel" value=" <%= inputValues.phone %>  " class="inputinfosadm" name="phone" id="phone"><br>
                         <button type="submit" class="botaoinfosadm">Salvar</button>
                     </form>
                 </div>

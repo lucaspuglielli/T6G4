@@ -9,8 +9,7 @@ const auth = require('../middleware/auth');
 router.get('/', sessionVerifier, userController.create);
 router.post('/', userController.store);
 
-router.get('/perfil', auth, function(req, res) {
-    res.render('perfil')
-  })
+router.get('/perfil', auth, userController.index);
+router.put('/editar', auth, userController.update);
 
 module.exports = router;
