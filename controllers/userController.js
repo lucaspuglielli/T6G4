@@ -66,9 +66,18 @@ const userController = {
             updatedAt: new Date(),
         });
 
-        return res.redirect('/');
+        req.session.user = {
+            id: user.id,
+            name: user.name,
+            email: user.email,
+        }
+        res.redirect('/usuario/perfil');
+        
     }, 
     update: async (req, res) => {
+
+        const client = await Client.findByPk(req.session.user.id);
+
         const {
             name,
             lastname,
@@ -78,7 +87,21 @@ const userController = {
             phone,
         } = req.body;
 
+        const user = await Client.update({
+            name,
+            lastname,
+            email,
+            cpf,
+            birthdate,
+            phone,
+        },
+        {
+            where: {
+                id: client.id
+            }
+        });
 
+        return res.redirect('/usuario/perfil');
 
     },
 };
