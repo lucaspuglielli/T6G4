@@ -1,10 +1,6 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Administrator = sequelize.define('Administrator', {
-    id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-    },
     fullName: DataTypes.STRING,
     email: DataTypes.STRING,
     cpf: DataTypes.INTEGER,
