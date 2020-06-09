@@ -2,6 +2,7 @@ let agendamento = false;
 let servico = false;
 let categoria = false;
 let funcionario = false;
+let administrador = false;
 
 let formIndex = 1;
 
@@ -16,6 +17,11 @@ function showForms(n) {
     let forms = document.getElementsByClassName("forms");
     let subforms = document.getElementsByClassName("subforms");
     let borda = document.getElementsByClassName("opcaoinfos");
+    if(formIndex != 1){
+    administrador = false;
+    subforms[4].style.display = "none";
+    forms[0].style.display = "block";
+    }
     if(formIndex != 3){
     agendamento = false;
     subforms[0].style.display = "none";
@@ -39,7 +45,7 @@ function showForms(n) {
     for (i = 0; i < forms.length; i++) {
         borda[i].className = borda[i].className.replace(" borda", "");
     }
-    if(!agendamento && !servico && !categoria && !funcionario){
+    if(!agendamento && !servico && !categoria && !funcionario && !administrador){
         forms[formIndex - 1].style.display = "block";
     }
     borda[formIndex - 1].className += " borda";
@@ -67,5 +73,9 @@ function displaysub(n){
     if(n = 4){
     forms[5].style.display = "none";
     categoria = true;
+    }
+    if(n = 5){
+    forms[0].style.display = "none";
+    administrador = true;
     }
 }

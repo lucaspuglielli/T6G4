@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt');
 const { Administrator } = require('../models');
 
 const administratorController = {
-    create: (_req, res) => {
+    index: (_req, res) => {
         return res.render('administracao');
     },
     store: async (req, res) => {
@@ -17,7 +17,7 @@ const administratorController = {
             passwordinfosadm,
         } = req.body;
 
-        const hashPassword = bcrypt.hashSync(passwordinfosadm, 10);
+        const defaultPassword = bcrypt.hashSync("Senha Padrão", 10);
 
         const administrator = await Administrator.create({
             fullName: nameinfosadm,
@@ -25,12 +25,12 @@ const administratorController = {
             cpf: cpfinfosadm,
             birthdate: birthdayinfosadm,
             phone: phoneinfosadm,
-            password: hashPassword,
+            password: defaultPassword,
             createdAt: new Date(),
             updatedAt: new Date(),
         });
 
-        return res.redirect('/');
+        return res.redirect('/administracao');
 
     },
 

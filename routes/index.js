@@ -43,8 +43,4 @@ router.get('/pagamento-cadastro', function(req, res) {
   res.render('pagamento-cadastro')
 })
 
-router.get('/administracao', function(req, res) {
-  res.render('administracao')
-})
-
 module.exports = router;

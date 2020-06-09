@@ -28,6 +28,9 @@
                 <label for="passwordinfosadm" class="labelinfosadm">Senha</label><br>
                 <input type="password" placeholder="Digite sua senha" class="inputinfosadm" name="passwordinfosadm" id="passwordinfosadm"><br>
                 <button type="submit" class="botaoinfosadm">Salvar</button>
+                <br>
+                <br>
+                <div class="botaoagendamento" onclick="displaysub(5)"><span class="textcolorblack">Cadastrar administrador</span><i class="fas fa-arrow-right"></i></div>
             </form>
         </div>
         </div>
@@ -433,9 +436,27 @@
             <br><br>
             <div class="botaoagendamento" onclick="displaysub(3)"><span class="textcolorblack">Cadastrar Serviço</span><i class="fas fa-arrow-right"></i></div>
         </form>
+        <form class="subforms" method="POST" action="/administracao/admin-register">
+            <% if(typeof(msg) != 'undefined') { %>
+                <div class="alert alert-danger"><%= msg %></div>
+            <% } %>
+            <h3 class="tituloinfosadm">CADASTRAR NOVO ADMINISTRADOR</h3>
+            <label for="nameinfosadm" class="labelinfosadm">Nome Completo</label><br>
+            <input type="text" placeholder="Digite seu nome" class="inputinfosadm" name="nameinfosadm" id="nameinfosadm"><br>
+            <label for="emailinfosadm" class="labelinfosadm">E-mail</label><br>
+            <input type="email" placeholder=" usuario@mail.com" class="inputinfosadm" name="emailinfosadm" id="emailinfosadm"><br>
+            <label for="cpfinfosadm" class="labelinfosadm">CPF</label><br>
+            <input type="text" placeholder=" 123.456.789-12" class="inputinfosadm" name="cpfinfosadm" id="cpfinfosadm"><br>
+            <label for="birthdayinfosadm" class="labelinfosadm">Data de Nascimento</label><br>
+            <input type="date" class="inputinfosadm" name="birthdayinfosadm" id="birthdayinfosadm"><br>
+            <label for="phoneinfosadm" class="labelinfosadm">Telefone</label><br>
+            <input type="text" placeholder=" (99) 99999-9999" class="inputinfosadm" name="phoneinfosadm" id="phoneinfosadm"><br>
+            <button type="submit" class="botaoinfosadm">Salvar</button>
+        </form>
     </div>
 </main>
 
+<div class="teste1"></div>
 <div class="teste1"></div>
 
 <%- include('includes/footer') %> 
