@@ -6,8 +6,8 @@ const sessionVerifier = require('../middleware/sessionVerifier');
 const auth = require('../middleware/auth');
 
 /* User register routes */
-router.get('/', sessionVerifier, userController.create);
-router.post('/', userController.store);
+router.get('/registro', sessionVerifier, userController.create);
+router.post('/registro', userController.store);
 
 router.get('/perfil', auth, userController.index);
 router.put('/editar', auth, userController.update);
