@@ -10,6 +10,7 @@ const administratorController = require('../controllers/administratorController'
 const companyController = require('../controllers/companyController');
 const clientController = require('../controllers/clientController');
 const employeeController = require('../controllers/employeeController');
+const categoryController = require('../controllers/categoryController');
 
 router.get('/', sessionVerifier, administratorController.index);
 
@@ -22,6 +23,10 @@ router.post('/client-register', clientController.store);
 
 // Funcionário.
 router.post('/employee-register', employeeController.store);
+
+// Categoria.
+router.post('/category-register', categoryController.store);
+
 
 // *** EDIÇÃO DE DADOS ***
 // Empresa

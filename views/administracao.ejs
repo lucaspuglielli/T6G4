@@ -425,12 +425,12 @@
             <br><br>
             <div class="botaoagendamento" onclick="displaysub(4)"><span class="textcolorblack">Cadastrar Categoria</span><i class="fas fa-arrow-right"></i></div>
         </form>
-        <form class="subforms">
-            <h3 class="tituloinfosadm">CADASTRAR CATEGORIA</h3>
-            <label for="nomecadastrarcategoria" class="labelinfosadm">Nome</label><br>
-            <input type="text" placeholder=" Nome da categoria" class="dropdowninfosfunc" name="nomecadastrarcategoria" id="nomecadastrarcategoria"><br>
-            <label for="servicoscadastrarcategoria" class="labelinfosadm">Categoria</label><br>
-            <textarea name="servicoscadastrarcategoria" id="servicoscadastrarcategoria" class="textareainfoscategoria" placeholder="Adicione aqui a descrição da categoria com até XXX caracteres."></textarea>
+        <form class="subforms" method="POST" action="/administracao/category-register">
+            <h3 class="tituloinfosadm">CADASTRAR NOVA CATEGORIA</h3>
+            <label for="namecategory" class="labelinfosadm">Nome</label><br>
+            <input type="text" placeholder=" Nome da categoria" class="dropdowninfosfunc" name="namecategory" id="namecategory"><br>
+            <label for="descriptioncategory" class="labelinfosadm">Categoria</label><br>
+            <textarea name="descriptioncategory" id="descriptioncategory" class="textareainfoscategoria" placeholder="Adicione aqui a descrição da categoria com até XXX caracteres."></textarea>
             <br>
             <button type="submit" class="botaoinfosadm">Salvar</button>
             <br><br>
