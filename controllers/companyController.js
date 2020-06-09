@@ -3,7 +3,7 @@ const config = require('../config/database');
 const { Company } = require('../models');
 
 const companyController = {
-    store: async (req, res) => {
+    update: async (req, res) => {
         const {
             nomeinfosempresa,
             emailinfosempresa,
@@ -11,15 +11,19 @@ const companyController = {
             phone2infosempresa
         } = req.body;
 
-        const company = await Company.create({
+        const company = await Company.update({
             name: nomeinfosempresa,
             email: emailinfosempresa,
             phone_1: phone1infosempresa,
             phone_2: phone2infosempresa,
-            createdAt: new Date(),
             updatedAt: new Date(),
+        },
+        {
+            where: {
+                id: 1
+            }
         });
-        return res.redirect('/admin');
+        return res.redirect('/administracao');
     },
 };
 

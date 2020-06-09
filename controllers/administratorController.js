@@ -1,11 +1,14 @@
 const Sequelize = require('sequelize');
 const config = require('../config/database');
 const bcrypt = require('bcrypt');
-const { Administrator } = require('../models');
+const { Administrator, Company } = require('../models');
 
 const administratorController = {
-    index: (_req, res) => {
-        return res.render('administracao');
+    index: async (req, res) => {
+
+        const company = await Company.findByPk(1);
+
+        return res.render('administracao', {company});
     },
     store: async (req, res) => {
         const {

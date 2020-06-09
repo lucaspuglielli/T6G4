@@ -13,16 +13,18 @@ const employeeController = require('../controllers/employeeController');
 
 router.get('/', sessionVerifier, administratorController.index);
 
-// Registro de Administrador
+// *** REGISTROS DE DADOS ***
+// Administrador
 router.post('/admin-register', administratorController.store);
-
-// Registro de Empresa
-router.post('/company-register', companyController.store);
 
 // Registro manual de Cliente.
 router.post('/client-register', clientController.store);
 
-// Registro de Funcionário.
+// Funcionário.
 router.post('/employee-register', employeeController.store);
+
+// *** EDIÇÃO DE DADOS ***
+// Empresa
+router.put('/company-register', companyController.update);
 
 module.exports = router;

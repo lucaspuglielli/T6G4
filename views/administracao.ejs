@@ -36,16 +36,16 @@
         </div>
         <div class="opcaoinfos" onclick="currentForm(2)">
             <div class="admitem2"></div>
-            <form class="forms" method="POST" action="/admin/company-register">
-                <h3 class="tituloinfosadm">INFORMAÇÕES DA EMPRESA</h3>
+            <form class="forms" method="POST" action="/administracao/company-register?_method=put">
+                <h3 class="tituloinfosadm">ALTERAR DADOS DA EMPRESA</h3>
                 <label for="nomeinfosempresa" class="labelinfosadm">Nome</label><br>
-                <input type="text" placeholder="Casarão Estética & Saúde" class="inputinfosadm" name="nomeinfosempresa" id="nomeinfosempresa"><br>
+                <input type="text" value="<%= company.name %>" class="inputinfosadm" name="nomeinfosempresa" id="nomeinfosempresa"><br>
                 <label for="emailinfosempresa" class="labelinfosadm">E-mail para contato</label><br>
-                <input type="email" placeholder=" casaraodaestetica@gmail.com" class="inputinfosadm" name="emailinfosempresa" id="emailinfosempresa"><br>
+                <input type="email" value="<%= company.email %>" class="inputinfosadm" name="emailinfosempresa" id="emailinfosempresa"><br>
                 <label for="phone1infosempresa" class="labelinfosadm">Telefone 1</label><br>
-                <input type="text" placeholder=" (99) 99999-9999" class="inputinfosadm" name="phone1infosempresa" id="phone1infosempresa"><br>
+                <input type="text" value="<%= company.phone_1 %>" class="inputinfosadm" name="phone1infosempresa" id="phone1infosempresa"><br>
                 <label for="phone2infosempresa" class="labelinfosadm">Telefone 2</label><br>
-                <input type="text" placeholder=" (99) 99999-9999" class="inputinfosadm" name="phone2infosempresa" id="phone2infosempresa"><br>
+                <input type="text" value="<%= company.phone_2 %>" class="inputinfosadm" name="phone2infosempresa" id="phone2infosempresa"><br>
                 
                 <!-- Essas informações serão mesmo necessárias? Teremos que alterar o BD -->
                 <!-- <label for="celinfosempresa" class="labelinfosadm">Dias de funcionamento</label><br>
