@@ -11,6 +11,7 @@ const companyController = require('../controllers/companyController');
 const clientController = require('../controllers/clientController');
 const employeeController = require('../controllers/employeeController');
 const categoryController = require('../controllers/categoryController');
+const serviceController = require('../controllers/serviceController');
 
 router.get('/', sessionVerifier, administratorController.index);
 
@@ -26,6 +27,9 @@ router.post('/employee-register', employeeController.store);
 
 // Categoria.
 router.post('/category-register', categoryController.store);
+
+// Serviço.
+router.post('/service-register', serviceController.store);
 
 
 // *** EDIÇÃO DE DADOS ***

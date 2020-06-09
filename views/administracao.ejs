@@ -389,38 +389,52 @@
             </select><br>
             <button type="submit" class="botaoinfosadm">Salvar</button>
         </form>
-        <form class="subforms">
+        <form class="subforms" method="POST" action="/administracao/service-register">
             <h3 class="tituloinfosadm">CADASTRAR SERVIÇO</h3>
-            <label for="nomecadastrarservicos" class="labelinfosadm">Nome</label><br>
-            <input type="text" placeholder=" Nome do serviço" class="dropdowninfosfunc" name="nomecadastrarservicos" id="nomecadastrarservicos"><br>
-            <label for="categoriacadastrarservicos" class="labelinfosadm">Categoria</label><br>
-            <select name="selected" class="dropdowninfosadm" id="categoriacadastrarservicos">
-                <option value="0" selected="selected">Selecione</option>
-                <option value="1">Categoria 1</option>
-                <option value="2">Categoria 2</option>
-                <option value="3">Categoria 3</option>
-                <option value="4">Categoria 4</option>
-                <option value="5">Categoria 5</option>
-                <option value="6">Categoria 6</option>
-                <option value="7">Categoria 7</option>
-                <option value="8">Categoria 8</option>
-                <option value="9">Categoria 9</option>
+            <label for="serviceregistername" class="labelinfosadm">Nome</label><br>
+            <input type="text" placeholder="Digite o nome do serviço" class="dropdowninfosfunc" name="serviceregistername" id="serviceregistername"><br>
+            <label for="serviceregistercategory" class="labelinfosadm">Categoria</label><br>
+            <select name="serviceregistercategory" class="dropdowninfosadm" id="serviceregistercategory">
+                <option value="0" selected="selected" disabled>Selecione</option> 
+                <% for( let i = 0; i < category.length; i++ ) { %>
+                    <option value=" <%= category[i].id %> "> <%= category[i].name %> </option>
+                <% } %>
             </select><br>
-            <label for="precocadastrarservicos" class="labelinfosadm">Preço</label><br>
-            <input type="text" class="inputinfosfunc2" placeholder=" R$0,00" name="precocadastrarservicos" id="precocadastrarservicos"><br>
-            <label for="funcionariocadastrarservicos" class="labelinfosadm">Funcionário</label><br>
-            <select name="selected" class="dropdowninfosfunc" id="funcionariocadastrarservicos">
-                <option value="0" selected="selected">Selecione</option>
-                <option value="1">Funcionário 1</option>
-                <option value="2">Funcionário 2</option>
-                <option value="3">Funcionário 3</option>
-                <option value="4">Funcionário 4</option>
-                <option value="5">Funcionário 5</option>
-                <option value="6">Funcionário 6</option>
-                <option value="7">Funcionário 7</option>
-                <option value="8">Funcionário 8</option>
-                <option value="9">Funcionário 9</option>
-            </select><br>
+            <label for="serviceduration" class="labelinfosadm">Duração em minutos</label><br>
+            <input type="number" class="inputinfosfunc2" placeholder=" Digite a duração do serviço" name="serviceduration" id="serviceduration"><br>
+            <label for="servicedescription" class="labelinfosadm">Descrição</label><br>
+            <textarea class="inputinfosfunc2" placeholder=" Digite a descrição do serviço" name="servicedescription" id="servicedescription"></textarea><br>
+            <label for="serviceprice" class="labelinfosadm">Preço</label><br>
+            <input type="number" class="inputinfosfunc2" placeholder=" R$0,00" name="serviceprice" id="serviceprice"><br>
+            <br>
+            <!-- Button trigger modal -->
+<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">
+    Adicionar funcionários
+  </button>
+  <!-- Modal adicionar funcionários -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Selecione os funcionários habilitados para o serviço.</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <% for( let i = 0; i < employees.length; i++ ) { %>
+                <input id="<%= employees[i].id %>" name="<%= employees[i].id %>" type="checkbox">
+                <label for=""><%= employees[i].name %></label>
+                <br>
+            <% } %>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
             <button type="submit" class="botaoinfosadm">Salvar</button>
             <br><br>
             <div class="botaoagendamento" onclick="displaysub(4)"><span class="textcolorblack">Cadastrar Categoria</span><i class="fas fa-arrow-right"></i></div>
