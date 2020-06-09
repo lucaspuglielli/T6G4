@@ -30,7 +30,7 @@ const clientController = {
             updatedAt: new Date(),
         });
 
-        return res.redirect('/admin');
+        return res.redirect('/administracao');
     }, 
 };
 
