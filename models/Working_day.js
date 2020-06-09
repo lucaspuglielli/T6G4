@@ -1,9 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
   const Working_day = sequelize.define('Working_day', {
-    id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-    },
     id_employee: DataTypes.INTEGER,
     monday: DataTypes.INTEGER,
     tuesday: DataTypes.INTEGER,

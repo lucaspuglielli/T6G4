@@ -1,16 +1,12 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Client = sequelize.define('Client', {
-    id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-    },
     name: DataTypes.STRING,
     lastname: DataTypes.STRING,
     email: DataTypes.STRING,
     password: DataTypes.STRING,
     cpf: DataTypes.STRING,
-    phone: DataTypes.INTEGER,
+    phone: DataTypes.STRING,
     birthdate: DataTypes.DATE,
     updatedAt: DataTypes.DATE,
     createdAt: DataTypes.DATE,

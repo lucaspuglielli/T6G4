@@ -17,11 +17,11 @@ module.exports = {
         allowNull: false,
       },
       phone_1: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
         allowNull: false,
       },
       phone_2: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
         allowNull: false,
       },
       createdAt: {

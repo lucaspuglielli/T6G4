@@ -25,7 +25,7 @@ module.exports = {
         type: Sequelize.DATE
       },
       phone: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
         allowNull: false,
       },
       password: {
