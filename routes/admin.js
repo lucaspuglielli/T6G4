@@ -17,6 +17,7 @@ const adminAuthController = require('../controllers/adminAuthController');
 const adminLoginMiddleware = require('../middleware/adminLoginMiddleware');
 
 // *** EXIBIÇÃO DA PÁGINA DE ADMINISTRAÇÃO ***
+// !!! Após o desenvolvimento incluir o adminLoginMiddleware. !!!
 router.get('/', sessionVerifier, administratorController.index);
 
 // *** LOGIN DE ADMINISTRADOR ***
@@ -43,5 +44,8 @@ router.post('/service-register', serviceController.store);
 // *** EDIÇÃO DE DADOS ***
 // Empresa
 router.put('/company-register', companyController.update);
+
+// Administrador
+router.put('/admin-edit', administratorController.update);
 
 module.exports = router;

@@ -10,23 +10,22 @@
     <div class="containerinfosopcoes">
         <div class="opcaoinfos" onclick="currentForm(1)">
             <div class="admitem1"></div>
-            <form class="forms" method="POST" action="/admin/admin-register">
+            <form class="forms" method="POST" action="/administracao/admin-edit?_method=put">
                 <% if(typeof(msg) != 'undefined') { %>
                     <div class="alert alert-danger"><%= msg %></div>
                 <% } %>
-                <h3 class="tituloinfosadm">INFORMAÇÕES DO ADMINISTRADOR</h3>
+                <h3 class="tituloinfosadm">ATUALIZAR INFORMAÇÕES DO ADMINISTRADOR</h3>
                 <label for="nameinfosadm" class="labelinfosadm">Nome Completo</label><br>
-                <input type="text" placeholder="Digite seu nome" class="inputinfosadm" name="nameinfosadm" id="nameinfosadm"><br>
+                <input type="text" value="<%= administrator.fullName %>" class="inputinfosadm" name="nameinfosadm" id="nameinfosadm"><br>
                 <label for="emailinfosadm" class="labelinfosadm">E-mail</label><br>
-                <input type="email" placeholder=" usuario@mail.com" class="inputinfosadm" name="emailinfosadm" id="emailinfosadm"><br>
+                <input type="email" value="<%= administrator.email %>" class="inputinfosadm" name="emailinfosadm" id="emailinfosadm"><br>
                 <label for="cpfinfosadm" class="labelinfosadm">CPF</label><br>
-                <input type="text" placeholder=" 123.456.789-12" class="inputinfosadm" name="cpfinfosadm" id="cpfinfosadm"><br>
+                <input type="text" value="<%= administrator.cpf %>" class="inputinfosadm" name="cpfinfosadm" id="cpfinfosadm"><br>
                 <label for="birthdayinfosadm" class="labelinfosadm">Data de Nascimento</label><br>
-                <input type="date" class="inputinfosadm" name="birthdayinfosadm" id="birthdayinfosadm"><br>
+                <input type="text" class="inputinfosadm" name="birthdayinfosadm" value="<%= admbirthdate %>" id="birthdayinfosadm"><br>
                 <label for="phoneinfosadm" class="labelinfosadm">Telefone</label><br>
-                <input type="text" placeholder=" (99) 99999-9999" class="inputinfosadm" name="phoneinfosadm" id="phoneinfosadm"><br>
-                <label for="passwordinfosadm" class="labelinfosadm">Senha</label><br>
-                <input type="password" placeholder="Digite sua senha" class="inputinfosadm" name="passwordinfosadm" id="passwordinfosadm"><br>
+                <input type="text" value="<%= administrator.phone %>" class="inputinfosadm" name="phoneinfosadm" id="phoneinfosadm"><br>
+                
                 <button type="submit" class="botaoinfosadm">Salvar</button>
                 <br>
                 <br>
