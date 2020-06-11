@@ -15,7 +15,7 @@ router.get('/quem-somos', sessionVerifier, function(req, res) {
   res.render('quem-somos');
 })
 
-router.get('/teste', sessionVerifier, function(req, res) {
+router.get('/cadastro-usuario', sessionVerifier, function(req, res) {
   res.render('cadastro-usuario')
 });
 
@@ -23,7 +23,7 @@ router.get('/profissionais', sessionVerifier, function(req, res) {
   res.render('profissionais')
 })
 
-router.get('/teste1', sessionVerifier, function(req, res) {
+router.get('/login-adm', sessionVerifier, function(req, res) {
   res.render('login-adm')
 });
 
@@ -35,11 +35,11 @@ router.get('/agendamento', sessionVerifier, function(req, res) {
   res.render('agendamento')
 })
 
-router.get('/pagamento', function(req, res) {
+router.get('/pagamento', sessionVerifier, function(req, res) {
   res.render('pagamento')
 })
 
-router.get('/pagamento-cadastro', function(req, res) {
+router.get('/pagamento-cadastro', sessionVerifier, function(req, res) {
   res.render('pagamento-cadastro')
 })
 
