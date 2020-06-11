@@ -6,9 +6,9 @@
 <body>
 
     <%- include('includes/header') %> 
-        <main class="d-flex flex-column align-items-center">
+        <main class="d-flex flex-column align-items-center main-container">
             <h1 class="m-4 titulopagina">AGENDAMENTO</h1>
-            <form action="/registrar" class="formAgendamento w-75 d-flex flex-column">
+            <form action="" class="formAgendamento w-75 d-flex flex-column">
                 <div class="form-group">
                     <label class="label-form" for="servico">Selecione um serviço</label>
                     <select class="form-control form-control-lg form-border" id="servico">
@@ -22,8 +22,8 @@
                 </div>
                 <div class="form-group">
                     <label class="label-form" for="valoragendamento">Valor</label>
-                    <input type="text" class="form-control form-control-lg form-border correcaoplaceholder" id="valoragendamento"
-                        placeholder="R$0,00">
+                    <input type="text" class="form-control form-control-lg form-border correcaoplaceholder disabled-style" id="valoragendamento"
+                        placeholder="R$0,00" disabled>
                 </div>
                 <div class="form-group">
                     <label class="label-form" for="profissional">Escolha o profissional</label>
