@@ -23,10 +23,6 @@ router.get('/profissionais', sessionVerifier, function(req, res) {
   res.render('profissionais')
 })
 
-router.get('/login-adm', sessionVerifier, function(req, res) {
-  res.render('login-adm')
-});
-
 router.get('/contato', sessionVerifier, function(req, res) {
   res.render('contato')
 })

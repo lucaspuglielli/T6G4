@@ -12,8 +12,16 @@ const clientController = require('../controllers/clientController');
 const employeeController = require('../controllers/employeeController');
 const categoryController = require('../controllers/categoryController');
 const serviceController = require('../controllers/serviceController');
+const adminAuthController = require('../controllers/adminAuthController');
 
+const adminLoginMiddleware = require('../middleware/adminLoginMiddleware');
+
+// *** EXIBIÇÃO DA PÁGINA DE ADMINISTRAÇÃO ***
 router.get('/', sessionVerifier, administratorController.index);
+
+// *** LOGIN DE ADMINISTRADOR ***
+router.get('/login', adminLoginMiddleware, adminAuthController.index);
+router.post('/login', adminAuthController.store);
 
 // *** REGISTROS DE DADOS ***
 // Administrador
