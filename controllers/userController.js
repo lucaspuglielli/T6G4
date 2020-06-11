@@ -76,8 +76,6 @@ const userController = {
     }, 
     update: async (req, res) => {
 
-        const client = await Client.findByPk(req.session.user.id);
-
         const {
             name,
             lastname,
@@ -97,7 +95,7 @@ const userController = {
         },
         {
             where: {
-                id: client.id
+                id: req.session.user.id
             }
         });
 
