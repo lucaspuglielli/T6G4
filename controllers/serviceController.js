@@ -1,32 +1,12 @@
 const Sequelize = require('sequelize');
 const config = require('../config/database');
 const {
-    Service, Employee
+    Service, Employee, Employee_skill
 } = require('../models');
 
 const serviceController = {
 
     store: async (req, res) => {
-
-        // const employees = await Employee.findAll();
-        
-        // let employeesId = [];
-        
-        // for( let i=0; i < employees.length; i++) {
-        //     // let idEmployee = employees[i].id;
-        //     if(typeof req.body.employees[i] === 'undefined'){
-        //         employeesId.push('não definido')
-        //     } else{
-        //         employeesId.push(req.body.employees[i].id);
-        //     }
-        // }
-
-        // for( let i=0; i < employeesId.length; i++) {
-        //     employeesId[i] = req.body;
-        // } 
-
-        // console.log(req.body);
-        // console.log(employeesId);
 
         const {
             serviceregistername,
@@ -34,8 +14,11 @@ const serviceController = {
             serviceprice,
             serviceduration,
             servicedescription,
+            employees
         } = req.body;
-
+        
+        console.log(employees);
+        
         const service = await Service.create({
             name: serviceregistername,
             duration: serviceduration,
@@ -45,7 +28,24 @@ const serviceController = {
             createdAt: new Date(),
             updatedAt: new Date(),
         });
-
+        
+        if(Array.isArray(employees)) {
+            employees.forEach(id => {
+                const relationship = Employee_skill.create({
+                    id_employee: id,
+                    id_service: service.id,
+                    createdAt: new Date(),
+                    updatedAt: new Date(),
+                });
+            }); 
+        } else {
+            const relationship = Employee_skill.create({
+                id_employee: employees,
+                id_service: service.id,
+                createdAt: new Date(),
+                updatedAt: new Date(), 
+            });
+        };
         return res.redirect('/administracao');
     },
 };

@@ -423,13 +423,13 @@
         </div>
         <div class="modal-body">
             <% for( let i = 0; i < employees.length; i++ ) { %>
-                <input id="<%= employees[i].id %>" name="<%= employees[i].id %>" type="checkbox">
+                <input id="<%= employees[i].id %>" name="employees" value=" <%= employees[i].id %>  " type="checkbox">
                 <label for=""><%= employees[i].name %></label>
                 <br>
             <% } %>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
         </div>
       </div>
     </div>
