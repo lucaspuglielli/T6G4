@@ -11,23 +11,23 @@ const userController = {
             console.log('Not found!');
         }
 
-        function transformarData(date) {
-            var newDate = new Date(date.getTime() + date.getTimezoneOffset() * 60 * 1000);
-            let ano = newDate.getFullYear();
-            let mes = newDate.getMonth();
-            let dia = newDate.getDate();
+        // function transformarData(date) {
+        //     var newDate = new Date(date.getTime() + date.getTimezoneOffset() * 60 * 1000);
+        //     let ano = newDate.getFullYear();
+        //     let mes = newDate.getMonth();
+        //     let dia = newDate.getDate();
         
-            newDate = `${dia}/${mes + 1}/${ano}`
+        //     newDate = `${dia}/${mes + 1}/${ano}`
         
-            return newDate;
-        }
+        //     return newDate;
+        // }
 
         const inputValues = {
             name: user.name,
             lastname: user.lastname,
             email: user.email,
             cpf: user.cpf,
-            birthdate: transformarData(user.birthdate),
+            birthdate: user.birthdate,
             phone: user.phone
         }
 

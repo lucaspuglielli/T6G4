@@ -22,7 +22,7 @@ module.exports = {
       },
       birthdate: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATEONLY
       },
       phone: {
         type: Sequelize.STRING,
