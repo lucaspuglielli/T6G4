@@ -15,10 +15,11 @@ const serviceController = require('../controllers/serviceController');
 const adminAuthController = require('../controllers/adminAuthController');
 
 const adminLoginMiddleware = require('../middleware/adminLoginMiddleware');
+const adminAuthMiddleware = require('../middleware/adminAuthMiddleware');
 
 // *** EXIBIÇÃO DA PÁGINA DE ADMINISTRAÇÃO ***
 // !!! Após o desenvolvimento incluir o adminLoginMiddleware. !!!
-router.get('/', sessionVerifier, administratorController.index);
+router.get('/', adminAuthMiddleware, administratorController.index);
 
 // *** LOGIN DE ADMINISTRADOR ***
 router.get('/login', adminLoginMiddleware, adminAuthController.index);

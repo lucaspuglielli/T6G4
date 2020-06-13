@@ -10,20 +10,11 @@ const administratorController = {
         const category = await Category.findAll();
         const employees = await Employee.findAll();
         const administrator = await Administrator.findByPk(req.session.user.id);
+        const user = administrator;
 
-        // function transformarData(date) {
-        //     var newDate = new Date(date.getTime() + date.getTimezoneOffset() * 60 * 1000);
-        //     let ano = newDate.getFullYear();
-        //     let mes = newDate.getMonth();
-        //     let dia = newDate.getDate();
-        
-        //     newDate = `${dia}/${mes + 1}/${ano}`
-        
-        //     return newDate;
-        // }
-        // const admbirthdate = transformarData(administrator.birthdate);
+        console.log(user);
 
-        return res.render('administracao', {company, category, employees, administrator});
+        return res.render('administracao', {company, category, employees, administrator, user});
     },
     store: async (req, res) => {
         const {
