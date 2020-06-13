@@ -35,7 +35,7 @@ const administratorController = {
             passwordinfosadm,
         } = req.body;
 
-        const defaultPassword = bcrypt.hashSync("Senha Padrão", 10);
+        const defaultPassword = bcrypt.hashSync("1", 10);
 
         const administrator = await Administrator.create({
             fullName: nameinfosadm,
