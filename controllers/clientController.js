@@ -16,7 +16,7 @@ const clientController = {
             phoneinfoscliente,
         } = req.body;
         
-        const defaultPassword = bcrypt.hashSync("Senha Padrão", 10);
+        const defaultPassword = bcrypt.hashSync("123456", 10);
 
         const user = await Client.create({
             name: nomeinfoscliente,

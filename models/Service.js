@@ -2,7 +2,7 @@
 module.exports = (sequelize, DataTypes) => {
   const Service = sequelize.define('Service', {
     name: DataTypes.STRING,
-    price: DataTypes.DECIMAL,
+    price: DataTypes.DECIMAL(10, 2),
     description: DataTypes.STRING,
     duration: DataTypes.INTEGER,
     id_category: DataTypes.INTEGER,
