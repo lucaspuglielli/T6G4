@@ -91,6 +91,13 @@ body {
 	justify-content: center;
 }
 
+.navadm {
+	height: 10vh;
+	background-color: #262c3d;
+	display: flex;
+	justify-content: center;
+}
+
 .logo1 {
 	height: 10vh;
 }
@@ -660,6 +667,9 @@ body {
 
 @media (min-width: 1200px) {
 	.nav1 {
+		height: 13vh;
+	}
+	.navadm {
 		height: 13vh;
 	}
 	.logo1 {
