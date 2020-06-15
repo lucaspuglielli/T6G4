@@ -127,22 +127,16 @@
                 <div class="admitem4"></div>
                 <form class="forms" method='POST'>
                     <h3 class="tituloinfosadm">EDITAR FUNCIONARIO</h3>
-                    <label for="nomeeditarfuncionario" class="labelinfosadm">Nome</label><br>
-                    <select name="selected" class="dropdowninfosadm2" id="nomeeditarfuncionario">
-                        <option value="0" selected="selected">Selecione</option>
-                        <option value="1">Funcionário 1</option>
-                        <option value="2">Funcionário 2</option>
-                        <option value="3">Funcionário 3</option>
-                        <option value="4">Funcionário 4</option>
-                        <option value="5">Funcionário 5</option>
-                        <option value="6">Funcionário 6</option>
-                        <option value="7">Funcionário 7</option>
-                        <option value="8">Funcionário 8</option>
-                        <option value="9">Funcionário 9</option>
+                    <label for="editemployeename" class="labelinfosadm">Nome</label><br>
+                    <select name="editemployeename" class="dropdowninfosadm2" id="editemployeename" onchange="preencherCampo();">
+                        <option value="0" selected="selected" disabled>Selecione o funcionário</option>
+                        <% for( let i = 0; i < employees.length; i++ ) { %>
+                            <option value="<%=employees[i].id%>  "><%= employees[i].name %></option>
+                        <% } %>
                     </select><br>
-                    <label for="emailinfosfuncionario" class="labelinfosadm">E-mail</label><br>
-                    <input type="email" placeholder=" usuario@mail.com" class="inputinfosadm"
-                        name="emailinfosfuncionario" id="emailinfosfuncionario"><br>
+                    <label for="editemployeeemail" class="labelinfosadm">E-mail</label><br>
+                    <input type="email" class="inputinfosadm"
+                        name="editemployeeemail" id="editemployeeemail"><br>
                     <label for="celinfosfuncionario" class="labelinfosadm">Telefone</label><br>
                     <input type="text" placeholder=" (99) 99999-9999" class="inputinfosadm" name="celinfosfuncionario"
                         id="celinfosfuncionario"><br>

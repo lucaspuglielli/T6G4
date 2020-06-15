@@ -79,3 +79,13 @@ function displaysub(n){
     administrador = true;
     }
 }
+
+// *** FORM EDIÇÃO DE FUNCIONÁRIOS ***
+
+const editEmployeeSelect = document.getElementById('editemployeename');
+const editEmployeeEmail = document.getElementById('editemployeeemail');
+
+function preencherCampo() {
+    const idEmployee = editEmployeeSelect.value.trim();
+    return editEmployeeEmail.value = employees[idEmployee].name;
+};
