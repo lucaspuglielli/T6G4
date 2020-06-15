@@ -10,6 +10,7 @@ const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const authRouter = require('./routes/auth');
 const adminRouter = require('./routes/admin');
+const apiRouter = require('./routes/api');
 
 const app = express();
 
@@ -33,6 +34,7 @@ app.use('/', indexRouter);
 app.use('/login', authRouter);
 app.use('/administracao', adminRouter);
 app.use('/usuario', usersRouter);
+app.use('/api', apiRouter);
 
 
 // catch 404 and forward to error handler
