@@ -92,7 +92,7 @@ function displaysub(n) {
 
 const editEmployeeSelect = document.getElementById("editemployeenameselection");
 const editEmployeeEmail = document.getElementById("editemployeeemail");
-const editEmployeePhone = document.getElementById("editemployeeephone");
+const editEmployeePhone = document.getElementById("editemployeephone");
 const editEmployeeDom = document.getElementById("dominfosfuncionario");
 const editEmployeeSeg = document.getElementById("seginfosfuncionario");
 const editEmployeeTer = document.getElementById("terinfosfuncionario");
@@ -100,8 +100,8 @@ const editEmployeeQua = document.getElementById("quainfosfuncionario");
 const editEmployeeQui = document.getElementById("quiinfosfuncionario");
 const editEmployeeSex = document.getElementById("sexinfosfuncionario");
 const editEmployeeSab = document.getElementById("sabinfosfuncionario");
-const editEmployeeShiftstart = document.getElementById("editemployeeeshiftstart");
-const editEmployeeShiftend = document.getElementById("editemployeeeshiftend");
+const editEmployeeShiftstart = document.getElementById("editemployeeshiftstart");
+const editEmployeeShiftend = document.getElementById("editemployeeshiftend");
 const editEmployeeName = document.getElementById("editemployeename");
 const editEmployeeLastname = document.getElementById("editemployeelastname");
 

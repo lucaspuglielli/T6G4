@@ -134,7 +134,7 @@
                 </div>
                 <div class="opcaoinfos" onclick="currentForm(4)">
                     <div class="admitem4"></div>
-                    <form class="forms" method='POST' action="/administracao/employee-edit?_method=put">
+                    <form class="forms" method='POST' action="/api/employee-edit?_method=put">
                         <h3 class="tituloinfosadm">EDITAR FUNCIONARIO</h3>
                         <label for="editemployeenameselection" class="labelinfosadm">Seleione o funcionário</label><br>
                         <select name="editemployeenameselection" class="dropdowninfosadm2" id="editemployeenameselection"
@@ -150,9 +150,9 @@
                         <input type="text" class="inputinfosadm" placeholder="Sobrenome" name="editemployeelastname" id="editemployeelastname"><br>
                         <label for="editemployeeemail" class="labelinfosadm">E-mail</label><br>
                         <input type="email" class="inputinfosadm" placeholder="name@email.com" name="editemployeeemail" id="editemployeeemail"><br>
-                        <label for="editemployeeephone" class="labelinfosadm">Telefone</label><br>
+                        <label for="editemployeephone" class="labelinfosadm">Telefone</label><br>
                         <input type="text" placeholder=" (99) 99999-9999" class="inputinfosadm"
-                            name="editemployeeephone" id="editemployeeephone"><br>
+                            name="editemployeephone" id="editemployeephone"><br>
                         <label for="celinfosfuncionario" class="labelinfosadm">Dias de trabalho</label><br>
                         <input type="checkbox" name="dominfosfuncionario" id="dominfosfuncionario" checked>
                         <label for="dominfosfuncionario" class="labelinfosadm">Dom</label>
@@ -170,8 +170,8 @@
                         <input type="checkbox" name="sabinfosfuncionario" id="sabinfosfuncionario">
                         <label for="sabinfosfuncionario" class="labelinfosadm">Sáb</label>
                         <br>
-                        <label for="editemployeeeshiftstart" class="labelinfosadm">Horário de trabalho</label><br>
-                        <select name="editemployeeeshiftstart" id="editemployeeeshiftstart" class="dropdowninfosadm">
+                        <label for="editemployeeshiftstart" class="labelinfosadm">Horário de trabalho</label><br>
+                        <select name="editemployeeshiftstart" id="editemployeeshiftstart" class="dropdowninfosadm">
                             <option value="8:00">das 8:00h</option>
                             <option value="9:00">das 9:00h</option>
                             <option value="10:00" selected="selected">das 10:00h</option>
@@ -183,7 +183,7 @@
                             <option value="16:00">das 16:00h</option>
                             <option value="17:00">das 17:00h</option>
                         </select>
-                        <select name="editemployeeeshiftend" id="editemployeeeshiftend" class="dropdowninfosadm">
+                        <select name="editemployeeshiftend" id="editemployeeshiftend" class="dropdowninfosadm">
                             <option value="9:00" selected="selected">as 09:00h</option>
                             <option value="10:00">as 10:00h</option>
                             <option value="11:00">as 11:00h</option>
