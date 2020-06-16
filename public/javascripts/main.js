@@ -90,7 +90,7 @@ function displaysub(n) {
 
 // *** FORM EDIÇÃO DE FUNCIONÁRIOS ***
 
-const editEmployeeSelect = document.getElementById("editemployeename");
+const editEmployeeSelect = document.getElementById("editemployeenameselection");
 const editEmployeeEmail = document.getElementById("editemployeeemail");
 const editEmployeePhone = document.getElementById("editemployeeephone");
 const editEmployeeDom = document.getElementById("dominfosfuncionario");
@@ -102,6 +102,8 @@ const editEmployeeSex = document.getElementById("sexinfosfuncionario");
 const editEmployeeSab = document.getElementById("sabinfosfuncionario");
 const editEmployeeShiftstart = document.getElementById("editemployeeeshiftstart");
 const editEmployeeShiftend = document.getElementById("editemployeeeshiftend");
+const editEmployeeName = document.getElementById("editemployeename");
+const editEmployeeLastname = document.getElementById("editemployeelastname");
 
 let employees = []
 let dias = []
@@ -121,6 +123,8 @@ fetch('http://localhost:3000/api/dias')
 
 function preencherCampo() {
 	const idEmployee = editEmployeeSelect.value.trim();
+	editEmployeeName.value = employees[idEmployee -1].name;
+	editEmployeeLastname.value = employees[idEmployee -1].lastname;
 	editEmployeeEmail.value = employees[idEmployee - 1].email;
 	editEmployeePhone.value = employees[idEmployee - 1].phone;
 	editEmployeeShiftstart.value = employees[idEmployee - 1].shiftstart;

@@ -134,18 +134,22 @@
                 </div>
                 <div class="opcaoinfos" onclick="currentForm(4)">
                     <div class="admitem4"></div>
-                    <form class="forms" method='POST'>
+                    <form class="forms" method='POST' action="/administracao/employee-edit?_method=put">
                         <h3 class="tituloinfosadm">EDITAR FUNCIONARIO</h3>
-                        <label for="editemployeename" class="labelinfosadm">Nome</label><br>
-                        <select name="editemployeename" class="dropdowninfosadm2" id="editemployeename"
+                        <label for="editemployeenameselection" class="labelinfosadm">Seleione o funcionário</label><br>
+                        <select name="editemployeenameselection" class="dropdowninfosadm2" id="editemployeenameselection"
                             onchange="preencherCampo();">
-                            <option value="0" selected="selected" disabled>Selecione o funcionário</option>
+                            <option value="0" selected="selected" disabled>Selecionar</option>
                             <% for( let i = 0; i < employees.length; i++ ) { %>
                             <option value="<%=employees[i].id%>  "><%= employees[i].name %></option>
                             <% } %>
                         </select><br>
+                        <label for="editemployeename" class="labelinfosadm">Nome</label><br>
+                        <input type="text" class="inputinfosadm" placeholder="Nome" name="editemployeename" id="editemployeename"><br>
+                        <label for="editemployeelastname" class="labelinfosadm">Sobrenome</label><br>
+                        <input type="text" class="inputinfosadm" placeholder="Sobrenome" name="editemployeelastname" id="editemployeelastname"><br>
                         <label for="editemployeeemail" class="labelinfosadm">E-mail</label><br>
-                        <input type="email" class="inputinfosadm" name="editemployeeemail" id="editemployeeemail"><br>
+                        <input type="email" class="inputinfosadm" placeholder="name@email.com" name="editemployeeemail" id="editemployeeemail"><br>
                         <label for="editemployeeephone" class="labelinfosadm">Telefone</label><br>
                         <input type="text" placeholder=" (99) 99999-9999" class="inputinfosadm"
                             name="editemployeeephone" id="editemployeeephone"><br>
