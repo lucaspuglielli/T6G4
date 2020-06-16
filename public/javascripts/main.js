@@ -122,50 +122,52 @@ fetch('http://localhost:3000/api/dias')
 
 
 function preencherCampo() {
-	const idEmployee = editEmployeeSelect.value.trim();
-	editEmployeeName.value = employees[idEmployee -1].name;
-	editEmployeeLastname.value = employees[idEmployee -1].lastname;
-	editEmployeeEmail.value = employees[idEmployee - 1].email;
-	editEmployeePhone.value = employees[idEmployee - 1].phone;
-	editEmployeeShiftstart.value = employees[idEmployee - 1].shiftstart;
-	editEmployeeShiftend.value = employees[idEmployee - 1].shiftend;
-	if(dias.find(element => element.id_employee == idEmployee).sunday == 0){
+	let selectedEmployee = employees.filter(function (elem) {
+		return elem.id == editEmployeeSelect.value.trim();
+	});
+	editEmployeeName.value = selectedEmployee[0].name;
+	editEmployeeLastname.value = selectedEmployee[0].lastname;
+	editEmployeeEmail.value = selectedEmployee[0].email;
+	editEmployeePhone.value = selectedEmployee[0].phone;
+	editEmployeeShiftstart.value = selectedEmployee[0].shiftstart;
+	editEmployeeShiftend.value = selectedEmployee[0].shiftend;
+	if(dias.find(element => element.id_employee == selectedEmployee[0].id).sunday == 0){
 		editEmployeeDom.checked = false;
 	}else {
 		editEmployeeDom.checked = true;
 	}
 
-	if(dias.find(element => element.id_employee == idEmployee).monday == 0){
+	if(dias.find(element => element.id_employee == selectedEmployee[0].id).monday == 0){
 		editEmployeeSeg.checked = false;
 	}else {
 		editEmployeeSeg.checked = true;
 	}
 
-	if(dias.find(element => element.id_employee == idEmployee).tuesday == 0){
+	if(dias.find(element => element.id_employee == selectedEmployee[0].id).tuesday == 0){
 		editEmployeeTer.checked = false;
 	}else {
 		editEmployeeTer.checked = true;
 	}
 
-	if(dias.find(element => element.id_employee == idEmployee).wednesday == 0){
+	if(dias.find(element => element.id_employee == selectedEmployee[0].id).wednesday == 0){
 		editEmployeeQua.checked = false;
 	}else {
 		editEmployeeQua.checked = true;
 	}
 
-	if(dias.find(element => element.id_employee == idEmployee).thursday == 0){
+	if(dias.find(element => element.id_employee == selectedEmployee[0].id).thursday == 0){
 		editEmployeeQui.checked = false;
 	}else {
 		editEmployeeQui.checked = true;
 	}
 
-	if(dias.find(element => element.id_employee == idEmployee).friday == 0){
+	if(dias.find(element => element.id_employee == selectedEmployee[0].id).friday == 0){
 		editEmployeeSex.checked = false;
 	}else {
 		editEmployeeSex.checked = true;
 	}
 
-	if(dias.find(element => element.id_employee == idEmployee).saturday == 0){
+	if(dias.find(element => element.id_employee == selectedEmployee[0].id).saturday == 0){
 		editEmployeeSab.checked = false;
 	}else {
 		editEmployeeSab.checked = true;
