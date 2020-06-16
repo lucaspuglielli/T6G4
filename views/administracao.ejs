@@ -389,7 +389,7 @@
                     </select><br>
                     <button type="submit" class="botaoinfosadm">Salvar</button><br><br>
                 </form>
-                <form class="subforms" method="POST" action="/admin/employee-register">
+                <form class="subforms" method="POST" enctype="multipart/form-data" action="/administracao/employee-register">
                     <h3 class="tituloinfosadm">CADASTRAR FUNCIONARIO</h3>
                     <label for="nameemployee" class="labelinfosadm">Nome</label><br>
                     <input type="text" placeholder="Digite o nome do funcionário" class="inputinfosadm"
@@ -404,7 +404,7 @@
                     <input type="text" placeholder=" (99) 99999-9999" class="inputinfosadm" name="phoneemployee"
                         id="phoneemployee"><br>
                     <label for="photoemployee" class="labelinfosadm">Foto</label><br>
-                    <input type="text" name="photoemployee" id="photoemployee" class="inputfotofunc"><br>
+                    <input type="file" name="photoemployee" id="photoemployee" class="inputfotofunc"><br>
                     <label class="labelinfosadm">Dias de trabalho</label><br>
                     <input type="checkbox" name="sunemployee" id="sunemployee">
                     <label for="sunemployee" class="labelinfosadm">Dom</label>

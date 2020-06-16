@@ -21,7 +21,6 @@ const employeeController = {
             lastnameemployee,
             emailemployee,
             phoneemployee,
-            photoemployee,
             sunemployee,
             monemployee,
             tueemployee,
@@ -32,6 +31,8 @@ const employeeController = {
             shiftend,
             shiftstart
         } = req.body;
+
+        const [photoemployee] = req.files;
 
         function verificaDia(dia){
             if(dia == "on"){
@@ -47,27 +48,31 @@ const employeeController = {
                 lastname: lastnameemployee,
                 email: emailemployee,
                 phone: phoneemployee,
-                photo: photoemployee,
+                photo: photoemployee.filename,
                 shiftstart,
                 shiftend,
                 createdAt: new Date(),
                 updatedAt: new Date(),
             });
+            const workingDay = await Working_day.create({
+                id_employee: employee.id,
+                monday: verificarDia(monemployee),
+                tuesday: verificarDia(tueemployee),
+                wednesday: verificarDia(wedemployee),
+                thursday: verificarDia(thuemployee),
+                friday: verificarDia(friemployee),
+                saturday: verificarDia(satemployee),
+                sunday: verificarDia(sunemployee),
+                createdAt: new Date(),
+                updatedAt: new Date(),
+            })
+            return res.redirect('/administracao');
             // you can now access the newly created user
           } catch (err) {
             // print the error details
             console.log(err);
           }
-
-          const workingDay = await Working_day.create({
-              monday: verificarDia(monemployee),
-              tuesday: verificarDia(tueemployee),
-              wednesday: verificarDia(wedemployee),
-              thursday: verificarDia(thuemployee),
-              friday: verificarDia(friemployee),
-              saturday: verificarDia(satemployee),
-              sunday: verificarDia(sunemployee),
-          })
+          
     },
 };
 
