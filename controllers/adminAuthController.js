@@ -16,7 +16,6 @@ const AdminAuthController = {
         let [user] = await Administrator.findAll({
             where: {email: email}
         });
-        console.log(user);
         if(!user || !bcrypt.compareSync(password, user.password)) {
             user = {
                 name: "disconnected"

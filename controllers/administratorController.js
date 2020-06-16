@@ -12,7 +12,6 @@ const administratorController = {
         const administrator = await Administrator.findByPk(req.session.user.id);
         const user = administrator;
 
-        console.log(user);
 
         return res.render('administracao', {company, category, employees, administrator, user});
     },
