@@ -17,8 +17,8 @@ const administratorController = {
     },
     store: async (req, res) => {
         const {
-            nameinfosadm,
-            emailinfosadm,
+            admregistername,
+            admregisteremail,
             cpfinfosadm,
             birthdayinfosadm,
             phoneinfosadm,
@@ -28,11 +28,11 @@ const administratorController = {
         const defaultPassword = bcrypt.hashSync("1", 10);
 
         const administrator = await Administrator.create({
-            fullName: nameinfosadm,
-            email: emailinfosadm,
-            cpf: cpfinfosadm,
-            birthdate: birthdayinfosadm,
-            phone: phoneinfosadm,
+            fullName: admregistername,
+            email: admregisteremail,
+            cpf: admregistercpf,
+            birthdate: admregisterbirthday,
+            phone: admregisterphone,
             password: defaultPassword,
             createdAt: new Date(),
             updatedAt: new Date(),
