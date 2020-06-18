@@ -19,10 +19,9 @@ const administratorController = {
         const {
             admregistername,
             admregisteremail,
-            cpfinfosadm,
-            birthdayinfosadm,
-            phoneinfosadm,
-            passwordinfosadm,
+            admregistercpf,
+            admregisterbirthday,
+            admregisterphone,
         } = req.body;
 
         const defaultPassword = bcrypt.hashSync("1", 10);
