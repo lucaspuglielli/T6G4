@@ -33,6 +33,10 @@ label {
 	margin: initial;
 }
 
+.card {
+	border: none !important;
+}
+
 /* ESTILOS COMUNS */
 
 .titulopagina {
@@ -1181,6 +1185,16 @@ footer {
 	background-image: url(/images/funcionario-4.jpg);
 }
 
+.listadefuncionarios{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.card-funcionario{
+	border: 1px solid rgba(0,0,0,.125) !important;
+}
+
 /* Para página pagamento */
 .logo-cartao {
 	width: 4em;
@@ -1242,10 +1256,6 @@ footer {
 .titulo-nossos-servicos {
 	padding-top: 3rem;
 	font-size: 2.5em;
-}
-
-.card {
-	border: none !important;
 }
 
 .img-nossos-servicos {
