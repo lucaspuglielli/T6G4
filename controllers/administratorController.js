@@ -20,7 +20,7 @@ const administratorController = {
             admregistername,
             admregisteremail,
             admregistercpf,
-            admregisterbirthday,
+            admregisterbirthdate,
             admregisterphone,
         } = req.body;
 
@@ -30,7 +30,7 @@ const administratorController = {
             fullName: admregistername,
             email: admregisteremail,
             cpf: admregistercpf,
-            birthdate: admregisterbirthday,
+            birthdate: admregisterbirthdate,
             phone: admregisterphone,
             password: defaultPassword,
             createdAt: new Date(),

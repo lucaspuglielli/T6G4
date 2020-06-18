@@ -289,9 +289,6 @@
           </form>
         </div>
         <form class="subforms" method="POST" action="/administracao/admin-register" id="formAdministratorRegistration">
-          <% if(typeof(msg) != 'undefined') { %>
-          <div class="alert alert-danger"><%= msg %></div>
-          <% } %>
           <h3 class="tituloinfosadm">CADASTRAR NOVO ADMINISTRADOR</h3>
           <label for="admregistername" class="labelinfosadm">Nome Completo</label><br>
           <input type="text" placeholder="Digite seu nome" class="inputinfosadm" name="admregistername"
@@ -308,7 +305,7 @@
           <input type="text" placeholder=" (99) 99999-9999" class="inputinfosadm" name="admregisterphone"
             id="admregisterphone"><br>
 
-            <div id="editadmerrorlist" class="alert alert-danger alert-dismissible fade show" role="alert" hidden>
+            <div id="administratorRegistrationErrorList" class="alert alert-danger alert-dismissible fade show" role="alert" hidden>
               <ul>
 
               </ul>
@@ -421,7 +418,7 @@
           <br>
           <label for="shiftstart" class="labelinfosadm">Horário de trabalho</label><br>
           <select name="shiftstart" class="dropdowninfosadm" id="shiftstart">
-            <option value="" selected="selected" disabled="disabled">Selecione horário de início...</option>
+            <option value="0" selected="selected" disabled="disabled">Selecione horário de início...</option>
             <option value="8:00">das 8:00h</option>
             <option value="9:00">das 9:00h</option>
             <option value="10:00">das 10:00h</option>
@@ -436,7 +433,7 @@
             <option value="19:00">das 19:00h</option>
           </select>
           <select name="shiftend" id="shiftend" class="dropdowninfosadm">
-            <option value="" selected="selected" disabled="disabled">Selecione horário de término...
+            <option value="0" selected="selected" disabled="disabled">Selecione horário de término...
             </option>
             <option value="9:00">as 09:00h</option>
             <option value="10:00">as 10:00h</option>
@@ -449,6 +446,11 @@
             <option value="17:00">as 17:00h</option>
             <option value="18:00">as 18:00h</option>
           </select><br>
+          <div id="registerEmployeeErrorList" class="alert alert-danger alert-dismissible fade show" role="alert" hidden>
+            <ul>
+
+            </ul>
+          </div>
           <button type="submit" class="botaoinfosadm">Salvar</button>
         </form>
         <form class="subforms" method="POST" action="/administracao/service-register" id="formServiceRegistration">

@@ -13,7 +13,7 @@ const selectField = (select) => {
 const formCloseSchedule = selectId("formCloseSchedule");
 const formServiceUpdate = selectId("formServiceUpdate");
 const formScheduleClient = selectId("formScheduleClient");
-const formEmployeeRegistration = selectId("formEmployeeRegistration");
+
 const formServiceRegistration = selectId("formServiceRegistration");
 const formCategoryRegistration = selectId("formCategoryRegistration");
 
@@ -175,44 +175,93 @@ formEmployeeUpdate.addEventListener("submit", function (e) {
 
 //CADASTRAR ADMINISTRADOR
 
-// const formAdministratorRegistration = selectId("formAdministratorRegistration");
+const formAdministratorRegistration = selectId("formAdministratorRegistration");
 
-// const administratorRegistrationErrorListUl = document.querySelector("#administratorRegistrationErrorList ul");
-// const administratorRegistrationErrorList = document.querySelector("#administratorRegistrationErrorList");
+const administratorRegistrationErrorListUl = document.querySelector("#administratorRegistrationErrorList ul");
+const administratorRegistrationErrorList = document.querySelector("#administratorRegistrationErrorList");
 
-// formClientRegistration.addEventListener("submit", function (e) {
-// 	let errorMessage = (message) => {
-// 		clientRegistrationErrorListUl.innerHTML += "<li>" + message + "</li>";
-// 	};
+formAdministratorRegistration.addEventListener("submit", function (e) {
+	let errorMessage = (message) => {
+		administratorRegistrationErrorListUl.innerHTML += "<li>" + message + "</li>";
+	};
 
-// 	clientRegistrationErrorListUl.innerHTML = "";
+	administratorRegistrationErrorListUl.innerHTML = "";
 
-// 	if (emptyField(nomeinfoscliente)) {
-// 		errorMessage("Campo <b>Nome</b> não pode estar vazio.");
-// 	}
+	if (emptyField(admregistername)) {
+		errorMessage("Campo <b>nome completo</b> não pode estar vazio.");
+	}
 
-// 	if (emptyField(sobrenomeinfoscliente)) {
-// 		errorMessage("Campo <b>Sobrenome</b> não pode estar vazio.");
-// 	}
+	if (emptyField(admregisteremail)) {
+		errorMessage("Campo <b>E-mail</b> não pode estar vazio.");
+	}
 
-// 	if (emptyField(emailinfoscliente)) {
-// 		errorMessage("Campo <b>E-mail</b> não pode estar vazio.");
-//     }
+	if (emptyField(admregistercpf)) {
+		errorMessage("Campo <b>CPF</b> não pode estar vazio.");
+    }
     
-//     if (emptyField(cpfinfoscliente)) {
-// 		errorMessage("Campo <b>CPF</b> não pode estar vazio.");
-//     }
+    if (emptyField(admregisterbirthdate)) {
+		errorMessage("Campo <b>data de nascimento</b> não pode estar vazio.");
+    }
     
-//     if (emptyField(birthdateinfoscliente)) {
-// 		errorMessage("Campo <b>Data de Nascimento</b> não pode estar vazio.");
-// 	}
-    
-//     if (emptyField(phoneinfoscliente)) {
-// 		errorMessage("Campo <b>Telefone</b> não pode estar vazio.");
-// 	}
+    if (emptyField(admregisterphone)) {
+		errorMessage("Campo <b>telefone</b> não pode estar vazio.");
+	}
 
-// 	if (clientRegistrationErrorListUl.querySelectorAll("li").length > 0) {
-// 		e.preventDefault();
-// 		clientregistrationerrorlist.hidden = "";
-// 	}
-// });
+	if (administratorRegistrationErrorListUl.querySelectorAll("li").length > 0) {
+		e.preventDefault();
+		administratorRegistrationErrorList.hidden = "";
+	}
+});
+
+
+// CADASTRAR FUNCIONÁRIO
+
+const formEmployeeRegistration = selectId("formEmployeeRegistration");
+
+const registerEmployeeErrorListUl = document.querySelector("#registerEmployeeErrorList ul");
+const registerEmployeeErrorList = document.querySelector("#registerEmployeeErrorList");
+
+formEmployeeRegistration.addEventListener("submit", function (e) {
+	let errorMessage = (message) => {
+		registerEmployeeErrorListUl.innerHTML += "<li>" + message + "</li>";
+	};
+
+	registerEmployeeErrorListUl.innerHTML = "";
+
+	if (emptyField(nameemployee)) {
+		errorMessage("Campo <b>nome</b> não pode estar vazio.");
+	}
+
+	if (emptyField(lastnameemployee)) {
+		errorMessage("Campo <b>sobrenome</b> não pode estar vazio.");
+	}
+
+	if (emptyField(emailemployee)) {
+		errorMessage("Campo <b>E-mail</b> não pode estar vazio.");
+	}
+
+	if (emptyField(phoneemployee)) {
+		errorMessage("Campo <b>telefone</b> não pode estar vazio.");
+	}
+
+	if (emptyField(photoemployee)) {
+		errorMessage("Você precisa selecionar uma foto.");
+	}
+
+	if (selectField(shiftstart)) {
+		errorMessage("Você deve selecionar um horário de início.");
+	}
+
+	if (selectField(shiftend)) {
+		errorMessage("Você deve selecionar um horário de término.");
+	}
+
+	if (parseInt(shiftend.value) <= parseInt(shiftstart.value)) {
+		errorMessage("O horário de início deve anteceder o horário de término");
+	}
+
+	if (registerEmployeeErrorListUl.querySelectorAll("li").length > 0) {
+		e.preventDefault();
+		registerEmployeeErrorList.hidden = "";
+	}
+});
