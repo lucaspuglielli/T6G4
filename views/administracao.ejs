@@ -349,19 +349,16 @@
           </select><br>
 
           <!-- tentativa de uso do datepicker -->
-          <!-- <div class="input-group date" data-provide="datepicker"> 
+          <div class="input-group date" data-provide="datepicker"> 
             <input type="text" class="form-control" id="example">
             <div class="input-group-addon">
               <span class="glyphicon glyphicon-th"></span>
             </div>
-          </div> -->
+          </div>
 
           <label for="clientscheduledate" class="labelinfosadm">Dia</label><br>
           <select name="clientscheduledate" class="inputinfosadm" id="clientscheduledate">
             <option value="0" selected="selected">Selecione o dia</option>
-            <% for( let i = 0; i < employees.length; i++ ) { %>
-              <option value=" <%= employees[i].id %> "> <%= employees[i].name %> <%= employees[i].lastname %> </option>
-            <% } %>
           </select><br>
           <!-- <input type="date" class="inputinfosadm" name="dataagendarclass" id="dataagendarclass"><br> -->
           <label for="horarioagendarcliente" class="labelinfosadm">Hora</label><br>
@@ -543,16 +540,32 @@
 
 
     <!-- import do datepicker -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha256-bqVeqGdJ7h/lYPq6xrPv/YGzMEb6dNxlfiTUHSgRCp8=" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha256-bqVeqGdJ7h/lYPq6xrPv/YGzMEb6dNxlfiTUHSgRCp8=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
     <!-- tentativa datepicker -->
-    <!-- <script type="text/javascript">
-    let dislabledDates = ['19-6/2020','20/6/2020']
-      $('#example').datepicker({
-          format: 'dd/mm/yyyy',
-          datesDisabled: dislabledDates
-      })
-    </script> -->
+    <script>
+    let dislabledDates = ['19/06/2020','20/06/2020']
+    var disabledDays = ["10-20-2013", "10-21-2013", "11-15-2013", "11-17-2013"];
+
+    function DisableDates(date) {
+        var string = jQuery.datepicker.formatDate('dd/mm/yy', date);
+        return [dates.indexOf(string) == -1];
+    }
+    $(function() {
+      $("#example").datepicker({
+        dateFormat: 'dd/mm/yy',
+        beforeShowDay: function(date){
+            var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
+            return [ dislabledDates.indexOf(string) == -1 ]
+        },
+      });
+    });
+    </script>
 
 </body>
 

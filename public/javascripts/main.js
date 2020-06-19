@@ -112,6 +112,7 @@ const inputPreco = document.getElementById('clientscheduleserviceprice')
 const divInputPreco = document.getElementById('divclientscheduleserviceprice')
 const divInputServico = document.getElementById('divclientscheduleservice')
 const inputFuncionario = document.getElementById('clientscheduleemployee')
+const inputDias = document.getElementById('clientscheduledate')
 
 let employees = []
 let dias = []
@@ -187,15 +188,13 @@ function removerPorValor(array, valor) {
 inputFuncionario.addEventListener('change', function(){
 	let datasAgendadas = []
 	let horariosPadrao = ['08:00:00', '09:00:00', '10:00:00', '11:00:00', '12:00:00', '13:00:00', '14:00:00', '15:00:00', '16:00:00', '17:00:00', '18:00:00']
-	let horariosAbertos = []
 	let datas = []
-	
-	let agendamentoPadrao = {
-		data: '',
-		horarios: []
-	}
+	let datasLotadas = []
 
-	let agendamentosDofuncionario = []
+	let filtrarDatas = []
+
+	let datasParaMostrar = []
+	
 
 	let idFuncionario = inputFuncionario.value.trim();
 
@@ -205,13 +204,34 @@ inputFuncionario.addEventListener('change', function(){
 		};
 	};
 
-	for(let i=0; i<datasAgendadas.length;i++){
-		datas.push(datasAgendadas[i].start_date)
-	}
-
 	datas = datas.filter(function(este, i) {
 		return datas.indexOf(este) === i;
 	});
+
+	for(let i=0; i<datasAgendadas.length;i++){
+		filtrarDatas.push(datasAgendadas[i].start_date);
+	}
+
+	filtrarDatas = filtrarDatas.filter(function(este, i) {
+		return filtrarDatas.indexOf(este) === i;
+	});
+	//console.log(filtrarDatas)
+
+
+	for(let i=0; i<filtrarDatas.length;i++){
+		let agendamentoPadrao = {
+			data: '',
+			horarios: []
+		}
+		agendamentoPadrao.data = filtrarDatas[i]
+		datas.push(agendamentoPadrao)
+	}
+
+	console.log(datas)
+
+	for(let i=0; i<datas.length;i++){
+		datas[i].horarios = ['08:00:00', '09:00:00', '10:00:00', '11:00:00', '12:00:00', '13:00:00', '14:00:00', '15:00:00', '16:00:00', '17:00:00', '18:00:00']
+	}
 
 	
 
@@ -223,28 +243,36 @@ inputFuncionario.addEventListener('change', function(){
 		}
 	}
 
-	for(let i=0; i<datasAgendadas.length;i++){
-		horariosPadrao = removerPorValor(horariosPadrao, datasAgendadas[i].start_time)
-		agendamentoPadrao.data = datasAgendadas[i].start_date
-		agendamentoPadrao.horarios = horariosPadrao
-		agendamentosDofuncionario.push(agendamentoPadrao)
-		console.log(agendamentosDofuncionario)
-		horariosPadrao = ['08:00:00', '09:00:00', '10:00:00', '11:00:00', '12:00:00', '13:00:00', '14:00:00', '15:00:00', '16:00:00', '17:00:00', '18:00:00']
+	function filtrarHorarios(array){
+		for(let x=0; x<datas.length; x++){
+			if(datas[x].data == array.start_date){
+				datas[x].horarios = removerPorValor(datas[x].horarios, array.start_time)
+			}
+		}
 	}
-	//console.log(agendamentosDofuncionario)
 
-	
+	for(let i=0; i<datasAgendadas.length;i++){
+		filtrarHorarios(datasAgendadas[i])
+	}
 
-	// for(let i=0; i < datasAgendadas.length;i++){
-	// 	agendamentoPadrao.data = datasAgendadas[i].start_date;
-	// }
+	console.log(datas)
 
-	// for(let i=0; i<datas.length;i++){
-	// 	agendamentosDofuncionario.push(agendamentoPadrao);
-	// }
+	for(let i=0; i<datas;i++){
+		if(datas.data == ""){
+			datasLotadas.push(datas.data)
+		}
+	}
 
-	//console.log(agendamentosDofuncionario)
 
+	// faze de testes
+	function setarDatas(){
+		let newDate = new Date()
+		for(let i=0; i<7; i++){
+			inputDias.innerHTML += `
+			<option value="${newDate}">${employees[idFuncionarios[i]-1].name} ${employees[idFuncionarios[i]-1].lastname}</option>
+			`
+		}
+	}
 
 })
 
