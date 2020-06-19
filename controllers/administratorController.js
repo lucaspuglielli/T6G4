@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const config = require('../config/database');
 const bcrypt = require('bcrypt');
-const { Administrator, Company, Category, Employee } = require('../models');
+const { Administrator, Company, Category, Employee, Client, Service } = require('../models');
 
 const administratorController = {
     index: async (req, res) => {
@@ -9,11 +9,13 @@ const administratorController = {
         const company = await Company.findByPk(1);
         const category = await Category.findAll();
         const employees = await Employee.findAll();
+        const services = await Service.findAll();
+        const clients = await Client.findAll();
         const administrator = await Administrator.findByPk(req.session.user.id);
         const user = administrator;
 
 
-        return res.render('administracao', {company, category, employees, administrator, user});
+        return res.render('administracao', {company, category, employees, administrator, user, clients, services});
     },
     store: async (req, res) => {
         const {

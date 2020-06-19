@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <%- include('includes/head', {title: "Administração"}) %>
 
@@ -315,52 +315,55 @@
         <form class="subforms" id="formScheduleClient">
           <h3 class="tituloinfosadm">AGENDAR CLIENTE</h3>
           <label for="nomeagendarcliente" class="labelinfosadm">Nome Completo</label><br>
-          <input type="text" placeholder=" John Doe" class="inputinfosadm" name="nomeagendarcliente"
-            id="nomeagendarcliente"><br>
-          <label for="emailagendarcliente" class="labelinfosadm">Serviço</label><br>
-          <select name="selected" class="inputinfosadm" id="emailagendarcliente">
+          <select name="nomeagendarcliente" id="nomeagendarcliente" class="inputinfosadm">
+            <option value="0" selected="selected" disabled>Selecione</option>
+            <% for( let i = 0; i < clients.length; i++ ) { %>
+            <option value=" <%= clients[i].id %> "> <%= clients[i].name %> <%= clients[i].lastname %> </option>
+            <% } %>
+          </select>
+          <br>
+          <label for="clientschedulecategory" class="labelinfosadm">Categoria</label><br>
+          <select name="clientschedulecategory" class="dropdowninfosadm" id="clientschedulecategory">
             <option value="0" selected="selected">Selecione</option>
-            <option value="1">Serviço 1</option>
-            <option value="2">Serviço 2</option>
-            <option value="3">Serviço 3</option>
-            <option value="4">Serviço 4</option>
-            <option value="5">Serviço 5</option>
-            <option value="6">Serviço 6</option>
-            <option value="7">Serviço 7</option>
-            <option value="8">Serviço 8</option>
-            <option value="9">Serviço 9</option>
+            <% for( let i = 0; i < category.length; i++ ) { %>
+              <option value=" <%= category[i].id %> "> <%= category[i].name %></option>
+              <% } %>
           </select><br>
-          <label for="categoriainfosfuncionario" class="labelinfosadm">Categoria</label><br>
-          <select name="selected" class="dropdowninfosadm" id="categoriainfosfuncionario">
+          <div id="divclientscheduleservice" hidden>
+            <label for="clientscheduleservice" class="labelinfosadm" id="labelclientscheduleservice">Serviços</label><br>
+            <select name="clientscheduleservice" class="inputinfosadm" id="clientscheduleservice">
+              <!-- valores trazidos pelo main.js filtrarServicos(); -->
+            </select><br>
+          </div>
+          <div id="divclientscheduleserviceprice" hidden>
+            <label for="clientscheduleserviceprice" class="labelinfosadm" id="labelclientscheduleserviceprice">Preço</label><br>
+            <input type="text" class="inputinfosfunc2" placeholder=" R$0,00" name="clientscheduleserviceprice"
+              id="clientscheduleserviceprice" readonly><br>
+          </div>
+          <label for="clientscheduleemployee" class="labelinfosadm">Funcionário</label><br>
+          <select name="clientscheduleemployee" class="inputinfosadm" id="clientscheduleemployee">
             <option value="0" selected="selected">Selecione</option>
-            <option value="1">Categoria 1</option>
-            <option value="2">Categoria 2</option>
-            <option value="3">Categoria 3</option>
-            <option value="4">Categoria 4</option>
-            <option value="5">Categoria 5</option>
-            <option value="6">Categoria 6</option>
-            <option value="7">Categoria 7</option>
-            <option value="8">Categoria 8</option>
-            <option value="9">Categoria 9</option>
+            <% for( let i = 0; i < employees.length; i++ ) { %>
+              <option value=" <%= employees[i].id %> "> <%= employees[i].name %> <%= employees[i].lastname %> </option>
+            <% } %>
           </select><br>
-          <label for="precoeditarservicos" class="labelinfosadm">Preço</label><br>
-          <input type="text" class="inputinfosfunc2" placeholder=" R$0,00" name="precoeditarservicos"
-            id="precoeditarservicos"><br>
-          <label for="nomeinfosfuncionario" class="labelinfosadm">Funcionário</label><br>
-          <select name="selected" class="inputinfosadm" id="agendarinfosfuncionario">
-            <option value="0" selected="selected">Selecione</option>
-            <option value="1">Funcionário 1</option>
-            <option value="2">Funcionário 2</option>
-            <option value="3">Funcionário 3</option>
-            <option value="4">Funcionário 4</option>
-            <option value="5">Funcionário 5</option>
-            <option value="6">Funcionário 6</option>
-            <option value="7">Funcionário 7</option>
-            <option value="8">Funcionário 8</option>
-            <option value="9">Funcionário 9</option>
+
+          <!-- tentativa de uso do datepicker -->
+          <!-- <div class="input-group date" data-provide="datepicker"> 
+            <input type="text" class="form-control" id="example">
+            <div class="input-group-addon">
+              <span class="glyphicon glyphicon-th"></span>
+            </div>
+          </div> -->
+
+          <label for="clientscheduledate" class="labelinfosadm">Dia</label><br>
+          <select name="clientscheduledate" class="inputinfosadm" id="clientscheduledate">
+            <option value="0" selected="selected">Selecione o dia</option>
+            <% for( let i = 0; i < employees.length; i++ ) { %>
+              <option value=" <%= employees[i].id %> "> <%= employees[i].name %> <%= employees[i].lastname %> </option>
+            <% } %>
           </select><br>
-          <label for="dataagendarclass" class="labelinfosadm">Dia</label><br>
-          <input type="date" class="inputinfosadm" name="dataagendarclass" id="dataagendarclass"><br>
+          <!-- <input type="date" class="inputinfosadm" name="dataagendarclass" id="dataagendarclass"><br> -->
           <label for="horarioagendarcliente" class="labelinfosadm">Hora</label><br>
           <select name="selected" class="inputinfosadm" id="horarioagendarcliente">
             <option value="0" selected="selected">8:00h</option>
@@ -537,6 +540,19 @@
 
     <script src="/javascripts/main.js"></script>
     <script src="/javascripts/formValidations.js"></script>
+
+
+    <!-- import do datepicker -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha256-bqVeqGdJ7h/lYPq6xrPv/YGzMEb6dNxlfiTUHSgRCp8=" crossorigin="anonymous"></script> -->
+
+    <!-- tentativa datepicker -->
+    <!-- <script type="text/javascript">
+    let dislabledDates = ['19-6/2020','20/6/2020']
+      $('#example').datepicker({
+          format: 'dd/mm/yyyy',
+          datesDisabled: dislabledDates
+      })
+    </script> -->
 
 </body>
 

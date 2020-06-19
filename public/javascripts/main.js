@@ -105,8 +105,19 @@ const editEmployeeShiftend = document.getElementById("editemployeeshiftend");
 const editEmployeeName = document.getElementById("editemployeename");
 const editEmployeeLastname = document.getElementById("editemployeelastname");
 
+// Parte de filtragem de serviços e preços e funcionarios
+const inputServico = document.getElementById('clientscheduleservice')
+const inputCategoria = document.getElementById('clientschedulecategory')
+const inputPreco = document.getElementById('clientscheduleserviceprice')
+const divInputPreco = document.getElementById('divclientscheduleserviceprice')
+const divInputServico = document.getElementById('divclientscheduleservice')
+const inputFuncionario = document.getElementById('clientscheduleemployee')
+
 let employees = []
 let dias = []
+let servicos = []
+let employeesSkills = []
+let agendamentos = []
 
 fetch('http://localhost:3000/api/funcionario')
 .then((resposta) => resposta.json())
@@ -118,6 +129,123 @@ fetch('http://localhost:3000/api/dias')
 .then((resposta) => resposta.json())
 .then((dados) => {
 	return dias = dados
+})
+
+fetch('http://localhost:3000/api/services')
+.then((resposta) => resposta.json())
+.then((dados) => {
+	return servicos = dados
+})
+
+fetch('http://localhost:3000/api/employee-skills')
+.then((resposta) => resposta.json())
+.then((dados) => {
+	return employeesSkills = dados
+})
+
+fetch('http://localhost:3000/api/schedules')
+.then((resposta) => resposta.json())
+.then((dados) => {
+	return agendamentos = dados
+})
+
+inputCategoria.addEventListener('change', function(){
+	divInputServico.hidden = '';
+	inputServico.innerHTML = '<option value="0" selected="selected">Selecione</option>'
+	for(let i=0; i < servicos.length; i++){
+		if(servicos[i].id_category == inputCategoria.value.trim()){
+			inputServico.innerHTML += `
+			<option value="${servicos[i].id}">${servicos[i].name}</option>
+			`
+		}
+	}
+})
+
+inputServico.addEventListener('change', function(){
+	inputPreco.value = servicos[inputServico.value.trim()-1].price;
+	divInputPreco.hidden = "";
+	inputFuncionario.innerHTML = '<option value="0" selected="selected">Selecione</option>'
+	let idFuncionarios = []
+	for(let i=0; i < employeesSkills.length; i++){
+		if(employeesSkills[i].id_service == inputServico.value.trim()){
+			idFuncionarios.push(employeesSkills[i].id_employee);
+		}
+	}
+	for(let i=0; i<idFuncionarios.length; i++){
+		inputFuncionario.innerHTML += `
+			<option value="${employees[idFuncionarios[i]-1].id}">${employees[idFuncionarios[i]-1].name} ${employees[idFuncionarios[i]-1].lastname}</option>
+			`
+	}
+})
+
+function removerPorValor(array, valor) {
+	return array.filter(function(el) { 
+	  return el != valor; 
+	});
+}
+
+inputFuncionario.addEventListener('change', function(){
+	let datasAgendadas = []
+	let horariosPadrao = ['08:00:00', '09:00:00', '10:00:00', '11:00:00', '12:00:00', '13:00:00', '14:00:00', '15:00:00', '16:00:00', '17:00:00', '18:00:00']
+	let horariosAbertos = []
+	let datas = []
+	
+	let agendamentoPadrao = {
+		data: '',
+		horarios: []
+	}
+
+	let agendamentosDofuncionario = []
+
+	let idFuncionario = inputFuncionario.value.trim();
+
+	for(i = 0; i < agendamentos.length; i++){
+		if(agendamentos[i].id_employee == idFuncionario){
+			datasAgendadas.push(agendamentos[i])
+		};
+	};
+
+	for(let i=0; i<datasAgendadas.length;i++){
+		datas.push(datasAgendadas[i].start_date)
+	}
+
+	datas = datas.filter(function(este, i) {
+		return datas.indexOf(este) === i;
+	});
+
+	
+
+	function verificar(data){
+		for(let i=0; i<datasAgendadas;i++){
+			if(data = datasAgendadas[i].start_date){
+				horariosPadrao = removerPorValor(horariosPadrao, datasAgendadas[i].start_time)
+			}
+		}
+	}
+
+	for(let i=0; i<datasAgendadas.length;i++){
+		horariosPadrao = removerPorValor(horariosPadrao, datasAgendadas[i].start_time)
+		agendamentoPadrao.data = datasAgendadas[i].start_date
+		agendamentoPadrao.horarios = horariosPadrao
+		agendamentosDofuncionario.push(agendamentoPadrao)
+		console.log(agendamentosDofuncionario)
+		horariosPadrao = ['08:00:00', '09:00:00', '10:00:00', '11:00:00', '12:00:00', '13:00:00', '14:00:00', '15:00:00', '16:00:00', '17:00:00', '18:00:00']
+	}
+	//console.log(agendamentosDofuncionario)
+
+	
+
+	// for(let i=0; i < datasAgendadas.length;i++){
+	// 	agendamentoPadrao.data = datasAgendadas[i].start_date;
+	// }
+
+	// for(let i=0; i<datas.length;i++){
+	// 	agendamentosDofuncionario.push(agendamentoPadrao);
+	// }
+
+	//console.log(agendamentosDofuncionario)
+
+
 })
 
 
