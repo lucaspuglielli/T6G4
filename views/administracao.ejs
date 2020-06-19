@@ -349,12 +349,14 @@
           </select><br>
 
           <!-- tentativa de uso do datepicker -->
-          <div class="input-group date" data-provide="datepicker"> 
+          <!-- <div class="input-group date" data-provide="datepicker"> 
             <input type="text" class="form-control" id="example">
             <div class="input-group-addon">
               <span class="glyphicon glyphicon-th"></span>
             </div>
-          </div>
+          </div> -->
+
+          <input type="text" id="date">
 
           <label for="clientscheduledate" class="labelinfosadm">Dia</label><br>
           <select name="clientscheduledate" class="inputinfosadm" id="clientscheduledate">
@@ -548,7 +550,7 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
     <!-- tentativa datepicker -->
-    <script>
+    <!-- <script>
     let dislabledDates = ['19/06/2020','20/06/2020']
     var disabledDays = ["10-20-2013", "10-21-2013", "11-15-2013", "11-17-2013"];
 
@@ -565,7 +567,26 @@
         },
       });
     });
-    </script>
+    </script> -->
+
+    
+  <script>
+    var dates = ["20/06/2020", "21/06/2020", "22/06/2020", "23/06/2020"];
+ 
+ function DisableDates(date) {
+     var string = jQuery.datepicker.formatDate('dd/mm/yy', date);
+     return [dates.indexOf(string) == -1];
+ }
+
+
+  $(function() {
+    $("#date").datepicker({
+      dateFormat: 'dd/mm/yy',
+      minDate: new Date(),
+      beforeShowDay: DisableDates
+    });
+  });
+  </script>
 
 </body>
 
