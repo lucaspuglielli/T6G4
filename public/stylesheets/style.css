@@ -33,6 +33,10 @@ label {
 	margin: initial;
 }
 
+.card {
+	border: none !important;
+}
+
 /* ESTILOS COMUNS */
 
 .titulopagina {
@@ -550,24 +554,23 @@ body {
 .equipehomecontainer {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: space-evenly;
 	width: 80%;
 	margin-bottom: 20px;
 }
 
 .equipehomecards {
-	width: 18vh;
-	height: 22vh;
+	width: 239px;
+	height: 334px;
 	border: 1px solid black;
-	margin: 5px;
+	margin: 5px 5px 25px 5px;
 }
 
 .funcionario1bg {
 	width: 100%;
-	height: 14vh;
-	background-image: url(../images/funcionario-1.jpg);
+	/* background-image: url(../images/funcionario-1.jpg);
 	background-size: cover;
-	background-position: center;
+	background-position: center; */
 }
 
 .funcionario2bg {
@@ -604,12 +607,12 @@ body {
 }
 
 .titulofuncionariohome {
-	font-size: 12px;
+	font-size: 20px;
 	color: #227578;
 }
 
 .subtitulofuncionariohome {
-	font-size: 10px;
+	font-size: 16px;
 	color: #41bfc4;
 }
 
@@ -780,16 +783,16 @@ body {
 
 	.equipehomecontainer {
 		width: 1150px;
-		justify-content: space-between;
+		justify-content: space-evenly;
 	}
 
 	.equipehomecards {
-		width: 264px;
-		height: 289px;
+		width: 239px;
+		height: 334px;
 	}
 
 	.funcionario1bg {
-		height: 20vh;
+		/* height: 20vh; */
 	}
 
 	.funcionario2bg {
@@ -1181,6 +1184,16 @@ footer {
 	background-image: url(/images/funcionario-4.jpg);
 }
 
+.listadefuncionarios{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.card-funcionario{
+	border: 1px solid rgba(0,0,0,.125) !important;
+}
+
 /* Para página pagamento */
 .logo-cartao {
 	width: 4em;
@@ -1242,10 +1255,6 @@ footer {
 .titulo-nossos-servicos {
 	padding-top: 3rem;
 	font-size: 2.5em;
-}
-
-.card {
-	border: none !important;
 }
 
 .img-nossos-servicos {
