@@ -89,7 +89,8 @@
             <label for="phoneinfoscliente" class="labelinfosadm">Telefone</label><br>
             <input type="text" placeholder=" (99) 99999-9999" class="inputinfosadm" name="phoneinfoscliente"
               id="phoneinfoscliente"><br>
-            <div id="clientregistrationerrorlist" class="alert alert-danger alert-dismissible fade show" role="alert" hidden>
+            <div id="clientregistrationerrorlist" class="alert alert-danger alert-dismissible fade show" role="alert"
+              hidden>
               <ul>
 
               </ul>
@@ -103,26 +104,33 @@
           <div class="admitem4"></div>
           <form class="forms" method='POST' action="/api/employee-edit?_method=put" id="formEmployeeUpdate">
             <h3 class="tituloinfosadm">EDITAR FUNCIONARIO</h3>
-            <label for="editemployeenameselection" class="labelinfosadm">Seleione o funcionário</label><br>
-            <select name="editemployeenameselection" class="dropdowninfosadm2" id="editemployeenameselection"
-              onchange="preencherCampo();">
-              <option value="0" selected="selected" disabled>Selecionar</option>
-              <% for( let i = 0; i < employees.length; i++ ) { %>
-              <option value="<%=employees[i].id%>  "><%= employees[i].name %></option>
-              <% } %>
-            </select><br>
-            <label for="editemployeename" class="labelinfosadm">Nome</label><br>
-            <input type="text" class="inputinfosadm" placeholder="Nome" name="editemployeename"
-              id="editemployeename"><br>
-            <label for="editemployeelastname" class="labelinfosadm">Sobrenome</label><br>
-            <input type="text" class="inputinfosadm" placeholder="Sobrenome" name="editemployeelastname"
-              id="editemployeelastname"><br>
-            <label for="editemployeeemail" class="labelinfosadm">E-mail</label><br>
-            <input type="email" class="inputinfosadm" placeholder="name@email.com" name="editemployeeemail"
-              id="editemployeeemail"><br>
-            <label for="editemployeephone" class="labelinfosadm">Telefone</label><br>
-            <input type="text" placeholder=" (99) 99999-9999" class="inputinfosadm" name="editemployeephone"
-              id="editemployeephone"><br>
+            <div class="containereditarfuncionario">
+              <div class="subcontainereditarfuncionario1">
+                <label for="editemployeenameselection" class="labelinfosadm">Seleione o funcionário</label><br>
+                <select name="editemployeenameselection" class="dropdowninfosadm2" id="editemployeenameselection"
+                  onchange="preencherCampo();">
+                  <option value="0" selected="selected" disabled>Selecionar</option>
+                  <% for( let i = 0; i < employees.length; i++ ) { %>
+                  <option value="<%=employees[i].id%>  "><%= employees[i].name %></option>
+                  <% } %>
+                </select><br>
+                <label for="editemployeename" class="labelinfosadm">Nome</label><br>
+                <input type="text" class="inputinfosadm" placeholder="Nome" name="editemployeename"
+                  id="editemployeename"><br>
+                <label for="editemployeelastname" class="labelinfosadm">Sobrenome</label><br>
+                <input type="text" class="inputinfosadm" placeholder="Sobrenome" name="editemployeelastname"
+                  id="editemployeelastname"><br>
+                <label for="editemployeeemail" class="labelinfosadm">E-mail</label><br>
+                <input type="email" class="inputinfosadm" placeholder="name@email.com" name="editemployeeemail"
+                  id="editemployeeemail"><br>
+                <label for="editemployeephone" class="labelinfosadm">Telefone</label><br>
+                <input type="text" placeholder=" (99) 99999-9999" class="inputinfosadm" name="editemployeephone"
+                  id="editemployeephone"><br>
+              </div>
+              <div class="subcontainereditarfuncionario2">
+                <img src="/images/funcionariotemplate.png" alt="" class="editemployeeimage">
+              </div>
+            </div>
             <label for="celinfosfuncionario" class="labelinfosadm">Dias de trabalho</label><br>
             <input type="checkbox" name="dominfosfuncionario" id="dominfosfuncionario" checked>
             <label for="dominfosfuncionario" class="labelinfosadm">Dom</label>
@@ -305,11 +313,12 @@
           <input type="text" placeholder=" (99) 99999-9999" class="inputinfosadm" name="admregisterphone"
             id="admregisterphone"><br>
 
-            <div id="administratorRegistrationErrorList" class="alert alert-danger alert-dismissible fade show" role="alert" hidden>
-              <ul>
+          <div id="administratorRegistrationErrorList" class="alert alert-danger alert-dismissible fade show"
+            role="alert" hidden>
+            <ul>
 
-              </ul>
-            </div>
+            </ul>
+          </div>
           <button type="submit" class="botaoinfosadm">Salvar</button>
         </form>
         <form class="subforms" id="formScheduleClient">
@@ -326,17 +335,19 @@
           <select name="clientschedulecategory" class="dropdowninfosadm" id="clientschedulecategory">
             <option value="0" selected="selected">Selecione</option>
             <% for( let i = 0; i < category.length; i++ ) { %>
-              <option value=" <%= category[i].id %> "> <%= category[i].name %></option>
-              <% } %>
+            <option value=" <%= category[i].id %> "> <%= category[i].name %></option>
+            <% } %>
           </select><br>
           <div id="divclientscheduleservice" hidden>
-            <label for="clientscheduleservice" class="labelinfosadm" id="labelclientscheduleservice">Serviços</label><br>
+            <label for="clientscheduleservice" class="labelinfosadm"
+              id="labelclientscheduleservice">Serviços</label><br>
             <select name="clientscheduleservice" class="inputinfosadm" id="clientscheduleservice">
               <!-- valores trazidos pelo main.js filtrarServicos(); -->
             </select><br>
           </div>
           <div id="divclientscheduleserviceprice" hidden>
-            <label for="clientscheduleserviceprice" class="labelinfosadm" id="labelclientscheduleserviceprice">Preço</label><br>
+            <label for="clientscheduleserviceprice" class="labelinfosadm"
+              id="labelclientscheduleserviceprice">Preço</label><br>
             <input type="text" class="inputinfosfunc2" placeholder=" R$0,00" name="clientscheduleserviceprice"
               id="clientscheduleserviceprice" readonly><br>
           </div>
@@ -344,7 +355,7 @@
           <select name="clientscheduleemployee" class="inputinfosadm" id="clientscheduleemployee">
             <option value="0" selected="selected">Selecione</option>
             <% for( let i = 0; i < employees.length; i++ ) { %>
-              <option value=" <%= employees[i].id %> "> <%= employees[i].name %> <%= employees[i].lastname %> </option>
+            <option value=" <%= employees[i].id %> "> <%= employees[i].name %> <%= employees[i].lastname %> </option>
             <% } %>
           </select><br>
 
@@ -448,7 +459,8 @@
             <option value="17:00">as 17:00h</option>
             <option value="18:00">as 18:00h</option>
           </select><br>
-          <div id="registerEmployeeErrorList" class="alert alert-danger alert-dismissible fade show" role="alert" hidden>
+          <div id="registerEmployeeErrorList" class="alert alert-danger alert-dismissible fade show" role="alert"
+            hidden>
             <ul>
 
             </ul>
@@ -542,9 +554,11 @@
 
 
     <!-- import do datepicker -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha256-bqVeqGdJ7h/lYPq6xrPv/YGzMEb6dNxlfiTUHSgRCp8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"
+      integrity="sha256-bqVeqGdJ7h/lYPq6xrPv/YGzMEb6dNxlfiTUHSgRCp8=" crossorigin="anonymous"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -569,24 +583,24 @@
     });
     </script> -->
 
-    
-  <script>
-    var dates = ["20/06/2020", "21/06/2020", "22/06/2020", "23/06/2020"];
- 
- function DisableDates(date) {
-     var string = jQuery.datepicker.formatDate('dd/mm/yy', date);
-     return [dates.indexOf(string) == -1];
- }
+
+    <script>
+      var dates = ["20/06/2020", "21/06/2020", "22/06/2020", "23/06/2020"];
+
+      function DisableDates(date) {
+        var string = jQuery.datepicker.formatDate('dd/mm/yy', date);
+        return [dates.indexOf(string) == -1];
+      }
 
 
-  $(function() {
-    $("#date").datepicker({
-      dateFormat: 'dd/mm/yy',
-      minDate: new Date(),
-      beforeShowDay: DisableDates
-    });
-  });
-  </script>
+      $(function () {
+        $("#date").datepicker({
+          dateFormat: 'dd/mm/yy',
+          minDate: new Date(),
+          beforeShowDay: DisableDates
+        });
+      });
+    </script>
 
 </body>
 

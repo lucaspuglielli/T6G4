@@ -4,7 +4,7 @@ let funcionario = false;
 let servico = false;
 let categoria = false;
 
-let formIndex = 1;
+let formIndex = 4;
 
 showForms(formIndex);
 
@@ -91,6 +91,7 @@ function displaysub(n) {
 // *** FORM EDIÇÃO DE FUNCIONÁRIOS ***
 
 const editEmployeeSelect = document.getElementById("editemployeenameselection");
+const editEmployeeImage = document.querySelector(".subcontainereditarfuncionario2");
 const editEmployeeEmail = document.getElementById("editemployeeemail");
 const editEmployeePhone = document.getElementById("editemployeephone");
 const editEmployeeDom = document.getElementById("dominfosfuncionario");
@@ -282,6 +283,8 @@ function preencherCampo() {
 		return elem.id == editEmployeeSelect.value.trim();
 	});
 	editEmployeeName.value = selectedEmployee[0].name;
+	editEmployeeImage.innerHTML = `<img src="/images/${selectedEmployee[0].photo}" alt="" class="editemployeeimage">`;
+	console.log(selectedEmployee[0].photo)
 	editEmployeeLastname.value = selectedEmployee[0].lastname;
 	editEmployeeEmail.value = selectedEmployee[0].email;
 	editEmployeePhone.value = selectedEmployee[0].phone;

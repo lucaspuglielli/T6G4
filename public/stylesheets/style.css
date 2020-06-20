@@ -791,9 +791,9 @@ body {
 		height: 334px;
 	}
 
-	.funcionario1bg {
-		/* height: 20vh; */
-	}
+	/* .funcionario1bg {
+		height: 20vh;
+	} */
 
 	.funcionario2bg {
 		height: 20vh;
@@ -927,7 +927,7 @@ a.userinfocontent2 {
 .useropcoesmenu {
 	display: none;
 	list-style-type: none;
-	background-color: orange;
+	background-color: #c4924b;
 	color: white;
 	width: 160px;
 	font-size: 13px;
@@ -956,7 +956,7 @@ a.userinfocontent:hover + .useropcoesmenu {
 
 .espacoteste {
 	padding: 0px 20px 10px;
-	background-color: orange;
+	background-color: #c4924b;
 }
 
 .logoutbutton {
@@ -1184,14 +1184,14 @@ footer {
 	background-image: url(/images/funcionario-4.jpg);
 }
 
-.listadefuncionarios{
+.listadefuncionarios {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 }
 
-.card-funcionario{
-	border: 1px solid rgba(0,0,0,.125) !important;
+.card-funcionario {
+	border: 1px solid rgba(0, 0, 0, 0.125) !important;
 }
 
 /* Para página pagamento */
@@ -1312,11 +1312,11 @@ footer {
 	max-width: 500px;
 }
 
-.main-container{
+.main-container {
 	padding-bottom: 3rem;
 }
 
-.disabled-style:disabled{
+.disabled-style:disabled {
 	background-color: rgba(0, 0, 0, 0);
 }
 
@@ -1702,6 +1702,27 @@ footer {
 	color: black;
 	font-size: 12px;
 	font-weight: bold;
+}
+
+.containereditarfuncionario{
+display: flex;
+width: 100%;
+}
+
+.subcontainereditarfuncionario1{
+	width: 50%;
+}
+.subcontainereditarfuncionario2{
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.editemployeeimage{
+	width: 400px;
+	border-radius: 20px;
+	border: 2px solid #227578;
 }
 
 .borda {
