@@ -11,7 +11,7 @@ module.exports = {
         phone: '1112345678',
         photo: 'janesphoto.jpg',
         shiftstart: '8:00',
-        shiftend: '18:00',
+        shiftend: '10:00',
         updatedAt: '2020-06-13 04:11:51',
         createdAt: '2020-06-13 04:11:51',
        },

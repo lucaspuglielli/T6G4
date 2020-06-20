@@ -1,10 +1,10 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Schedule = sequelize.define('Schedule', {
-    start_date: DataTypes.DATEONLY,
-    end_date: DataTypes.DATEONLY,
-    start_time: DataTypes.TIME,
-    end_time: DataTypes.TIME,
+    start_date: DataTypes.STRING,
+    end_date: DataTypes.STRING,
+    start_time: DataTypes.STRING,
+    end_time: DataTypes.STRING,
     id_client: DataTypes.INTEGER,
     id_employee: DataTypes.INTEGER,
     id_service: DataTypes.INTEGER,
