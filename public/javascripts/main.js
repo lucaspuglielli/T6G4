@@ -4,6 +4,7 @@ let funcionario = false;
 let servico = false;
 let categoria = false;
 
+
 let formIndex = 4;
 
 showForms(formIndex);
@@ -114,6 +115,8 @@ const divInputPreco = document.getElementById('divclientscheduleserviceprice')
 const divInputServico = document.getElementById('divclientscheduleservice')
 const inputFuncionario = document.getElementById('clientscheduleemployee')
 const inputDias = document.getElementById('clientscheduledate')
+const inputHorario = document.getElementById('clientscheduletime')
+
 
 let employees = []
 let dias = []
@@ -188,16 +191,15 @@ function removerPorValor(array, valor) {
 
 inputFuncionario.addEventListener('change', function(){
 	let datasAgendadas = []
-	let horariosPadrao = ['08:00:00', '09:00:00', '10:00:00', '11:00:00', '12:00:00', '13:00:00', '14:00:00', '15:00:00', '16:00:00', '17:00:00', '18:00:00']
+	let horariosPadrao = []
 	let datas = []
 	let datasLotadas = []
-
 	let filtrarDatas = []
-
-	let datasParaMostrar = []
-	
-
 	let idFuncionario = inputFuncionario.value.trim();
+	//Variaveis para setar Horarios
+	let horarioInicio = 0
+	let horarioFim = 0
+	let horasTrabalhadas = 0
 
 	for(i = 0; i < agendamentos.length; i++){
 		if(agendamentos[i].id_employee == idFuncionario){
@@ -205,9 +207,23 @@ inputFuncionario.addEventListener('change', function(){
 		};
 	};
 
-	datas = datas.filter(function(este, i) {
-		return datas.indexOf(este) === i;
-	});
+	function setarHorariosPadrao(diferencaHoras){
+		for(let i=0; i < diferencaHoras; i++){
+			if(horarioInicio<=horarioFim){
+				horariosPadrao.push(`${horarioInicio}:00`)
+				horarioInicio += 1;
+			}
+		}
+	}
+
+	horarioInicio = parseInt(employees[idFuncionario - 1].shiftstart)
+	horarioFim = parseInt(employees[idFuncionario - 1].shiftend)
+	horasTrabalhadas = (horarioFim - horarioInicio) + 1
+
+	setarHorariosPadrao(horasTrabalhadas)
+
+	horariosPadraoFuncionario = horariosPadrao
+
 
 	for(let i=0; i<datasAgendadas.length;i++){
 		filtrarDatas.push(datasAgendadas[i].start_date);
@@ -216,7 +232,6 @@ inputFuncionario.addEventListener('change', function(){
 	filtrarDatas = filtrarDatas.filter(function(este, i) {
 		return filtrarDatas.indexOf(este) === i;
 	});
-	//console.log(filtrarDatas)
 
 
 	for(let i=0; i<filtrarDatas.length;i++){
@@ -228,20 +243,10 @@ inputFuncionario.addEventListener('change', function(){
 		datas.push(agendamentoPadrao)
 	}
 
-	console.log(datas)
-
-	for(let i=0; i<datas.length;i++){
-		datas[i].horarios = ['08:00:00', '09:00:00', '10:00:00', '11:00:00', '12:00:00', '13:00:00', '14:00:00', '15:00:00', '16:00:00', '17:00:00', '18:00:00']
-	}
-
 	
 
-	function verificar(data){
-		for(let i=0; i<datasAgendadas;i++){
-			if(data = datasAgendadas[i].start_date){
-				horariosPadrao = removerPorValor(horariosPadrao, datasAgendadas[i].start_time)
-			}
-		}
+	for(let i=0; i<datas.length;i++){
+		datas[i].horarios = horariosPadrao
 	}
 
 	function filtrarHorarios(array){
@@ -250,31 +255,64 @@ inputFuncionario.addEventListener('change', function(){
 				datas[x].horarios = removerPorValor(datas[x].horarios, array.start_time)
 			}
 		}
-	}
 
+	}
+	// Verificar
 	for(let i=0; i<datasAgendadas.length;i++){
 		filtrarHorarios(datasAgendadas[i])
 	}
 
-	console.log(datas)
+	for(let i=0; i<datas.length; i++){
+		if(datas[i].horarios.length == 0){
+			datasLotadas.push(datas[i].data)
+		}
+	}
+	
 
-	for(let i=0; i<datas;i++){
-		if(datas.data == ""){
-			datasLotadas.push(datas.data)
+	dates = datasLotadas;
+	diasDisponiveis = datas;
+})
+
+// *** DATEPICKER DINÂMICO AGENDAMENTO MANUAL DE CLIENTE ***
+var dates = [];
+
+      function DisableDates(date) {
+        var string = jQuery.datepicker.formatDate('dd/mm/yy', date);
+        return [dates.indexOf(string) == -1];
+      }
+
+      $(function () {
+        $("#clientscheduledate").datepicker({
+          dateFormat: 'dd/mm/yy',
+          minDate: new Date(),
+          beforeShowDay: DisableDates
+        });
+      });
+
+// *** DATEPICKER DINÂMICO AGENDAMENTO MANUAL DE CLIENTE ***
+
+// Variavel com dia e horário do funcionário.
+let diasDisponiveis = {};
+let horariosDisponiveis = [];
+let horariosPadraoFuncionario = [];
+
+inputHorario.addEventListener('mouseover', function() {
+	const dataEscolhida = inputDias.value;
+	
+	// inputHorario.innerHTML = `<option value="0" selected="selected" disabled>Selecione o horário.</option>`
+
+	for(let i = 0; i < diasDisponiveis.length; i++) {
+		if(diasDisponiveis[i].data == dataEscolhida) {
+			horariosDisponiveis = diasDisponiveis[i].horarios;
+		} else {
+			horariosDisponiveis = horariosPadraoFuncionario;
 		}
 	}
 
-
-	// faze de testes
-	function setarDatas(){
-		let newDate = new Date()
-		for(let i=0; i<7; i++){
-			inputDias.innerHTML += `
-			<option value="${newDate}">${employees[idFuncionarios[i]-1].name} ${employees[idFuncionarios[i]-1].lastname}</option>
-			`
-		}
+	for(let i = 0; i < horariosDisponiveis.length; i++) {
+		console.log('rodou');
+		inputHorario.innerHTML += `<option value="${horariosDisponiveis[i]}">${horariosDisponiveis[i]}</option>`
 	}
-
 })
 
 
