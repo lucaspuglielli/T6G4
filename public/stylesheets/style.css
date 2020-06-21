@@ -1527,6 +1527,10 @@ footer {
 
 /* PAGINA DE INFOS */
 
+.admflexcontainer{
+	display: flex;
+}
+
 .containerinfosopcoes {
 	background-color: #2f364a;
 	width: 62px;
@@ -1541,10 +1545,10 @@ footer {
 }
 
 .forms {
-	position: absolute;
+	position: relative;
 	left: 85px;
-	top: 10vh;
 	width: calc(100% - 105px);
+	background-color: white;
 }
 
 #displayinv {
@@ -1552,10 +1556,9 @@ footer {
 }
 
 .subforms {
-	position: absolute;
+	position: relative;
 	display: none;
 	left: 85px;
-	top: 10vh;
 	width: 70%;
 	background-color: white;
 }
@@ -1861,8 +1864,7 @@ width: 100%;
 	.forms,
 	.subforms {
 		width: 1000px;
-		left: calc(50% - 470px);
-		top: 170px;
+		top: 30px;
 	}
 	.containerinfosopcoes {
 		width: 90px;
