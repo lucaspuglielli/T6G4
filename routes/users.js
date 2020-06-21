@@ -4,9 +4,10 @@ const router = express.Router();
 const userController = require('../controllers/userController');
 const sessionVerifier = require('../middleware/sessionVerifier');
 const auth = require('../middleware/auth');
+const blockAdm = require('../middleware/blockAdmMiddleware')
 
 /* User register routes */
-router.get('/registro', sessionVerifier, userController.create);
+router.get('/registro', blockAdm, sessionVerifier, userController.create);
 router.post('/registro', userController.store);
 
 router.get('/perfil', auth, userController.index);

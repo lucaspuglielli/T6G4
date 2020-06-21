@@ -31,6 +31,7 @@ const authController = {
             id: user.id,
             name: user.name,
             email: user.email,
+            admin: false
         }
         res.redirect('/usuario/perfil')
 

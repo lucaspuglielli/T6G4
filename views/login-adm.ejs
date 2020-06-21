@@ -4,9 +4,13 @@
 <%- include('includes/head', {title: "Login"}) %>
 
 <body>
-    <%- include('includes/header') %>
-
-
+    <nav class="navadm">
+        <a href="/">
+          <img src="/images/logo-deitado.png" alt="logo deitado" class="logo1">
+        </a>
+      </nav>
+      
+    <div class="containermaincontent">
         <main class="d-flex flex-column align-items-center">
             <h1 class="m-5 titulopagina">LOGIN DE ADMINISTRADOR</h1>
             <form class="formAgendamento w-75 d-flex flex-column" method="POST" action="/administracao/login">
@@ -23,6 +27,7 @@
                 <button type="submit" class="btn btn-color mb-5 mt-4 align-self-center">Entrar</button>
             </form>
         </main>
+        </div>
 
 
         <%- include('includes/footer') %> 
