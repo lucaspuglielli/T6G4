@@ -27,9 +27,7 @@ router.get('/contato', sessionVerifier, function(req, res) {
   res.render('contato')
 })
 
-router.get('/agendamento', sessionVerifier, function(req, res) {
-  res.render('agendamento')
-})
+
 
 router.get('/pagamento', sessionVerifier, function(req, res) {
   res.render('pagamento')
