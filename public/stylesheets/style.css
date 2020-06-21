@@ -1130,7 +1130,7 @@ footer {
 }
 
 .teste1 {
-	height: 200px;
+	height: 100px;
 }
 
 @media (max-width: 1199px) {
@@ -1546,7 +1546,8 @@ footer {
 
 .forms {
 	position: relative;
-	left: 85px;
+	left: 20px;
+	top: 20px;
 	width: calc(100% - 105px);
 	background-color: white;
 }
@@ -1558,7 +1559,8 @@ footer {
 .subforms {
 	position: relative;
 	display: none;
-	left: 85px;
+	top: 20px;
+	left: 20px;
 	width: 70%;
 	background-color: white;
 }
@@ -1585,6 +1587,18 @@ footer {
 	font-size: 12px;
 }
 
+.inputinfosadm2 {
+	width: 100%;
+	border-radius: 8px;
+	margin: 10px 0;
+	height: 40px;
+	border: 2px solid #227578;
+	color: #227578;
+	padding-left: 10px;
+	box-sizing: border-box;
+	font-size: 12px;
+}
+
 .inputinfosfunc {
 	width: 50%;
 	border-radius: 8px;
@@ -1598,7 +1612,7 @@ footer {
 }
 
 .inputinfosfunc2 {
-	width: 30%;
+	width: 90%;
 	border-radius: 8px;
 	margin: 10px 0;
 	height: 40px;
@@ -1636,13 +1650,14 @@ footer {
 
 .inputinfosfunc2::placeholder,
 .inputinfosadm::placeholder,
+.inputinfosadm2::placeholder,
 .dropdowninfosfunc::placeholder,
 .textareainfoscategoria::placeholder {
 	color: #227578;
 }
 
 .dropdowninfosadm {
-	width: 40%;
+	width: 100%;
 	border-radius: 8px;
 	margin: 10px 0;
 	height: 40px;
@@ -1654,6 +1669,18 @@ footer {
 }
 
 .dropdowninfosadm2 {
+	width: 100%;
+	border-radius: 8px;
+	margin: 10px 0;
+	height: 40px;
+	border: 2px solid #227578;
+	color: #227578;
+	box-sizing: border-box;
+	font-size: 12px;
+	padding: 0 10px;
+}
+
+.dropdowninfosadm3 {
 	width: 100%;
 	border-radius: 8px;
 	margin: 10px 0;
@@ -1710,20 +1737,21 @@ footer {
 .containereditarfuncionario{
 display: flex;
 width: 100%;
+flex-direction: column-reverse;
 }
 
 .subcontainereditarfuncionario1{
-	width: 50%;
+	width: 100%;
 }
 .subcontainereditarfuncionario2{
-	width: 50%;
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
 .editemployeeimage{
-	width: 400px;
+	width: 270px;
 	border-radius: 20px;
 	border: 2px solid #227578;
 }
@@ -1864,7 +1892,17 @@ width: 100%;
 	.forms,
 	.subforms {
 		width: 1000px;
+		left: 85px;
 		top: 30px;
+	}
+	.containereditarfuncionario{
+		flex-direction: row;
+	}
+	.subcontainereditarfuncionario1, .subcontainereditarfuncionario2{
+		width: 50%;
+	}
+	.editemployeeimage{
+		width: 400px;
 	}
 	.containerinfosopcoes {
 		width: 90px;
@@ -1873,7 +1911,43 @@ width: 100%;
 		width: 90px;
 		height: 90px;
 	}
+	.inputfotofunc{
+		width: 50%;
+	}
+	.inputinfosfunc2 {
+		width: 30%;
+		border-radius: 8px;
+		margin: 10px 0;
+		height: 40px;
+		border: 2px solid #227578;
+		color: #227578;
+		padding-left: 10px;
+		box-sizing: border-box;
+		font-size: 12px;
+	}
+	.inputinfosfunc{
+		width: 15%;
+	}
+	.inputinfosadm{
+		width: 50%;
+	}
+	.inputinfosadm2{
+		width: 100%;
+	}
+	.dropdowninfosadm{
+		width: 15%;
+	}
+	.dropdowninfosadm3{
+		width: 50%;
+	}
+	.dropdowninfosfunc{
+		width: 50%;
+	}
+	.textareainfoscategoria{
+		width: 50%;
+	}
 	.teste1 {
 		height: 10vh;
 	}
+
 }

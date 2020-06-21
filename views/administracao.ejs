@@ -117,14 +117,14 @@
               <% } %>
             </select><br>
             <label for="editemployeename" class="labelinfosadm">Nome</label><br>
-            <input type="text" class="inputinfosadm" placeholder="Nome" name="editemployeename" id="editemployeename"><br>
+            <input type="text" class="inputinfosadm2" placeholder="Nome" name="editemployeename" id="editemployeename"><br>
             <label for="editemployeelastname" class="labelinfosadm">Sobrenome</label><br>
-            <input type="text" class="inputinfosadm" placeholder="Sobrenome" name="editemployeelastname" id="editemployeelastname"><br>
+            <input type="text" class="inputinfosadm2" placeholder="Sobrenome" name="editemployeelastname" id="editemployeelastname"><br>
             <label for="editemployeeemail" class="labelinfosadm">E-mail</label><br>
-            <input type="email" class="inputinfosadm" placeholder="name@email.com" name="editemployeeemail" id="editemployeeemail"><br>
+            <input type="email" class="inputinfosadm2" placeholder="name@email.com" name="editemployeeemail" id="editemployeeemail"><br>
             <label for="editemployeephone" class="labelinfosadm">Telefone</label><br>
-            <input type="text" placeholder=" (99) 99999-9999" class="inputinfosadm" name="editemployeephone" id="editemployeephone"><br>
-          </div>
+            <input type="text" placeholder=" (99) 99999-9999" class="inputinfosadm2" name="editemployeephone" id="editemployeephone"><br>
+          </div><br>
           <div class="subcontainereditarfuncionario2">
             <img src="/images/funcionariotemplate.png" alt="" class="editemployeeimage">
           </div>
@@ -322,7 +322,7 @@
           <% } %>
         </select><br>
         <label for="clientschedulecategory" class="labelinfosadm">Categoria</label><br>
-        <select name="clientschedulecategory" class="dropdowninfosadm" id="clientschedulecategory">
+        <select name="clientschedulecategory" class="dropdowninfosadm3" id="clientschedulecategory">
           <option value="0" selected="selected">Selecione</option>
           <% for( let i = 0; i < category.length; i++ ) { %>
           <option value=" <%= category[i].id %> "> <%= category[i].name %></option>
@@ -435,7 +435,7 @@
         <label for="serviceduration" class="labelinfosadm">Duração em minutos</label><br>
         <input type="number" class="inputinfosfunc2" placeholder=" Digite a duração do serviço" name="serviceduration" id="serviceduration"><br>
         <label for="servicedescription" class="labelinfosadm">Descrição</label><br>
-        <textarea class="inputinfosfunc2" placeholder=" Digite a descrição do serviço" name="servicedescription" id="servicedescription"></textarea><br>
+        <textarea class="textareainfoscategoria" placeholder=" Digite a descrição do serviço" name="servicedescription" id="servicedescription"></textarea><br>
         <label for="serviceprice" class="labelinfosadm">Preço</label><br>
         <input type="number" class="inputinfosfunc2" placeholder=" R$0,00" name="serviceprice" id="serviceprice">
         <br><br>
@@ -485,7 +485,7 @@
           <i class="fas fa-arrow-right"></i></div>
       </form>
 
-      
+
     </main>
 
     <div class="teste1"></div>
