@@ -321,7 +321,7 @@
           </div>
           <button type="submit" class="botaoinfosadm">Salvar</button>
         </form>
-        <form class="subforms" method='POST' id="formScheduleClient" action="/administracao/client-schedule">
+        <form class="subforms" method='POST' id="formAdmScheduleClient" action="/administracao/client-schedule">
           <h3 class="tituloinfosadm">AGENDAR CLIENTE</h3>
           <label for="clientschedulename" class="labelinfosadm">Nome Completo</label><br>
           <select name="clientschedulename" id="clientschedulename" class="inputinfosadm">
@@ -350,7 +350,7 @@
             <input type="text" class="inputinfosfunc2" placeholder=" R$0,00" name="clientscheduleserviceprice"
               id="clientscheduleserviceprice" readonly><br>
           </div>
-          <label for="clientscheduleemployee" class="labelinfosadm">Funcionário</label><br>
+          <label for="clientscheduleemployee" class="labelinfosadm">Profissional</label><br>
           <select name="clientscheduleemployee" class="inputinfosadm" id="clientscheduleemployee">
             <option value="0" selected="selected">Selecione</option>
             <% for( let i = 0; i < employees.length; i++ ) { %>
@@ -362,9 +362,9 @@
           <br>
           <label for="clientscheduletime" class="labelinfosadm">Horário</label><br>
           <select name="clientscheduletime" class="inputinfosadm" id="clientscheduletime">
-            <option value="0" selected="selected" disabled>Selecione o horário.</option>
+            <option value="" selected="selected" disabled>Selecione o horário.</option>
           </select><br>
-          <div id="editadmerrorlist" class="alert alert-danger alert-dismissible fade show" role="alert" hidden>
+          <div id="formAdmScheduleClientErrorList" class="alert alert-danger alert-dismissible fade show" role="alert" hidden>
             <ul>
 
             </ul>

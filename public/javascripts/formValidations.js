@@ -17,6 +17,7 @@ const formScheduleClient = selectId("formScheduleClient");
 const formServiceRegistration = selectId("formServiceRegistration");
 const formCategoryRegistration = selectId("formCategoryRegistration");
 
+
 //ATUALIZAR INFORMAÇÕES DO ADMINISTRADOR
 
 const formAdministratorUpdate = selectId("formAdministratorUpdate");
@@ -263,5 +264,50 @@ formEmployeeRegistration.addEventListener("submit", function (e) {
 	if (registerEmployeeErrorListUl.querySelectorAll("li").length > 0) {
 		e.preventDefault();
 		registerEmployeeErrorList.hidden = "";
+	}
+});
+
+// AGENDAMENTO MANUAL DE CLIENTE
+
+const formAdmScheduleClient = selectId("formAdmScheduleClient");
+
+const formAdmScheduleClientErrorListUl = document.querySelector("#formAdmScheduleClientErrorList ul");
+const formAdmScheduleClientErrorList = document.querySelector("#formAdmScheduleClientErrorList");
+
+
+formAdmScheduleClient.addEventListener("submit", function (e) {
+	let errorMessage = (message) => {
+		formAdmScheduleClientErrorListUl.innerHTML += "<li>" + message + "</li>";
+	};
+
+	formAdmScheduleClientErrorListUl.innerHTML = "";
+
+	if (selectField(clientschedulename)) {
+		errorMessage("Você deve selecionar um cliente.");
+	}
+
+	if (selectField(clientschedulecategory)) {
+		errorMessage("Você deve selecionar uma categoria.");
+	}
+
+	if (selectField(clientscheduleservice)) {
+		errorMessage("Você deve selecionar um serviço.");
+	}
+
+	if (selectField(clientscheduleemployee)) {
+		errorMessage("Você deve selecionar um profissional.");
+	}
+
+	if (emptyField(clientscheduledate)) {
+		errorMessage("Você deve selecionar uma data.");
+	}
+
+	if (selectField(clientscheduletime)) {
+		errorMessage("Você deve selecionar um horário.");
+	}
+
+	if (formAdmScheduleClientErrorListUl.querySelectorAll("li").length > 0) {
+		e.preventDefault();
+		formAdmScheduleClientErrorList.hidden = "";
 	}
 });
