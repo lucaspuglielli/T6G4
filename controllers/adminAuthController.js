@@ -13,6 +13,7 @@ const AdminAuthController = {
             password
         } = req.body;
 
+
         let [user] = await Administrator.findAll({
             where: {email: email}
         });
@@ -30,6 +31,7 @@ const AdminAuthController = {
             id: user.id,
             name: user.fullName,
             email: user.email,
+            admin: true,
         }
         res.redirect('/administracao')
 
