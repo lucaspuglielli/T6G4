@@ -16,6 +16,7 @@ const employeeController = require('../controllers/employeeController');
 const categoryController = require('../controllers/categoryController');
 const serviceController = require('../controllers/serviceController');
 const adminAuthController = require('../controllers/adminAuthController');
+const scheduleController = require('../controllers/scheduleController');
 
 const adminLoginMiddleware = require('../middleware/adminLoginMiddleware');
 const adminAuthMiddleware = require('../middleware/adminAuthMiddleware');
@@ -47,6 +48,9 @@ router.post('/admin-register', administratorController.store);
 
 // Registro manual de Cliente.
 router.post('/client-register', clientController.store);
+
+// Agendamento manual de Cliente.
+router.post('/client-schedule', scheduleController.store);
 
 // Funcionário.
 router.post('/employee-register', upload.any(), employeeController.store);

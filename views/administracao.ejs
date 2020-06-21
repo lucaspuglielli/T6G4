@@ -321,11 +321,11 @@
           </div>
           <button type="submit" class="botaoinfosadm">Salvar</button>
         </form>
-        <form class="subforms" id="formScheduleClient">
+        <form class="subforms" method='POST' id="formScheduleClient" action="/administracao/client-schedule">
           <h3 class="tituloinfosadm">AGENDAR CLIENTE</h3>
-          <label for="nomeagendarcliente" class="labelinfosadm">Nome Completo</label><br>
-          <select name="nomeagendarcliente" id="nomeagendarcliente" class="inputinfosadm">
-            <option value="0" selected="selected" disabled>Selecione</option>
+          <label for="clientschedulename" class="labelinfosadm">Nome Completo</label><br>
+          <select name="clientschedulename" id="clientschedulename" class="inputinfosadm">
+            <option value="0" selected="selected" disabled>Selecione um cliente.</option>
             <% for( let i = 0; i < clients.length; i++ ) { %>
             <option value=" <%= clients[i].id %> "> <%= clients[i].name %> <%= clients[i].lastname %> </option>
             <% } %>
@@ -342,7 +342,6 @@
             <label for="clientscheduleservice" class="labelinfosadm"
               id="labelclientscheduleservice">Serviços</label><br>
             <select name="clientscheduleservice" class="inputinfosadm" id="clientscheduleservice">
-              <!-- valores trazidos pelo main.js filtrarServicos(); -->
             </select><br>
           </div>
           <div id="divclientscheduleserviceprice" hidden>

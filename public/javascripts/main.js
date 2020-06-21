@@ -299,7 +299,7 @@ let horariosPadraoFuncionario = [];
 inputHorario.addEventListener('mouseover', function() {
 	const dataEscolhida = inputDias.value;
 	
-	// inputHorario.innerHTML = `<option value="0" selected="selected" disabled>Selecione o horário.</option>`
+	inputHorario.innerHTML = `<option value="0" selected="selected" disabled>Selecione o horário.</option>`
 
 	for(let i = 0; i < diasDisponiveis.length; i++) {
 		if(diasDisponiveis[i].data == dataEscolhida) {
@@ -310,7 +310,6 @@ inputHorario.addEventListener('mouseover', function() {
 	}
 
 	for(let i = 0; i < horariosDisponiveis.length; i++) {
-		console.log('rodou');
 		inputHorario.innerHTML += `<option value="${horariosDisponiveis[i]}">${horariosDisponiveis[i]}</option>`
 	}
 })
