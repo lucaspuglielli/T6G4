@@ -3,18 +3,17 @@ const config = require('../config/database');
 const { Schedule, Category, Employee,  } = require('../models');
 
 const clientScheduleController = {
-    index: async (_req, res) => {
+    index: async (req, res) => {
 
     const category = await Category.findAll();
     const employees = await Employee.findAll();
-
+        
         res.render('agendamento', { category, employees });
     },
 
     store: async (req, res) => {
        
         const {
-            clientschedulename,
             clientscheduleservice,
             clientscheduleemployee,
             clientscheduledate,
@@ -28,14 +27,14 @@ const clientScheduleController = {
             end_date: clientscheduledate,
             start_time: clientscheduletime,
             end_time: endTime,
-            id_client: clientschedulename,
+            id_client: req.session.user.id,
             id_employee: clientscheduleemployee,
             id_service: clientscheduleservice,
             createdAt: new Date(),
             updatedAt: new Date(),
         });
 
-        return res.redirect('/administracao');
+        return res.redirect('/usuario/perfil');
     }, 
 };
 

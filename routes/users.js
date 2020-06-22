@@ -17,5 +17,6 @@ router.put('/editar', auth, userController.update);
 // Rotas para agendamento de usuário.agendamento
 
 router.get('/agendamento', blockAdm, auth, clientScheduleController.index);
+router.post('/agendamento', clientScheduleController.store);
 
 module.exports = router;

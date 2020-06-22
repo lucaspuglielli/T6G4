@@ -8,7 +8,7 @@
     <%- include('includes/header') %> 
         <main class="d-flex flex-column align-items-center main-container">
             <h1 class="m-4 titulopagina">AGENDAMENTO</h1>
-            <form action="" class="formAgendamento w-75 d-flex flex-column">
+            <form action="/usuario/agendamento" method="POST" class="formAgendamento w-75 d-flex flex-column">
                 <div class="form-group">
                     <label class="label-form" for="clientschedulecategory">Selecione a categoria</label>
                     <select name="clientschedulecategory" class="form-control form-control-lg form-border" id="clientschedulecategory">
@@ -30,10 +30,6 @@
                 <div class="form-group">
                     <label class="label-form" for="clientscheduleemployee">Escolha o profissional</label>
                     <select name="clientscheduleemployee" class="form-control form-control-lg form-border" id="clientscheduleemployee">
-                        <option value="0" selected="selected">Selecione</option>
-                        <% for( let i = 0; i < employees.length; i++ ) { %>
-                        <option value=" <%= employees[i].id %> "> <%= employees[i].name %> <%= employees[i].lastname %> </option>
-                        <% } %>
                     </select>
                 </div>
                 <div class="form-group">
