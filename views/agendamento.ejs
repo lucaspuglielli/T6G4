@@ -1,52 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<%- include('includes/head', {title: "Agendamento"}) %> 
+<%- include('includes/head', {title: "Agendamento"}) %>
 
 <body>
 
-    <%- include('includes/header') %> 
-        <main class="d-flex flex-column align-items-center main-container">
-            <h1 class="m-4 titulopagina">AGENDAMENTO</h1>
-            <form action="/usuario/agendamento" method="POST" class="formAgendamento w-75 d-flex flex-column">
-                <div class="form-group">
-                    <label class="label-form" for="clientschedulecategory">Selecione a categoria</label>
-                    <select name="clientschedulecategory" class="form-control form-control-lg form-border" id="clientschedulecategory">
-                        <option value="0" selected="selected">Selecione</option>
-                        <% for( let i = 0; i < category.length; i++ ) { %>
-                        <option value=" <%= category[i].id %> "> <%= category[i].name %></option>
-                        <% } %>
-                      </select>
-                </div>
-                <div id="divclientscheduleservice" hidden class="form-group">
-                    <label class="label-form" for="clientscheduleservice">Selecione um serviço</label>
-                    <select name="clientscheduleservice" class="form-control form-control-lg form-border" id="clientscheduleservice">
-                    </select>
-                </div>
-                <div id="divclientscheduleserviceprice" class="form-group" hidden>
-                    <label class="label-form" for="clientscheduleserviceprice">Valor</label>
-                    <input type="text" name="clientscheduleserviceprice" class="form-control form-control-lg form-border correcaoplaceholder disabled-style" id="clientscheduleserviceprice" disabled>
-                </div>
-                <div class="form-group">
-                    <label class="label-form" for="clientscheduleemployee">Escolha o profissional</label>
-                    <select name="clientscheduleemployee" class="form-control form-control-lg form-border" id="clientscheduleemployee">
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="clientscheduledate" class="label-form">Dia</label><br>
-                    <input type="text" placeholder="Selecione a data." name="clientscheduledate" class="form-control form-control-lg form-border" id="clientscheduledate">
-                </div>
-                <div class="form-group ">
-                    <label for="clientscheduletime" class="label-form">Horário</label><br>
-                    <select name="clientscheduletime" class="form-control form-control-lg form-border" id="clientscheduletime">
+    <%- include('includes/header') %>
+    
+    <main class="d-flex flex-column align-items-center main-container">
+
+
+        <h1 class="m-4 titulopagina">AGENDAMENTO</h1>
+        <form action="/usuario/agendamento" method="POST" class="formAgendamento w-75 d-flex flex-column">
+            <div class="form-group">
+                <label class="label-form" for="clientschedulecategory">Selecione a categoria</label>
+                <select name="clientschedulecategory" class="form-control form-control-lg form-border" id="clientschedulecategory">
+                    <option value="0" selected="selected">Selecione</option>
+                    <% for( let i = 0; i < category.length; i++ ) { %>
+                    <option value=" <%= category[i].id %> "> <%= category[i].name %></option>
+                    <% } %>
+                </select>
+            </div>
+            <div id="divclientscheduleservice" hidden class="form-group">
+                <label class="label-form" for="clientscheduleservice">Selecione um serviço</label>
+                <select name="clientscheduleservice" class="form-control form-control-lg form-border" id="clientscheduleservice">
+                </select>
+            </div>
+            <div id="divclientscheduleserviceprice" class="form-group" hidden>
+                <label class="label-form" for="clientscheduleserviceprice">Valor</label>
+                <input type="text" name="clientscheduleserviceprice" class="form-control form-control-lg form-border correcaoplaceholder disabled-style" id="clientscheduleserviceprice" disabled>
+            </div>
+            <div class="form-group">
+                <label class="label-form" for="clientscheduleemployee">Escolha o profissional</label>
+                <select name="clientscheduleemployee" class="form-control form-control-lg form-border" id="clientscheduleemployee">
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="clientscheduledate" class="label-form">Dia</label><br>
+                <input type="text" placeholder="Selecione a data." name="clientscheduledate" class="form-control form-control-lg form-border" id="clientscheduledate">
+            </div>
+            <div class="form-group ">
+                <label for="clientscheduletime" class="label-form">Horário</label><br>
+                <select name="clientscheduletime" class="form-control form-control-lg form-border" id="clientscheduletime">
                     <option value="" selected="selected" disabled>Selecione o horário.</option>
-                    </select><br>
-                </div>
-                <button type="submit" class="btn btn-color mb-4 mt-3 align-self-center">Agendar</button>
-            </form>
-        </main>
-    <%- include('includes/footer') %> 
-    <%- include('includes/scripts') %> 
+                </select><br>
+            </div>
+            <button type="submit" class="btn btn-color mb-4 mt-3 align-self-center">Agendar</button>
+        </form>
+
+
+    </main>
+
+    <%- include('includes/footer') %>
+    <%- include('includes/scripts') %>
 
     <script src="/javascripts/agendamento.js"></script>
 
