@@ -33,6 +33,35 @@ const userController = {
 
         return res.render('perfil', {inputValues});
     },
+    index2: async (req, res) => {
+
+        const user = await Client.findByPk(req.session.user.id);
+        if(user === null){
+            console.log('Not found!');
+        }
+
+        // function transformarData(date) {
+        //     var newDate = new Date(date.getTime() + date.getTimezoneOffset() * 60 * 1000);
+        //     let ano = newDate.getFullYear();
+        //     let mes = newDate.getMonth();
+        //     let dia = newDate.getDate();
+        
+        //     newDate = `${dia}/${mes + 1}/${ano}`
+        
+        //     return newDate;
+        // }
+
+        const inputValues = {
+            name: user.name,
+            lastname: user.lastname,
+            email: user.email,
+            cpf: user.cpf,
+            birthdate: user.birthdate,
+            phone: user.phone
+        }
+
+        return res.render('perfil-agendamentos', {inputValues});
+    },
     create: (_req, res) => {
         return res.render('cadastro-usuario');
     },

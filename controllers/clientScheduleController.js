@@ -34,7 +34,7 @@ const clientScheduleController = {
             updatedAt: new Date(),
         });
 
-        return res.redirect('/usuario/perfil');
+        return res.redirect('/usuario/perfil/agendamento');
     }, 
 };
 

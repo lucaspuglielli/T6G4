@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('includes/head', {title: "Meu Perfil"}) %>
+
+<body>
+    <%- include('includes/header') %>
+
+    <main class="admflexcontainer">
+
+        <div>
+            <div class="containerinfosopcoes">
+                <a class="opcaoinfos" href="/usuario/perfil">
+                    <div class="admitem1"></div>
+                </a>
+                <a class="opcaoinfos borda" href="/usuario/perfil/agendamento">
+                    <div class="perfilitem3"></div>
+                </a>
+            </div>
+        </div>
+
+
+        <form class="forms" method="POST" action="/admin/admin-register">
+            <div class="cartao-servico mb-5 p-4">
+                <div class="d-flex">
+                    <div>
+                        <img class="img-servico" src="/images/unha.png" alt="">
+                    </div>
+                    <div class="d-flex flex-column justify-content-between">
+                        <div>
+                            <h2 class="titulo-servico-card">Pé e Mão</h2>
+                        </div>
+                        <div>
+                            <p class="data-servico-card">23/04/2020 - 10:00h</p>
+                        </div>
+                        <div class="d-flex">
+                            <p class="label-info">Prefissional: </p>
+                            <p class="label-info">Valor: </p>
+                        </div>
+                        <div class="d-flex">
+                            <p class="nome-info">Ana Américo</p>
+                            <p class="nome-info">R$:25,00</p>
+                        </div>
+                        <div class="d-flex">
+                            <p class="label-info">Status: </p>
+                            <p class="status-info">Agendado</p>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <img class="icones-servico-card" src="/images/google.png" alt="">
+                        <img class="icones-servico-card" src="/images/google.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </form>
+
+
+    </main>
+
+    <div class="teste1"></div>
+    <div class="teste1"></div>
+
+    <%- include('includes/footer') %>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

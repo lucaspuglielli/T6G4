@@ -12,6 +12,7 @@ router.get('/registro', blockAdm, sessionVerifier, userController.create);
 router.post('/registro', userController.store);
 
 router.get('/perfil', auth, userController.index);
+router.get('/perfil/agendamento', auth, userController.index2);
 router.put('/editar', auth, userController.update);
 
 // Rotas para agendamento de usuário.agendamento
