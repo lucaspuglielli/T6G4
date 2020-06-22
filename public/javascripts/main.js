@@ -296,7 +296,7 @@ let diasDisponiveis = {};
 let horariosDisponiveis = [];
 let horariosPadraoFuncionario = [];
 
-inputHorario.addEventListener('mouseover', function() {
+inputHorario.addEventListener('focusin', function() {
 	const dataEscolhida = inputDias.value;
 	
 	inputHorario.innerHTML = `<option value="0" selected="selected" disabled>Selecione o horário.</option>`
