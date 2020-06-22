@@ -472,12 +472,14 @@
       </form>
 
 
-      <form class="subforms" method="POST" action="/administracao/category-register" id="formCategoryRegistration">
+      <form class="subforms" method="POST" action="/administracao/category-register" id="formCategoryRegistration" enctype="multipart/form-data">
         <h3 class="tituloinfosadm">CADASTRAR NOVA CATEGORIA</h3>
         <label for="namecategory" class="labelinfosadm">Nome</label><br>
         <input type="text" placeholder=" Nome da categoria" class="dropdowninfosfunc" name="namecategory" id="namecategory"><br>
-        <label for="descriptioncategory" class="labelinfosadm">Categoria</label><br>
+        <label for="descriptioncategory" class="labelinfosadm">Descrição</label><br>
         <textarea name="descriptioncategory" id="descriptioncategory" class="textareainfoscategoria" placeholder="Adicione aqui a descrição da categoria com até XXX caracteres."></textarea><br>
+        <label for="categoryicon" class="labelinfosadm">Ícone</label><br>
+        <input type="file" name="categoryicon" id="categoryicon" class="inputfotofunc"><br>
         <button type="submit" class="botaoinfosadm">Salvar</button>
         <br><br>
         <div class="botaoagendamento" onclick="displaysub(4)">

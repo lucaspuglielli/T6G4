@@ -21,6 +21,8 @@ const scheduleController = require('../controllers/scheduleController');
 const adminLoginMiddleware = require('../middleware/adminLoginMiddleware');
 const adminAuthMiddleware = require('../middleware/adminAuthMiddleware');
 
+
+// Multer config para foto do funcionário
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, path.join('public', 'images'));
@@ -33,6 +35,19 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({ storage: storage });
+
+// Multer config para ícone da categoria
+const storageCategory = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, path.join('public', 'images'));
+    },
+    filename: function (req, file, cb) {
+        let nomeImg = req.body.namecategory.replace(/\s/g, "") + path.extname(file.originalname);
+        cb(null, nomeImg);
+    },
+});
+
+const uploadCategory = multer({ storage: storageCategory });
 
 // *** EXIBIÇÃO DA PÁGINA DE ADMINISTRAÇÃO ***
 // !!! Após o desenvolvimento incluir o adminLoginMiddleware. !!!
@@ -56,7 +71,7 @@ router.post('/client-schedule', scheduleController.store);
 router.post('/employee-register', upload.any(), employeeController.store);
 
 // Categoria.
-router.post('/category-register', categoryController.store);
+router.post('/category-register', uploadCategory.any(), categoryController.store);
 
 // Serviço.
 router.post('/service-register', serviceController.store);

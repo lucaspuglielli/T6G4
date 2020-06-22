@@ -10,10 +10,13 @@ const categoryController = {
             namecategory,
             descriptioncategory,
         } = req.body;
+
+        const [categoryicon] = req.files;
         
         const category = await Category.create({
             name: namecategory,
             description: descriptioncategory,
+            icon: categoryicon.filename,
             createdAt: new Date(),
             updatedAt: new Date(),
         });
