@@ -400,14 +400,14 @@ editServiceSelectCategory.addEventListener('change', function() {
 
 editServiceSelectName.addEventListener('change', function() {
 	
-	const idCategory = editServiceSelectCategory.value.trim();
+	let idCategory = editServiceSelectCategory.value.trim();
 	
 	for(let i=0; i< servicos.length; i++){
-	if(servicos[i].id_category == idCategory){
-	editServiceName.value = servicos[i].name
-	editServiceDuration.value = servicos[i].duration
-	editServiceDescription.value = servicos[i].description
-	editServicePrice.value = servicos[i].price
+	if(servicos[i].id_category == idCategory && servicos[i].id == editServiceSelectName.value){
+		editServiceName.value = servicos[i].name
+		editServiceDuration.value = servicos[i].duration
+		editServiceDescription.value = servicos[i].description
+		editServicePrice.value = servicos[i].price
 	}
 }
 // checkboxes
