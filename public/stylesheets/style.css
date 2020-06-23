@@ -704,7 +704,8 @@ body {
 		display: flex;
 	}
 	.overflowservicos {
-		display: block;
+		display: flex;
+		
 	}
 
 	.newslettertitle {
@@ -1263,6 +1264,8 @@ footer {
 	justify-content: space-evenly;
 }
 
+
+
 .container-nossos-servicos {
 	padding: 0 !important;
 }
@@ -1270,6 +1273,10 @@ footer {
 .texto-cards-nossos-servicos {
 	font-size: 1em;
 	color: #41bfc4;
+	white-space: normal;
+	width: 239px;
+	height: 40px;
+	text-align: center;
 }
 
 .menu-header {
