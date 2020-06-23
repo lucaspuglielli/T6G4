@@ -1257,8 +1257,10 @@ footer {
 	font-size: 2.5em;
 }
 
-.img-nossos-servicos {
-	width: 60% !important;
+.listadeservicos {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
 }
 
 .container-nossos-servicos {
