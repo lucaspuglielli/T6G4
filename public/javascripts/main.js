@@ -413,6 +413,8 @@ editServiceSelectName.addEventListener('change', function() {
 // checkboxes
 	const editserviceemployeescheckboxes = document.querySelector('#editserviceemployeescheckboxes');
 	const idEmployee = editserviceemployeescheckboxes.querySelectorAll('input');
+
+
 	
 function checkbox(id) {
 	for(let i = 0; i < idEmployee.length; i++) {
@@ -435,3 +437,16 @@ for(let i = 0; i < idEmployee.length; i++) {
 	}
 });
 
+// Funcionários não selecionados
+const unchecked = document.getElementById('unchecked');
+const okModal = document.getElementById('okModal');
+
+okModal.addEventListener('click', function(){
+	const idEmployee = editserviceemployeescheckboxes.querySelectorAll('input');
+	unchecked.innerHTML = ""
+	for(let i = 0; i < idEmployee.length; i++) {
+		if(idEmployee[i].checked == false){
+			unchecked.innerHTML += `<input type="text" name="uncheckedemployees" id="${idEmployee[i].value}" value="${idEmployee[i].value}" > `
+		}
+	}
+})

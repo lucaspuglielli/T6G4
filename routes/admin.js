@@ -84,4 +84,7 @@ router.put('/company-register', companyController.update);
 // Administrador
 router.put('/admin-edit', administratorController.update);
 
+// Serviço
+router.put('/service-edit', serviceController.update);
+
 module.exports = router;

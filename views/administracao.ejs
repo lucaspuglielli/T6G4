@@ -232,7 +232,7 @@
       </form>
 
 
-      <form class="forms" id="formServiceUpdate">
+      <form class="forms" id="formServiceUpdate" method="POST" action="/administracao/service-edit?_method=put">
         <h3 class="tituloinfosadm" >EDITAR SERVIÇOS</h3>
         <label for="editserviceselectcategory" class="labelinfosadm">Escolha uma categoria</label><br>
         <select name="editserviceselectcategory" class="dropdowninfosadm" id="editserviceselectcategory">
@@ -256,26 +256,28 @@
         <input type="number" class="inputinfosfunc2" placeholder="R$0,00" name="editserviceprice" id="editserviceprice">
         <br>
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">Adicionar funcionários</button>
+        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#editServiceModal">Editar funcionários</button>
         <!-- Modal adicionar funcionários -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="editServiceModal" tabindex="-1" role="dialog" aria-labelledby="editServiceModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Selecione os funcionários habilitados para o serviço.</h5>
+                <h5 class="modal-title" id="editServiceModalLabel">Selecione os funcionários habilitados para o serviço.</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <!-- Criar lógica no javascript -->
               <div class="modal-body" id="editserviceemployeescheckboxes">
                 <% for( let i = 0; i < employees.length; i++ ) { %>
-                <input id="<%=employees[i].id%>" name="employees" value="<%= employees[i].id %>" type="checkbox">
+                <input id="<%=employees[i].id%>" name="editemployees" value="<%= employees[i].id %>" type="checkbox">
                 <label for="<%= employees[i].id %>"><%= employees[i].name %></label><br>
                 <% } %>
               </div>
+              <div id="unchecked" hidden>
+
+              </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="okModal">Ok</button>
               </div>
             </div>
           </div>
