@@ -704,7 +704,8 @@ body {
 		display: flex;
 	}
 	.overflowservicos {
-		display: block;
+		display: flex;
+		
 	}
 
 	.newslettertitle {
@@ -1257,9 +1258,13 @@ footer {
 	font-size: 2.5em;
 }
 
-.img-nossos-servicos {
-	width: 60% !important;
+.listadeservicos {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
 }
+
+
 
 .container-nossos-servicos {
 	padding: 0 !important;
@@ -1268,6 +1273,10 @@ footer {
 .texto-cards-nossos-servicos {
 	font-size: 1em;
 	color: #41bfc4;
+	white-space: normal;
+	width: 239px;
+	height: 40px;
+	text-align: center;
 }
 
 .menu-header {
