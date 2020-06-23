@@ -11,10 +11,9 @@ const selectField = (select) => {
 
 
 const formCloseSchedule = selectId("formCloseSchedule");
-const formServiceUpdate = selectId("formServiceUpdate");
 const formScheduleClient = selectId("formScheduleClient");
 
-const formServiceRegistration = selectId("formServiceRegistration");
+
 const formCategoryRegistration = selectId("formCategoryRegistration");
 
 
@@ -311,3 +310,87 @@ formAdmScheduleClient.addEventListener("submit", function (e) {
 		formAdmScheduleClientErrorList.hidden = "";
 	}
 });
+
+
+// FORMULÁRIO DE EDIÇÃO DE SERVIÇO
+
+const formServiceUpdate = selectId("formServiceUpdate");
+const formAdmEditServiceErrorListUl = document.querySelector('#formAdmEditServiceErrorList ul')
+const formAdmEditServiceErrorList = document.querySelector('#formAdmEditServiceErrorList')
+
+formServiceUpdate.addEventListener('submit', function(e){
+		let errorMessage = (message) => {
+			formAdmEditServiceErrorListUl.innerHTML += "<li>" + message + "</li>";
+		};
+
+		formAdmEditServiceErrorListUl.innerHTML = ''
+
+		if(selectField(editserviceselectcategory)){
+			errorMessage('Você deve escolher uma categoria')
+		}
+
+		if(selectField(editserviceselectname)){
+			errorMessage('Você deve escolher um serviço')
+		}
+
+		if(emptyField(editservicename)){
+			errorMessage('O campo <b>nome</b> não pode estar vazio.')
+		}
+
+		if(emptyField(editserviceduration)){
+			errorMessage('O campo <b>duração</b> não pode estar vazio.')
+		}
+
+		if(emptyField(editservicedescription)){
+			errorMessage('O campo <b>descrição</b> não pode estar vazio.')
+		}
+
+		if(emptyField(editserviceprice)){
+			errorMessage('O campo <b>Preço</b> não pode estar vazio.')
+		}
+
+		if (formAdmEditServiceErrorListUl.querySelectorAll("li").length > 0) {
+			e.preventDefault();
+			formAdmEditServiceErrorList.hidden = "";
+		}
+	
+})
+
+// CADASTRAR SERVIÇO
+
+const formServiceRegistration = selectId("formServiceRegistration");
+const formAdmServiceRegistrationErrorListUl = document.querySelector('#formAdmServiceRegistrationErrorList ul')
+const formAdmServiceRegistrationErrorList = document.querySelector('#formAdmServiceRegistrationErrorList')
+
+formServiceRegistration.addEventListener('submit', function(e) {
+	let errorMessage = (message) => {
+		formAdmServiceRegistrationErrorListUl.innerHTML += "<li>" + message + "</li>";
+	};
+
+	formAdmServiceRegistrationErrorListUl.innerHTML = ''
+
+	if(emptyField(serviceregistername)){
+		errorMessage('O campo <b>nome</b> não pode estar vazio.')
+	}
+
+	if(selectField(serviceregistercategory)){
+		errorMessage('Você deve escolher uma categoria')
+	}
+
+	if(emptyField(serviceduration)){
+		errorMessage('O campo <b>duração</b> não pode estar vazio.')
+	}
+
+	if(emptyField(servicedescription)){
+		errorMessage('O campo <b>descrição</b> não pode estar vazio.')
+	}
+
+	if(emptyField(serviceprice)){
+		errorMessage('O campo <b>preço</b> não pode estar vazio.')
+	}
+
+	if (formAdmServiceRegistrationErrorListUl.querySelectorAll("li").length > 0) {
+		e.preventDefault();
+		formAdmServiceRegistrationErrorList.hidden = "";
+	}
+})
