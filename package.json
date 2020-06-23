@@ -19,7 +19,7 @@
     "mysql2": "^2.1.0",
     "nodemon": "^2.0.4",
     "path": "^0.12.7",
-    "sequelize": "^5.21.9"
+    "sequelize": "^5.21.13"
   },
   "devDependencies": {
     "sequelize-cli": "^5.5.1"
