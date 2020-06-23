@@ -233,49 +233,53 @@
 
 
       <form class="forms" id="formServiceUpdate">
-        <h3 class="tituloinfosadm">EDITAR SERVIÇOS</h3>
-        <label for="servicoinfosfuncionario" class="labelinfosadm">Nome</label><br>
-        <select name="selected" class="dropdowninfosfunc" id="servicoinfosfuncionario">
-          <option value="0" selected="selected">Selecione</option>
-          <option value="1">Serviço 1</option>
-          <option value="2">Serviço 2</option>
-          <option value="3">Serviço 3</option>
-          <option value="4">Serviço 4</option>
-          <option value="5">Serviço 5</option>
-          <option value="6">Serviço 6</option>
-          <option value="7">Serviço 7</option>
-          <option value="8">Serviço 8</option>
-          <option value="9">Serviço 9</option>
+        <h3 class="tituloinfosadm" >EDITAR SERVIÇOS</h3>
+        <label for="editserviceselectcategory" class="labelinfosadm">Escolha uma categoria</label><br>
+        <select name="editserviceselectcategory" class="dropdowninfosadm" id="editserviceselectcategory">
+          <option value="0" selected="selected" disabled>Selecione</option>
+          <% for( let i = 0; i < category.length; i++ ) { %>
+          <option value=" <%= category[i].id %> "> <%= category[i].name %> </option>
+          <% } %>
+            </select><br>
+        <label for="editserviceselectname" class="labelinfosadm">Escolha um serviço</label><br>
+        <select name="editserviceselectname" class="dropdowninfosadm" id="editserviceselectname">
+          <option value='0' selected='selected' disabled>Selecionar</option>
         </select><br>
-        <label for="agendarinfosfuncionario" class="labelinfosadm">Profissional</label><br>
-        <select name="selected" class="inputinfosadm" id="agendarinfosfuncionario">
-          <option value="0" selected="selected">Selecione</option>
-          <option value="1">Funcionário 1</option>
-          <option value="2">Funcionário 2</option>
-          <option value="3">Funcionário 3</option>
-          <option value="4">Funcionário 4</option>
-          <option value="5">Funcionário 5</option>
-          <option value="6">Funcionário 6</option>
-          <option value="7">Funcionário 7</option>
-          <option value="8">Funcionário 8</option>
-          <option value="9">Funcionário 9</option>
-        </select><br>
-        <label for="dataagendarclass" class="labelinfosadm">Dia</label><br>
-        <input type="date" class="inputinfosadm" name="dataagendarclass" id="dataagendarclass"><br>
-        <label for="horarioagendarcliente" class="labelinfosadm">Hora</label><br>
-        <select name="selected" class="inputinfosadm" id="horarioagendarcliente">
-          <option value="0" selected="selected">8:00h</option>
-          <option value="1">9:00h</option>
-          <option value="2">10:00h</option>
-          <option value="3">11:00h</option>
-          <option value="4">12:00h</option>
-          <option value="5">13:00h</option>
-          <option value="6">14:00h</option>
-          <option value="7">15:00h</option>
-          <option value="8">16:00h</option>
-          <option value="9">17:00h</option>
-          <option value="10">18:00h</option>
-        </select><br>
+        </select>
+        <label for="editservicename" class="labelinfosadm">Nome</label><br>
+        <input type="text" placeholder="Nome serviço" class="dropdowninfosfunc" name="editservicename" id="editservicename"><br>
+        <label for="editserviceduration" class="labelinfosadm">Duração em minutos</label><br>
+        <input type="number" class="inputinfosfunc2" placeholder=" Duração do serviço" name="editserviceduration" id="editserviceduration"><br>
+        <label for="editservicedescription" class="labelinfosadm">Descrição</label><br>
+        <textarea class="textareainfoscategoria" placeholder=" Descrição do serviço" name="editservicedescription" id="editservicedescription"></textarea><br>
+        <label for="editserviceprice" class="labelinfosadm">Preço</label><br>
+        <input type="number" class="inputinfosfunc2" placeholder="R$0,00" name="editserviceprice" id="editserviceprice">
+        <br>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">Adicionar funcionários</button>
+        <!-- Modal adicionar funcionários -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Selecione os funcionários habilitados para o serviço.</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <!-- Criar lógica no javascript -->
+              <div class="modal-body" id="editserviceemployeescheckboxes">
+                <% for( let i = 0; i < employees.length; i++ ) { %>
+                <input id="<%=employees[i].id%>" name="employees" value="<%= employees[i].id %>" type="checkbox">
+                <label for="<%= employees[i].id %>"><%= employees[i].name %></label><br>
+                <% } %>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+              </div>
+            </div>
+          </div>
+        </div><br>
         <div id="editadmerrorlist" class="alert alert-danger alert-dismissible fade show" role="alert" hidden>
           <ul></ul>
         </div>
@@ -389,7 +393,7 @@
           <option value="0" selected="selected" disabled="disabled">Selecione horário de início...</option>
           <option value="8:00">das 8:00h</option>
           <option value="9:00">das 9:00h</option>
-          <option value="10:00">das 10:00h</option>
+          <option value="10:00">das 10:00h</oeption>
           <option value="11:00">das 11:00h</option>
           <option value="12:00">das 12:00h</option>
           <option value="13:00">das 13:00h</option>

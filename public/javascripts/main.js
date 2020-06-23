@@ -370,3 +370,68 @@ function preencherCampo() {
 	}
 	
 }
+
+// *** DINÂMICA FORMULÁRIO DE EDIÇÃO DE SERVIÇO
+
+// const formServiceUpdate = document.getElementById('formServiceUpdate');
+const editServiceSelectCategory = document.getElementById('editserviceselectcategory');
+const editServiceSelectName = document.getElementById('editserviceselectname');
+const editServiceName = document.getElementById('editservicename');
+const editServiceDuration = document.getElementById('editserviceduration');
+const editServiceDescription = document.getElementById('editservicedescription');
+const editServicePrice = document.getElementById('editserviceprice');
+
+
+
+editServiceSelectCategory.addEventListener('change', function() {
+	
+	editServiceSelectName.innerHTML = `<option value='0' selected='selected' disabled>Selecionar</option>`;
+	
+	const idCategory = editServiceSelectCategory.value.trim();
+
+	for ( let i = 0; i < servicos.length; i++) {
+		if(servicos[i].id_category == idCategory){
+			editServiceSelectName.innerHTML += `<option value='${servicos[i].id}'>${servicos[i].name}</option>`;
+		}	
+		
+	}
+
+})
+
+editServiceSelectName.addEventListener('change', function() {
+	
+	const idCategory = editServiceSelectCategory.value.trim();
+	
+	for(let i=0; i< servicos.length; i++){
+	if(servicos[i].id_category == idCategory){
+	editServiceName.value = servicos[i].name
+	editServiceDuration.value = servicos[i].duration
+	editServiceDescription.value = servicos[i].description
+	editServicePrice.value = servicos[i].price
+	}
+}
+// checkboxes
+	const editserviceemployeescheckboxes = document.querySelector('#editserviceemployeescheckboxes');
+	const idEmployee = editserviceemployeescheckboxes.querySelectorAll('input');
+	
+function checkbox(id) {
+	for(let i = 0; i < idEmployee.length; i++) {
+		if(id == idEmployee[i].value) {
+			idEmployee[i].checked = true;
+		}
+	}
+}
+
+for(let i = 0; i < idEmployee.length; i++) {
+	
+	idEmployee[i].checked = false;
+	
+}
+
+	for (let i = 0; i< employeesSkills.length; i++) {
+		if(employeesSkills[i].id_service == editServiceSelectName.value.trim()) {
+			checkbox(employeesSkills[i].id_employee);
+		}
+	}
+});
+
