@@ -6,8 +6,11 @@ const clientScheduleController = {
 	index: async (req, res) => {
 		const category = await Category.findAll();
 		const employees = await Employee.findAll();
+		const { idcategory } = req.params;
 
-		res.render("agendamento", { category, employees });
+		console.log('***********' + idcategory);
+
+		res.render("agendamento", { category, employees, idcategory });
 	},
 
 	store: async (req, res) => {

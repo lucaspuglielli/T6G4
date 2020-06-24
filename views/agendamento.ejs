@@ -15,13 +15,18 @@
             <div class="form-group">
                 <label class="label-form" for="clientschedulecategory">Selecione a categoria</label>
                 <select name="clientschedulecategory" class="form-control form-control-lg form-border" id="clientschedulecategory">
-                    <option value="0" selected="selected">Selecione</option>
+                    <% if (idcategory != undefined) { %>
+                        <option value="<%=idcategory%>" selected="selected"> <%=category[idcategory -1].name%>  </option>
+                     <% } else { %>
+                        <option value="0" selected="selected">Selecione</option>
                     <% for( let i = 0; i < category.length; i++ ) { %>
                     <option value=" <%= category[i].id %> "> <%= category[i].name %></option>
                     <% } %>
+                        <% } %>
+                    
                 </select>
             </div>
-            <div id="divclientscheduleservice" hidden class="form-group">
+            <div id="divclientscheduleservice" class="form-group">
                 <label class="label-form" for="clientscheduleservice">Selecione um serviço</label>
                 <select name="clientscheduleservice" class="form-control form-control-lg form-border" id="clientscheduleservice">
                 </select>

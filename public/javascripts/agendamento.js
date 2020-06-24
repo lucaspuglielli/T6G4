@@ -43,8 +43,22 @@ fetch('http://localhost:3000/api/schedules')
 	return agendamentos = dados
 })
 
-inputCategoria.addEventListener('change', function(){
-	divInputServico.hidden = '';
+fetch("http://localhost:3000/api/categories")
+.then((resposta) => resposta.json())
+.then((dados) => {
+	return categories = dados
+})
+
+"http://localhost:3000/api/categories"
+
+inputCategoria.addEventListener('focusin', function(){
+	inputCategoria.innerHTML = '<option value="0" selected="selected">Selecione</option>';
+	for(let i = 0; i < categories.length; i++) {
+		inputCategoria.innerHTML += `<option value="${categories[i].id}">${categories[i].name}</option>`;
+	};
+});
+
+inputServico.addEventListener('focusin', function(){
 	inputServico.innerHTML = '<option value="0" selected="selected">Selecione</option>'
 	for(let i=0; i < servicos.length; i++){
 		if(servicos[i].id_category == inputCategoria.value.trim()){
