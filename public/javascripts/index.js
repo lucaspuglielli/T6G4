@@ -37,7 +37,7 @@ fetch("http://localhost:3000/api/categories")
                     <h5 class="card-title text-center">${servico.name}</h5>
                     <p class="texto-cards-nossos-servicos">${servico.description}</p>
                     <div class="d-flex justify-content-center">
-                        <a href="/agendamento?Servico=${servico.name}" class="navbutton">Agendar</a>
+                        <a href="/usuario/agendamento/${servico.id}" class="navbutton">Agendar</a>
                     </div>
                 </div>
             </div>
@@ -55,7 +55,7 @@ fetch("http://localhost:3000/api/categories")
                         ${servico.description}
                         </div>
                         <div class="servicosbotaocontainer">
-                            <a href="/agendamento?Servico=${servico.name}" class="servicosbotao">Agendar</a>
+                            <a href="/usuario/agendamento/${servico.id}" class="servicosbotao">Agendar</a>
                         </div>
                     </div>
                 </div>
