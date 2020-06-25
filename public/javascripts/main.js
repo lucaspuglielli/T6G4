@@ -95,6 +95,7 @@ const editEmployeeSelect = document.getElementById("editemployeenameselection");
 const editEmployeeImage = document.querySelector(".subcontainereditarfuncionario2");
 const editEmployeeEmail = document.getElementById("editemployeeemail");
 const editEmployeePhone = document.getElementById("editemployeephone");
+const editEmployeeSkill = document.getElementById("editskillsemployee");
 const editEmployeeDom = document.getElementById("dominfosfuncionario");
 const editEmployeeSeg = document.getElementById("seginfosfuncionario");
 const editEmployeeTer = document.getElementById("terinfosfuncionario");
@@ -324,6 +325,7 @@ function preencherCampo() {
 	editEmployeeLastname.value = selectedEmployee[0].lastname;
 	editEmployeeEmail.value = selectedEmployee[0].email;
 	editEmployeePhone.value = selectedEmployee[0].phone;
+	editEmployeeSkill.value = selectedEmployee[0].skills;
 	editEmployeeShiftstart.value = selectedEmployee[0].shiftstart;
 	editEmployeeShiftend.value = selectedEmployee[0].shiftend;
 	if(dias.find(element => element.id_employee == selectedEmployee[0].id).sunday == 0){

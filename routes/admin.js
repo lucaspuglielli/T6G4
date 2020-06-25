@@ -36,6 +36,20 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
+// Multer config para atualização de foto do funcionário
+const newEmployeeStorage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, path.join('public', 'images'));
+    },
+    filename: function (req, file, cb) {
+        let nomeImg = req.body.editemployeename.replace(/\s/g, "") + req.body.editemployeelastname.replace(/\s/g, "") +
+        path.extname(file.originalname);
+        cb(null, nomeImg);
+    },
+});
+
+const newEmployeeUpload = multer({ storage: newEmployeeStorage });
+
 // Multer config para ícone da categoria
 const storageCategory = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -86,5 +100,8 @@ router.put('/admin-edit', administratorController.update);
 
 // Serviço
 router.put('/service-edit', serviceController.update);
+
+// Funcionário
+router.put('/employee-edit', newEmployeeUpload.any(), employeeController.update);
 
 module.exports = router;
