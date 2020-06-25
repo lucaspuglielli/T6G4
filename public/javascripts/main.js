@@ -321,7 +321,6 @@ function preencherCampo() {
 	});
 	editEmployeeName.value = selectedEmployee[0].name;
 	editEmployeeImage.innerHTML = `<img src="/images/${selectedEmployee[0].photo}" alt="" class="editemployeeimage">`;
-	console.log(selectedEmployee[0].photo)
 	editEmployeeLastname.value = selectedEmployee[0].lastname;
 	editEmployeeEmail.value = selectedEmployee[0].email;
 	editEmployeePhone.value = selectedEmployee[0].phone;

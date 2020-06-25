@@ -5,7 +5,6 @@ fetch("http://localhost:3000/api/categories")
 	.then((dados) => {
 		lista.innerHTML = "";
 		dados.forEach((servico) => {
-            console.log(servico)
             lista.innerHTML += `
             <div card card-funcionario" style="margin-bottom: 30px; width: 300px">
                 <div class="d-flex justify-content-center">
