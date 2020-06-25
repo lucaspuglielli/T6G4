@@ -46,6 +46,14 @@ label {
 	padding: 3rem;
 }
 
+.titulopagina1 {
+	color: #2f364a;
+	font-size: 34px;
+	margin: 0.5px 0 !important;
+	padding:  52px 0px;
+	text-align: center;
+}
+
 /* TEMPLATE DE FORMULÁRIO */
 
 .label-form {
@@ -1135,6 +1143,10 @@ footer {
 }
 
 @media (max-width: 1199px) {
+	.teste3 {
+		height: 15.7vh;
+	}
+
 	.nav3 {
 		display: none;
 	}
@@ -1898,6 +1910,14 @@ flex-direction: column-reverse;
 }
 
 @media (min-width: 1199px) {
+
+	.titulopagina1 {
+		color: #2f364a;
+		font-size: 2.5em;
+		margin: 0 !important;
+		padding: 3rem;
+	}
+
 	.forms,
 	.subforms {
 		width: 1000px;
@@ -1956,6 +1976,9 @@ flex-direction: column-reverse;
 		width: 50%;
 	}
 	.teste1 {
+		height: 10vh;
+	}
+	.teste3 {
 		height: 10vh;
 	}
 
