@@ -240,6 +240,10 @@ formEmployeeRegistration.addEventListener("submit", function (e) {
 		errorMessage("Campo <b>E-mail</b> não pode estar vazio.");
 	}
 
+	if (emptyField(skillsemployee)) {
+		errorMessage("Campo <b>Área de atuação</b> não pode estar vazio.");
+	}
+
 	if (emptyField(phoneemployee)) {
 		errorMessage("Campo <b>telefone</b> não pode estar vazio.");
 	}

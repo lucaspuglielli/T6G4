@@ -20,6 +20,7 @@ const employeeController = {
             nameemployee,
             lastnameemployee,
             emailemployee,
+            skillsemployee,
             phoneemployee,
             sunemployee,
             monemployee,
@@ -47,6 +48,7 @@ const employeeController = {
                 name: nameemployee,
                 lastname: lastnameemployee,
                 email: emailemployee,
+                skills: skillsemployee,
                 phone: phoneemployee,
                 photo: photoemployee.filename,
                 shiftstart,
@@ -74,6 +76,76 @@ const employeeController = {
           }
           
     },
+
+    update: async (req, res) => {
+        const {
+            editemployeenameselection,
+            editemployeename,
+            editemployeelastname,
+            editemployeeemail,
+            editskillsemployee,
+            editemployeephone,
+            editemployeeshiftstart,
+            editemployeeshiftend,
+            dominfosfuncionario,
+            seginfosfuncionario,
+            terinfosfuncionario,
+            quainfosfuncionario,
+            quiinfosfuncionario,
+            sexinfosfuncionario,
+            sabinfosfuncionario,
+        } = req.body;
+
+        const [newphotoemployee] = req.files;
+        
+        function verificaDia(dia){
+            if(dia == "on"){
+                return 1;
+            } else{
+                return 0;
+            }
+        }
+
+        try {
+            const employee = await Employee.update(
+                {
+                name: editemployeename,
+                lastname: editemployeelastname,
+                email: editemployeeemail,
+                skills: editskillsemployee,
+                phone: editemployeephone,
+                photo: newphotoemployee.filename,
+                shiftstart: editemployeeshiftstart,
+                shiftend: editemployeeshiftend,
+                updatedAt: new Date(), 
+            },
+            {
+                where: {id: editemployeenameselection}
+            }
+            )
+            const workingDay = await Working_day.update(
+                {
+                    sunday: verificaDia(dominfosfuncionario),
+                    monday: verificaDia(seginfosfuncionario),
+                    tuesday: verificaDia(terinfosfuncionario),
+                    wednesday: verificaDia(quainfosfuncionario),
+                    thursday: verificaDia(quiinfosfuncionario),
+                    friday: verificaDia(sexinfosfuncionario),
+                    saturday: verificaDia(sabinfosfuncionario),
+                    updatedAt: new Date(),
+                },
+                {
+                    where: {id_employee: editemployeenameselection}
+                }
+            )
+            return res.redirect('/administracao')
+        } catch(e){
+            return res.status(400).json({
+              error: true,
+              msg: 'Erro na requisição, tente novamente'
+            }
+            )}
+    }
 };
 
 module.exports = employeeController;

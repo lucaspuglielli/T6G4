@@ -105,15 +105,15 @@
       </form>
 
 
-      <form class="forms" method='POST' action="/api/employee-edit?_method=put" id="formEmployeeUpdate">
-        <h3 class="tituloinfosadm">EDITAR FUNCIONARIO</h3>
+      <form class="forms" method='POST' action="administracao/employee-edit?_method=put" enctype="multipart/form-data" id="formEmployeeUpdate">
+        <h3 class="tituloinfosadm">EDITAR FUNCIONÁRIO</h3>
         <div class="containereditarfuncionario">
           <div class="subcontainereditarfuncionario1">
-            <label for="editemployeenameselection" class="labelinfosadm">Seleione o funcionário</label><br>
+            <label for="editemployeenameselection" class="labelinfosadm">Selecione o funcionário</label><br>
             <select name="editemployeenameselection" class="dropdowninfosadm2" id="editemployeenameselection" onchange="preencherCampo();">
               <option value="0" selected="selected" disabled>Selecionar</option>
               <% for( let i = 0; i < employees.length; i++ ) { %>
-              <option value="<%=employees[i].id%>  "><%= employees[i].name %></option>
+              <option value="<%=employees[i].id%>"><%= employees[i].name %></option>
               <% } %>
             </select><br>
             <label for="editemployeename" class="labelinfosadm">Nome</label><br>
@@ -122,33 +122,38 @@
             <input type="text" class="inputinfosadm2" placeholder="Sobrenome" name="editemployeelastname" id="editemployeelastname"><br>
             <label for="editemployeeemail" class="labelinfosadm">E-mail</label><br>
             <input type="email" class="inputinfosadm2" placeholder="name@email.com" name="editemployeeemail" id="editemployeeemail"><br>
+            <label for="editskillsemployee" class="labelinfosadm">Área de atuação</label><br>
+            <input type="text" placeholder=" Digite a área de atuação do funcionário" class="inputinfosadm" name="editskillsemployee" id="editskillsemployee"><br>
             <label for="editemployeephone" class="labelinfosadm">Telefone</label><br>
             <input type="text" placeholder=" (99) 99999-9999" class="inputinfosadm2" name="editemployeephone" id="editemployeephone"><br>
+            <label for="newphotoemployee" class="labelinfosadm">Foto</label><br>
+            <input type="file" name="newphotoemployee" id="newphotoemployee" class="inputfotofunc"><br>
           </div><br>
           <div class="subcontainereditarfuncionario2">
             <img src="/images/funcionariotemplate.png" alt="" class="editemployeeimage">
           </div>
         </div>
         <label class="labelinfosadm">Dias de trabalho</label><br>
-        <input type="checkbox" name="dominfosfuncionario" id="dominfosfuncionario" checked>
+        <input type="checkbox" name="dominfosfuncionario" id="dominfosfuncionario">
         <label for="dominfosfuncionario" class="labelinfosadm">Dom</label>
-        <input type="checkbox" name="seginfosfuncionario" id="seginfosfuncionario" checked>
+        <input type="checkbox" name="seginfosfuncionario" id="seginfosfuncionario">
         <label for="seginfosfuncionario" class="labelinfosadm">Seg</label>
-        <input type="checkbox" name="terinfosfuncionario" id="terinfosfuncionario" checked>
+        <input type="checkbox" name="terinfosfuncionario" id="terinfosfuncionario">
         <label for="terinfosfuncionario" class="labelinfosadm">Ter</label>
-        <input type="checkbox" name="quainfosfuncionario" id="quainfosfuncionario" checked>
+        <input type="checkbox" name="quainfosfuncionario" id="quainfosfuncionario" >
         <label for="quainfosfuncionario" class="labelinfosadm">Qua</label><br>
-        <input type="checkbox" name="quiinfosfuncionario" id="quiinfosfuncionario" checked>
+        <input type="checkbox" name="quiinfosfuncionario" id="quiinfosfuncionario">
         <label for="quiinfosfuncionario" class="labelinfosadm">Qui</label>
-        <input type="checkbox" name="sexinfosfuncionario" id="sexinfosfuncionario" checked>
+        <input type="checkbox" name="sexinfosfuncionario" id="sexinfosfuncionario">
         <label for="sexinfosfuncionario" class="labelinfosadm">Sex</label>
         <input type="checkbox" name="sabinfosfuncionario" id="sabinfosfuncionario">
         <label for="sabinfosfuncionario" class="labelinfosadm">Sáb</label><br>
         <label for="editemployeeshiftstart" class="labelinfosadm">Horário de trabalho</label><br>
         <select name="editemployeeshiftstart" id="editemployeeshiftstart" class="dropdowninfosadm">
+          <option value="0" selected="selected" disabled="disabled">Selecione horário de início...</option>
           <option value="8:00">das 8:00h</option>
           <option value="9:00">das 9:00h</option>
-          <option value="10:00" selected="selected">das 10:00h</option>
+          <option value="10:00">das 10:00h</option>
           <option value="11:00">das 11:00h</option>
           <option value="12:00">das 12:00h</option>
           <option value="13:00">das 13:00h</option>
@@ -158,7 +163,9 @@
           <option value="17:00">das 17:00h</option>
         </select>
         <select name="editemployeeshiftend" id="editemployeeshiftend" class="dropdowninfosadm">
-          <option value="9:00" selected="selected">as 09:00h</option>
+          <option value="0" selected="selected" disabled="disabled">Selecione horário de término...
+          </option>
+          <option value="9:00">as 09:00h</option>
           <option value="10:00">as 10:00h</option>
           <option value="11:00">as 11:00h</option>
           <option value="12:00">as 12:00h</option>
@@ -364,13 +371,15 @@
 
 
       <form class="subforms" method="POST" enctype="multipart/form-data" action="/administracao/employee-register" id="formEmployeeRegistration">
-        <h3 class="tituloinfosadm">CADASTRAR FUNCIONARIO</h3>
+        <h3 class="tituloinfosadm">CADASTRAR FUNCIONÁRIO</h3>
         <label for="nameemployee" class="labelinfosadm">Nome</label><br>
         <input type="text" placeholder="Digite o nome do funcionário" class="inputinfosadm" name="nameemployee" id="nameemployee"><br>
         <label for="lastnameemployee" class="labelinfosadm">Sobrenome</label><br>
         <input type="text" placeholder="Digite o sobrenome do funcionário" class="inputinfosadm" name="lastnameemployee" id="lastnameemployee"><br>
         <label for="emailemployee" class="labelinfosadm">E-mail</label><br>
         <input type="email" placeholder=" usuario@mail.com" class="inputinfosadm" name="emailemployee" id="emailemployee"><br>
+        <label for="skillsemployee" class="labelinfosadm">Área de atuação</label><br>
+        <input type="text" placeholder=" Digite a área de atuação do funcionário" class="inputinfosadm" name="skillsemployee" id="skillsemployee"><br>
         <label for="phoneemployee" class="labelinfosadm">Telefone</label><br>
         <input type="text" placeholder=" (99) 99999-9999" class="inputinfosadm" name="phoneemployee" id="phoneemployee"><br>
         <label for="photoemployee" class="labelinfosadm">Foto</label><br>

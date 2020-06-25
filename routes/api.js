@@ -12,7 +12,7 @@ const categoriesController = require('../controllers/api/categoriesController');
 // Funcionários
 router.get('/funcionario', employeeController.index);
 router.get('/dias', workingDayController.index);
-router.put('/employee-edit', employeeController.update)
+
 
 // Serviços
 router.get('/services', servicesController.index);
