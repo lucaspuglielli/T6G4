@@ -19,40 +19,10 @@
             </div>
         </div>
 
+        <input id="usuario" type="text" value="<%= inputValues.id  %>" hidden>
 
-        <form class="forms" method="POST" action="/admin/admin-register">
-            <div class="cartao-servico mb-5 p-4">
-                <div class="d-flex">
-                    <div>
-                        <img class="img-servico" src="/images/unha.png" alt="">
-                    </div>
-                    <div class="d-flex flex-column justify-content-between">
-                        <div>
-                            <h2 class="titulo-servico-card">Pé e Mão</h2>
-                        </div>
-                        <div>
-                            <p class="data-servico-card">23/04/2020 - 10:00h</p>
-                        </div>
-                        <div class="d-flex">
-                            <p class="label-info">Prefissional: </p>
-                            <p class="label-info">Valor: </p>
-                        </div>
-                        <div class="d-flex">
-                            <p class="nome-info">Ana Américo</p>
-                            <p class="nome-info">R$:25,00</p>
-                        </div>
-                        <div class="d-flex">
-                            <p class="label-info">Status: </p>
-                            <p class="status-info">Agendado</p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <img class="icones-servico-card" src="/images/google.png" alt="">
-                        <img class="icones-servico-card" src="/images/google.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </form>
+        <div class="listadeagendamentos">
+        </div>
 
 
     </main>
@@ -71,6 +41,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+    <script src="/javascripts/perfil-agendamentos.js"></script>
 
 
 </body>
