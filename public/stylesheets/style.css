@@ -1291,6 +1291,13 @@ footer {
 	text-align: center;
 }
 
+.texto-cards-quem-somos {
+	font-size: 1em;
+	color: #41bfc4;
+	white-space: normal;
+	text-align: center;
+}
+
 .menu-header {
 	background-color: #2f364a;
 }
