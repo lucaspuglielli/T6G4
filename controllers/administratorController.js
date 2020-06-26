@@ -17,6 +17,14 @@ const administratorController = {
 
         return res.render('administracao', {company, category, employees, administrator, user, clients, services});
     },
+    index2: async (req, res) => {
+
+        const administrator = await Administrator.findByPk(req.session.user.id);
+        const user = administrator;
+
+
+        return res.render('daily-schedule', {user});
+    },
     store: async (req, res) => {
         const {
             admregistername,
