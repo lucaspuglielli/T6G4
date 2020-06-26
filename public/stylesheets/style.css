@@ -110,8 +110,31 @@ body {
 	justify-content: center;
 }
 
+.navadmcontainer{
+	width: 1200px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.botaosair{
+	position: relative;
+	color: white;
+	font-size: 15px;
+}
+
+a.botaosair{
+	color: white;
+	text-decoration: none;
+}
+
 .logo1 {
 	height: 10vh;
+}
+
+.logonavadm {
+	height: 10vh;
+	position: relative;
 }
 
 .carousel {
@@ -683,8 +706,25 @@ body {
 	.navadm {
 		height: 13vh;
 	}
+	.navadmcontainer{
+		width: 1200px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 	.logo1 {
 		height: 13vh;
+	}
+	.logonavadm {
+		height: 13vh;
+		position: relative;
+		left: 40.75px;
+	}
+	.botaosair{
+		position: relative;
+		color: white;
+		font-size: 25px;
+		left: 300px;
 	}
 	.carousel {
 		height: 73vh;
