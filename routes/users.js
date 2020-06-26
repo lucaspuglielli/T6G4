@@ -19,5 +19,6 @@ router.put("/editar", auth, userController.update);
 
 router.get("/agendamento/:idcategory?", blockAdm, auth, clientScheduleController.index);
 router.post("/agendamento", clientScheduleController.store);
+router.delete("/agendamento", clientScheduleController.destroy);
 
 module.exports = router;

@@ -37,6 +37,16 @@ const clientScheduleController = {
 
 		return res.redirect("/usuario/perfil/agendamento");
 	},
+	destroy: async (req, res) => {
+		
+		const { idschedule } = req.body;
+
+		const deletedSchedule = Schedule.destroy({
+			where: {id: idschedule},
+		});
+
+		return res.redirect('/usuario/perfil/agendamento')
+	},
 };
 
 module.exports = clientScheduleController;

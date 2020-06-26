@@ -1,35 +1,39 @@
 const lista = document.querySelector(".listadeagendamentos");
 const usuario = document.getElementById('usuario');
+
+
 let categorias = [];
 let servicos = [];
 let funcionario = [];
 
 fetch("http://localhost:3000/api/categories")
-	.then((resposta) => resposta.json())
-	.then((dados) => {
-		categorias = dados;
-	});
+    .then((resposta) => resposta.json())
+    .then((dados) => {
+        categorias = dados;
+    });
 
 fetch("http://localhost:3000/api/services")
-	.then((resposta) => resposta.json())
-	.then((dados) => {
-		servicos = dados;
-	});
+    .then((resposta) => resposta.json())
+    .then((dados) => {
+        servicos = dados;
+    });
 
 fetch("http://localhost:3000/api/funcionario")
-	.then((resposta) => resposta.json())
-	.then((dados) => {
-		funcionario = dados;
-	});
+    .then((resposta) => resposta.json())
+    .then((dados) => {
+        funcionario = dados;
+    });
+
 
 fetch("http://localhost:3000/api/schedules")
-	.then((resposta) => resposta.json())
-	.then((dados) => {
+    .then((resposta) => resposta.json())
+    .then((dados) => {
         lista.innerHTML = "";
-		dados.forEach((agendamento) => {
-            if(agendamento.id_client == usuario.value) {
-			lista.innerHTML += `
-            <form class="forms" method="POST" action="/admin/admin-register">
+        dados.forEach((agendamento) => {
+            if (agendamento.id_client == usuario.value) {
+                lista.innerHTML += `
+            <form class="forms" id="formdeletar" method="POST" action="/usuario/agendamento?_method=delete">
+                <input id="idschedule" name="idschedule" value="${agendamento.id}" type="text" hidden/>
                 <div class="cartao-servico mb-5 p-4">
                     <div class="d-flex">
                         <div>
@@ -57,13 +61,37 @@ fetch("http://localhost:3000/api/schedules")
                             </div>
                         </div>
                         <div class="d-flex align-items-start">
-                            <div class="d-flex align-items-center">
-                                Cancelar<i class="fa fa-close" style="font-size: 3.5vh; color:black; margin-left: 10px;"></i>
-                            </div>
-                        </div>
+                !-- Button trigger modal -->
+                <button type="button" class="d-flex align-items-center btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                Cancelar<i class="fa fa-close" style="font-size: 3.5vh; color:white; margin-left: 10px;"></i>
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Tem certeza que deseja cancelar esse agendamento?</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Sim</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
+                    </div>
                     </div>
                 </div>
-            </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
             `;
-		}});
-	});
+            }
+        });
+
+        if (lista.innerHTML == "") {
+            lista.innerHTML = '<div class="m-5">Você não possui nenhum procedimento agendado.</div>'
+        };
+    });
