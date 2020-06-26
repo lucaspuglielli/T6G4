@@ -2055,3 +2055,11 @@ flex-direction: column-reverse;
 	}
 
 }
+.container-instagram {
+	height: 281px;
+	overflow: hidden;
+	margin-bottom: 55px;
+	border: 1px solid lightgrey;
+	padding: 5px 5px 5px 8px;
+
+}
