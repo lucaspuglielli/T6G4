@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<%- include('includes/head', {title: "Agendamentos"}) %>
+
+<body>
+
+  <nav class="navadm">
+    <div class="navadmcontainer">
+      <a href="/">
+        <img src="/images/logo-deitado.png" alt="logo deitado" class="logonavadm">
+      </a>
+      <a href="/login/logout" class="botaosair">Sair <i class="fa fa-power-off" aria-hidden="true"></i></a>
+    </div>
+  </nav>
+
+  <div class="containermaincontent">
+
+    <main class="admflexcontainer">
+
+      <div>
+        <div class="containerinfosopcoes">
+          <a class="opcaoinfos" href="/administracao">
+            <i class="fas fa-arrow-left admitem7" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <div class="positiondatedaily">
+          <label for="datadaily">Selecione o dia:</label>
+          <input type="date" id="datadaily">
+        </div>
+
+
+        <div class="listadeagendamentos">
+
+        </div>
+      </div>
+
+    </main>
+
+    <div class="teste1"></div>
+    <div class="teste1"></div>
+
+    <%- include('includes/footer') %>
+    <%- include('includes/scripts') %>
+
+    <script src="/javascripts/daily.js"></script>
+
+</body>
+
+</html>

@@ -1624,6 +1624,13 @@ footer {
 	display: none;
 }
 
+.positiondatedaily{
+	position: relative;
+	left: 85px;
+	top: 30px;
+	margin-bottom: 40px;
+}
+
 .subforms {
 	position: relative;
 	display: none;
@@ -1888,7 +1895,14 @@ flex-direction: column-reverse;
 	height: 100%;
 	transform: scale(0.6);
 }
-
+.admitem7 {
+	width: 100%;
+	height: 100%;
+	color: white;
+	font-size: 90px;
+	text-align: center;
+	transform: scale(0.6);
+}
 /* Para page Perfil */
 .perfilitem2 {
 	background-image: url(../images/pagar-branco.png);

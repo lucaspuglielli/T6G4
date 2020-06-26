@@ -66,6 +66,7 @@ const uploadCategory = multer({ storage: storageCategory });
 // *** EXIBIÇÃO DA PÁGINA DE ADMINISTRAÇÃO ***
 // !!! Após o desenvolvimento incluir o adminLoginMiddleware. !!!
 router.get('/', adminAuthMiddleware, administratorController.index);
+router.get('/daily', adminAuthMiddleware, administratorController.index2);
 
 // *** LOGIN DE ADMINISTRADOR ***
 router.get('/login', adminLoginMiddleware, adminAuthController.index);
