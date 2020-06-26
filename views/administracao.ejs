@@ -126,11 +126,11 @@
             <label for="editemployeeemail" class="labelinfosadm">E-mail</label><br>
             <input type="email" class="inputinfosadm2" placeholder="name@email.com" name="editemployeeemail" id="editemployeeemail"><br>
             <label for="editskillsemployee" class="labelinfosadm">Área de atuação</label><br>
-            <input type="text" placeholder=" Digite a área de atuação do funcionário" class="inputinfosadm" name="editskillsemployee" id="editskillsemployee"><br>
+            <input type="text" placeholder=" Digite a área de atuação do funcionário" class="inputinfosadm2" name="editskillsemployee" id="editskillsemployee"><br>
             <label for="editemployeephone" class="labelinfosadm">Telefone</label><br>
             <input type="text" placeholder=" (99) 99999-9999" class="inputinfosadm2" name="editemployeephone" id="editemployeephone"><br>
             <label for="newphotoemployee" class="labelinfosadm">Foto</label><br>
-            <input type="file" name="newphotoemployee" id="newphotoemployee" class="inputfotofunc"><br>
+            <input type="file" name="newphotoemployee" id="newphotoemployee" class="inputfotofunc inputinfosadm2"><br>
           </div><br>
           <div class="subcontainereditarfuncionario2">
             <img src="/images/funcionariotemplate.png" alt="" class="editemployeeimage">
@@ -153,7 +153,7 @@
         <label for="sabinfosfuncionario" class="labelinfosadm">Sáb</label><br>
         <label for="editemployeeshiftstart" class="labelinfosadm">Horário de trabalho</label><br>
         <select name="editemployeeshiftstart" id="editemployeeshiftstart" class="dropdowninfosadm">
-          <option value="0" selected="selected" disabled="disabled">Selecione horário de início...</option>
+          <option value="0" selected="selected" disabled="disabled">Selecione horário de início</option>
           <option value="8:00">das 8:00h</option>
           <option value="9:00">das 9:00h</option>
           <option value="10:00">das 10:00h</option>
@@ -166,7 +166,7 @@
           <option value="17:00">das 17:00h</option>
         </select>
         <select name="editemployeeshiftend" id="editemployeeshiftend" class="dropdowninfosadm">
-          <option value="0" selected="selected" disabled="disabled">Selecione horário de término...
+          <option value="0" selected="selected" disabled="disabled">Selecione horário de término
           </option>
           <option value="9:00">as 09:00h</option>
           <option value="10:00">as 10:00h</option>
@@ -245,25 +245,25 @@
       <form class="forms" id="formServiceUpdate" method="POST" action="/administracao/service-edit?_method=put">
         <h3 class="tituloinfosadm" >EDITAR SERVIÇOS</h3>
         <label for="editserviceselectcategory" class="labelinfosadm">Escolha uma categoria</label><br>
-        <select name="editserviceselectcategory" class="dropdowninfosadm" id="editserviceselectcategory">
+        <select name="editserviceselectcategory" class="dropdowninfosfunc" id="editserviceselectcategory">
           <option value="0" selected="selected" disabled>Selecione</option>
           <% for( let i = 0; i < category.length; i++ ) { %>
           <option value=" <%= category[i].id %> "> <%= category[i].name %> </option>
           <% } %>
             </select><br>
         <label for="editserviceselectname" class="labelinfosadm">Escolha um serviço</label><br>
-        <select name="editserviceselectname" class="dropdowninfosadm" id="editserviceselectname">
+        <select name="editserviceselectname" class="dropdowninfosfunc" id="editserviceselectname">
           <option value='0' selected='selected' disabled>Selecionar</option>
         </select><br>
         </select>
         <label for="editservicename" class="labelinfosadm">Nome</label><br>
         <input type="text" placeholder="Nome serviço" class="dropdowninfosfunc" name="editservicename" id="editservicename"><br>
         <label for="editserviceduration" class="labelinfosadm">Duração em minutos</label><br>
-        <input type="number" class="inputinfosfunc2" placeholder=" Duração do serviço" name="editserviceduration" id="editserviceduration"><br>
+        <input type="number" class="dropdowninfosfunc" placeholder=" Duração do serviço" name="editserviceduration" id="editserviceduration"><br>
         <label for="editservicedescription" class="labelinfosadm">Descrição</label><br>
         <textarea class="textareainfoscategoria" placeholder=" Descrição do serviço" name="editservicedescription" id="editservicedescription"></textarea><br>
         <label for="editserviceprice" class="labelinfosadm">Preço</label><br>
-        <input type="number" class="inputinfosfunc2" placeholder="R$0,00" name="editserviceprice" id="editserviceprice">
+        <input type="number" class="dropdowninfosfunc" placeholder="R$0,00" name="editserviceprice" id="editserviceprice">
         <br>
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#editServiceModal">Editar funcionários</button>
@@ -404,7 +404,7 @@
         <label for="satemployee" class="labelinfosadm">Sáb</label><br>
         <label for="shiftstart" class="labelinfosadm">Horário de trabalho</label><br>
         <select name="shiftstart" class="dropdowninfosadm" id="shiftstart">
-          <option value="0" selected="selected" disabled="disabled">Selecione horário de início...</option>
+          <option value="0" selected="selected" disabled="disabled">Selecione horário de início</option>
           <option value="8:00">das 8:00h</option>
           <option value="9:00">das 9:00h</option>
           <option value="10:00">das 10:00h</oeption>
@@ -419,7 +419,7 @@
           <option value="19:00">das 19:00h</option>
         </select>
         <select name="shiftend" id="shiftend" class="dropdowninfosadm">
-          <option value="0" selected="selected" disabled="disabled">Selecione horário de término...
+          <option value="0" selected="selected" disabled="disabled">Selecione horário de término
           </option>
           <option value="9:00">as 09:00h</option>
           <option value="10:00">as 10:00h</option>
@@ -444,18 +444,18 @@
         <label for="serviceregistername" class="labelinfosadm">Nome</label><br>
         <input type="text" placeholder="Digite o nome do serviço" class="dropdowninfosfunc" name="serviceregistername" id="serviceregistername"><br>
         <label for="serviceregistercategory" class="labelinfosadm">Categoria</label><br>
-        <select name="serviceregistercategory" class="dropdowninfosadm" id="serviceregistercategory">
+        <select name="serviceregistercategory" class="dropdowninfosadm1" id="serviceregistercategory">
           <option value="0" selected="selected" disabled>Selecione</option>
           <% for( let i = 0; i < category.length; i++ ) { %>
           <option value=" <%= category[i].id %> "> <%= category[i].name %> </option>
           <% } %>
         </select><br>
         <label for="serviceduration" class="labelinfosadm">Duração em minutos</label><br>
-        <input type="number" class="inputinfosfunc2" placeholder=" Digite a duração do serviço" name="serviceduration" id="serviceduration"><br>
+        <input type="number" class="dropdowninfosfunc" placeholder=" Digite a duração do serviço" name="serviceduration" id="serviceduration"><br>
         <label for="servicedescription" class="labelinfosadm">Descrição</label><br>
         <textarea class="textareainfoscategoria" placeholder=" Digite a descrição do serviço" name="servicedescription" id="servicedescription"></textarea><br>
         <label for="serviceprice" class="labelinfosadm">Preço</label><br>
-        <input type="number" class="inputinfosfunc2" placeholder=" R$0,00" name="serviceprice" id="serviceprice">
+        <input type="number" class="dropdowninfosfunc" placeholder=" R$0,00" name="serviceprice" id="serviceprice">
         <br><br>
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">Adicionar funcionários</button>

@@ -1736,6 +1736,18 @@ footer {
 	padding: 0 10px;
 }
 
+.dropdowninfosadm1 {
+	width: 50%;
+	border-radius: 8px;
+	margin: 10px 0;
+	height: 40px;
+	border: 2px solid #227578;
+	color: #227578;
+	box-sizing: border-box;
+	font-size: 12px;
+	padding: 0 10px;
+}
+
 .dropdowninfosadm2 {
 	width: 100%;
 	border-radius: 8px;
@@ -2010,7 +2022,7 @@ flex-direction: column-reverse;
 		width: 100%;
 	}
 	.dropdowninfosadm{
-		width: 15%;
+		width: 24.8%;
 	}
 	.dropdowninfosadm3{
 		width: 50%;

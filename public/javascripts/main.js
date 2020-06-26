@@ -4,8 +4,7 @@ let funcionario = false;
 let servico = false;
 let categoria = false;
 
-
-let formIndex = 4;
+let formIndex = 1;
 
 showForms(formIndex);
 
