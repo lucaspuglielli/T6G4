@@ -11,7 +11,6 @@ const selectField = (select) => {
 
 
 const formCloseSchedule = selectId("formCloseSchedule");
-const formScheduleClient = selectId("formScheduleClient");
 
 
 const formCategoryRegistration = selectId("formCategoryRegistration");
@@ -54,6 +53,8 @@ formAdministratorUpdate.addEventListener("submit", function (e) {
 	if (editAdmErrorListUl.querySelectorAll("li").length > 0) {
 		e.preventDefault();
 		editAdmErrorList.hidden = "";
+	} else {
+		alert('Os dados do administrador foram alterados com sucesso.');
 	}
 });
 
@@ -86,6 +87,8 @@ formCompanyUpdate.addEventListener("submit", function (e) {
 	if (editCompErrorListUl.querySelectorAll("li").length > 0) {
 		e.preventDefault();
 		editCompErrorList.hidden = "";
+	} else {
+		alert('Os dados da empresa foram alterados com sucesso.');
 	}
 });
 
@@ -130,6 +133,8 @@ formClientRegistration.addEventListener("submit", function (e) {
 	if (clientRegistrationErrorListUl.querySelectorAll("li").length > 0) {
 		e.preventDefault();
 		clientregistrationerrorlist.hidden = "";
+	} else {
+		alert('O cliente foi cadastrado com sucesso.');
 	}
 });
 
@@ -170,6 +175,8 @@ formEmployeeUpdate.addEventListener("submit", function (e) {
 	if (editEmployeeErrorListUl.querySelectorAll("li").length > 0) {
 		e.preventDefault();
 		editEmployeeErrorList.hidden = "";
+	} else {
+		alert('Os dados do funcionário foram atualizados com sucesso.');
 	}
 });
 
@@ -210,6 +217,8 @@ formAdministratorRegistration.addEventListener("submit", function (e) {
 	if (administratorRegistrationErrorListUl.querySelectorAll("li").length > 0) {
 		e.preventDefault();
 		administratorRegistrationErrorList.hidden = "";
+	} else {
+		alert('O administrador foi cadastrado com sucesso.');
 	}
 });
 
@@ -267,6 +276,8 @@ formEmployeeRegistration.addEventListener("submit", function (e) {
 	if (registerEmployeeErrorListUl.querySelectorAll("li").length > 0) {
 		e.preventDefault();
 		registerEmployeeErrorList.hidden = "";
+	} else {
+		alert('O funcionário foi cadastrado com sucesso.');
 	}
 });
 
@@ -312,6 +323,8 @@ formAdmScheduleClient.addEventListener("submit", function (e) {
 	if (formAdmScheduleClientErrorListUl.querySelectorAll("li").length > 0) {
 		e.preventDefault();
 		formAdmScheduleClientErrorList.hidden = "";
+	} else {
+		alert('Agendamento efetuado com sucesso.');
 	}
 });
 
@@ -356,6 +369,8 @@ formServiceUpdate.addEventListener('submit', function(e){
 		if (formAdmEditServiceErrorListUl.querySelectorAll("li").length > 0) {
 			e.preventDefault();
 			formAdmEditServiceErrorList.hidden = "";
+		} else {
+			alert('Os dados do serviço foram alterados com sucesso.');
 		}
 	
 })
@@ -396,5 +411,7 @@ formServiceRegistration.addEventListener('submit', function(e) {
 	if (formAdmServiceRegistrationErrorListUl.querySelectorAll("li").length > 0) {
 		e.preventDefault();
 		formAdmServiceRegistrationErrorList.hidden = "";
+	} else {
+		alert('O serviço foi cadastrado com sucesso.');
 	}
 })
