@@ -107,6 +107,7 @@ const employeeController = {
         }
 
         try {
+            if(!newphotoemployee){
             const employee = await Employee.update(
                 {
                 name: editemployeename,
@@ -114,7 +115,6 @@ const employeeController = {
                 email: editemployeeemail,
                 skills: editskillsemployee,
                 phone: editemployeephone,
-                photo: newphotoemployee.filename,
                 shiftstart: editemployeeshiftstart,
                 shiftend: editemployeeshiftend,
                 updatedAt: new Date(), 
@@ -122,7 +122,24 @@ const employeeController = {
             {
                 where: {id: editemployeenameselection}
             }
-            )
+            )} else {
+                const employee = await Employee.update(
+                    {
+                    name: editemployeename,
+                    lastname: editemployeelastname,
+                    email: editemployeeemail,
+                    skills: editskillsemployee,
+                    phone: editemployeephone,
+                    photo: newphotoemployee.filename,
+                    shiftstart: editemployeeshiftstart,
+                    shiftend: editemployeeshiftend,
+                    updatedAt: new Date(), 
+                },
+                {
+                    where: {id: editemployeenameselection}
+                }
+                )
+            }
             const workingDay = await Working_day.update(
                 {
                     sunday: verificaDia(dominfosfuncionario),
