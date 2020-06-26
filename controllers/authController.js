@@ -33,11 +33,17 @@ const authController = {
             email: user.email,
             admin: false
         }
-        res.redirect('/usuario/perfil')
+
+        if(!req.session.previousUrl) {
+            res.redirect('/usuario/perfil')
+        } else {
+            res.redirect(req.session.previousUrl);
+        }
 
     },
     update: (req, res) => {
         req.session.user = undefined;
+        req.session.previousUrl = undefined;
         res.redirect('/');
     }
 
