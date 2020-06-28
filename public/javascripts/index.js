@@ -61,4 +61,13 @@ fetch("http://localhost:3000/api/categories")
                 </div>
             `
 		});
-	});
+    });
+
+
+    function limparcampo() {
+        let nome = document.getElementById("nomeindex");
+        let email = document.getElementById("emailindex");
+        nome.value = ""
+        email.value = ""
+        alert("Newsletter cadastrado com sucesso!")
+    }

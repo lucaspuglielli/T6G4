@@ -469,6 +469,8 @@ a.botaosair{
 	width: 220px;
 	background-color: #262c3d;
 	border: none;
+	padding-left: 30px;
+	color: white;
 	border-bottom: 2px solid white;
 	margin-bottom: 5px;
 }
@@ -476,7 +478,9 @@ a.botaosair{
 .newsletterinputhome2 {
 	width: 220px;
 	background-color: #262c3d;
+	color: white;
 	border: none;
+	padding-left: 30px;
 	border-bottom: 2px solid white;
 	margin-bottom: 5px;
 }
@@ -494,6 +498,7 @@ a.botaosair{
 	align-items: center;
 	font-family: arial;
 	border: none;
+	cursor: pointer;
 }
 
 ::placeholder {
@@ -1899,7 +1904,7 @@ flex-direction: column-reverse;
 	width: 100%;
 	height: 100%;
 	color: white;
-	font-size: 90px;
+	font-size: 60px;
 	text-align: center;
 	transform: scale(0.6);
 }
@@ -1982,6 +1987,15 @@ flex-direction: column-reverse;
 }
 
 @media (min-width: 1199px) {
+
+	.admitem7 {
+		width: 100%;
+		height: 100%;
+		color: white;
+		font-size: 90px;
+		text-align: center;
+		transform: scale(0.6);
+	}
 
 	.titulopagina1 {
 		color: #2f364a;
