@@ -50,24 +50,24 @@
         </div>
         <ul class="navcontainer5">
             <a href="/nossos-servicos" class="navbutton2">
-                <li>Serviços</li>
+                <li>SERVIÇOS</li>
             </a>
             <a href="/quem-somos" class="navbutton2">
-                <li>Quem somos</li>
+                <li>QUEM SOMOS</li>
             </a>
             <a href="/profissionais" class="navbutton2">
-                <li>Equipe</li>
+                <li>EQUIPE</li>
             </a>
             <a href="/contato" class="navbutton2">
-                <li>Contato</li>
+                <li>CONTATO</li>
             </a>
             <% if(user.name == "disconnected") { %>
             <a href="/login" id="user-login" class="navbutton2">
-                <li>Login</li>
+                <li>LOGIN</li>
             </a>
             <% } else { %>
             <a href="/usuario/perfil" id="user-logado" class="navbutton2">
-                <li> <%=user.name%> </li>
+                <li> Olá, <%=user.name%>! </li>
             </a> <% } %>
 
         </ul>
@@ -131,7 +131,7 @@
                 </div>
             </div>
         </div>
-
+        
         <div class="nossaequipehomecontainer">
             <h5 class="quemsomostitle2">NOSSA EQUIPE</h5>
             <div class="equipehomecontainer">

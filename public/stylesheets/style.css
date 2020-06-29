@@ -220,23 +220,24 @@ a.botaosair{
 	height: 100%;
 	display: none;
 	align-items: center;
+	justify-content: space-evenly;
 	margin: 0;
 	padding: 0;
 }
 
 .navbutton2 {
 	text-decoration: none;
-	color: white;
+	color: #ddd;
 	list-style-type: none;
 	height: 35px;
-	width: 120px;
-	font-size: 15px;
-	background-color: #c4924b;
-	border-radius: 7px;
+	font-size: 18px;
+	font-weight: 600;
+	/* background-color: #c4924b; */
+	border-radius: 4px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: 0 40px;
+	margin: 0 22px 0 22px;
 	font-family: arial;
 }
 
@@ -747,6 +748,14 @@ a.botaosair{
 	}
 	.navcontainer5 {
 		display: flex;
+		width: 1200px;
+		justify-content: space-evenly;
+	}
+
+	.navcontainer4{
+		display: flex;
+		width: 900px;
+		justify-content: space-evenly;
 	}
 
 	.servicoscontainer,
@@ -921,18 +930,30 @@ a.botaosair{
 
 .navbutton {
 	text-decoration: none;
-	color: white;
+	color: #ddd;
 	list-style-type: none;
 	height: 35px;
-	width: 120px;
-	font-size: 15px;
-	background-color: #c4924b;
+	font-size: 18px;
+	font-weight: 600;
+	/* background-color: #c4924b; */
 	border-radius: 4px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	margin: 0 22px 0 22px;
 	font-family: arial;
+}
+
+.navbutton:hover{
+	color: #ddd;
+	border-bottom: 4px solid #c4924b;
+	text-decoration: none;
+}
+
+.navbutton2:hover{
+	color: #ddd;
+	border-bottom: 4px solid #c4924b;
+	text-decoration: none;
 }
 
 /* .usercontainer{
@@ -1852,61 +1873,71 @@ flex-direction: column-reverse;
 	border-left: 3px solid #c4924b;
 }
 
+.botaocontaineradm{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	font-size: 8px;
+	color: white;
+}
+
 .admitem1 {
 	background-image: url(../images/usuario-branco.png);
 	background-size: contain;
 	background-repeat: no-repeat;
-	width: 100%;
-	height: 100%;
-	transform: scale(0.6);
+	background-position: center;
+	width: 60%;
+	height: 60%;
 }
 .admitem2 {
 	background-image: url(../images/companhia.png);
 	background-size: contain;
 	background-repeat: no-repeat;
-	width: 100%;
-	height: 100%;
-	transform: scale(0.6);
+	background-position: center;
+	width: 60%;
+	height: 60%;
 }
 .admitem3 {
 	background-image: url(../images/clientes.png);
 	background-size: contain;
 	background-repeat: no-repeat;
-	width: 100%;
-	height: 100%;
-	transform: scale(0.6);
+	background-position: center;
+	width: 60%;
+	height: 60%;
 }
 .admitem4 {
 	background-image: url(../images/funcionario.png);
 	background-size: contain;
 	background-repeat: no-repeat;
-	width: 100%;
-	height: 100%;
-	transform: scale(0.6);
+	background-position: center;
+	width: 60%;
+	height: 60%;
 }
 .admitem5 {
 	background-image: url(../images/calendario-branco.png);
 	background-size: contain;
 	background-repeat: no-repeat;
-	width: 100%;
-	height: 100%;
-	transform: scale(0.6);
+	background-position: center;
+	width: 60%;
+	height: 60%;
 }
 .admitem6 {
 	background-image: url(../images/serviços.png);
 	background-size: contain;
 	background-repeat: no-repeat;
-	width: 100%;
-	height: 100%;
-	transform: scale(0.6);
+	background-position: center;
+	width: 60%;
+	height: 60%;
 }
 .admitem7 {
-	width: 100%;
-	height: 100%;
+	width: 60%;
+	height: 60%;
 	color: white;
-	font-size: 60px;
+	font-size: 35px;
 	text-align: center;
-	transform: scale(0.6);
 }
 /* Para page Perfil */
 .perfilitem2 {
@@ -1989,12 +2020,15 @@ flex-direction: column-reverse;
 @media (min-width: 1199px) {
 
 	.admitem7 {
-		width: 100%;
-		height: 100%;
+		width: 60%;
+		height: 60%;
 		color: white;
-		font-size: 90px;
+		font-size: 50px;
 		text-align: center;
-		transform: scale(0.6);
+	}
+
+	.botaocontaineradm{
+		font-size: 15px;
 	}
 
 	.titulopagina1 {
@@ -2020,10 +2054,10 @@ flex-direction: column-reverse;
 		width: 400px;
 	}
 	.containerinfosopcoes {
-		width: 90px;
+		width: 120px;
 	}
 	.opcaoinfos {
-		width: 90px;
+		width: 120px;
 		height: 90px;
 	}
 	.inputfotofunc{
