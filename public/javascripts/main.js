@@ -176,6 +176,12 @@ inputServico.addEventListener('change', function(){
 			idFuncionarios.push(employeesSkills[i].id_employee);
 		}
 	}
+
+	idFuncionarios = idFuncionarios.filter(function(este, i) {
+		return idFuncionarios.indexOf(este) === i;
+	});
+
+
 	for(let i=0; i<idFuncionarios.length; i++){
 		inputFuncionario.innerHTML += `
 			<option value="${employees[idFuncionarios[i]-1].id}">${employees[idFuncionarios[i]-1].name} ${employees[idFuncionarios[i]-1].lastname}</option>
@@ -200,6 +206,33 @@ inputFuncionario.addEventListener('change', function(){
 	let horarioInicio = 0
 	let horarioFim = 0
 	let horasTrabalhadas = 0
+
+
+	for(let i=0; i< dias.length; i++){
+		if(dias[i].id_employee == inputFuncionario.value){
+			if(dias[i].monday == 0){
+				employeeDayOff.push(1)
+			}
+			if(dias[i].tuesday == 0){
+				employeeDayOff.push(2)
+			}
+			if(dias[i].wednesday == 0){
+				employeeDayOff.push(3)
+			}
+			if(dias[i].thursday == 0){
+				employeeDayOff.push(4)
+			}
+			if(dias[i].friday == 0){
+				employeeDayOff.push(5)
+			}
+			if(dias[i].saturday == 0){
+				employeeDayOff.push(6)
+			}
+			if(dias[i].sunday == 0){
+				employeeDayOff.push(0)
+			}
+		}
+	}
 
 	for(i = 0; i < agendamentos.length; i++){
 		if(agendamentos[i].id_employee == idFuncionario){
@@ -275,18 +308,43 @@ inputFuncionario.addEventListener('change', function(){
 
 // *** DATEPICKER DINÂMICO AGENDAMENTO MANUAL DE CLIENTE ***
 var dates = [];
+var employeeDayOff = []
+var lotadasDatas = []
+
+function daysOff(date){
+	for(let i=0; i< employeeDayOff.length; i++){
+		if(date.getDay() == employeeDayOff[i]){
+			// console.log('dia igual ao elemento do array: ' + employeeDayOff[i])
+			var string = jQuery.datepicker.formatDate('dd/mm/yy', date);
+			return[dates.push(string)]
+		}
+	}
+	return[true, '']
+}
 
       function DisableDates(date) {
-        var string = jQuery.datepicker.formatDate('dd/mm/yy', date);
+		var string = jQuery.datepicker.formatDate('dd/mm/yy', date);
         return [dates.indexOf(string) == -1];
-      }
+	  }
+	  
+	  function setCustomDate(date){
+		  var clazz = ''
+		  var arr1 = daysOff(date)
+		  if(arr1[1] != '') clazz = arr1[1]
 
-      $(function () {
+		  var arr2 = DisableDates(date)
+
+		  return[(!arr2[0]) ? false : true, clazz]
+		//   return[]
+	  }
+
+	  $(function () {
         $("#clientscheduledate").datepicker({
           dateFormat: 'dd/mm/yy',
-          minDate: new Date(),
-          beforeShowDay: DisableDates
-        });
+		  minDate: new Date(),
+		  maxDate: "+1m",
+		  beforeShowDay: setCustomDate
+		});
       });
 
 // *** DATEPICKER DINÂMICO AGENDAMENTO MANUAL DE CLIENTE ***
@@ -301,13 +359,18 @@ inputHorario.addEventListener('focusin', function() {
 	
 	inputHorario.innerHTML = `<option value="0" selected="selected" disabled>Selecione o horário.</option>`
 
-	for(let i = 0; i < diasDisponiveis.length; i++) {
-		if(diasDisponiveis[i].data == dataEscolhida) {
-			horariosDisponiveis = diasDisponiveis[i].horarios;
-		} else {
-			horariosDisponiveis = horariosPadraoFuncionario;
+	if(diasDisponiveis.length > 0) {
+		for(let i = 0; i < diasDisponiveis.length; i++) {
+			if(diasDisponiveis[i].data == dataEscolhida) {
+				horariosDisponiveis = diasDisponiveis[i].horarios;
+			} else {
+				horariosDisponiveis = horariosPadraoFuncionario;
+			}
 		}
+	} else {
+		horariosDisponiveis = horariosPadraoFuncionario
 	}
+	
 
 	for(let i = 0; i < horariosDisponiveis.length; i++) {
 		inputHorario.innerHTML += `<option value="${horariosDisponiveis[i]}">${horariosDisponiveis[i]}</option>`

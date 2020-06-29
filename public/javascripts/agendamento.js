@@ -79,6 +79,11 @@ inputServico.addEventListener('change', function(){
 			idFuncionarios.push(employeesSkills[i].id_employee);
 		}
 	}
+
+	idFuncionarios = idFuncionarios.filter(function(este, i) {
+		return idFuncionarios.indexOf(este) === i;
+	});
+
 	for(let i=0; i<idFuncionarios.length; i++){
 		inputFuncionario.innerHTML += `
 			<option value="${employees[idFuncionarios[i]-1].id}">${employees[idFuncionarios[i]-1].name} ${employees[idFuncionarios[i]-1].lastname}</option>
@@ -134,11 +139,6 @@ inputFuncionario.addEventListener('change', function(){
 	// 	<input type="text" placeholder="Selecione a data." name="clientscheduledate" class="form-control form-control-lg form-border" id="clientscheduledate">
 	// </div>
 	// `
-
-	
-		
-
-	
 	
 	// employeeDayOff = []
 	for(let i=0; i< dias.length; i++){
@@ -234,7 +234,6 @@ inputFuncionario.addEventListener('change', function(){
 		}
 	}
 	
-
 	dates = datasLotadas;
 	lotadasDatas = datasLotadas
 	diasDisponiveis = datas;
@@ -264,7 +263,6 @@ function daysOff(date){
 	  }
 	  
 	  function setCustomDate(date){
-		  console.log('rodei')
 		  var clazz = ''
 		  var arr1 = daysOff(date)
 		  if(arr1[1] != '') clazz = arr1[1]
@@ -298,12 +296,17 @@ inputHorario.addEventListener('focusin', function() {
 	
 	inputHorario.innerHTML = `<option value="0" selected="selected" disabled>Selecione o horário.</option>`
 
-	for(let i = 0; i < diasDisponiveis.length; i++) {
-		if(diasDisponiveis[i].data == dataEscolhida) {
-			horariosDisponiveis = diasDisponiveis[i].horarios;
-		} else {
-			horariosDisponiveis = horariosPadraoFuncionario;
+	
+	if(diasDisponiveis.length > 0) {
+		for(let i = 0; i < diasDisponiveis.length; i++) {
+			if(diasDisponiveis[i].data == dataEscolhida) {
+				horariosDisponiveis = diasDisponiveis[i].horarios;
+			} else {
+				horariosDisponiveis = horariosPadraoFuncionario;
+			}
 		}
+	} else {
+		horariosDisponiveis = horariosPadraoFuncionario
 	}
 
 	for(let i = 0; i < horariosDisponiveis.length; i++) {
