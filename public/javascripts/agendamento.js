@@ -117,7 +117,19 @@ const datelocal = document.getElementById('datelocal')
 //       });
 // })
 
-
+inputFuncionario.addEventListener('change', function() {
+	// $('#clientscheduledate').datepicker._clearDate(this)
+	// $.datepicker._clearDate('#clientscheduledate');
+	console.log('focusin')
+	// $('#clientscheduledate').datepicker('setDate', null);]
+	// $('#clientscheduledate').val('');
+	// $('#clientscheduledate').datepicker('setDate', new Date());
+	// $('#clientscheduledate').datepicker('setDate', null);
+	// $('#clientscheduledate').attr("value", null)
+	dates = []
+	employeeDayOff = []
+	
+})
 
 inputFuncionario.addEventListener('change', function(){
 	let datasAgendadas = []
@@ -139,6 +151,9 @@ inputFuncionario.addEventListener('change', function(){
 	// 	<input type="text" placeholder="Selecione a data." name="clientscheduledate" class="form-control form-control-lg form-border" id="clientscheduledate">
 	// </div>
 	// `
+	// $('#clientscheduledate').attr("value", null)
+	// $('#clientscheduledate').datepicker.attr('value', '');
+
 	
 	// employeeDayOff = []
 	for(let i=0; i< dias.length; i++){
@@ -268,21 +283,31 @@ function daysOff(date){
 		  if(arr1[1] != '') clazz = arr1[1]
 
 		  var arr2 = DisableDates(date)
-
+		  console.log([(!arr2[0]) ? false : true, clazz])
 		  return[(!arr2[0]) ? false : true, clazz]
 		//   return[]
 	  }
 
-	  
+	let dateTeste;
 
       $(function () {
-        $("#clientscheduledate").datepicker({
+		
+
+        dateTeste = $("#clientscheduledate").datepicker({
           dateFormat: 'dd/mm/yy',
 		  minDate: new Date(),
 		  maxDate: "+1m",
-		  beforeShowDay: setCustomDate
+		  beforeShowDay: setCustomDate,
+		  onClose: function(){
+			
+		  }
 		});
-      });
+	  });
+	  // from & to input textboxes with datepicker enabled
+		
+
+
+	
 
 // *** DATEPICKER DINÂMICO AGENDAMENTO MANUAL DE CLIENTE ***
 
