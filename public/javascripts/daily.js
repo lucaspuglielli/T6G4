@@ -33,7 +33,7 @@ fetch("http://localhost:3000/api/schedules")
         lista.innerHTML = "";
         dados.forEach((agendamento) => {
             lista.innerHTML += `
-            <form class="forms" id="formdeletar" method="POST" action="/usuario/agendamento?_method=delete">
+            <form class="forms" id="formdeletar" method="POST" action="/administracao/daily?_method=delete">
                 <input id="idschedule" name="idschedule" value="${agendamento.id}" type="text" hidden/>
                 <div class="cartao-servico mb-5 p-4">
                     <div class="d-flex">
@@ -63,12 +63,12 @@ fetch("http://localhost:3000/api/schedules")
                         </div>
                         <div class="d-flex align-items-start">
                 
-                <button type="button" class="d-flex align-items-center btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                <button type="button" class="d-flex align-items-center btn btn-danger" data-toggle="modal" data-target="#exampleModal${agendamento.id}">
                 Cancelar<i class="fa fa-close" style="font-size: 3.5vh; color:white; margin-left: 10px;"></i>
                 </button>
 
                 
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="exampleModal${agendamento.id}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                     <div class="modal-header">
@@ -105,7 +105,7 @@ fetch("http://localhost:3000/api/schedules")
             if(dateformatBR == agendamento.start_date) {
                 
                 lista.innerHTML += `
-            <form class="forms" id="formdeletar" method="POST" action="/usuario/agendamento?_method=delete">
+            <form class="forms" id="formdeletar" method="POST" action="/administracao/daily?_method=delete">
                 <input id="idschedule" name="idschedule" value="${agendamento.id}" type="text" hidden/>
                 <div class="cartao-servico mb-5 p-4">
                     <div class="d-flex">
@@ -135,12 +135,12 @@ fetch("http://localhost:3000/api/schedules")
                         </div>
                         <div class="d-flex align-items-start">
                 
-                <button type="button" class="d-flex align-items-center btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                <button type="button" class="d-flex align-items-center btn btn-danger" data-toggle="modal" data-target="#exampleModal${agendamento.id}">
                 Cancelar<i class="fa fa-close" style="font-size: 3.5vh; color:white; margin-left: 10px;"></i>
                 </button>
 
                 
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="exampleModal${agendamento.id}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                     <div class="modal-header">

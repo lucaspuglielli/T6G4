@@ -17,6 +17,7 @@ const categoryController = require('../controllers/categoryController');
 const serviceController = require('../controllers/serviceController');
 const adminAuthController = require('../controllers/adminAuthController');
 const scheduleController = require('../controllers/scheduleController');
+const dailyScheduleController = require('../controllers/dailyScheduleController');
 
 const adminLoginMiddleware = require('../middleware/adminLoginMiddleware');
 const adminAuthMiddleware = require('../middleware/adminAuthMiddleware');
@@ -64,9 +65,8 @@ const storageCategory = multer.diskStorage({
 const uploadCategory = multer({ storage: storageCategory });
 
 // *** EXIBIÇÃO DA PÁGINA DE ADMINISTRAÇÃO ***
-// !!! Após o desenvolvimento incluir o adminLoginMiddleware. !!!
 router.get('/', adminAuthMiddleware, administratorController.index);
-router.get('/daily', adminAuthMiddleware, administratorController.index2);
+router.get('/daily', adminAuthMiddleware, dailyScheduleController.index);
 
 // *** LOGIN DE ADMINISTRADOR ***
 router.get('/login', adminLoginMiddleware, adminAuthController.index);
@@ -104,5 +104,9 @@ router.put('/service-edit', serviceController.update);
 
 // Funcionário
 router.put('/employee-edit', newEmployeeUpload.any(), employeeController.update);
+
+// ***** DELETE DE DADOS *****
+
+router.delete('/daily', dailyScheduleController.destroy);
 
 module.exports = router;
