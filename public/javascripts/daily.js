@@ -99,7 +99,10 @@ fetch("http://localhost:3000/api/schedules")
     date.addEventListener('change', function () {
         lista.innerHTML = "";
         agendamentos.forEach((agendamento) => {
-            if(date.value == agendamento.start_date) {
+            console.log(date.value)
+            const dataFormat =  new Date(date.value+'T00:00:00-03:00')
+            const dateformatBR = new Intl.DateTimeFormat('pt-br').format(dataFormat);
+            if(dateformatBR == agendamento.start_date) {
                 
                 lista.innerHTML += `
             <form class="forms" id="formdeletar" method="POST" action="/usuario/agendamento?_method=delete">
