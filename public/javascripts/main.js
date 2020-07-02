@@ -195,6 +195,20 @@ function removerPorValor(array, valor) {
 	});
 }
 
+inputFuncionario.addEventListener('change', function() {
+	// $('#clientscheduledate').datepicker._clearDate(this)
+	// $.datepicker._clearDate('#clientscheduledate');
+	console.log('focusin')
+	// $('#clientscheduledate').datepicker('setDate', null);]
+	// $('#clientscheduledate').val('');
+	// $('#clientscheduledate').datepicker('setDate', new Date());
+	// $('#clientscheduledate').datepicker('setDate', null);
+	// $('#clientscheduledate').attr("value", null)
+	dates = []
+	employeeDayOff = []
+	
+})
+
 inputFuncionario.addEventListener('change', function(){
 	let datasAgendadas = []
 	let horariosPadrao = []
