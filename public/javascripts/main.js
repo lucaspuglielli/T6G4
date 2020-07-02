@@ -508,9 +508,7 @@ function checkbox(id) {
 }
 
 for(let i = 0; i < idEmployee.length; i++) {
-	
 	idEmployee[i].checked = false;
-	
 }
 
 	for (let i = 0; i< employeesSkills.length; i++) {
