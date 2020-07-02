@@ -88,7 +88,7 @@
         </div>
 
         <div class="containernewsletter1">
-            <form action="POST" class="formwidth">
+            <form action="/usuario/news_subscribe" id="newsform" method="POST" class="formwidth">
                 <div class="newslettercontainer1">
                     <div class="subnewslettercontainer1">
                         <h2 class="newslettertitle">NEWSLETTER</h2>
@@ -96,11 +96,17 @@
                     </div>
                 </div>
                 <div class="subnewslettercontainer2">
-                    <input type="text" name="nome" id="nomeindex" class="newsletterinputhome1"
-                        placeholder="Nome Completo">
-                    <input type="email" name="email" id="emailindex" class="newsletterinputhome2"
+                    <input type="text" name="newsname" id="newsname" class="newsletterinputhome1"
+                        placeholder="Digite seu nome">
+                    <input type="email" name="newsemail" id="newsemail" class="newsletterinputhome2"
                         placeholder="email@dominio.com.br">
-                    <a class="botaonewsletter1" onclick="limparcampo()">Inscreva-se</a>
+                    <button type="submit" class="botaonewsletter1">Inscreva-se</button>
+                </div>
+                <div id="errorList" class="alert alert-danger alert-dismissible fade show" role="alert" hidden>
+                    <ul>
+
+                    </ul>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
                 </div>
             </form>
         </div>

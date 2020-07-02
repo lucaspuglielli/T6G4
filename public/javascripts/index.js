@@ -64,10 +64,44 @@ fetch("http://localhost:3000/api/categories")
     });
 
 
-    function limparcampo() {
-        let nome = document.getElementById("nomeindex");
-        let email = document.getElementById("emailindex");
-        nome.value = ""
-        email.value = ""
-        alert("Newsletter cadastrado com sucesso!")
-    }
+    // function limparcampo() {
+    //     let nome = document.getElementById("nomeindex");
+    //     let email = document.getElementById("emailindex");
+    //     nome.value = ""
+    //     email.value = ""
+    //     alert("Newsletter cadastrado com sucesso!")
+    // }
+
+    // VALIDAÇÃO NEWSLETTER
+    const emptyField = (input) => {
+        return input.value.trim() === "";
+    };
+
+    const newsform = document.getElementById('newsform');
+
+    const errorListUl = document.querySelector("#errorList ul");
+const errorList = document.querySelector("#errorList");
+
+newsform.addEventListener("submit", function (e) {
+        let errorMessage = (message) => {
+            errorListUl.innerHTML += "<li>" + message + "</li>";
+        };
+    
+        errorListUl.innerHTML = "";
+    
+        if (emptyField(newsname)) {
+            errorMessage("Campo <b>Nome</b> não pode estar vazio.");
+        }
+    
+        if (emptyField(newsemail)) {
+            errorMessage("Campo <b>E-mail</b> não pode estar vazio.");
+        }
+    
+    
+        if (errorListUl.querySelectorAll("li").length > 0) {
+            e.preventDefault();
+            errorList.hidden = "";
+        } else {
+            alert('Seu email foi cadastrado com sucesso.');
+        }
+    });
