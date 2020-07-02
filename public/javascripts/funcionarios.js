@@ -12,7 +12,7 @@ fetch("http://localhost:3000/api/funcionario")
                 </div>
                 <div class="card-body">
                     <div class="titulofuncionariohome">${funcionario.name} ${funcionario.lastname}</div>
-                    <div class="subtitulofuncionariohome">Robbie Williams</div>
+                    <div class="subtitulofuncionariohome">${funcionario.skills}</div>
                 </div>
             </div>
             `;
