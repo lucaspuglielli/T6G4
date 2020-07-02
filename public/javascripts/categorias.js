@@ -10,11 +10,11 @@ fetch("http://localhost:3000/api/categories")
                 <div class="d-flex justify-content-center">
                     <img src="/images/${servico.icon}" style="width: 239px;" alt="${servico.name}">
                 </div>
-                <div class="card-body">
+                <div class="card-body d-flex align-items-center flex-column">
                     <h5 class="card-title text-center">${servico.name}</h5>
                     <p class="card-text text-center texto-cards-nossos-servicos d-none d-lg-block">${servico.description}</p>
                     <div class="d-flex justify-content-center">
-                        <a href="/usuario/agendamento/${servico.id}" class="navbutton">Agendar</a>
+                        <a href="/usuario/agendamento/${servico.id}" class="servicosbotao">Agendar</a>
                     </div>
                 </div>
             </div>
