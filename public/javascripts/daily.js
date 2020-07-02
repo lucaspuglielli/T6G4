@@ -26,7 +26,7 @@ fetch("http://localhost:3000/api/funcionario")
         funcionario = dados;
     });
 
-fetch("http://localhost:3000/api/funcionario")
+fetch("http://localhost:3000/api/clients")
     .then((resposta) => resposta.json())
     .then((dados) => {
         clientes = dados;
