@@ -8,6 +8,7 @@ const servicesController = require('../controllers/api/servicesController');
 const employeeSkillsController = require('../controllers/api/employeeSkillsController');
 const schedulesController = require('../controllers/api/schedulesController');
 const categoriesController = require('../controllers/api/categoriesController');
+const clientsController = require('../controllers/api/clientsController');
 
 // Funcionários
 router.get('/funcionario', employeeController.index);
@@ -19,6 +20,9 @@ router.get('/services', servicesController.index);
 
 // Category
 router.get('/categories', categoriesController.index);
+
+// Clientes
+router.get('/clients', clientsController.index);
 
 // Serviços do funcionário
 router.get('/employee-skills', employeeSkillsController.index);

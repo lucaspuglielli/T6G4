@@ -33,7 +33,7 @@
             <div class="botaocontaineradm"><div class="admitem4"></div>Funcionarios</div>
           </div>
           <div class="opcaoinfos" onclick="currentForm(5)">
-            <div class="botaocontaineradm"><div class="admitem5"></div>Horarios</div>
+            <div class="botaocontaineradm"><div class="admitem5"></div>Eventualidades</div>
           </div>
           <div class="opcaoinfos" onclick="currentForm(6)">
             <div class="botaocontaineradm"><div class="admitem6"></div>Serviços</div>
@@ -54,7 +54,7 @@
         <label for="cpfinfosadm" class="labelinfosadm">CPF</label><br>
         <input type="text" value="<%= administrator.cpf %>" class="inputinfosadm" name="cpfinfosadm" id="cpfinfosadm"><br>
         <label for="birthdayinfosadm" class="labelinfosadm">Data de Nascimento</label><br>
-        <input type="date" class="inputinfosadm" name="birthdayinfosadm" value="<%= administrator.birthdate %>" id="birthdayinfosadm"><br>
+        <input type="date" autocomplete="off" class="inputinfosadm" name="birthdayinfosadm" value="<%= administrator.birthdate %>" id="birthdayinfosadm"><br>
         <label for="phoneinfosadm" class="labelinfosadm">Telefone</label><br>
         <input type="text" value="<%= administrator.phone %>" class="inputinfosadm" name="phoneinfosadm" id="phoneinfosadm"><br>
         <div id="editadmerrorlist" class="alert alert-danger alert-dismissible fade show" role="alert" hidden>
@@ -97,7 +97,7 @@
         <label for="cpfinfoscliente" class="labelinfosadm">CPF</label><br>
         <input type="text" placeholder="123.456.789-12" class="inputinfosadm" name="cpfinfoscliente" id="cpfinfoscliente"><br>
         <label for="birthdateinfoscliente" class="labelinfosadm">Data de Nascimento</label><br>
-        <input type="date" class="inputinfosadm" name="birthdateinfoscliente" id="birthdateinfoscliente"><br>
+        <input type="date" autocomplete="off" class="inputinfosadm" name="birthdateinfoscliente" id="birthdateinfoscliente"><br>
         <label for="phoneinfoscliente" class="labelinfosadm">Telefone</label><br>
         <input type="text" placeholder=" (99) 99999-9999" class="inputinfosadm" name="phoneinfoscliente" id="phoneinfoscliente"><br>
         <div id="clientregistrationerrorlist" class="alert alert-danger alert-dismissible fade show" role="alert" hidden>
@@ -210,9 +210,9 @@
           <option value="9">Funcionário 9</option>
         </select><br>
         <label for="datainfosinicio" class="labelinfosadm">Data Inicial</label><br>
-        <input type="date" class="inputinfosfunc" name="datainfosinicio" id="datainfosinicio"><br>
+        <input type="date" autocomplete="off" class="inputinfosfunc" name="datainfosinicio" id="datainfosinicio"><br>
         <label for="datainfosfim" class="labelinfosadm">Data Final</label><br>
-        <input type="date" class="inputinfosfunc" name="datainfosfim" id="datainfosfim"><br>
+        <input type="date" autocomplete="off" class="inputinfosfunc" name="datainfosfim" id="datainfosfim"><br>
         <label for="horarioinfosfuncionario" class="labelinfosadm">Horário</label><br>
         <select name="selected" class="dropdowninfosadm" id="horarioinfosfuncionario">
           <option value="0" selected="selected">das 8:00h</option>
@@ -321,7 +321,7 @@
         <label for="admregistercpf" class="labelinfosadm">CPF</label><br>
         <input type="text" placeholder=" 123.456.789-12" class="inputinfosadm" name="admregistercpf" id="admregistercpf"><br>
         <label for="admregisterbirthdate" class="labelinfosadm">Data de Nascimento</label><br>
-        <input type="date" class="inputinfosadm" name="admregisterbirthdate" id="admregisterbirthdate"><br>
+        <input type="date" autocomplete="off" class="inputinfosadm" name="admregisterbirthdate" id="admregisterbirthdate"><br>
         <label for="admregisterphone" class="labelinfosadm">Telefone</label><br>
         <input type="text" placeholder=" (99) 99999-9999" class="inputinfosadm" name="admregisterphone" id="admregisterphone"><br>
         <div id="administratorRegistrationErrorList" class="alert alert-danger alert-dismissible fade show" role="alert" hidden>

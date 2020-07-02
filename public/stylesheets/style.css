@@ -50,7 +50,7 @@ label {
 	color: #2f364a;
 	font-size: 34px;
 	margin: 0.5px 0 !important;
-	padding:  52px 0px;
+	padding: 52px 0px;
 	text-align: center;
 }
 
@@ -110,20 +110,20 @@ body {
 	justify-content: center;
 }
 
-.navadmcontainer{
+.navadmcontainer {
 	width: 1200px;
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
 }
 
-.botaosair{
+.botaosair {
 	position: relative;
 	color: white;
 	font-size: 15px;
 }
 
-a.botaosair{
+a.botaosair {
 	color: white;
 	text-decoration: none;
 }
@@ -712,7 +712,7 @@ a.botaosair{
 	.navadm {
 		height: 13vh;
 	}
-	.navadmcontainer{
+	.navadmcontainer {
 		width: 1200px;
 		display: flex;
 		justify-content: center;
@@ -726,7 +726,7 @@ a.botaosair{
 		position: relative;
 		left: 40.75px;
 	}
-	.botaosair{
+	.botaosair {
 		position: relative;
 		color: white;
 		font-size: 25px;
@@ -752,7 +752,7 @@ a.botaosair{
 		justify-content: space-evenly;
 	}
 
-	.navcontainer4{
+	.navcontainer4 {
 		display: flex;
 		width: 900px;
 		justify-content: space-evenly;
@@ -767,7 +767,6 @@ a.botaosair{
 	}
 	.overflowservicos {
 		display: flex;
-		
 	}
 
 	.newslettertitle {
@@ -944,13 +943,13 @@ a.botaosair{
 	font-family: arial;
 }
 
-.navbutton:hover{
+.navbutton:hover {
 	color: #ddd;
 	border-bottom: 4px solid #c4924b;
 	text-decoration: none;
 }
 
-.navbutton2:hover{
+.navbutton2:hover {
 	color: #ddd;
 	border-bottom: 4px solid #c4924b;
 	text-decoration: none;
@@ -1342,8 +1341,6 @@ footer {
 	justify-content: space-evenly;
 }
 
-
-
 .container-nossos-servicos {
 	padding: 0 !important;
 }
@@ -1621,7 +1618,7 @@ footer {
 
 /* PAGINA DE INFOS */
 
-.admflexcontainer{
+.admflexcontainer {
 	display: flex;
 }
 
@@ -1636,6 +1633,7 @@ footer {
 	background-color: #2f364a;
 	display: block;
 	margin-bottom: 10px;
+	cursor: pointer;
 }
 
 .forms {
@@ -1650,7 +1648,7 @@ footer {
 	display: none;
 }
 
-.positiondatedaily{
+.positiondatedaily {
 	position: relative;
 	left: 85px;
 	top: 30px;
@@ -1839,6 +1837,7 @@ footer {
 	box-shadow: 2px 2px 8px #ccc;
 	color: #227578;
 	font-size: 20px;
+	cursor: pointer;
 }
 
 .textcolorblack {
@@ -1847,23 +1846,23 @@ footer {
 	font-weight: bold;
 }
 
-.containereditarfuncionario{
-display: flex;
-width: 100%;
-flex-direction: column-reverse;
+.containereditarfuncionario {
+	display: flex;
+	width: 100%;
+	flex-direction: column-reverse;
 }
 
-.subcontainereditarfuncionario1{
+.subcontainereditarfuncionario1 {
 	width: 100%;
 }
-.subcontainereditarfuncionario2{
+.subcontainereditarfuncionario2 {
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.editemployeeimage{
+.editemployeeimage {
 	width: 270px;
 	border-radius: 20px;
 	border: 2px solid #227578;
@@ -1873,7 +1872,7 @@ flex-direction: column-reverse;
 	border-left: 3px solid #c4924b;
 }
 
-.botaocontaineradm{
+.botaocontaineradm {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -2018,7 +2017,6 @@ flex-direction: column-reverse;
 }
 
 @media (min-width: 1199px) {
-
 	.admitem7 {
 		width: 60%;
 		height: 60%;
@@ -2027,7 +2025,7 @@ flex-direction: column-reverse;
 		text-align: center;
 	}
 
-	.botaocontaineradm{
+	.botaocontaineradm {
 		font-size: 15px;
 	}
 
@@ -2044,13 +2042,14 @@ flex-direction: column-reverse;
 		left: 85px;
 		top: 30px;
 	}
-	.containereditarfuncionario{
+	.containereditarfuncionario {
 		flex-direction: row;
 	}
-	.subcontainereditarfuncionario1, .subcontainereditarfuncionario2{
+	.subcontainereditarfuncionario1,
+	.subcontainereditarfuncionario2 {
 		width: 50%;
 	}
-	.editemployeeimage{
+	.editemployeeimage {
 		width: 400px;
 	}
 	.containerinfosopcoes {
@@ -2060,7 +2059,7 @@ flex-direction: column-reverse;
 		width: 120px;
 		height: 90px;
 	}
-	.inputfotofunc{
+	.inputfotofunc {
 		width: 50%;
 	}
 	.inputinfosfunc2 {
@@ -2074,25 +2073,25 @@ flex-direction: column-reverse;
 		box-sizing: border-box;
 		font-size: 12px;
 	}
-	.inputinfosfunc{
+	.inputinfosfunc {
 		width: 15%;
 	}
-	.inputinfosadm{
+	.inputinfosadm {
 		width: 50%;
 	}
-	.inputinfosadm2{
+	.inputinfosadm2 {
 		width: 100%;
 	}
-	.dropdowninfosadm{
+	.dropdowninfosadm {
 		width: 24.8%;
 	}
-	.dropdowninfosadm3{
+	.dropdowninfosadm3 {
 		width: 50%;
 	}
-	.dropdowninfosfunc{
+	.dropdowninfosfunc {
 		width: 50%;
 	}
-	.textareainfoscategoria{
+	.textareainfoscategoria {
 		width: 50%;
 	}
 	.teste1 {
@@ -2101,7 +2100,6 @@ flex-direction: column-reverse;
 	.teste3 {
 		height: 10vh;
 	}
-
 }
 .container-instagram {
 	height: 281px;
@@ -2109,5 +2107,19 @@ flex-direction: column-reverse;
 	margin-bottom: 55px;
 	border: 1px solid lightgrey;
 	padding: 5px 5px 5px 8px;
+}
 
+table {
+	text-align: center;
+	width: 958px;
+	margin-top: 50px;
+}
+tr {
+	border: 1px solid grey;
+}
+th {
+	padding: 15px;
+}
+td {
+	padding: 15px;
 }
