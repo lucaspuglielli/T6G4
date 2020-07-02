@@ -486,6 +486,10 @@ a.botaosair {
 	margin-bottom: 5px;
 }
 
+.newsletterinputhome1:focus, .newsletterinputhome2:focus, .inputnewsletterfooter:focus {
+	outline: none;
+}
+
 .botaonewsletter1 {
 	color: white;
 	height: 25px;
