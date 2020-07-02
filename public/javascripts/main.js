@@ -45,15 +45,21 @@ function showForms(n) {
 	for (i = 0; i < forms.length; i++) {
 		borda[i].className = borda[i].className.replace(" borda", "");
 	}
-	if (
-		!administrador &&
-		!cliente &&
-		!funcionario &&
-		!servico &&
-		!categoria
-	) {
-		forms[formIndex - 1].style.display = "block";
-	}
+
+
+	// if (
+	// 	!administrador &&
+	// 	!cliente &&
+	// 	!funcionario &&
+	// 	!servico &&
+	// 	!categoria
+	// ) {
+	// 	forms[formIndex - 1].style.display = "block";
+	// }
+
+	forms[formIndex - 1].style.display = "block";
+
+
 	borda[formIndex - 1].className += " borda";
 }
 
