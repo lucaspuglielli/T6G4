@@ -45,15 +45,21 @@ function showForms(n) {
 	for (i = 0; i < forms.length; i++) {
 		borda[i].className = borda[i].className.replace(" borda", "");
 	}
-	if (
-		!administrador &&
-		!cliente &&
-		!funcionario &&
-		!servico &&
-		!categoria
-	) {
-		forms[formIndex - 1].style.display = "block";
-	}
+
+
+	// if (
+	// 	!administrador &&
+	// 	!cliente &&
+	// 	!funcionario &&
+	// 	!servico &&
+	// 	!categoria
+	// ) {
+	// 	forms[formIndex - 1].style.display = "block";
+	// }
+
+	forms[formIndex - 1].style.display = "block";
+
+
 	borda[formIndex - 1].className += " borda";
 }
 
@@ -194,6 +200,20 @@ function removerPorValor(array, valor) {
 	  return el != valor; 
 	});
 }
+
+inputFuncionario.addEventListener('change', function() {
+	// $('#clientscheduledate').datepicker._clearDate(this)
+	// $.datepicker._clearDate('#clientscheduledate');
+	console.log('focusin')
+	// $('#clientscheduledate').datepicker('setDate', null);]
+	// $('#clientscheduledate').val('');
+	// $('#clientscheduledate').datepicker('setDate', new Date());
+	// $('#clientscheduledate').datepicker('setDate', null);
+	// $('#clientscheduledate').attr("value", null)
+	dates = []
+	employeeDayOff = []
+	
+})
 
 inputFuncionario.addEventListener('change', function(){
 	let datasAgendadas = []

@@ -297,10 +297,7 @@ function daysOff(date){
           dateFormat: 'dd/mm/yy',
 		  minDate: new Date(),
 		  maxDate: "+1m",
-		  beforeShowDay: setCustomDate,
-		  onClose: function(){
-			
-		  }
+		  beforeShowDay: setCustomDate
 		});
 	  });
 	  // from & to input textboxes with datepicker enabled
