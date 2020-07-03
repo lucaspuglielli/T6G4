@@ -1637,6 +1637,7 @@ footer {
 	display: block;
 	margin-bottom: 10px;
 	cursor: pointer;
+	text-decoration: none;
 }
 
 .forms {
@@ -2061,6 +2062,7 @@ footer {
 	.opcaoinfos {
 		width: 120px;
 		height: 90px;
+		text-decoration: none;
 	}
 	.inputfotofunc {
 		width: 50%;
@@ -2125,4 +2127,8 @@ th {
 }
 td {
 	padding: 15px;
+}
+
+a.opcaoinfos:hover {
+	text-decoration: none;
 }
