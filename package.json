@@ -27,7 +27,5 @@
     "sequelize-cli": "^5.5.1",
     "yarn": "^1.22.4"
   },
-  "devDependencies": {
-
-  }
+  "devDependencies": {}
 }
