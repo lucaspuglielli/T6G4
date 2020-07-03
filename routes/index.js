@@ -27,6 +27,8 @@ router.get('/contato', sessionVerifier, function(req, res) {
   res.render('contato')
 })
 
+router.get('/integrantes', sessionVerifier, function (req,res) {res.render('template')})
+
 
 
 router.get('/pagamento', sessionVerifier, function(req, res) {

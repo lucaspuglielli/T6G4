@@ -4,15 +4,46 @@
 <%- include('includes/head', {title: "Título da página"}) %>
 
 <body>
-<%- include('includes/header') %>
+    <div class="nav1">
+        <a href="/">
+            <img src="/images/logo-deitado.png" alt="logo deitado" class="logo1">
+        </a>
+    </div>
+    <div class="containermaincontent">
+        <main class="profissionais-container">
+            <h1 class="text-center py-5 titulo-nossos-servicos">INTEGRANTES - Turma 6 Grupo 4</h1>
+            <div class="container d-flex flex-column">
+                <div class="listadefuncionarios">
+                    <div class="card card-funcionario" style="margin-bottom: 30px">
+                        <div>
+                            <img src="/images/lucasp.jpg" style="width: 239px;" alt="funcionario">
+                        </div>
+                        <div class="card-body">
+                            <div class="titulofuncionariohome">Lucas Puglielli</div>
+                        </div>
+                    </div>
+                    <div class="card card-funcionario" style="margin-bottom: 30px">
+                        <div>
+                            <img src="/images/lucasa.jpg" style="width: 239px;" alt="funcionario">
+                        </div>
+                        <div class="card-body">
+                            <div class="titulofuncionariohome">Lucas Azevedo</div>
+                        </div>
+                    </div>
+                    <div class="card card-funcionario" style="margin-bottom: 30px">
+                        <div>
+                            <img src="/images/luizr.jpg" style="width: 239px;" alt="funcionario">
+                        </div>
+                        <div class="card-body">
+                            <div class="titulofuncionariohome">Luiz Roberto</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
 
-    <div class="teste"></div>
-    <div class="teste"></div>
-    <div class="teste"></div>
-    <div class="teste"></div>
-
-<%- include('includes/footer') %> 
-<%- include('includes/scripts') %> 
+        <%- include('includes/footer') %>
+        <%- include('includes/scripts') %>
 
 </body>
 
