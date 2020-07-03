@@ -105,3 +105,34 @@ newsform.addEventListener("submit", function (e) {
             alert('Seu email foi cadastrado com sucesso.');
         }
     });
+
+
+    // VALIDAÇÃO NEWS FOOTER
+    const newsformfooter = document.getElementById('newsformfooter');
+
+    const errorListfooterUl = document.querySelector("#errorListfooter ul");
+const errorListfooter = document.querySelector("#errorListfooter");
+
+newsformfooter.addEventListener("submit", function (e) {
+        let errorMessage = (message) => {
+            errorListfooterUl.innerHTML += "<li>" + message + "</li>";
+        };
+    
+        errorListfooterUl.innerHTML = "";
+    
+        if (emptyField(newsnamefooter)) {
+            errorMessage("Campo <b>Nome</b> não pode estar vazio.");
+        }
+    
+        if (emptyField(newsemailfooter)) {
+            errorMessage("Campo <b>E-mail</b> não pode estar vazio.");
+        }
+    
+    
+        if (errorListfooterUl.querySelectorAll("li").length > 0) {
+            e.preventDefault();
+            errorListfooter.hidden = "";
+        } else {
+            alert('Seu email foi cadastrado com sucesso.');
+        }
+    });

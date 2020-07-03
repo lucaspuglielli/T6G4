@@ -191,17 +191,6 @@ module.exports = {
           updatedAt: '2020-06-13 04:11:51',
           createdAt: '2020-06-13 04:11:51',
         },
-        {
-          start_date: '08/07/2020',
-          end_date: '08/07/2020',
-          start_time: '17:00',
-          end_time: '18:00',
-          id_client: '3',
-          id_employee: '4',
-          id_service: '22',
-          updatedAt: '2020-06-13 04:11:51',
-          createdAt: '2020-06-13 04:11:51',
-        },
       ], {});
 
   },

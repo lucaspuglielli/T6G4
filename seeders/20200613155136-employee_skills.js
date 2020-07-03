@@ -178,12 +178,6 @@ module.exports = {
           createdAt: '2020-06-13 04:11:51',
           updatedAt: '2020-06-13 04:11:51',
         },
-        {
-          id_service: '22',
-          id_employee: '4',
-          createdAt: '2020-06-13 04:11:51',
-          updatedAt: '2020-06-13 04:11:51',
-        },
       ], {});
 
   },

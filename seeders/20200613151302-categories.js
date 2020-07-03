@@ -33,7 +33,7 @@ module.exports = {
         createdAt: '2020-06-13 04:11:51',
       },
       {
-        name: 'Design de sobrancelhas',
+        name: 'Sobrancelhas',
         description: 'Embelezamento das sobrancelhas.',
         icon: 'sobrancelha.svg',
         updatedAt: '2020-06-13 04:11:51',

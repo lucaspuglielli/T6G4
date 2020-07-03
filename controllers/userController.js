@@ -10,18 +10,6 @@ const userController = {
         if(user === null){
             console.log('Not found!');
         }
-
-        // function transformarData(date) {
-        //     var newDate = new Date(date.getTime() + date.getTimezoneOffset() * 60 * 1000);
-        //     let ano = newDate.getFullYear();
-        //     let mes = newDate.getMonth();
-        //     let dia = newDate.getDate();
-        
-        //     newDate = `${dia}/${mes + 1}/${ano}`
-        
-        //     return newDate;
-        // }
-
         const inputValues = {
             name: user.name,
             lastname: user.lastname,
@@ -39,17 +27,6 @@ const userController = {
         if(user === null){
             console.log('Not found!');
         }
-
-        // function transformarData(date) {
-        //     var newDate = new Date(date.getTime() + date.getTimezoneOffset() * 60 * 1000);
-        //     let ano = newDate.getFullYear();
-        //     let mes = newDate.getMonth();
-        //     let dia = newDate.getDate();
-        
-        //     newDate = `${dia}/${mes + 1}/${ano}`
-        
-        //     return newDate;
-        // }
 
         const inputValues = {
             id: user.id,
@@ -102,7 +79,14 @@ const userController = {
             email: user.email,
             admin: false,
         }
-        res.redirect('/usuario/perfil');
+
+        if(!req.session.previousUrl) {
+            res.redirect('/usuario/perfil')
+        } else {
+            res.redirect(req.session.previousUrl);
+        }
+
+        // res.redirect('/usuario/perfil');
         
     }, 
     update: async (req, res) => {
