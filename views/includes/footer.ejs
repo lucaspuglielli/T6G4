@@ -51,13 +51,18 @@
                             </ul>
                         </div>
                         <div class="newsletterfooter">
-                            <form action="/usuario/news_subscribe" method="POST" class="formfooter">
+                            <form action="/usuario/news_subscribe" id="newsformfooter" method="POST" class="formfooter">
                                 <label class="footerfontopcoes newslettercontainer" for="emailfooter">
                                     Cadastre-se e receba nossas dicas e novidades.
                                 </label>
-                                <input type="text" name="newsname" id="newsname"class="inputnewsletterfooter" placeholder="Digite seu nome">
-                                <input type="email" name="newsemail" id="newsemail"class="inputnewsletterfooter" placeholder="email@dominio.com.br">
+                                <input type="text" name="newsname" id="newsnamefooter"class="inputnewsletterfooter" placeholder="Digite seu nome">
+                                <input type="email" name="newsemail" id="newsemailfooter"class="inputnewsletterfooter" placeholder="email@dominio.com.br">
                                 <button type="submit" class="buttonnewsletterfooter">Inscreva-se</button>
+                                <div id="errorListfooter" class="alert alert-danger alert-dismissible fade show" role="alert" hidden>
+                                    <ul>
+                
+                                    </ul>
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
                             </form>
                         </div>
                     </div>
