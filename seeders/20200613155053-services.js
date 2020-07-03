@@ -193,15 +193,6 @@ module.exports = {
           createdAt: '2020-06-13 04:11:51',
           updatedAt: '2020-06-13 04:11:51',
         },
-        {
-          name: 'Design com henna',
-          price: '40,00',
-          description: 'Embelezamento e pigmentação das sobrancelhas',
-          duration: '60',
-          id_category: '5',
-          createdAt: '2020-06-13 04:11:51',
-          updatedAt: '2020-06-13 04:11:51',
-        },
       ], {});
 
   },
