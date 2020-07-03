@@ -94,4 +94,9 @@ fetch("http://localhost:3000/api/schedules")
         if (lista.innerHTML == "") {
             lista.innerHTML = '<div class="m-5">Você não possui nenhum procedimento agendado.</div>'
         };
+    }).catch(function (e) {
+        if(e) {
+            console.log(e);
+            Location.reload(true);
+        }
     });
