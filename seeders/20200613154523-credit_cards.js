@@ -5,21 +5,21 @@ module.exports = {
       return queryInterface.bulkInsert('credit_cards', 
       [
         {
-          number: '3245132423454345',
+          number: '4444',
           name: 'JANE DOE',
           id_client: '1',
           createdAt: '2020-06-13 04:11:51',
           updatedAt: '2020-06-13 04:11:51',
         },
         {
-          number: '3245132423454345',
+          number: '3333',
           name: 'JOHN DOE',
           id_client: '2',
           createdAt: '2020-06-13 04:11:51',
           updatedAt: '2020-06-13 04:11:51',
         },
         {
-          number: '3245132423454345',
+          number: '2222',
           name: 'MARY DOE',
           id_client: '3',
           createdAt: '2020-06-13 04:11:51',
