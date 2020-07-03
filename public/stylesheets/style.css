@@ -1656,7 +1656,7 @@ footer {
 	position: relative;
 	left: 85px;
 	top: 30px;
-	margin-bottom: 40px;
+	/* margin-bottom: 40px; */
 }
 
 .subforms {
