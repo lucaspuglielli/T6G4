@@ -6,7 +6,7 @@ module.exports = {
       [
         {
           name: 'Manicure',
-          price: '23,00',
+          price: 23.00,
           description: 'Embelezamento das unhas das mãos.',
           duration: '45',
           id_category: '1',
@@ -15,7 +15,7 @@ module.exports = {
         },
         {
           name: 'Pedicure',
-          price: '27,00',
+          price: 27.00,
           description: 'Embelezamento das unhas dos pés.',
           duration: '45',
           id_category: '1',
@@ -24,7 +24,7 @@ module.exports = {
         },
         {
           name: 'Manicure e pedicure',
-          price: '27,00',
+          price: 27.00,
           description: 'Embelezamento das unhas das mãos e dos pés.',
           duration: '90',
           id_category: '1',
@@ -33,7 +33,7 @@ module.exports = {
         },
         {
           name: 'Alongamento de unhas',
-          price: '70,00',
+          price: 70.00,
           description: 'Alongamento das unhas das mãos.',
           duration: '120',
           id_category: '1',
@@ -42,7 +42,7 @@ module.exports = {
         },
         {
           name: 'Esmaltação',
-          price: '15,00',
+          price: 15.00,
           description: 'Esmaltação da unhas das mãos ou pés.',
           duration: '30',
           id_category: '1',
@@ -51,7 +51,7 @@ module.exports = {
         },
         {
           name: 'Corte',
-          price: '55,00',
+          price: 55.00,
           description: 'Corte de cabelo.',
           duration: '60',
           id_category: '2',
@@ -60,7 +60,7 @@ module.exports = {
         },
         {
           name: 'Hidratação',
-          price: '50,00',
+          price: 50.00,
           description: 'Hidratação profunda dos fios.',
           duration: '60',
           id_category: '2',
@@ -69,7 +69,7 @@ module.exports = {
         },
         {
           name: 'Escova',
-          price: '40,00',
+          price: 40.00,
           description: 'Lavagem e escova modeladora dos cabelos.',
           duration: '45',
           id_category: '2',
@@ -78,7 +78,7 @@ module.exports = {
         },
         {
           name: 'Tintura',
-          price: '70,00',
+          price: 70.00,
           description: 'Pigmentação dos cabelos.',
           duration: '90',
           id_category: '2',
@@ -87,7 +87,7 @@ module.exports = {
         },
         {
           name: 'Lavagem',
-          price: '20,00',
+          price: 20.00,
           description: 'Lavagem dos cabelos.',
           duration: '30',
           id_category: '2',
@@ -96,7 +96,7 @@ module.exports = {
         },
         {
           name: 'Drenagem',
-          price: '60,00',
+          price: 60.00,
           description: 'Massagem para drenagem do sistema linfático.',
           duration: '60',
           id_category: '3',
@@ -105,7 +105,7 @@ module.exports = {
         },
         {
           name: 'Massagem relaxante',
-          price: '60,00',
+          price: 60.00,
           description: 'Massagem relaxante.',
           duration: '60',
           id_category: '3',
@@ -114,7 +114,7 @@ module.exports = {
         },
         {
           name: 'Limpeza de pele',
-          price: '70,00',
+          price: 70.00,
           description: 'Eliminação de impurezas e limpeza profunda da pele.',
           duration: '60',
           id_category: '3',
@@ -123,7 +123,7 @@ module.exports = {
         },
         {
           name: 'Procedimento estético',
-          price: '70,00',
+          price: 70.00,
           description: 'Protocolos estéticos com uso de aparelhos.',
           duration: '60',
           id_category: '3',
@@ -132,7 +132,7 @@ module.exports = {
         },
         {
           name: 'Buço',
-          price: '15,00',
+          price: 15.00,
           description: 'Eliminação de pelos do buço.',
           duration: '30',
           id_category: '4',
@@ -141,7 +141,7 @@ module.exports = {
         },
         {
           name: 'Queixo',
-          price: '15,00',
+          price: 15.00,
           description: 'Eliminação de pelos do queixo.',
           duration: '30',
           id_category: '4',
@@ -150,7 +150,7 @@ module.exports = {
         },
         {
           name: 'Axila',
-          price: '20,00',
+          price: 20.00,
           description: 'Eliminação de pelos da axila.',
           duration: '30',
           id_category: '4',
@@ -159,7 +159,7 @@ module.exports = {
         },
         {
           name: 'Meia perna',
-          price: '25,00',
+          price: 25.00,
           description: 'Eliminação de pelos das pernas.',
           duration: '30',
           id_category: '4',
@@ -168,7 +168,7 @@ module.exports = {
         },
         {
           name: 'Perna',
-          price: '35,00',
+          price: 35.00,
           description: 'Eliminação de pelos das pernas.',
           duration: '45',
           id_category: '4',
@@ -177,7 +177,7 @@ module.exports = {
         },
         {
           name: 'Virilha',
-          price: '50,00',
+          price: 50.00,
           description: 'Eliminação de pelos na região da virilha.',
           duration: '45',
           id_category: '4',
@@ -186,7 +186,7 @@ module.exports = {
         },
         {
           name: 'Design simples',
-          price: '30,00',
+          price: 30.00,
           description: 'Embelezamento e pigmentação das sobrancelhas',
           duration: '60',
           id_category: '5',
