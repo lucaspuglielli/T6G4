@@ -16,8 +16,8 @@ module.exports = (sequelize, DataTypes) => {
   });
 
 
-  Employee.associate = (models) => {
-    Employee.belongsToMany(models.Service, {through: 'Employee_skill', foreignKey: 'id_employee'});
+  employee.associate = (models) => {
+    employee.belongsToMany(models.Service, {through: 'Employee_skill', foreignKey: 'id_employee'});
   };
   return employee;
 };
