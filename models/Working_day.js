@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     timestamps: false,
   });
   Working_day.associate = (models) => {
-    Working_day.belongsTo(models.Employee, {foreignKey: 'id_employee'})
+    Working_day.belongsTo(models.employee, {foreignKey: 'id_employee'})
   }
   return Working_day;
 };

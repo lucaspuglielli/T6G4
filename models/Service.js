@@ -13,8 +13,8 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Service.associate = (models) => {
-    Service.belongsTo(models.Category, {foreignKey: 'id_category'});
-    Service.belongsToMany(models.Employee, {through: 'Employee_skill', foreignKey: 'id_employee'});
+    Service.belongsTo(models.category, {foreignKey: 'id_category'});
+    Service.belongsToMany(models.employee, {through: 'Employee_skill', foreignKey: 'id_employee'});
   };
   return Service;
 };

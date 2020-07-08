@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
     timestamps: false,
   });
   Employee_skill.associate = (models) => {
-    Employee_skill.belongsTo(models.Employee, {foreignKey: 'id_employee'});
+    Employee_skill.belongsTo(models.employee, {foreignKey: 'id_employee'});
     Employee_skill.belongsTo(models.Service, {foreignKey: 'id_service'});
   };
   return Employee_skill;
