@@ -1,6 +1,6 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const Employee_working_day = sequelize.define('Employee_working_day', {
+  const employee_working_day = sequelize.define('employee_working_day', {
     id_employee: DataTypes.INTEGER,
     id_working_day: DataTypes.INTEGER,
     updatedAt: DataTypes.DATE,
@@ -8,9 +8,9 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     timestamps: false,
   });
-  Employee_working_day.associate = (models) => {
-    Employee_working_day.belongsTo(models.employee, {foreignKey: 'id_employee'});
-    Employee_working_day.belongsTo(models.Working_day, {foreignKey: 'id_working_day'});
+  employee_working_day.associate = (models) => {
+    employee_working_day.belongsTo(models.employee, {foreignKey: 'id_employee'});
+    employee_working_day.belongsTo(models.working_day, {foreignKey: 'id_working_day'});
   };
-  return Employee_working_day;
+  return employee_working_day;
 };

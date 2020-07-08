@@ -1,6 +1,6 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const Client = sequelize.define('Client', {
+  const client = sequelize.define('client', {
     name: DataTypes.STRING,
     lastname: DataTypes.STRING,
     email: DataTypes.STRING,
@@ -13,5 +13,5 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     timestamps: false,
   });
-  return Client;
+  return client;
 };

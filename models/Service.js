@@ -1,6 +1,6 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const Service = sequelize.define('Service', {
+  const service = sequelize.define('service', {
     name: DataTypes.STRING,
     price: DataTypes.DECIMAL(10, 2),
     description: DataTypes.STRING,
@@ -12,9 +12,9 @@ module.exports = (sequelize, DataTypes) => {
     timestamps: false,
   });
 
-  Service.associate = (models) => {
-    Service.belongsTo(models.category, {foreignKey: 'id_category'});
-    Service.belongsToMany(models.employee, {through: 'Employee_skill', foreignKey: 'id_employee'});
+  service.associate = (models) => {
+    service.belongsTo(models.category, {foreignKey: 'id_category'});
+    service.belongsToMany(models.employee, {through: 'employee_skill', foreignKey: 'id_employee'});
   };
-  return Service;
+  return service;
 };

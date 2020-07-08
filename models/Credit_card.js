@@ -1,6 +1,6 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const Credit_card = sequelize.define('Credit_card', {
+  const credit_card = sequelize.define('credit_card', {
     number: DataTypes.INTEGER,
     name: DataTypes.STRING,
     id_client: DataTypes.INTEGER,
@@ -9,8 +9,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     timestamps: false,
   });
-  Credit_card.associate = (models) => {
-    Credit_card.belongsTo(models.Client, {foreignKey: 'id_client'});
+  credit_card.associate = (models) => {
+    credit_card.belongsTo(models.client, {foreignKey: 'id_client'});
   };
-  return Credit_card;
+  return credit_card;
 };
