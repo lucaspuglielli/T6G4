@@ -10,6 +10,7 @@ const employeeController = {
         } 
         catch(error){
             return res.status(400).json({
+                bananinha: error,
                 error: true,
                 msg: 'Deu ruim by podolski'
             })
