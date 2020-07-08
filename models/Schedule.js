@@ -1,6 +1,6 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const schedule = sequelize.define('schedule', {
+  const Schedule = sequelize.define('Schedule', {
     start_date: DataTypes.STRING,
     end_date: DataTypes.STRING,
     start_time: DataTypes.STRING,
@@ -13,9 +13,9 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     timestamps: false,
   });
-  schedule.associate = (models) => {
-    schedule.belongsTo(models.client, {foreignKey: 'id_client'});
-    schedule.belongsTo(models.employee, {foreignKey: 'id_employee'});
+  Schedule.associate = (models) => {
+    Schedule.belongsTo(models.Client, {foreignKey: 'id_client'});
+    Schedule.belongsTo(models.Employee, {foreignKey: 'id_employee'});
   };
-  return schedule;
+  return Schedule;
 };

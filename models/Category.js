@@ -1,6 +1,6 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const category = sequelize.define('category', {
+  const Category = sequelize.define('Category', {
     name: DataTypes.STRING,
     description: DataTypes.STRING,
     icon: DataTypes.STRING,
@@ -9,5 +9,5 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     timestamps: false,
   });
-  return category;
+  return Category;
 };

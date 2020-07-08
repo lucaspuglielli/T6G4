@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  const working_day = sequelize.define('working_day', {
+  const Working_day = sequelize.define('Working_day', {
     id_employee: DataTypes.INTEGER,
     monday: DataTypes.INTEGER,
     tuesday: DataTypes.INTEGER,
@@ -13,8 +13,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     timestamps: false,
   });
-  working_day.associate = (models) => {
-    working_day.belongsTo(models.employee, {foreignKey: 'id_employee'})
+  Working_day.associate = (models) => {
+    Working_day.belongsTo(models.Employee, {foreignKey: 'id_employee'})
   }
-  return working_day;
+  return Working_day;
 };
