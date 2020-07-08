@@ -11,7 +11,7 @@ const employeeController = {
         catch(error){
             return res.status(400).json({
                 error: true,
-                msg: 'Deu erro'
+                msg: 'Deu ruim by podolski'
             })
         }
         

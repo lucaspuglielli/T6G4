@@ -1,6 +1,6 @@
 let lista = document.querySelector(".equipehomecontainer");
 
-fetch("http://localhost:3000/api/funcionario")
+fetch("https://casarao-estetica.herokuapp.com/api/funcionario")
 	.then((resposta) => resposta.json())
 	.then((dados) => {
 		lista.innerHTML = "";
@@ -22,7 +22,7 @@ fetch("http://localhost:3000/api/funcionario")
 const listaservicos = document.querySelector(".overflowservicos");
 const listaservicosmobile = document.querySelector(".containerservicosmobile");
 
-fetch("http://localhost:3000/api/categories")
+fetch("https://casarao-estetica.herokuapp.com/api/categories")
 	.then((resposta) => resposta.json())
 	.then((dados) => {
 		listaservicos.innerHTML = "";
