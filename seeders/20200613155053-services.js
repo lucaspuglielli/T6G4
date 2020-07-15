@@ -54,7 +54,7 @@ module.exports = {
           price: 55.00,
           description: 'Corte de cabelo.',
           duration: '60',
-          id_category: '2',
+          id_category: '11',
           createdAt: '2020-06-13 04:11:51',
           updatedAt: '2020-06-13 04:11:51',
         },
