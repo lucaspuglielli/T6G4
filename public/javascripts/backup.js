@@ -51,11 +51,11 @@ fetch("https://casarao-estetica.herokuapp.com/api/schedules")
                         <div>
                             <img class="img-servico" src="/images/${
 															categorias[
-																servicos[(agendamento.id_service - 1) / 10]
-																	.id_category - 1
+																(servicos[(agendamento.id_service - 1) / 10]
+																	.id_category - 1) / 10
 															].icon
 														}" alt="${
-				categorias[servicos[(agendamento.id_service - 1) / 10].id_category - 1]
+				categorias[(servicos[(agendamento.id_service - 1) / 10].id_category - 1) / 10]
 					.name
 			}">
                         </div>
