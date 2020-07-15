@@ -39,17 +39,20 @@ fetch("https://casarao-estetica.herokuapp.com/api/schedules")
                         <div>
                             <img class="img-servico" src="/images/${
 															categorias[
-																servicos[agendamento.id_service - 1]
+																servicos[(agendamento.id_service - 1) / 10]
 																	.id_category - 1
 															].icon
 														}" alt="${
-					categorias[servicos[agendamento.id_service - 1].id_category - 1].name
+					categorias[
+						servicos[(agendamento.id_service - 1) / 10].id_category - 1
+					].name
 				}">
                         </div>
                         <div class="d-flex flex-column justify-content-between">
                             <div>
                                 <h2 class="titulo-servico-card">${
-																	servicos[agendamento.id_service - 1].name
+																	servicos[(agendamento.id_service - 1) / 10]
+																		.name
 																}</h2>
                             </div>
                             <div>
@@ -60,16 +63,19 @@ fetch("https://casarao-estetica.herokuapp.com/api/schedules")
                             <div class="d-flex">
                                 <span class="label-info">Profissional: </span>
                                 <span class="nome-info">${
-																	funcionario[agendamento.id_employee - 1].name
+																	funcionario[
+																		(agendamento.id_employee - 1) / 10
+																	].name
 																} ${
-					funcionario[agendamento.id_employee - 1].lastname
+					funcionario[(agendamento.id_employee - 1) / 10].lastname
 				}</span>
                                 
                             </div>
                             <div class="d-flex">
                                 <span class="label-info">Valor: </span>
                                 <span class="nome-info">R$:${
-																	servicos[agendamento.id_service - 1].price
+																	servicos[(agendamento.id_service - 1) / 10]
+																		.price
 																}</span>
                             </div>
                             <div class="d-flex">

@@ -89,9 +89,9 @@ inputServico.addEventListener("change", function () {
 
 	for (let i = 0; i < idFuncionarios.length; i++) {
 		inputFuncionario.innerHTML += `
-			<option value="${employees[idFuncionarios[i] - 1].id}">${
-			employees[idFuncionarios[i] - 1].name
-		} ${employees[idFuncionarios[i] - 1].lastname}</option>
+			<option value="${employees[(idFuncionarios[i] - 1) / 10].id}">${
+			employees[(idFuncionarios[i] - 1) / 10].name
+		} ${employees[(idFuncionarios[i] - 1) / 10].lastname}</option>
 			`;
 	}
 });
@@ -200,8 +200,8 @@ inputFuncionario.addEventListener("change", function () {
 		}
 	}
 
-	horarioInicio = parseInt(employees[idFuncionario - 1].shiftstart);
-	horarioFim = parseInt(employees[idFuncionario - 1].shiftend);
+	horarioInicio = parseInt(employees[(idFuncionario - 1) / 10].shiftstart);
+	horarioFim = parseInt(employees[(idFuncionario - 1) / 10].shiftend);
 	horasTrabalhadas = horarioFim - horarioInicio + 1;
 
 	setarHorariosPadrao(horasTrabalhadas);

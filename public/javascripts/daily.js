@@ -50,16 +50,16 @@ fetch("https://casarao-estetica.herokuapp.com/api/schedules")
 		dados.forEach((agendamento) => {
 			lista.innerHTML += `
             <tr>
-                <td>${clientes[agendamento.id_client - 1].name} ${
-				clientes[agendamento.id_client - 1].lastname
+                <td>${clientes[(agendamento.id_client - 1) / 10].name} ${
+				clientes[(agendamento.id_client - 1) / 10].lastname
 			}</td>
                 <td>${agendamento.start_date}</td>
                 <td>${agendamento.start_time}</td>
-                <td>${servicos[agendamento.id_service - 1].name}</td>
-                <td>${funcionario[agendamento.id_employee - 1].name} ${
-				funcionario[agendamento.id_employee - 1].lastname
+                <td>${servicos[(agendamento.id_service - 1) / 10].name}</td>
+                <td>${funcionario[(agendamento.id_employee - 1) / 10].name} ${
+				funcionario[(agendamento.id_employee - 1) / 10].lastname
 			}</td>
-                <td>${servicos[agendamento.id_service - 1].price}</td>
+                <td>${servicos[(agendamento.id_service - 1) / 10].price}</td>
                 <td>Agendado</td>
                 <td>
                     <form id="formdeletar" method="POST" action="/administracao/daily?_method=delete">
@@ -113,16 +113,20 @@ inputFuncionario.addEventListener("change", function () {
 		agendamentos.forEach((agendamento) => {
 			lista.innerHTML += `
                 <tr>
-                    <td>${clientes[agendamento.id_client - 1].name} ${
-				clientes[agendamento.id_client - 1].lastname
+                    <td>${clientes[(agendamento.id_client - 1) / 10].name} ${
+				clientes[(agendamento.id_client - 1) / 10].lastname
 			}</td>
                     <td>${agendamento.start_date}</td>
                     <td>${agendamento.start_time}</td>
-                    <td>${servicos[agendamento.id_service - 1].name}</td>
-                    <td>${funcionario[agendamento.id_employee - 1].name} ${
-				funcionario[agendamento.id_employee - 1].lastname
+                    <td>${servicos[(agendamento.id_service - 1) / 10].name}</td>
+                    <td>${
+											funcionario[(agendamento.id_employee - 1) / 10].name
+										} ${
+				funcionario[(agendamento.id_employee - 1) / 10].lastname
 			}</td>
-                    <td>${servicos[agendamento.id_service - 1].price}</td>
+                    <td>${
+											servicos[(agendamento.id_service - 1) / 10].price
+										}</td>
                     <td>Agendado</td>
                     <td>
                         <form id="formdeletar" method="POST" action="/administracao/daily?_method=delete">
@@ -173,16 +177,20 @@ inputFuncionario.addEventListener("change", function () {
 			) {
 				lista.innerHTML += `
                 <tr>
-                    <td>${clientes[agendamento.id_client - 1].name} ${
-					clientes[agendamento.id_client - 1].lastname
+                    <td>${clientes[(agendamento.id_client - 1) / 10].name} ${
+					clientes[(agendamento.id_client - 1) / 10].lastname
 				}</td>
                     <td>${agendamento.start_date}</td>
                     <td>${agendamento.start_time}</td>
-                    <td>${servicos[agendamento.id_service - 1].name}</td>
-                    <td>${funcionario[agendamento.id_employee - 1].name} ${
-					funcionario[agendamento.id_employee - 1].lastname
+                    <td>${servicos[(agendamento.id_service - 1) / 10].name}</td>
+                    <td>${
+											funcionario[(agendamento.id_employee - 1) / 10].name
+										} ${
+					funcionario[(agendamento.id_employee - 1) / 10].lastname
 				}</td>
-                    <td>${servicos[agendamento.id_service - 1].price}</td>
+                    <td>${
+											servicos[(agendamento.id_service - 1) / 10].price
+										}</td>
                     <td>Agendado</td>
                     <td>
                         <form id="formdeletar" method="POST" action="/administracao/daily?_method=delete">
@@ -232,16 +240,16 @@ inputFuncionario.addEventListener("change", function () {
 			) {
 				lista.innerHTML += `
         <tr>
-            <td>${clientes[agendamento.id_client - 1].name} ${
-					clientes[agendamento.id_client - 1].lastname
+            <td>${clientes[(agendamento.id_client - 1) / 10].name} ${
+					clientes[(agendamento.id_client - 1) / 10].lastname
 				}</td>
             <td>${agendamento.start_date}</td>
             <td>${agendamento.start_time}</td>
-            <td>${servicos[agendamento.id_service - 1].name}</td>
-            <td>${funcionario[agendamento.id_employee - 1].name} ${
-					funcionario[agendamento.id_employee - 1].lastname
+            <td>${servicos[(agendamento.id_service - 1) / 10].name}</td>
+            <td>${funcionario[(agendamento.id_employee - 1) / 10].name} ${
+					funcionario[(agendamento.id_employee - 1) / 10].lastname
 				}</td>
-            <td>${servicos[agendamento.id_service - 1].price}</td>
+            <td>${servicos[(agendamento.id_service - 1) / 10].price}</td>
             <td>Agendado</td>
             <td>
                 <form id="formdeletar" method="POST" action="/administracao/daily?_method=delete">
@@ -289,16 +297,16 @@ inputFuncionario.addEventListener("change", function () {
 			) {
 				lista.innerHTML += `
         <tr>
-            <td>${clientes[agendamento.id_client - 1].name} ${
-					clientes[agendamento.id_client - 1].lastname
+            <td>${clientes[(agendamento.id_client - 1) / 10].name} ${
+					clientes[(agendamento.id_client - 1) / 10].lastname
 				}</td>
             <td>${agendamento.start_date}</td>
             <td>${agendamento.start_time}</td>
-            <td>${servicos[agendamento.id_service - 1].name}</td>
-            <td>${funcionario[agendamento.id_employee - 1].name} ${
-					funcionario[agendamento.id_employee - 1].lastname
+            <td>${servicos[(agendamento.id_service - 1) / 10].name}</td>
+            <td>${funcionario[(agendamento.id_employee - 1) / 10].name} ${
+					funcionario[(agendamento.id_employee - 1) / 10].lastname
 				}</td>
-            <td>${servicos[agendamento.id_service - 1].price}</td>
+            <td>${servicos[(agendamento.id_service - 1) / 10].price}</td>
             <td>Agendado</td>
             <td>
                 <form id="formdeletar" method="POST" action="/administracao/daily?_method=delete">
@@ -349,16 +357,16 @@ inputFuncionario.addEventListener("change", function () {
 			) {
 				lista.innerHTML += `
         <tr>
-            <td>${clientes[agendamento.id_client - 1].name} ${
-					clientes[agendamento.id_client - 1].lastname
+            <td>${clientes[(agendamento.id_client - 1) / 10].name} ${
+					clientes[(agendamento.id_client - 1) / 10].lastname
 				}</td>
             <td>${agendamento.start_date}</td>
             <td>${agendamento.start_time}</td>
-            <td>${servicos[agendamento.id_service - 1].name}</td>
-            <td>${funcionario[agendamento.id_employee - 1].name} ${
-					funcionario[agendamento.id_employee - 1].lastname
+            <td>${servicos[(agendamento.id_service - 1) / 10].name}</td>
+            <td>${funcionario[(agendamento.id_employee - 1) / 10].name} ${
+					funcionario[(agendamento.id_employee - 1) / 10].lastname
 				}</td>
-            <td>${servicos[agendamento.id_service - 1].price}</td>
+            <td>${servicos[(agendamento.id_service - 1) / 10].price}</td>
             <td>Agendado</td>
             <td>
                 <form id="formdeletar" method="POST" action="/administracao/daily?_method=delete">
@@ -406,16 +414,16 @@ inputFuncionario.addEventListener("change", function () {
 			) {
 				lista.innerHTML += `
         <tr>
-            <td>${clientes[agendamento.id_client - 1].name} ${
-					clientes[agendamento.id_client - 1].lastname
+            <td>${clientes[(agendamento.id_client - 1) / 10].name} ${
+					clientes[(agendamento.id_client - 1) / 10].lastname
 				}</td>
             <td>${agendamento.start_date}</td>
             <td>${agendamento.start_time}</td>
-            <td>${servicos[agendamento.id_service - 1].name}</td>
-            <td>${funcionario[agendamento.id_employee - 1].name} ${
-					funcionario[agendamento.id_employee - 1].lastname
+            <td>${servicos[(agendamento.id_service - 1) / 10].name}</td>
+            <td>${funcionario[(agendamento.id_employee - 1) / 10].name} ${
+					funcionario[(agendamento.id_employee - 1) / 10].lastname
 				}</td>
-            <td>${servicos[agendamento.id_service - 1].price}</td>
+            <td>${servicos[(agendamento.id_service - 1) / 10].price}</td>
             <td>Agendado</td>
             <td>
                 <form id="formdeletar" method="POST" action="/administracao/daily?_method=delete">
@@ -460,16 +468,16 @@ inputFuncionario.addEventListener("change", function () {
 			if (dateformatBR == agendamento.start_date) {
 				lista.innerHTML += `
         <tr>
-            <td>${clientes[agendamento.id_client - 1].name} ${
-					clientes[agendamento.id_client - 1].lastname
+            <td>${clientes[(agendamento.id_client - 1) / 10].name} ${
+					clientes[(agendamento.id_client - 1) / 10].lastname
 				}</td>
             <td>${agendamento.start_date}</td>
             <td>${agendamento.start_time}</td>
-            <td>${servicos[agendamento.id_service - 1].name}</td>
-            <td>${funcionario[agendamento.id_employee - 1].name} ${
-					funcionario[agendamento.id_employee - 1].lastname
+            <td>${servicos[(agendamento.id_service - 1) / 10].name}</td>
+            <td>${funcionario[(agendamento.id_employee - 1) / 10].name} ${
+					funcionario[(agendamento.id_employee - 1) / 10].lastname
 				}</td>
-            <td>${servicos[agendamento.id_service - 1].price}</td>
+            <td>${servicos[(agendamento.id_service - 1) / 10].price}</td>
             <td>Agendado</td>
             <td>
                 <form id="formdeletar" method="POST" action="/administracao/daily?_method=delete">
@@ -512,16 +520,16 @@ inputFuncionario.addEventListener("change", function () {
 			if (agendamento.id_employee == inputFuncionario.value) {
 				lista.innerHTML += `
         <tr>
-            <td>${clientes[agendamento.id_client - 1].name} ${
-					clientes[agendamento.id_client - 1].lastname
+            <td>${clientes[(agendamento.id_client - 1) / 10].name} ${
+					clientes[(agendamento.id_client - 1) / 10].lastname
 				}</td>
             <td>${agendamento.start_date}</td>
             <td>${agendamento.start_time}</td>
-            <td>${servicos[agendamento.id_service - 1].name}</td>
-            <td>${funcionario[agendamento.id_employee - 1].name} ${
-					funcionario[agendamento.id_employee - 1].lastname
+            <td>${servicos[(agendamento.id_service - 1) / 10].name}</td>
+            <td>${funcionario[(agendamento.id_employee - 1) / 10].name} ${
+					funcionario[(agendamento.id_employee - 1) / 10].lastname
 				}</td>
-            <td>${servicos[agendamento.id_service - 1].price}</td>
+            <td>${servicos[(agendamento.id_service - 1) / 10].price}</td>
             <td>Agendado</td>
             <td>
                 <form id="formdeletar" method="POST" action="/administracao/daily?_method=delete">
@@ -583,16 +591,20 @@ date.addEventListener("change", function () {
 		agendamentos.forEach((agendamento) => {
 			lista.innerHTML += `
                 <tr>
-                    <td>${clientes[agendamento.id_client - 1].name} ${
-				clientes[agendamento.id_client - 1].lastname
+                    <td>${clientes[(agendamento.id_client - 1) / 10].name} ${
+				clientes[(agendamento.id_client - 1) / 10].lastname
 			}</td>
                     <td>${agendamento.start_date}</td>
                     <td>${agendamento.start_time}</td>
-                    <td>${servicos[agendamento.id_service - 1].name}</td>
-                    <td>${funcionario[agendamento.id_employee - 1].name} ${
-				funcionario[agendamento.id_employee - 1].lastname
+                    <td>${servicos[(agendamento.id_service - 1) / 10].name}</td>
+                    <td>${
+											funcionario[(agendamento.id_employee - 1) / 10].name
+										} ${
+				funcionario[(agendamento.id_employee - 1) / 10].lastname
 			}</td>
-                    <td>${servicos[agendamento.id_service - 1].price}</td>
+                    <td>${
+											servicos[(agendamento.id_service - 1) / 10].price
+										}</td>
                     <td>Agendado</td>
                     <td>
                         <form id="formdeletar" method="POST" action="/administracao/daily?_method=delete">
@@ -643,16 +655,20 @@ date.addEventListener("change", function () {
 			) {
 				lista.innerHTML += `
                 <tr>
-                    <td>${clientes[agendamento.id_client - 1].name} ${
-					clientes[agendamento.id_client - 1].lastname
+                    <td>${clientes[(agendamento.id_client - 1) / 10].name} ${
+					clientes[(agendamento.id_client - 1) / 10].lastname
 				}</td>
                     <td>${agendamento.start_date}</td>
                     <td>${agendamento.start_time}</td>
-                    <td>${servicos[agendamento.id_service - 1].name}</td>
-                    <td>${funcionario[agendamento.id_employee - 1].name} ${
-					funcionario[agendamento.id_employee - 1].lastname
+                    <td>${servicos[(agendamento.id_service - 1) / 10].name}</td>
+                    <td>${
+											funcionario[(agendamento.id_employee - 1) / 10].name
+										} ${
+					funcionario[(agendamento.id_employee - 1) / 10].lastname
 				}</td>
-                    <td>${servicos[agendamento.id_service - 1].price}</td>
+                    <td>${
+											servicos[(agendamento.id_service - 1) / 10].price
+										}</td>
                     <td>Agendado</td>
                     <td>
                         <form id="formdeletar" method="POST" action="/administracao/daily?_method=delete">
@@ -702,16 +718,16 @@ date.addEventListener("change", function () {
 			) {
 				lista.innerHTML += `
         <tr>
-            <td>${clientes[agendamento.id_client - 1].name} ${
-					clientes[agendamento.id_client - 1].lastname
+            <td>${clientes[(agendamento.id_client - 1) / 10].name} ${
+					clientes[(agendamento.id_client - 1) / 10].lastname
 				}</td>
             <td>${agendamento.start_date}</td>
             <td>${agendamento.start_time}</td>
-            <td>${servicos[agendamento.id_service - 1].name}</td>
-            <td>${funcionario[agendamento.id_employee - 1].name} ${
-					funcionario[agendamento.id_employee - 1].lastname
+            <td>${servicos[(agendamento.id_service - 1) / 10].name}</td>
+            <td>${funcionario[(agendamento.id_employee - 1) / 10].name} ${
+					funcionario[(agendamento.id_employee - 1) / 10].lastname
 				}</td>
-            <td>${servicos[agendamento.id_service - 1].price}</td>
+            <td>${servicos[(agendamento.id_service - 1) / 10].price}</td>
             <td>Agendado</td>
             <td>
                 <form id="formdeletar" method="POST" action="/administracao/daily?_method=delete">
@@ -759,16 +775,16 @@ date.addEventListener("change", function () {
 			) {
 				lista.innerHTML += `
         <tr>
-            <td>${clientes[agendamento.id_client - 1].name} ${
-					clientes[agendamento.id_client - 1].lastname
+            <td>${clientes[(agendamento.id_client - 1) / 10].name} ${
+					clientes[(agendamento.id_client - 1) / 10].lastname
 				}</td>
             <td>${agendamento.start_date}</td>
             <td>${agendamento.start_time}</td>
-            <td>${servicos[agendamento.id_service - 1].name}</td>
-            <td>${funcionario[agendamento.id_employee - 1].name} ${
-					funcionario[agendamento.id_employee - 1].lastname
+            <td>${servicos[(agendamento.id_service - 1) / 10].name}</td>
+            <td>${funcionario[(agendamento.id_employee - 1) / 10].name} ${
+					funcionario[(agendamento.id_employee - 1) / 10].lastname
 				}</td>
-            <td>${servicos[agendamento.id_service - 1].price}</td>
+            <td>${servicos[(agendamento.id_service - 1) / 10].price}</td>
             <td>Agendado</td>
             <td>
                 <form id="formdeletar" method="POST" action="/administracao/daily?_method=delete">
@@ -819,16 +835,16 @@ date.addEventListener("change", function () {
 			) {
 				lista.innerHTML += `
         <tr>
-            <td>${clientes[agendamento.id_client - 1].name} ${
-					clientes[agendamento.id_client - 1].lastname
+            <td>${clientes[(agendamento.id_client - 1) / 10].name} ${
+					clientes[(agendamento.id_client - 1) / 10].lastname
 				}</td>
             <td>${agendamento.start_date}</td>
             <td>${agendamento.start_time}</td>
-            <td>${servicos[agendamento.id_service - 1].name}</td>
-            <td>${funcionario[agendamento.id_employee - 1].name} ${
-					funcionario[agendamento.id_employee - 1].lastname
+            <td>${servicos[(agendamento.id_service - 1) / 10].name}</td>
+            <td>${funcionario[(agendamento.id_employee - 1) / 10].name} ${
+					funcionario[(agendamento.id_employee - 1) / 10].lastname
 				}</td>
-            <td>${servicos[agendamento.id_service - 1].price}</td>
+            <td>${servicos[(agendamento.id_service - 1) / 10].price}</td>
             <td>Agendado</td>
             <td>
                 <form id="formdeletar" method="POST" action="/administracao/daily?_method=delete">
@@ -876,16 +892,16 @@ date.addEventListener("change", function () {
 			) {
 				lista.innerHTML += `
         <tr>
-            <td>${clientes[agendamento.id_client - 1].name} ${
-					clientes[agendamento.id_client - 1].lastname
+            <td>${clientes[(agendamento.id_client - 1) / 10].name} ${
+					clientes[(agendamento.id_client - 1) / 10].lastname
 				}</td>
             <td>${agendamento.start_date}</td>
             <td>${agendamento.start_time}</td>
-            <td>${servicos[agendamento.id_service - 1].name}</td>
-            <td>${funcionario[agendamento.id_employee - 1].name} ${
-					funcionario[agendamento.id_employee - 1].lastname
+            <td>${servicos[(agendamento.id_service - 1) / 10].name}</td>
+            <td>${funcionario[(agendamento.id_employee - 1) / 10].name} ${
+					funcionario[(agendamento.id_employee - 1) / 10].lastname
 				}</td>
-            <td>${servicos[agendamento.id_service - 1].price}</td>
+            <td>${servicos[(agendamento.id_service - 1) / 10].price}</td>
             <td>Agendado</td>
             <td>
                 <form id="formdeletar" method="POST" action="/administracao/daily?_method=delete">
@@ -930,16 +946,16 @@ date.addEventListener("change", function () {
 			if (dateformatBR == agendamento.start_date) {
 				lista.innerHTML += `
         <tr>
-            <td>${clientes[agendamento.id_client - 1].name} ${
-					clientes[agendamento.id_client - 1].lastname
+            <td>${clientes[(agendamento.id_client - 1) / 10].name} ${
+					clientes[(agendamento.id_client - 1) / 10].lastname
 				}</td>
             <td>${agendamento.start_date}</td>
             <td>${agendamento.start_time}</td>
-            <td>${servicos[agendamento.id_service - 1].name}</td>
-            <td>${funcionario[agendamento.id_employee - 1].name} ${
-					funcionario[agendamento.id_employee - 1].lastname
+            <td>${servicos[(agendamento.id_service - 1) / 10].name}</td>
+            <td>${funcionario[(agendamento.id_employee - 1) / 10].name} ${
+					funcionario[(agendamento.id_employee - 1) / 10].lastname
 				}</td>
-            <td>${servicos[agendamento.id_service - 1].price}</td>
+            <td>${servicos[(agendamento.id_service - 1) / 10].price}</td>
             <td>Agendado</td>
             <td>
                 <form id="formdeletar" method="POST" action="/administracao/daily?_method=delete">
@@ -982,16 +998,16 @@ date.addEventListener("change", function () {
 			if (agendamento.id_employee == inputFuncionario.value) {
 				lista.innerHTML += `
         <tr>
-            <td>${clientes[agendamento.id_client - 1].name} ${
-					clientes[agendamento.id_client - 1].lastname
+            <td>${clientes[(agendamento.id_client - 1) / 10].name} ${
+					clientes[(agendamento.id_client - 1) / 10].lastname
 				}</td>
             <td>${agendamento.start_date}</td>
             <td>${agendamento.start_time}</td>
-            <td>${servicos[agendamento.id_service - 1].name}</td>
-            <td>${funcionario[agendamento.id_employee - 1].name} ${
-					funcionario[agendamento.id_employee - 1].lastname
+            <td>${servicos[(agendamento.id_service - 1) / 10].name}</td>
+            <td>${funcionario[(agendamento.id_employee - 1) / 10].name} ${
+					funcionario[(agendamento.id_employee - 1) / 10].lastname
 				}</td>
-            <td>${servicos[agendamento.id_service - 1].price}</td>
+            <td>${servicos[(agendamento.id_service - 1) / 10].price}</td>
             <td>Agendado</td>
             <td>
                 <form id="formdeletar" method="POST" action="/administracao/daily?_method=delete">
@@ -1048,16 +1064,20 @@ inputCliente
 			agendamentos.forEach((agendamento) => {
 				lista.innerHTML += `
                 <tr>
-                    <td>${clientes[agendamento.id_client - 1].name} ${
-					clientes[agendamento.id_client - 1].lastname
+                    <td>${clientes[(agendamento.id_client - 1) / 10].name} ${
+					clientes[(agendamento.id_client - 1) / 10].lastname
 				}</td>
                     <td>${agendamento.start_date}</td>
                     <td>${agendamento.start_time}</td>
-                    <td>${servicos[agendamento.id_service - 1].name}</td>
-                    <td>${funcionario[agendamento.id_employee - 1].name} ${
-					funcionario[agendamento.id_employee - 1].lastname
+                    <td>${servicos[(agendamento.id_service - 1) / 10].name}</td>
+                    <td>${
+											funcionario[(agendamento.id_employee - 1) / 10].name
+										} ${
+					funcionario[(agendamento.id_employee - 1) / 10].lastname
 				}</td>
-                    <td>${servicos[agendamento.id_service - 1].price}</td>
+                    <td>${
+											servicos[(agendamento.id_service - 1) / 10].price
+										}</td>
                     <td>Agendado</td>
                     <td>
                         <form id="formdeletar" method="POST" action="/administracao/daily?_method=delete">
@@ -1108,16 +1128,20 @@ inputCliente
 				) {
 					lista.innerHTML += `
                 <tr>
-                    <td>${clientes[agendamento.id_client - 1].name} ${
-						clientes[agendamento.id_client - 1].lastname
+                    <td>${clientes[(agendamento.id_client - 1) / 10].name} ${
+						clientes[(agendamento.id_client - 1) / 10].lastname
 					}</td>
                     <td>${agendamento.start_date}</td>
                     <td>${agendamento.start_time}</td>
-                    <td>${servicos[agendamento.id_service - 1].name}</td>
-                    <td>${funcionario[agendamento.id_employee - 1].name} ${
-						funcionario[agendamento.id_employee - 1].lastname
+                    <td>${servicos[(agendamento.id_service - 1) / 10].name}</td>
+                    <td>${
+											funcionario[(agendamento.id_employee - 1) / 10].name
+										} ${
+						funcionario[(agendamento.id_employee - 1) / 10].lastname
 					}</td>
-                    <td>${servicos[agendamento.id_service - 1].price}</td>
+                    <td>${
+											servicos[(agendamento.id_service - 1) / 10].price
+										}</td>
                     <td>Agendado</td>
                     <td>
                         <form id="formdeletar" method="POST" action="/administracao/daily?_method=delete">
@@ -1169,16 +1193,16 @@ inputCliente
 				) {
 					lista.innerHTML += `
         <tr>
-            <td>${clientes[agendamento.id_client - 1].name} ${
-						clientes[agendamento.id_client - 1].lastname
+            <td>${clientes[(agendamento.id_client - 1) / 10].name} ${
+						clientes[(agendamento.id_client - 1) / 10].lastname
 					}</td>
             <td>${agendamento.start_date}</td>
             <td>${agendamento.start_time}</td>
-            <td>${servicos[agendamento.id_service - 1].name}</td>
-            <td>${funcionario[agendamento.id_employee - 1].name} ${
-						funcionario[agendamento.id_employee - 1].lastname
+            <td>${servicos[(agendamento.id_service - 1) / 10].name}</td>
+            <td>${funcionario[(agendamento.id_employee - 1) / 10].name} ${
+						funcionario[(agendamento.id_employee - 1) / 10].lastname
 					}</td>
-            <td>${servicos[agendamento.id_service - 1].price}</td>
+            <td>${servicos[(agendamento.id_service - 1) / 10].price}</td>
             <td>Agendado</td>
             <td>
                 <form id="formdeletar" method="POST" action="/administracao/daily?_method=delete">
@@ -1226,16 +1250,16 @@ inputCliente
 				) {
 					lista.innerHTML += `
         <tr>
-            <td>${clientes[agendamento.id_client - 1].name} ${
-						clientes[agendamento.id_client - 1].lastname
+            <td>${clientes[(agendamento.id_client - 1) / 10].name} ${
+						clientes[(agendamento.id_client - 1) / 10].lastname
 					}</td>
             <td>${agendamento.start_date}</td>
             <td>${agendamento.start_time}</td>
-            <td>${servicos[agendamento.id_service - 1].name}</td>
-            <td>${funcionario[agendamento.id_employee - 1].name} ${
-						funcionario[agendamento.id_employee - 1].lastname
+            <td>${servicos[(agendamento.id_service - 1) / 10].name}</td>
+            <td>${funcionario[(agendamento.id_employee - 1) / 10].name} ${
+						funcionario[(agendamento.id_employee - 1) / 10].lastname
 					}</td>
-            <td>${servicos[agendamento.id_service - 1].price}</td>
+            <td>${servicos[(agendamento.id_service - 1) / 10].price}</td>
             <td>Agendado</td>
             <td>
                 <form id="formdeletar" method="POST" action="/administracao/daily?_method=delete">
@@ -1288,16 +1312,16 @@ inputCliente
 				) {
 					lista.innerHTML += `
         <tr>
-            <td>${clientes[agendamento.id_client - 1].name} ${
-						clientes[agendamento.id_client - 1].lastname
+            <td>${clientes[(agendamento.id_client - 1) / 10].name} ${
+						clientes[(agendamento.id_client - 1) / 10].lastname
 					}</td>
             <td>${agendamento.start_date}</td>
             <td>${agendamento.start_time}</td>
-            <td>${servicos[agendamento.id_service - 1].name}</td>
-            <td>${funcionario[agendamento.id_employee - 1].name} ${
-						funcionario[agendamento.id_employee - 1].lastname
+            <td>${servicos[(agendamento.id_service - 1) / 10].name}</td>
+            <td>${funcionario[(agendamento.id_employee - 1) / 10].name} ${
+						funcionario[(agendamento.id_employee - 1) / 10].lastname
 					}</td>
-            <td>${servicos[agendamento.id_service - 1].price}</td>
+            <td>${servicos[(agendamento.id_service - 1) / 10].price}</td>
             <td>Agendado</td>
             <td>
                 <form id="formdeletar" method="POST" action="/administracao/daily?_method=delete">
@@ -1347,16 +1371,16 @@ inputCliente
 				) {
 					lista.innerHTML += `
         <tr>
-            <td>${clientes[agendamento.id_client - 1].name} ${
-						clientes[agendamento.id_client - 1].lastname
+            <td>${clientes[(agendamento.id_client - 1) / 10].name} ${
+						clientes[(agendamento.id_client - 1) / 10].lastname
 					}</td>
             <td>${agendamento.start_date}</td>
             <td>${agendamento.start_time}</td>
-            <td>${servicos[agendamento.id_service - 1].name}</td>
-            <td>${funcionario[agendamento.id_employee - 1].name} ${
-						funcionario[agendamento.id_employee - 1].lastname
+            <td>${servicos[(agendamento.id_service - 1) / 10].name}</td>
+            <td>${funcionario[(agendamento.id_employee - 1) / 10].name} ${
+						funcionario[(agendamento.id_employee - 1) / 10].lastname
 					}</td>
-            <td>${servicos[agendamento.id_service - 1].price}</td>
+            <td>${servicos[(agendamento.id_service - 1) / 10].price}</td>
             <td>Agendado</td>
             <td>
                 <form id="formdeletar" method="POST" action="/administracao/daily?_method=delete">
@@ -1403,16 +1427,16 @@ inputCliente
 				if (dateformatBR == agendamento.start_date) {
 					lista.innerHTML += `
         <tr>
-            <td>${clientes[agendamento.id_client - 1].name} ${
-						clientes[agendamento.id_client - 1].lastname
+            <td>${clientes[(agendamento.id_client - 1) / 10].name} ${
+						clientes[(agendamento.id_client - 1) / 10].lastname
 					}</td>
             <td>${agendamento.start_date}</td>
             <td>${agendamento.start_time}</td>
-            <td>${servicos[agendamento.id_service - 1].name}</td>
-            <td>${funcionario[agendamento.id_employee - 1].name} ${
-						funcionario[agendamento.id_employee - 1].lastname
+            <td>${servicos[(agendamento.id_service - 1) / 10].name}</td>
+            <td>${funcionario[(agendamento.id_employee - 1) / 10].name} ${
+						funcionario[(agendamento.id_employee - 1) / 10].lastname
 					}</td>
-            <td>${servicos[agendamento.id_service - 1].price}</td>
+            <td>${servicos[(agendamento.id_service - 1) / 10].price}</td>
             <td>Agendado</td>
             <td>
                 <form id="formdeletar" method="POST" action="/administracao/daily?_method=delete">
@@ -1455,16 +1479,16 @@ inputCliente
 				if (agendamento.id_employee == inputFuncionario.value) {
 					lista.innerHTML += `
         <tr>
-            <td>${clientes[agendamento.id_client - 1].name} ${
-						clientes[agendamento.id_client - 1].lastname
+            <td>${clientes[(agendamento.id_client - 1) / 10].name} ${
+						clientes[(agendamento.id_client - 1) / 10].lastname
 					}</td>
             <td>${agendamento.start_date}</td>
             <td>${agendamento.start_time}</td>
-            <td>${servicos[agendamento.id_service - 1].name}</td>
-            <td>${funcionario[agendamento.id_employee - 1].name} ${
-						funcionario[agendamento.id_employee - 1].lastname
+            <td>${servicos[(agendamento.id_service - 1) / 10].name}</td>
+            <td>${funcionario[(agendamento.id_employee - 1) / 10].name} ${
+						funcionario[(agendamento.id_employee - 1) / 10].lastname
 					}</td>
-            <td>${servicos[agendamento.id_service - 1].price}</td>
+            <td>${servicos[(agendamento.id_service - 1) / 10].price}</td>
             <td>Agendado</td>
             <td>
                 <form id="formdeletar" method="POST" action="/administracao/daily?_method=delete">
