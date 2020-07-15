@@ -173,7 +173,7 @@ inputCategoria.addEventListener("change", function () {
 });
 
 inputServico.addEventListener("change", function () {
-	inputPreco.value = servicos[inputServico.value.trim() - 1].price;
+	inputPreco.value = servicos[(inputServico.value.trim() - 1) / 10].price;
 	divInputPreco.hidden = "";
 	inputFuncionario.innerHTML =
 		'<option value="0" selected="selected">Selecione</option>';
