@@ -1,11 +1,11 @@
 const lista = document.querySelector(".listadeservicos");
 
-fetch("http://localhost:3000/api/categories")
+fetch("https://casarao-estetica.herokuapp.com/api/categories")
 	.then((resposta) => resposta.json())
 	.then((dados) => {
 		lista.innerHTML = "";
 		dados.forEach((servico) => {
-            lista.innerHTML += `
+			lista.innerHTML += `
             <div card card-funcionario" style="margin-bottom: 30px; width: 300px">
                 <div class="d-flex justify-content-center">
                     <img src="/images/${servico.icon}" style="width: 239px;" alt="${servico.name}">

@@ -1,6 +1,6 @@
 const lista = document.querySelector(".listadefuncionarios");
 
-fetch("http://localhost:3000/api/funcionario")
+fetch("https://casarao-estetica.herokuapp.com/api/funcionario")
 	.then((resposta) => resposta.json())
 	.then((dados) => {
 		lista.innerHTML = "";
@@ -16,5 +16,5 @@ fetch("http://localhost:3000/api/funcionario")
                 </div>
             </div>
             `;
-        });
+		});
 	});
