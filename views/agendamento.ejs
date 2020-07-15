@@ -16,7 +16,7 @@
                 <label class="label-form" for="clientschedulecategory">Selecione a categoria</label>
                 <select name="clientschedulecategory" class="form-control form-control-lg form-border" id="clientschedulecategory">
                     <% if (idcategory != undefined) { %>
-                        <option value="<%=idcategory%>" selected="selected"> <%=category[idcategory -1].name%>  </option>
+                        <option value="<%=idcategory%>" selected="selected"> <%=category[(idcategory - 1) / 10].name%>  </option>
                      <% } else { %>
                         <option value="0" selected="selected">Selecione</option>
                     <% for( let i = 0; i < category.length; i++ ) { %>
