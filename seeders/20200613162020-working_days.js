@@ -17,7 +17,7 @@ module.exports = {
           createdAt: '2020-06-13 04:11:51',
         },
         {
-          id_employee: '2',
+          id_employee: '11',
           monday: '1',
           tuesday: '1',
           wednesday: '1',
@@ -29,7 +29,7 @@ module.exports = {
           createdAt: '2020-06-13 04:11:51',
         },
         {
-          id_employee: '3',
+          id_employee: '21',
           monday: '1',
           tuesday: '0',
           wednesday: '1',
@@ -41,7 +41,7 @@ module.exports = {
           createdAt: '2020-06-13 04:11:51',
         },
         {
-          id_employee: '4',
+          id_employee: '31',
           monday: '1',
           tuesday: '0',
           wednesday: '1',
